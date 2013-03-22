@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+	margin:0;
+	font-family:"宋体";
+	font-size:12px;
+	color:#444;
+	}
+#content{
+	width:677px;
+	margin:0 auto;
+	background:url(images/bg.gif) repeat-y right top;
+	}
+#header{
+	width:100%;
+	background:url(images/top_right.gif) no-repeat right top;
+	height:66px;
+	}
+.banner{
+	width:650px;
+	border:1px solid #dedede;
+	border-bottom:none;
+	}
+.neirong{
+	
+	}
+</style>
+<title>企业会员注册邮件</title>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width:677px;background:url(images/bg.gif) repeat-y right top;font-family:"宋体";font-size:12px;color:#444;">
+		<tr>
+				<td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td align="left" style="background:url(images/top_right.gif) no-repeat right top;height:66px;"><table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+				<td style="width:650px;border:1px solid #dedede;border-bottom:none;"><img src="images/top_bg.jpg" border="0" /></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none; border-bottom:none;">
+		<tr>
+				<td colspan="2" style="padding:0 15px; line-height:25px; ">
+					<span style="border-bottom:1px dashed #dedede;"><strong>尊敬的【公司名称】：</strong>
+						<span style="display:block; text-indent:2em;">感谢您注册成为OFweek人才网企业会员！OFweek人才网是OFweek旗下网站，是全国领先的高科技人才资源平台！</span>					</span>				</td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px; text-indent:2em; line-height:25px; "><strong>您的用户名：</strong>【用户名】</td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px;text-indent:2em; line-height:25px; "><strong>您的密码：</strong>【密码】</td>
+		</tr>
+		<tr>
+				<td width="551" style="padding:0 15px;text-indent:2em; line-height:25px; ">请保存好您的用户名以及密码，如果您忘记了密码，您可以通过找回密码的方法找回</td>
+				<td width="99" style="line-height:25px; "><a href="http://hr.ofweek.com/password.html" target="_blank"><img src="images/zhpw.gif"  alt="找回密码" border="0" /></a></td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px; text-indent:2em;border-bottom:1px dashed #dedede;line-height:25px;"><strong>招聘小助手：</strong></td>
+		</tr>
+		<tr>
+				<td colspan="2" style="border-bottom:1px dashed #dedede; padding:0 15px 0 40px;"><table border="0" cellspacing="0" cellpadding="0" align="center" width="100%" style="line-height:30px;">
+		<tr>
+				<td colspan="2">为了保证招聘信息的真实性以及求职者利益，我们将对企业信息进行审核，请完善您的公司信息并上传贵公司的营业执照复印件。</td>
+				</tr>
+		
+		<tr>
+				<td colspan="2" style="background:url(images/tel.gif) no-repeat 0px 6px; text-indent:20px;">咨询电话：0755-83279360</td>
+				</tr>
+		<tr>
+				<td width="72%">祝商祺！</td>
+				<td width="28%">&nbsp;</td>
+		</tr>
+</table>
+</td>
+		</tr>
+		
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:url(images/bottom_right.gif) no-repeat right bottom; height:35px; line-height:35px;">
+		<tr>
+				<td align="left"><table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none;">
+		<tr>
+				<td align="right" style="padding-right:20px;">OFweek人才网</td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+
+</td>
+		</tr>
+		
+</table>
+</body>
+</html>

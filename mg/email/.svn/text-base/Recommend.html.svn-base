@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+	margin:0;
+	font-family:"宋体";
+	font-size:12px;
+	color:#444;
+	}
+#content{
+	width:677px;
+	margin:0 auto;
+	background:url(images/bg.gif) repeat-y right top;
+	}
+#header{
+	width:100%;
+	background:url(images/top_right.gif) no-repeat right top;
+	height:66px;
+	}
+.banner{
+	width:650px;
+	border:1px solid #dedede;
+	border-bottom:none;
+	}
+.neirong{
+	
+	}
+</style>
+<title>职位推荐邮件</title>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width:677px;background:url(images/bg.gif) repeat-y right top;font-family:"宋体";font-size:12px;color:#444;">
+		<tr>
+				<td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td align="left" style="background:url(images/top_right.gif) no-repeat right top;height:66px;"><table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+				<td style="width:650px;border:1px solid #dedede;border-bottom:none;"><img src="images/top_bg.jpg" border="0" /></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none; border-bottom:none;">
+		<tr>
+				<td style="padding:0 15px; line-height:25px; ">
+					<span style="border-bottom:1px dashed #dedede;"><strong>尊敬的【邮箱地址】：</strong>
+						<span style="display:block; text-indent:2em;border-bottom:1px dashed #dedede;">您好！您的朋友【姓名】在OFweek人才网看到【公司名称】在招聘【职位名称】。觉得比较适合您，现将此职位推荐给您，详情如下：</span>					</span>				</td>
+		</tr>
+		<td style="padding:0 15px 0 30px;line-height:25px; ">
+						<table border="0" cellspacing="0" cellpadding="0" width="100%">
+								<tr>
+										<td style="background:url(images/fangdian.gif) #f1f6fa no-repeat 5px 7px; padding-left:20px;">职位名称：【职位名称】</td>
+								</tr>
+						</table></td>
+						</tr>
+						<tr>
+				<td style="padding:10px 15px 10px 30px;line-height:25px; "><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td width="16%" bgcolor="#f3f3f3" style="border:1px solid #ddd; padding-left:10px;">专业要求</td>
+				<td width="17%" style="border:1px solid #ddd; border-left:none; padding-left:10px;">不限</td>
+				<td width="17%" bgcolor="#f3f3f3" style="border:1px solid #ddd; border-left:none; padding-left:10px;">学历要求</td>
+				<td width="16%" style="border:1px solid #ddd; border-left:none; padding-left:10px;">不限</td>
+				<td width="17%" bgcolor="#f3f3f3" style="border:1px solid #ddd; border-left:none; padding-left:10px;">薪酬</td>
+				<td width="17%" style="border:1px solid #ddd; border-left:none; padding-left:10px;">面议</td>
+		</tr>
+		<tr>
+				<td bgcolor="#f3f3f3" style="border:1px solid #ddd;border-top:none; padding-left:10px;">工作地点</td>
+				<td style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">上海</td>
+				<td bgcolor="#f3f3f3" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">外语要求</td>
+				<td style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">英语</td>
+				<td bgcolor="#f3f3f3" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">年龄要求</td>
+				<td style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">22-45</td>
+		</tr>
+		<tr>
+				<td bgcolor="#f3f3f3" style="border:1px solid #ddd;border-top:none; padding-left:10px;">工作年限</td>
+				<td style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">5年以上</td>
+				<td bgcolor="#f3f3f3" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">招聘人数</td>
+				<td style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">2人</td>
+				<td bgcolor="#f3f3f3" style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">工作性质</td>
+				<td style="border-bottom:1px solid #ddd; border-right:1px solid #ddd; padding-left:10px;">全职</td>
+		</tr>
+</table>
+</td>
+		</tr>
+		<tr>
+				<td style="padding:0 15px 0 30px;line-height:25px; ">
+						<table border="0" cellspacing="0" cellpadding="0" width="100%">
+								<tr>
+										<td style="background:url(images/fangdian.gif) #f1f6fa no-repeat 5px 7px; padding-left:20px;">岗位职责：</td>
+								</tr>
+						</table></td>
+		</tr>
+		<tr>
+				<td style="padding:10px 15px 10px 30px;line-height:25px; "><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td width="16%" style="padding-left:10px;">
+							1.php网站开发2年以上工作经验<br />
+							2.熟悉网络架构<br />
+							3.熟悉mysql数据库开发、服务器环境<br />
+							4.有一定的SEO基础<br />
+							5.对用户体验有一定的认识<br />
+							6.较强的抗压能力，以及主动工作的能力</td>
+		</tr>	
+		</table></td>
+		</tr>
+		
+		<tr>
+				<td style="padding:0 15px; text-indent:2em;border-bottom:1px dashed #dedede;line-height:25px;">>>> <a href="#" style="color:#c2261a;" target="_blank">查看公司详细信息</a></td>
+		</tr>
+		<tr>
+		<td align="center"><a href="#" target="_blank"><img src="images/shen_q.gif" alt="申请职位" border="0" /></a></td>
+		</tr>
+				<td style="padding-right:15px; text-align:right;line-height:25px; background:url(images/hao_y.gif) no-repeat 500px 6px;">您的好友：【某某】</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:url(images/bottom_right.gif) no-repeat right bottom; height:35px; line-height:35px;">
+		<tr>
+				<td align="left"><table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none;">
+		<tr>
+				<td align="right" style="padding-right:20px;">&nbsp;</td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+
+</td>
+		</tr>
+		
+</table>
+</body>
+</html>

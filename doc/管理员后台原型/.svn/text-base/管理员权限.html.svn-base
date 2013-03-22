@@ -1,0 +1,934 @@
+<html>
+<head>
+    <title>管理员权限</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet">
+    <link href="管理员权限_files/axurerp_pagespecificstyles.css" type="text/css" rel="stylesheet">
+<!--[if IE 6]>
+    <link href="管理员权限_files/axurerp_pagespecificstyles_ie6.css" type="text/css" rel="stylesheet">
+<![endif]-->
+    <script src="data/sitemap.js"></script>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/axurerp_beforepagescript.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+<script src='管理员权限_files/data.js'></script>
+</head>
+<body>
+<div id="main_container">
+
+<div id="u0" class="u0_container"   >
+<div id="u0_img" class="u0_normal detectCanvas"></div>
+<div id="u1" class="u1" style="visibility:hidden;"  >
+<div id="u1_rtf"></div>
+</div>
+</div>
+<div id="u2" class="u2"  data-label="paragraph">
+<div id="u2_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">网站首页</span></p></div>
+</div>
+<div id="u3" class="u3"  data-label="paragraph">
+<div id="u3_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">更新缓存</span></p></div>
+</div>
+<div id="u4" class="u4"  data-label="paragraph">
+<div id="u4_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">生成首页</span></p></div>
+</div>
+<DIV id="u5container" style="position:absolute; left:200px; top:49px; width:900px; height:25px;; overflow:visible">
+
+<DIV id="u5_menu" class="u5_menu data-label="menu" detectCanvas"></DIV>
+
+<DIV id="u6" class="u6;" >
+
+</DIV>
+
+<DIV id="u6container" style="position:absolute; left:0px; top:0px; width:905px; height:30px; overflow:visible">
+
+<div id="u7" class="u7_container"   >
+<div id="u7_img" class="u7_normal detectCanvas"></div>
+<div id="u8" class="u8"  >
+<div id="u8_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">首页</span></p></div>
+</div>
+</div>
+<div id="u9" class="u9_container"   >
+<div id="u9_img" class="u9_normal detectCanvas"></div>
+<div id="u10" class="u10"  >
+<div id="u10_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">简历管理</span></p></div>
+</div>
+</div>
+<div id="u11" class="u11_container"   >
+<div id="u11_img" class="u11_normal detectCanvas"></div>
+<div id="u12" class="u12"  >
+<div id="u12_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">公司管理</span></p></div>
+</div>
+</div>
+<div id="u13" class="u13_container"   >
+<div id="u13_img" class="u13_normal detectCanvas"></div>
+<div id="u14" class="u14"  >
+<div id="u14_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">内容管理</span></p></div>
+</div>
+</div>
+<div id="u15" class="u15_container"   >
+<div id="u15_img" class="u15_normal detectCanvas"></div>
+<div id="u16" class="u16"  >
+<div id="u16_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告管理</span></p></div>
+</div>
+</div>
+<div id="u17" class="u17_container"   >
+<div id="u17_img" class="u17_normal detectCanvas"></div>
+<div id="u18" class="u18"  >
+<div id="u18_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">友情链接</span></p></div>
+</div>
+</div>
+<div id="u19" class="u19_container"   >
+<div id="u19_img" class="u19_normal detectCanvas"></div>
+<div id="u20" class="u20"  >
+<div id="u20_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员</span></p></div>
+</div>
+</div>
+<div id="u21" class="u21_container"   >
+<div id="u21_img" class="u21_normal detectCanvas"></div>
+<div id="u22" class="u22"  >
+<div id="u22_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">网站设置</span></p></div>
+</div>
+</div>
+<div id="u23" class="u23_container"   >
+<div id="u23_img" class="u23_normal detectCanvas"></div>
+<div id="u24" class="u24"  >
+<div id="u24_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">系统工具</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+<DIV id="sm0u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u25container" style="position:absolute; left:0px; top:25px; width:100px; height:20px;; overflow:visible">
+
+<DIV id="u25_menu" class="u25_menu  detectCanvas"></DIV>
+
+<DIV id="u26" class="u26;" >
+
+</DIV>
+
+<DIV id="u26container" style="position:absolute; left:0px; top:0px; width:105px; height:25px; overflow:visible">
+
+<div id="u27" class="u27_container"   >
+<div id="u27_img" class="u27_normal detectCanvas"></div>
+<div id="u28" class="u28" style="visibility:hidden;"  >
+<div id="u28_rtf"></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm0u5', 'u7');
+</script>
+<DIV id="sm1u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u29container" style="position:absolute; left:300px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u29_menu" class="u29_menu  detectCanvas"></DIV>
+
+<DIV id="u30" class="u30;" >
+
+</DIV>
+
+<DIV id="u30container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u31" class="u31_container"   >
+<div id="u31_img" class="u31_normal detectCanvas"></div>
+<div id="u32" class="u32"  >
+<div id="u32_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加资讯</span></p></div>
+</div>
+</div>
+<div id="u33" class="u33_container"   >
+<div id="u33_img" class="u33_normal detectCanvas"></div>
+<div id="u34" class="u34"  >
+<div id="u34_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理资讯</span></p></div>
+</div>
+</div>
+<div id="u35" class="u35_container"   >
+<div id="u35_img" class="u35_normal detectCanvas"></div>
+<div id="u36" class="u36" style="visibility:hidden;"  >
+<div id="u36_rtf"></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm1u5', 'u13');
+</script>
+<DIV id="sm2u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u37container" style="position:absolute; left:500px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u37_menu" class="u37_menu  detectCanvas"></DIV>
+
+<DIV id="u38" class="u38;" >
+
+</DIV>
+
+<DIV id="u38container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u39" class="u39_container"   >
+<div id="u39_img" class="u39_normal detectCanvas"></div>
+<div id="u40" class="u40"  >
+<div id="u40_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加友情链接</span></p></div>
+</div>
+</div>
+<div id="u41" class="u41_container"   >
+<div id="u41_img" class="u41_normal detectCanvas"></div>
+<div id="u42" class="u42"  >
+<div id="u42_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">友情链接管理</span></p></div>
+</div>
+</div>
+<div id="u43" class="u43_container"   >
+<div id="u43_img" class="u43_normal detectCanvas"></div>
+<div id="u44" class="u44"  >
+<div id="u44_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核友情链接</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm2u5', 'u17');
+</script>
+<DIV id="sm3u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u45container" style="position:absolute; left:400px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u45_menu" class="u45_menu  detectCanvas"></DIV>
+
+<DIV id="u46" class="u46;" >
+
+</DIV>
+
+<DIV id="u46container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u47" class="u47_container"   >
+<div id="u47_img" class="u47_normal detectCanvas"></div>
+<div id="u48" class="u48"  >
+<div id="u48_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理广告位</span></p></div>
+</div>
+</div>
+<div id="u49" class="u49_container"   >
+<div id="u49_img" class="u49_normal detectCanvas"></div>
+<div id="u50" class="u50"  >
+<div id="u50_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告列表</span></p></div>
+</div>
+</div>
+<div id="u51" class="u51_container"   >
+<div id="u51_img" class="u51_normal detectCanvas"></div>
+<div id="u52" class="u52"  >
+<div id="u52_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加广告</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm3u5', 'u15');
+</script>
+<DIV id="sm4u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u53container" style="position:absolute; left:700px; top:25px; width:100px; height:80px;; overflow:visible">
+
+<DIV id="u53_menu" class="u53_menu  detectCanvas"></DIV>
+
+<DIV id="u54" class="u54;" >
+
+</DIV>
+
+<DIV id="u54container" style="position:absolute; left:0px; top:0px; width:105px; height:85px; overflow:visible">
+
+<div id="u55" class="u55_container"   >
+<div id="u55_img" class="u55_normal detectCanvas"></div>
+<div id="u56" class="u56"  >
+<div id="u56_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职能设定</span></p></div>
+</div>
+</div>
+<div id="u57" class="u57_container"   >
+<div id="u57_img" class="u57_normal detectCanvas"></div>
+<div id="u58" class="u58"  >
+<div id="u58_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">学历分类设定</span></p></div>
+</div>
+</div>
+<div id="u59" class="u59_container"   >
+<div id="u59_img" class="u59_normal detectCanvas"></div>
+<div id="u60" class="u60"  >
+<div id="u60_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">敏感词过滤设定</span></p></div>
+</div>
+</div>
+<div id="u61" class="u61_container"   >
+<div id="u61_img" class="u61_normal detectCanvas"></div>
+<div id="u62" class="u62"  >
+<div id="u62_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">服务套餐设定</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+<DIV id="sm0u53" style="position:absolute; left:700px; top:25px; width:100px; height:80px; visibility:hidden; width:1px; height:1px;" >
+<DIV id="u63container" style="position:absolute; left:100px; top:40px; width:100px; height:20px;; overflow:visible">
+
+<DIV id="u63_menu" class="u63_menu  detectCanvas"></DIV>
+
+<DIV id="u64" class="u64;" >
+
+</DIV>
+
+<DIV id="u64container" style="position:absolute; left:0px; top:0px; width:105px; height:25px; overflow:visible">
+
+<div id="u65" class="u65_container"   >
+<div id="u65_img" class="u65_normal detectCanvas"></div>
+<div id="u66" class="u66" style="visibility:hidden;"  >
+<div id="u66_rtf"></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm0u53', 'u59');
+</script>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm4u5', 'u21');
+</script>
+<DIV id="sm5u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u67container" style="position:absolute; left:100px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u67_menu" class="u67_menu  detectCanvas"></DIV>
+
+<DIV id="u68" class="u68;" >
+
+</DIV>
+
+<DIV id="u68container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u69" class="u69_container"   >
+<div id="u69_img" class="u69_normal detectCanvas"></div>
+<div id="u70" class="u70"  >
+<div id="u70_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核简历</span></p></div>
+</div>
+</div>
+<div id="u71" class="u71_container"   >
+<div id="u71_img" class="u71_normal detectCanvas"></div>
+<div id="u72" class="u72"  >
+<div id="u72_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">简历列表</span></p></div>
+</div>
+</div>
+<div id="u73" class="u73_container"   >
+<div id="u73_img" class="u73_normal detectCanvas"></div>
+<div id="u74" class="u74"  >
+<div id="u74_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">人才搜索</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm5u5', 'u9');
+</script>
+<DIV id="sm6u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u75container" style="position:absolute; left:600px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u75_menu" class="u75_menu  detectCanvas"></DIV>
+
+<DIV id="u76" class="u76;" >
+
+</DIV>
+
+<DIV id="u76container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u77" class="u77_container"   >
+<div id="u77_img" class="u77_normal detectCanvas"></div>
+<div id="u78" class="u78"  >
+<div id="u78_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加管理员</span></p></div>
+</div>
+</div>
+<div id="u79" class="u79_container"   >
+<div id="u79_img" class="u79_normal detectCanvas"></div>
+<div id="u80" class="u80"  >
+<div id="u80_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员列表</span></p></div>
+</div>
+</div>
+<div id="u81" class="u81_container"   >
+<div id="u81_img" class="u81_normal detectCanvas"></div>
+<div id="u82" class="u82"  >
+<div id="u82_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">设置管理员权限</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm6u5', 'u19');
+</script>
+<DIV id="sm7u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u83container" style="position:absolute; left:800px; top:25px; width:100px; height:80px;; overflow:visible">
+
+<DIV id="u83_menu" class="u83_menu  detectCanvas"></DIV>
+
+<DIV id="u84" class="u84;" >
+
+</DIV>
+
+<DIV id="u84container" style="position:absolute; left:0px; top:0px; width:105px; height:85px; overflow:visible">
+
+<div id="u85" class="u85_container"   >
+<div id="u85_img" class="u85_normal detectCanvas"></div>
+<div id="u86" class="u86"  >
+<div id="u86_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">网站静态</span></p></div>
+</div>
+</div>
+<div id="u87" class="u87_container"   >
+<div id="u87_img" class="u87_normal detectCanvas"></div>
+<div id="u88" class="u88"  >
+<div id="u88_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">更新缓存</span></p></div>
+</div>
+</div>
+<div id="u89" class="u89_container"   >
+<div id="u89_img" class="u89_normal detectCanvas"></div>
+<div id="u90" class="u90"  >
+<div id="u90_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">意见反馈</span></p></div>
+</div>
+</div>
+<div id="u91" class="u91_container"   >
+<div id="u91_img" class="u91_normal detectCanvas"></div>
+<div id="u92" class="u92"  >
+<div id="u92_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">系统错误日志</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm7u5', 'u23');
+</script>
+<DIV id="sm8u5" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u93container" style="position:absolute; left:200px; top:25px; width:100px; height:100px;; overflow:visible">
+
+<DIV id="u93_menu" class="u93_menu  detectCanvas"></DIV>
+
+<DIV id="u94" class="u94;" >
+
+</DIV>
+
+<DIV id="u94container" style="position:absolute; left:0px; top:0px; width:105px; height:105px; overflow:visible">
+
+<div id="u95" class="u95_container"   >
+<div id="u95_img" class="u95_normal detectCanvas"></div>
+<div id="u96" class="u96"  >
+<div id="u96_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核企业信息</span></p></div>
+</div>
+</div>
+<div id="u97" class="u97_container"   >
+<div id="u97_img" class="u97_normal detectCanvas"></div>
+<div id="u98" class="u98"  >
+<div id="u98_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核职位信息</span></p></div>
+</div>
+</div>
+<div id="u99" class="u99_container"   >
+<div id="u99_img" class="u99_normal detectCanvas"></div>
+<div id="u100" class="u100"  >
+<div id="u100_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看公司列表</span></p></div>
+</div>
+</div>
+<div id="u101" class="u101_container"   >
+<div id="u101_img" class="u101_normal detectCanvas"></div>
+<div id="u102" class="u102"  >
+<div id="u102_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看职位列表</span></p></div>
+</div>
+</div>
+<div id="u103" class="u103_container"   >
+<div id="u103_img" class="u103_normal detectCanvas"></div>
+<div id="u104" class="u104"  >
+<div id="u104_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看到期职位</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm8u5', 'u11');
+</script>
+<div id="u105" class="u105"  data-label="paragraph">
+<div id="u105_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">退出系统</span></p></div>
+</div>
+<div id="u106" class="u106_container"   >
+<div id="u106_img" class="u106_normal detectCanvas"></div>
+<div id="u107" class="u107" style="visibility:hidden;"  >
+<div id="u107_rtf"></div>
+</div>
+</div>
+<DIV id="u108" style="border-style:dotted; border-color:red; visibility:hidden; position:absolute; left:0px; top:0px; width:1350px; height:75px;;" ></div>
+<div id="u109" class="u109_container"   >
+<div id="u109_img" class="u109_normal detectCanvas"></div>
+<div id="u110" class="u110" style="visibility:hidden;"  >
+<div id="u110_rtf"></div>
+</div>
+</div>
+<div id="u111" class="u111"  >
+<div id="u111_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员列表</span></p></div>
+</div>
+<div id="u112" class="u112"  >
+<div id="u112_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加管理员</span></p></div>
+</div>
+<div id="u113" class="u113"  >
+<div id="u113_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员权限设定</span></p></div>
+</div>
+<DIV id="u114container" style="position:absolute; left:150px; top:144px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u114">
+<div id="u115" class="u115"  >
+<div id="u115_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">简历管理</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u114" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u116container" style="position:absolute; left:252px; top:180px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u116">
+<div id="u117" class="u117"  >
+<div id="u117_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改简历</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u116" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u118container" style="position:absolute; left:532px; top:180px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u118">
+<div id="u119" class="u119"  >
+<div id="u119_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除简历</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u118" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u120container" style="position:absolute; left:392px; top:180px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u120">
+<div id="u121" class="u121"  >
+<div id="u121_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核简历</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u120" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u122container" style="position:absolute; left:150px; top:230px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u122">
+<div id="u123" class="u123"  >
+<div id="u123_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">公司管理</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u122" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u124container" style="position:absolute; left:250px; top:264px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u124">
+<div id="u125" class="u125"  >
+<div id="u125_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改公司简介</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u124" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u126container" style="position:absolute; left:530px; top:264px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u126">
+<div id="u127" class="u127"  >
+<div id="u127_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">公司</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u126" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u128container" style="position:absolute; left:390px; top:264px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u128">
+<div id="u129" class="u129"  >
+<div id="u129_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核公司</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u128" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u130container" style="position:absolute; left:150px; top:318px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u130">
+<div id="u131" class="u131"  >
+<div id="u131_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职位管理</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u130" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u132container" style="position:absolute; left:250px; top:360px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u132">
+<div id="u133" class="u133"  >
+<div id="u133_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职位</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u132" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u134container" style="position:absolute; left:530px; top:360px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u134">
+<div id="u135" class="u135"  >
+<div id="u135_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除职位</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u134" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u136container" style="position:absolute; left:390px; top:360px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u136">
+<div id="u137" class="u137"  >
+<div id="u137_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核职位</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u136" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u138container" style="position:absolute; left:150px; top:408px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u138">
+<div id="u139" class="u139"  >
+<div id="u139_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">内容管理</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u138" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u140container" style="position:absolute; left:150px; top:444px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u140">
+<div id="u141" class="u141"  >
+<div id="u141_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加内容</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u140" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u142container" style="position:absolute; left:430px; top:444px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u142">
+<div id="u143" class="u143"  >
+<div id="u143_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除内容</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u142" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u144container" style="position:absolute; left:290px; top:444px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u144">
+<div id="u145" class="u145"  >
+<div id="u145_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改内容</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u144" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u146container" style="position:absolute; left:662px; top:180px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u146">
+<div id="u147" class="u147"  >
+<div id="u147_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">搜索简历</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u146" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u148container" style="position:absolute; left:660px; top:360px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u148">
+<div id="u149" class="u149"  >
+<div id="u149_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">搜索职位</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u148" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<div id="u150" class="u150"  >
+<div id="u150_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u151" class="u151"  >
+<div id="u151_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<div id="u152" class="u152"  >
+<div id="u152_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u153" class="u153"  >
+<div id="u153_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<div id="u154" class="u154"  >
+<div id="u154_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u155" class="u155"  >
+<div id="u155_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<div id="u156" class="u156"  >
+<div id="u156_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u157" class="u157"  >
+<div id="u157_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<DIV id="u158container" style="position:absolute; left:150px; top:490px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u158">
+<div id="u159" class="u159"  >
+<div id="u159_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告管理</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u158" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u160container" style="position:absolute; left:150px; top:526px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u160">
+<div id="u161" class="u161"  >
+<div id="u161_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u160" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u162container" style="position:absolute; left:430px; top:526px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u162">
+<div id="u163" class="u163"  >
+<div id="u163_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u162" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u164container" style="position:absolute; left:290px; top:526px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u164">
+<div id="u165" class="u165"  >
+<div id="u165_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u164" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<div id="u166" class="u166"  >
+<div id="u166_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u167" class="u167"  >
+<div id="u167_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<DIV id="u168container" style="position:absolute; left:150px; top:568px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u168">
+<div id="u169" class="u169"  >
+<div id="u169_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">友情链接管理</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u168" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u170container" style="position:absolute; left:150px; top:604px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u170">
+<div id="u171" class="u171"  >
+<div id="u171_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">友情链接</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u170" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u172container" style="position:absolute; left:430px; top:604px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u172">
+<div id="u173" class="u173"  >
+<div id="u173_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核友情链接</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u172" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u174container" style="position:absolute; left:290px; top:604px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u174">
+<div id="u175" class="u175"  >
+<div id="u175_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">友情链接</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u174" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<div id="u176" class="u176"  >
+<div id="u176_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u177" class="u177"  >
+<div id="u177_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<DIV id="u178container" style="position:absolute; left:550px; top:604px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u178">
+<div id="u179" class="u179"  >
+<div id="u179_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除友情链接</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u178" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u180container" style="position:absolute; left:150px; top:648px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u180">
+<div id="u181" class="u181"  >
+<div id="u181_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u180" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u182container" style="position:absolute; left:150px; top:684px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u182">
+<div id="u183" class="u183"  >
+<div id="u183_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u182" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u184container" style="position:absolute; left:430px; top:684px; width:110px; height:16px; ; ; ;" >
+<LABEL for="u184">
+<div id="u185" class="u185"  >
+<div id="u185_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">设置管理员权限</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u184" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u186container" style="position:absolute; left:290px; top:684px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u186">
+<div id="u187" class="u187"  >
+<div id="u187_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u186" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<div id="u188" class="u188"  >
+<div id="u188_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u189" class="u189"  >
+<div id="u189_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<DIV id="u190container" style="position:absolute; left:550px; top:684px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u190">
+<div id="u191" class="u191"  >
+<div id="u191_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除管理员</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u190" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u192container" style="position:absolute; left:660px; top:264px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u192">
+<div id="u193" class="u193"  >
+<div id="u193_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">设置公司权限</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u192" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u194container" style="position:absolute; left:152px; top:729px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u194">
+<div id="u195" class="u195"  >
+<div id="u195_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">网站设置</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u194" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u196container" style="position:absolute; left:152px; top:765px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u196">
+<div id="u197" class="u197"  >
+<div id="u197_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看网站设置</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u196" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u198container" style="position:absolute; left:292px; top:765px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u198">
+<div id="u199" class="u199"  >
+<div id="u199_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">修改网站设置</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u198" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<div id="u200" class="u200"  >
+<div id="u200_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u201" class="u201"  >
+<div id="u201_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<DIV id="u202container" style="position:absolute; left:152px; top:810px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u202">
+<div id="u203" class="u203"  >
+<div id="u203_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">系统工具</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u202" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u204container" style="position:absolute; left:152px; top:846px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u204">
+<div id="u205" class="u205"  >
+<div id="u205_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">清除缓存</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u204" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u206container" style="position:absolute; left:292px; top:846px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u206">
+<div id="u207" class="u207"  >
+<div id="u207_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">首页静态生成</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u206" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<div id="u208" class="u208"  >
+<div id="u208_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u209" class="u209"  >
+<div id="u209_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<DIV id="u210container" style="position:absolute; left:152px; top:884px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u210">
+<div id="u211" class="u211"  >
+<div id="u211_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看意见反馈</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u210" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"  checked >
+</DIV>
+<DIV id="u212container" style="position:absolute; left:292px; top:884px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u212">
+<div id="u213" class="u213"  >
+<div id="u213_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">回复意见反馈</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u212" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u214container" style="position:absolute; left:430px; top:884px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u214">
+<div id="u215" class="u215"  >
+<div id="u215_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">删除意见反馈</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u214" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u216container" style="position:absolute; left:430px; top:846px; width:140px; height:16px; ; ; ;" >
+<LABEL for="u216">
+<div id="u217" class="u217"  >
+<div id="u217_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看系统错误日志</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u216" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u218container" style="position:absolute; left:670px; top:684px; width:130px; height:16px; ; ; ;" >
+<LABEL for="u218">
+<div id="u219" class="u219"  >
+<div id="u219_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看管理员列表</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u218" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<div id="u220" class="u220_container"   >
+<div id="u220_img" class="u220_normal detectCanvas"></div>
+<div id="u221" class="u221"  >
+<div id="u221_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">保存</span></p></div>
+</div>
+</div>
+<div id="u222" class="u222"  >
+<div id="u222_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全选</span></p></div>
+</div>
+<div id="u223" class="u223"  >
+<div id="u223_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">全不选</span></p></div>
+</div>
+<DIV id="u224container" style="position:absolute; left:170px; top:960px; width:30px; height:16px; ; ; ;" >
+<LABEL for="u224">
+<div id="u225" class="u225" style="visibility:hidden;"  >
+<div id="u225_rtf"></div>
+</div>
+</LABEL>
+<INPUT id="u224" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"  checked >
+</DIV>
+<DIV id="u226container" style="position:absolute; left:152px; top:180px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u226">
+<div id="u227" class="u227"  >
+<div id="u227_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看简历</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u226" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u228container" style="position:absolute; left:150px; top:264px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u228">
+<div id="u229" class="u229"  >
+<div id="u229_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看公司</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u228" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+<DIV id="u230container" style="position:absolute; left:150px; top:360px; width:100px; height:16px; ; ; ;" >
+<LABEL for="u230">
+<div id="u231" class="u231"  >
+<div id="u231_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看职位</span></p></div>
+</div>
+</LABEL>
+<INPUT id="u230" style="position:absolute; left:-3px; top:-2px;" type="checkbox" value="checkbox"   >
+</DIV>
+</div>
+<div class="preload"><img src="顶部导航_files/u17_normal.png" width="1" height="1"/><img src="顶部导航_files/menu_u22_menu.png" width="1" height="1"/><img src="顶部导航_files/u24_mouseOver.png" width="1" height="1"/><img src="顶部导航_files/u24_selected.png" width="1" height="1"/><img src="顶部导航_files/u24_normal.png" width="1" height="1"/><img src="顶部导航_files/u42_menu.png" width="1" height="1"/><img src="顶部导航_files/u44_mouseOver.png" width="1" height="1"/><img src="顶部导航_files/u44_selected.png" width="1" height="1"/><img src="顶部导航_files/u44_normal.png" width="1" height="1"/><img src="顶部导航_files/u46_menu.png" width="1" height="1"/><img src="顶部导航_files/u54_menu.png" width="1" height="1"/><img src="顶部导航_files/u62_menu.png" width="1" height="1"/><img src="顶部导航_files/u70_menu.png" width="1" height="1"/><img src="顶部导航_files/u80_menu.png" width="1" height="1"/><img src="顶部导航_files/u84_menu.png" width="1" height="1"/><img src="顶部导航_files/u92_menu.png" width="1" height="1"/><img src="顶部导航_files/u100_menu.png" width="1" height="1"/><img src="顶部导航_files/u110_menu.png" width="1" height="1"/><img src="顶部导航_files/u123_normal.png" width="1" height="1"/><img src="管理员权限_files/u109_normal.png" width="1" height="1"/><img src="管理员权限_files/u220_normal.png" width="1" height="1"/></div>
+</body>
+<script src="resources/scripts/axurerp_pagescript.js"></script>
+<script src="管理员权限_files/axurerp_pagespecificscript.js" charset="utf-8"></script>

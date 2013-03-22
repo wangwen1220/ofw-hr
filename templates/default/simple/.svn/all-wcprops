@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/simple
+END
+simple-del.htm
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/simple/simple-del.htm
+END
+simple-edit.htm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/simple/simple-edit.htm
+END
+simple-add.htm
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/simple/simple-add.htm
+END
+simple-list.htm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/simple/simple-list.htm
+END
+simple-refresh.htm
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/simple/simple-refresh.htm
+END
+simple-show.htm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/simple/simple-show.htm
+END

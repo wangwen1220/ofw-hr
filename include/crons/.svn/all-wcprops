@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/netway/!svn/ver/25695/ofweek_hr/include/crons
+END
+mail_resume_complete.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/netway/!svn/ver/25659/ofweek_hr/include/crons/mail_resume_complete.php
+END
+baibo_interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/netway/!svn/ver/25695/ofweek_hr/include/crons/baibo_interface.php
+END
+clear_promotion.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/netway/!svn/ver/23544/ofweek_hr/include/crons/clear_promotion.php
+END
+clear_expired_simple.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/netway/!svn/ver/23544/ofweek_hr/include/crons/clear_expired_simple.php
+END
+mail_resume_refresh.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/25566/ofweek_hr/include/crons/mail_resume_refresh.php
+END
+clear_all_cache.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/netway/!svn/ver/23544/ofweek_hr/include/crons/clear_all_cache.php
+END
+clear_members_log.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/netway/!svn/ver/23544/ofweek_hr/include/crons/clear_members_log.php
+END
+clear_expired_jobs.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/netway/!svn/ver/23544/ofweek_hr/include/crons/clear_expired_jobs.php
+END
+job_refresh.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/netway/!svn/ver/25566/ofweek_hr/include/crons/job_refresh.php
+END
+stat_category.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/netway/!svn/ver/25566/ofweek_hr/include/crons/stat_category.php
+END

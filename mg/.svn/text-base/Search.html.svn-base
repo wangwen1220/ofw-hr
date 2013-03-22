@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="skin/default/css/home.css" />
+<link type="text/css" rel="stylesheet" href="skin/default/css/css.css" />
+<script type="text/javascript" src="skin/default/js/tc.js"></script>
+<script type="text/javascript" src="skin/default/js/xl.js"></script>
+<title>高级搜索</title>
+</head>
+
+<body>
+<div id="site">
+	
+	<!--header start-->
+	<div class="header">
+        <div class="top">
+          <div class="link"><a href="http://www.ofweek.com/" target="_blank">OFweek首页</a>|<a href="http://lights.ofweek.com/" target="_blank">半导体照明</a>|<a href="http://solar.ofweek.com/" target="_blank">太阳能光伏</a>|<a href="http://fiber.ofweek.com/" target="_blank">光通讯</a>|<a href="http://laser.ofweek.com/" target="_blank">激光</a>|<a href="http://ee.ofweek.com/" target="_blank">电子工程</a>|<a href="http://gongkong.ofweek.com/" target="_blank">工控</a></div>
+          <div class="deng" id="site-nav">
+            <ul class="quick-menu">
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="login.html">求职者登陆</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+ 			<div class="JobseekersUserLogoncontent" id="userlogin" >
+           <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+           </ul> 
+           <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+           </li></ul>
+           <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+           <ul>
+           <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+               <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="password.html" class="f_bule">忘记密码了？</a>
+			</li></ul>
+           </div>
+          </div>
+                </div>
+                </div>
+                </li>
+                <li>或者</li>
+                <li><a href="reg/person/index.html">注册</a></li>
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="hrlogin.html">企业登录</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+                    <div class="JobseekersUserLogoncontent" id="userlogin" >
+                   <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+                   </ul> 
+                   <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+                   </li></ul>
+                   <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+                   <ul>
+                   <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+                       <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="password.html" class="f_bule">忘记密码了？</a>
+                    </li></ul>
+                   </div>
+                  </div>
+                </div>
+                </div>
+                </li>
+                <li><img src="skin/default/images/inco1.gif" /></li>
+                <li><a href="#">企业注册</a></li>
+            </ul>
+            </div>
+      </div>
+        <div class="logo"><a href="index.html"><img src="skin/default/images/logo.jpg" border="0" /></a></div>
+        <div class="nav_m">
+          <ul>
+                <li><a href="index.html">首页</a></li>
+           		<li><a href="joblist.html">求职</a></li>
+                <li><a href="hrlogin.html">招聘</a></li>
+                <li><a href="joblist.html">校园招聘</a></li>
+                <li><a href="hr.html">职场资讯</a></li>
+            </ul>
+            <div class="qiye"><a href="member/company/company.html">企业服务</a>热线：<strong>0755-83279360</strong></div>
+      </div>
+    </div>
+	<!--header end-->
+	<div class="current">您当前所在位置：<a href="hr.ofweek.com" target="_blank">OFweek人才网</a> » <a href="#" target="_blank">高级搜索</a></div>
+	<!--body start-->
+	<div id="content" style="border:1px solid #e4e4e4; margin:0px 0 10px;">
+		<div class="gjss_tl">
+		<table width="239" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="68" align="left"><img src="skin/default/images/zwss.png" border="0" /></td>
+				<td width="196">职位搜索（高级查询）</td>
+		</tr>
+</table>
+		</div>
+		<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td style="padding-left:245px;"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="85"><input type="radio" name="radio1" />不限</td>
+				<td width="105"><input type="radio" name="radio1" />公司名称</td>
+				<td width="175"><input type="radio" name="radio1" />职位名称</td>
+		</tr>
+</table>
+</td>
+		</tr>
+		<tr>
+				<td><table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="85">关键字：</td>
+				<td width="320"><input type="text" name="text1" style="height:20px; line-height:20px; width:285px;" /></td>
+				<td width="258">(搜索公司名称、招聘职位名称)</td>
+		</tr>
+</table>
+</td>
+		</tr>
+		<tr>
+				<td valign="top" style="padding-top:14px; line-height:22px;"><table width="663" border="0" cellpadding="0" cellspacing="0" align="center">
+              <tr>
+                <td width="13%" valign="top">行业分类：<br />
+                  （不多于5个）</td>
+                <td width="87%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="42%" valign="top"><select name="select" size="6" multiple="multiple" style="WIDTH: 17em">
+                          <option>太阳能光伏</option>
+                          <option>LED</option>
+                          <option>电子</option>
+                        </select></td>
+                      <td width="14%" align="left"><input type="button" style="width:50px;" onclick="addOption(this.form.selLocation,this.form.JobLocation_CODE)" value=">>" />
+                        <br />
+                        <br />
+                        <input type="button" style="width:50px;" onclick="removeOption(this.form.JobLocation_CODE)" value="<<" /></td>
+                      <td width="44%"><label>
+                        <select multiple="true" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" name="JobLocation_CODE">
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="13%" valign="top"><p>职位分类<br />
+                    （不多于5个）</p></td>
+                <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="42%" height="35" valign="bottom" ><select name="select3" style="WIDTH:17em">
+                          <option>经营管理类</option>
+                          <option>生产制造类</option>
+                          <option>市场营销类</option>
+                        </select></td>
+                      <td colspan="2" align="left" valign="bottom"><table border="0" cellspacing="0" cellpadding="0">
+                      		<tr>
+                      				<td><label>
+                      						<input type="text" name="textfield" id="textfield" class="s03" style="background:url(skin/default/images/btn03.gif) no-repeat right top;" />
+                      						</label></td>
+                      				<td><!--<input type="image" src="skin/default/images/btn03.gif"/>--></td>
+                      				</tr>
+                      		</table>                      		</td>
+                      </tr>
+                    <tr>
+                      <td valign="top"><select multiple="multiple" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" name="JobLocation_CODE2">
+                       <option>经营管理类</option>
+                          <option>&nbsp;&nbsp;总经理</option>
+                          <option>&nbsp;&nbsp;副总经理</option>
+						  <option>&nbsp;&nbsp;总监</option>
+					    </select>
+                      </td>
+                      <td width="14%" align="left"><input type="button" style="width:50px;" onclick="addOption(this.form.selLocation,this.form.JobLocation_CODE)" value=">>" />
+                        <br />
+                        <br />
+                        <input type="button" style="width:50px;" onclick="removeOption(this.form.JobLocation_CODE)" value="<<" /></td>
+                      <td width="44%"><label>
+                        <select multiple="true" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" name="JobLocation_CODE">
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="13%" valign="top"><p>地区分类<br />
+                    （不多于5个）</p></td>
+                <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<td width="42%" height="35" valign="bottom" ><select name="select3" style="WIDTH:17em">
+                          <option>全国</option>
+                          <option>北京市</option>
+                          <option>上海市</option>
+                          <option>广东省</option>
+                        </select></td>
+                      <td width="14%" align="left"></td>
+                     
+                    <tr>
+                      <td valign="top" width="42%"><select name="select2" size="6" multiple="multiple" style="WIDTH: 17em">
+                          <option>不限</option>
+                          <option>广东省</option>
+                          <option>　 　 深圳市</option>
+                          <option>　 　 南山区</option>
+                          <option>北京</option>
+                          <option>上海</option>
+                          <option>天津</option>
+                          <option>浙江省</option>
+                        </select></td>
+                      <td width="14%" align="left"><input type="button" style="width:50px;" onclick="addOption(this.form.selLocation,this.form.JobLocation_CODE)" value=">>" />
+                        <br />
+                        <br />
+                        <input type="button" style="width:50px;" onclick="removeOption(this.form.JobLocation_CODE)" value="<<" /></td>
+                      <td width="44%"><label>
+                        <select multiple="true" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" name="JobLocation_CODE">
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              
+			
+             
+              
+             
+              
+            </table></td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">性别：</td>
+				<td width="577" align="left"><table width="192" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="51"><input type="radio" name="radio1" />
+				男</td>
+				<td width="50"><input type="radio" name="radio1" />
+				女</td>
+				<td width="91"><input type="radio" name="radio1" />
+				不限</td>
+		</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86"><p>招聘类别：</p></td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="60"><input type="checkbox" name="checkbox1" />
+				全职</td>
+				<td width="60"><input type="checkbox" name="checkbox2" />
+				兼职</td>
+				<td width="69"><input type="checkbox" name="checkbox3" />
+				应届生</td>
+				<td width="176"><input type="checkbox" name="checkbox4" />实习</td>
+		</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">学历要求：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="233"><select name="select3" size="1" style="WIDTH: 17em">
+                          <option>博士</option>
+                          <option>研究生</option>
+                          <option>本科</option>
+                          <option>大专</option>
+                          <option>高中</option>
+                        </select>
+						</td>
+				<td width="132"><input type="checkbox" name="checkbox3" />
+						以上</td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">年龄：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="44"><input type="text" name="age1" style="width:30px; height:15px; line-height:15px;"/></td>
+				<td width="16">到</td>
+				<td width="305"><input type="text" name="age2" style="width:30px; height:15px; line-height:15px;" /></td>
+		</tr>
+</table></td>
+		</tr>
+</table>
+
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">薪酬：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="44"><input type="text" name="age1" style="width:30px; height:15px; line-height:15px;"/></td>
+				<td width="16">到</td>
+				<td width="305"><input type="text" name="age2" style="width:30px; height:15px; line-height:15px;" />&nbsp;&nbsp;&nbsp;0表示面议 </td>
+		</tr>
+</table></td>
+		</tr>
+</table>			
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">工作经验：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="233"><select name="select3" size="1" style="WIDTH: 17em">
+                          <option>5</option>
+                          <option>4</option>
+                          <option>3</option>
+                          <option>2</option>
+                          <option>1</option>
+                        </select>
+						</td>
+				<td width="132"><input type="checkbox" name="checkbox3" />
+						以上</td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">更新日期：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td><select name="select3" size="1" style="WIDTH: 17em">
+						<option>不限</option>
+						<option>当天</option>
+						<option>三天之内</option>
+						<option>一周之内</option>
+						<option>一个月内</option>
+						<option>三个月内</option>
+						<option>半年之内</option>
+						<option>一年之内</option>
+						</select></td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">&nbsp;</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td><input name="input" type="button" value="搜  索" class="so31"/></td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+</table>
+
+	</div>
+	<!--body end-->
+	<!--bottom start-->
+	<div id="bottom">
+	<div class="bottom-m">
+		<div class="bottom-m-1">
+			<a target="_blank" href="#">关于我们</a> -
+			<a target="_blank" href="#">征 稿</a> -
+			<a target="_blank" href="#">广告咨询</a> -
+			<a target="_blank" href="#">帮助信息</a> -
+			<a target="_blank" href="#">联系我们</a> -
+			<a target="_blank" href="#">会员服务</a> - 
+			<a target="_blank" href="#">网站导航</a>
+		</div>
+	</div>
+	<div class="bottom-2">
+	
+		我们的网站：
+		<a target="_blank" href="http://lights.ofweek.com/">半导体照明网</a> | 
+		<a target="_blank" href="http://solar.ofweek.com/">太阳能光伏网</a> | 
+		<a target="_blank" href="http://laser.ofweek.com/">激光网</a> | 
+		<a target="_blank" href="http://smartgrids.ofweek.com/">智能电网</a> | 
+		<a target="_blank" href="http://emc.ofweek.com/">节能网</a> | 
+		<a target="_blank" href="http://ee.ofweek.com/">电子工程网</a> | 
+		<a target="_blank" href="http://fiber.ofweek.com/">光通讯网</a> | 
+		<a target="_blank" href="http://gongkong.ofweek.com/">工控网</a> | 
+		<a target="_blank" href="http://windpower.ofweek.com/">风电网</a> | 
+		<a target="_blank" href="http://instrument.ofweek.com/">仪器仪表网</a> | 
+		<a target="_blank" href="http://display.ofweek.com/">光电显示网</a> | 
+		<a target="_blank" href="http://optics.ofweek.com/">光学网</a> | 
+		<a target="_blank" href="http://b2b.ofweek.com/">产品港湾</a> | 
+		<a target="_blank" href="http://cpbay.com/">CPbay</a>
+		<br>
+		客服热线：086-755-83279360 83279361 83279363 83279365 客服传真：0755-83279008
+		<br>
+		业务联系：086-755-83279360
+		<br>
+		Copyright &#169; 2012, All Rights Reserved.
+		<br>
+		中文版权所有－OFweek光电新闻网.网站所有图片、文字未经许可不得拷贝、复制。
+  </div>
+    <div class="bottom110">
+    
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="22%"><img src="skin/default/images/110.gif" width="115" height="75" /></td>
+          <td width="78%" align="left" valign="bottom">粤ICP备06087881</td>
+        </tr>
+      </table>
+    </div>
+</div>
+<!--bottom end-->
+
+</div>
+</body>
+</html>

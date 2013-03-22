@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	//头像
+	$("#show_avatars_url").mouseover(function() {
+		$(".avatars_edit").show();
+		$(".avatars_edit").css("opacity", 0.2);
+		$("#show_avatars_url").mouseout(function() {
+		$(".avatars_edit").hide();
+		});	
+	});
+});
+</script>
+</head>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz"><span style="float:left;">您当前所在位置：企业招聘首页</span><a href="/company/company-show-{#$member_uid#}.html" target="_blank" style="float:right;">预览我的公司首页</a></div>
+      <div class="hr_qiye">
+        <div class="hr_gsm">【{#$company.companyname#}】，欢迎来到OFweek人才网企业招聘中心。</div>
+        <div class="col_775 mtop">
+        <div class="w560">
+       	  <div class="hr_tjx">
+            <h3 class="hr_xin">统计信息</h3>
+		    <table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#DDDDDD">
+          <tr>
+            <td width="19%" rowspan="2" align="center" bgcolor="#e6eef9"><strong>服务计划</strong></td>
+            <td width="21%" align="center" bgcolor="#e6eef9">已发职位数</td>
+            <td width="18%" align="center" bgcolor="#e6eef9">剩余职位数</td>
+            <td width="23%" align="center" bgcolor="#e6eef9">已下简历</td>
+            <td width="19%" align="center" bgcolor="#e6eef9">剩余简历</td>
+          </tr>
+          <tr>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_jobs.php?act=jobs">{#$count_jobs#}</a></td>
+            <td align="center" bgcolor="#FFFFFF">{#$count_jobs_leave#}</td>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_recruitment.php?act=down_resume_list">{#$count_down_resume#}</a></td>
+            <td align="center" bgcolor="#FFFFFF">{#$count_down_resume_leave#}</td>
+          </tr>
+          <tr>
+            <td width="19%" rowspan="2" align="center" bgcolor="#e6eef9"><strong>招聘信息</strong></td>
+            <td width="21%" align="center" bgcolor="#e6eef9">发布中</a></td>
+            <td width="18%" align="center" bgcolor="#e6eef9">待审核</a></td>
+            <td width="23%" align="center" bgcolor="#e6eef9">停招</a></td>
+            <td width="19%" align="center" bgcolor="#e6eef9">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_jobs.php?act=jobs&jobtype=1">{#$count_jobs_display_1#}</a></td>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_jobs.php?act=jobs&jobtype=4">{#$count_jobs_audit_2#}</a></td>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_jobs.php?act=jobs&stop=1">{#$$count_jobs_display_2#}</a></td>
+            <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+          </tr>
+          <tr>
+            <td width="19%" rowspan="2" align="center" bgcolor="#e6eef9"><strong>简历</strong></td>
+            <td width="21%" align="center" bgcolor="#e6eef9">收到简历</a></td>
+            <td width="18%" align="center" bgcolor="#e6eef9">收藏简历</a></td>
+            <td width="23%" align="center" bgcolor="#e6eef9">面试通知</a></td>
+            <td width="19%" align="center" bgcolor="#e6eef9">&nbsp;</td>
+          </tr>
+          <tr>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_recruitment.php?act=apply_jobs">{#$count_apply#}</a></td>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_recruitment.php?act=favorites_list">{#$count_favorites#}</a></td>
+            <td align="center" bgcolor="#FFFFFF"><a href="company_recruitment.php?act=interview_list">{#$count_interview#}</a></td>
+            <td align="center" bgcolor="#FFFFFF">&nbsp;</td>
+          </tr>
+        </table>
+        	</div>
+          <div class="hr_wxt mtop">
+            <h3 class="hr_xin">温馨提示</h3>
+		    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="4%" valign="top">1、</td>
+                <td width="72%" valign="top">为了确保信息的真实性，我们将对注册的企业以及发布的职位进行审核。                </td>
+                <td width="24%"></td>
+              </tr>
+              <tr>
+                  <td>2、</td>
+                  <td>审核通过后，您的信息将被激活。您可以免费发布20条职位</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>3、</td>
+                  <td>经常登录并且刷新职位，将会获得更好的招聘效果</td>
+                  <td></td>
+              </tr>
+              <tr>
+                  <td>4、</td>
+                  <td>更多服务，请与我们客服进行联系</td>
+                  <td></td>
+              </tr>
+            </table>
+       	  </div>
+       </div>
+       <div class="w200">
+          <div class="hr_zh">
+          	<h3 class="hr_hao">账号信息</h3>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="50%">状态：</td>
+                <td width="50%">【<span class="{#$audit_style#}">{#$audit_cn#}</span>】</td>
+              </tr>
+              <tr>
+              	<td>公司简介：</td>
+                <td>【{#if ($company.contents=='' && $company.contents_tmp=='')#}<a href="company_info.php?act=company_intro_edit"><span class="f_red">不完善</span></a>{#else#}<span class="f_blue">完善</span>{#/if#}】</td>
+              </tr>
+              <tr>
+              	<td>公司基本信息：</td>
+                <td>【{#if $baseinfo_complete#}<span class="f_blue">完善</span>{#else#}<a href="company_info.php?act=company_profile_edit"><span class="f_red">不完善</span></a>{#/if#}】</td>
+              </tr>
+              <tr>
+              	<td>公司LOGO：</td>
+                <td>【{#if $company.logo==''#}<a href="company_info.php?act=company_logo"><span class="f_red">未上传</span></a>{#else#}<span class="f_blue">已上传</span>{#/if#}】</td>
+              </tr>
+              <tr>
+              	<td>会籍有效期：</td>
+                <td>【{#if $expire#}<span class="f_red">已过期</span>{#else#}{#$setmeal_endtime#}{#/if#}】</td>
+              </tr>
+              <tr>
+              	<td>未读系统消息：</td>
+                <td><a href="company_message.php?act=list">【{#$msg_unread_num#}】</a>条</td>
+              </tr>
+              
+            </table>
+
+          </div>
+          <div class="hr_lx mtop">
+          	<h3 class="hr_hao">联系客服</h3>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="35%" align="right">联系电话：</td>
+                <td width="65%">0755-83279360</td>
+              </tr>
+              <tr>
+              	<td align="right">传真：</td>
+                <td>0755-83279008</td>
+              </tr>
+              <tr>
+              	<td align="right" valign="top">邮箱地址：</td>
+                <td valign="top" style="word-break:break-all;"><a href="mailto:service@hr.ofweek.com">service@hr.ofweek.com</a></td>
+              </tr>
+              <tr>
+              	<td colspan="2"><a href="company_message.php?act=feedback" class="f_bule">意见反馈和投诉</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+  {#if $company.showed==0#}  
+  <div id="tab001" class="miniwin">
+			<div class="minitl">
+				<span class="winclosed"><a onclick="z_close('tab001');"></a></span>
+			</div>
+			<div class="mini_con" style="padding-left:15px;">
+				<table border="0" width="485" cellspacing="0" cellpadding="0">
+		<tr>
+				<td width="485" height="30">欢迎您：{#$member_username#}</td>
+		</tr>
+		<tr>
+				<td valign="top" style="padding-left:25px;"><table width="317" border="0"cellpadding="0" cellspacing="0">
+		<tr>
+				<td height="30" colspan="3">您是第一次来到OFweek人才网企业会员中心。</td>
+				</tr>
+		<tr>
+				<td width="117" height="30">公司简介：</td>
+				<td width="110" height="30" style="color:#004ba8;">{#if ($company.contents=='' && $company.contents_tmp=='')#}<a href="company_info.php?act=company_intro_edit"><span class="f_red">不完善</span></a>{#else#}<span class="f_blue">完善</span>{#/if#}</td>
+				<td width="90" height="30"><a href="company_info.php?act=company_intro_edit" target="_blank">修改</a></td>
+		</tr>
+		<tr>
+				<td width="117" height="30">基本信息：</td>
+				<td width="110" height="30" style="color:#cb0a00;">{#if $baseinfo_complete#}<span class="f_blue">完善</span>{#else#}<a href="company_info.php?act=company_profile_edit"><span class="f_red">不完善</span></a>{#/if#}</td>
+				<td width="90" height="30"><a href="company_info.php?act=company_profile_edit" target="_blank">{#if $baseinfo_complete#}修改{#else#}去完善{#/if#}</a></td>
+		</tr>
+		<tr>
+				<td height="30">营业执照：</td>
+				<td height="30" style="color:#cb0a00;">{#if $company.certificate_img==''#}<a href="company_info.php?act=company_auth"><span class="f_red">未上传</span></a>{#else#}<span class="f_blue">已上传</span>{#/if#}</td>
+				<td height="30"><a href="company_info.php?act=company_auth" target="_blank">{#if $company.certificate_img==''#}去上传{#else#}修改{#/if#}</a></td>
+		</tr>
+		<tr>
+				<td height="30">公司LOGO：</td>
+				<td height="30" style="color:#004ba8;">{#if $company.logo==''#}<a href="company_info.php?act=company_logo"><span class="f_red">未上传</span></a>{#else#}<span class="f_blue">已上传</span>{#/if#}</td>
+				<td height="30"><a href="company_info.php?act=company_logo" target="_blank">{#if $company.logo==''#}去上传{#else#}修改{#/if#}</a></td>
+		</tr>
+</table>
+</td>
+		</tr>
+		<tr>
+				<td style="text-indent:2em;line-height:22px;">您可以先了解一下OFweek人才网系统，如果有何疑问，可以通过意见反馈或者电话与我们联系：0755-83279360</td>
+		</tr>
+</table>
+
+			</div>
+	  </div>
+{#elseif $company.audit==3#}
+	  
+	  <div id="tab002" class="miniwin1">
+	  	<div class="minitl">
+			<span class="winclosed"><a onclick="z_close('tab002');"></a></span>
+		</div>
+		<div class="mini_con" style="padding-left:15px;">
+			<table width="492" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td height="30">欢迎您：{#$member_username#}</td>
+		</tr>
+		<tr>
+				<td style="text-indent:2em;line-height:22px;">系统检测到您的会员尚未通过审核，这将影响到您对我们网站的使用。</td>
+		</tr>
+		<tr>
+				<td height="30">未通过审核的原因一般有以下几个方面：</td>
+		</tr>
+		<tr>
+				<td style="padding-left:25px;"><table width="450" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="383" height="30">1.您的公司资料并不完善。</td>
+				<td width="67"><a href="company_info.php?act=company_intro_edit" target="_blank">去完善</a></td>
+		</tr>
+		<tr>
+				<td height="30" style="line-height:22px;">2.公司简介不符合规范</td>
+				<td><a href="company_info.php?act=company_auth" target="_blank">修改</a></td>
+		</tr>
+		<tr>
+				<td height="30" style="line-height:22px;">3.您公司的经营范围与OFweek所涉及的行业或者职位不相符</td>
+				<td>&nbsp;</td>
+		</tr>
+		<tr>
+				<td height="30">4.您的公司简介中包含了不符合要求的信息。</td>
+				<td><a href="company_info.php?act=company_intro_edit" target="_blank">修改</a></td>
+		</tr>
+</table>
+</td>
+		</tr>
+		<tr>
+				<td style="text-indent:2em;line-height:22px;">您可以通过意见反馈或者电话联系方式与我们联系：0755-83279360</td>
+		</tr>
+</table>
+
+		</div>
+	  </div>
+{#elseif $expire#}
+	  <div id="tab003" class="miniwin2" style="clear:both;z-index:100000;">
+	  	<div class="minitl">
+			<span class="winclosed"><a onclick="z_close('tab003');"></a></span>
+		</div>
+		<div class="mini_con" style="padding-left:15px;">
+			<table width="492" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="506" height="30">欢迎您：{#$member_username#}</td>
+		</tr>
+		<tr>
+				<td style="text-indent:2em; height:30px; line-height:30px;">您的会员<a style="color:#FF0000">已经过期</a>，您将无法正常使用本站提供的功能。</td>
+		</tr>
+		<tr>
+				<td style="text-indent:2em; height:30px; line-height:30px;">为了不影响到您招聘的效果，请与我们客服人员进行联系。</td>
+		</tr>
+		<tr>
+				<td style="text-indent:2em; height:30px; line-height:30px;">客服热线：0755-83279360</td>
+		</tr>
+</table>
+		</div>
+	  </div>
+	  
+{#/if#}
+
+<script>
+function z_close(v){
+	$("#"+v).css("display","none");
+}
+</script>	  
+</div>
+</body>
+</html>

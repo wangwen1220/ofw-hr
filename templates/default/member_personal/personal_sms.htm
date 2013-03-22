@@ -1,0 +1,34 @@
+
+      <div class="weiz">您当前所在位置： <a href="/user/personal/">个人中心</a> >> 系统消息</div>
+
+
+ <div class="shen_ul">
+		<div class="xiu_g">
+		<table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#DDDDDD">
+          <tr>
+            <td width="38%" align="center" bgcolor="#FFFFFF">标题</td>
+            <td width="22%" align="center" bgcolor="#FFFFFF">时间</td>
+            <td width="22%" align="center" bgcolor="#FFFFFF">来源</td>
+            <td width="18%" bgcolor="#FFFFFF">操作</td>
+          </tr>
+          {#if empty($messageList)#}
+          <tr><td bgcolor="#FFFFFF" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无</td></tr>
+          {#/if#}
+          {#foreach from=$messageList item=list#}
+          <tr>
+            <td bgcolor="#FFFFFF">
+            <a href="personal_user.php?act=sms_view&id={#$list.id#}"><span title="{#$list.title#}" style="width:380px;padding-left:10px;display:block;float:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.title#}</span>{#if $list.readed==0#}<img style="float:left;margin-top:7px;" src="{#$QISHI.site_template#}images/new.gif" />{#/if#}</a>
+            </td>
+            <td align="center" bgcolor="#FFFFFF">{#$list.addtime_cn#}</td>
+            <td align="center" bgcolor="#FFFFFF">系统</td>
+            <td align="center"  bgcolor="#FFFFFF"><a href="personal_user.php?act=sms_del&id={#$list.id#}&page={#$page_num#}" onclick="return confirm('确定要删除吗？');">删除</a></td>
+          </tr>
+          {#/foreach#}
+          <tr>
+                <td bgcolor="#EEEEEE" colspan="4"><span style="float:left; padding:0px 20px;">共{#$total#}条记录</span><div class="page">{#$pageHTML#}</div></td>
+                
+            </tr>
+
+        </table>
+             </div>
+	</div>

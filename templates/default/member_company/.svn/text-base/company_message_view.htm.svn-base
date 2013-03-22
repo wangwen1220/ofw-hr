@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;系统工具&nbsp;&gt;&gt;&nbsp;系统消息</div>
+      <div class="xiu_g">
+        
+        
+        <table width="100%" border="0">
+                      <tr>
+                        <td align="center"><strong style="color:#bd0000; font-size:14px;">{#$message.title#}</strong></td>
+                      </tr>
+                      <tr>
+                        <td>{#$message.feedback|nl2br#}</td>
+                      </tr>
+                    </table>
+        
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+</body>
+<script>
+function message_show(v){
+	$.get("{#$QISHI.site_dir#}user/company/company_message.php?act=show&id="+v,function(data){
+		$("#show_div").html(data);
+	});
+}
+$(document).ready(function(){
+	$('#allcheck').click(function(){
+		var f = this.checked;
+		$('.a_check').each(function(){
+			this.checked = f;
+		});
+	});
+});
+
+</script>
+</html>

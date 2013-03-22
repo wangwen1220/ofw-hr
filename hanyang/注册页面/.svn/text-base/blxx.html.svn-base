@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body{
+	font-size:12px;
+	}
+.blxx{
+	width:720px;
+	margin:0 auto;
+	padding-left:180px;
+	}
+.blxx ul{
+	float:left;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	}
+.blxx ul li{
+	padding-bottom:25px;
+	text-align:left;
+	}
+.blxx ul li .user_name{
+	position:relative;
+	display:inline-block;
+	width:100px;
+	height:25px;
+	text-align:right;
+	line-height:25px;
+	}
+.blxx ul li .xz_pic{
+	position:relative;
+	display:inline-block;
+	width:62px;
+	height:19px;
+	top:3px;
+	left:29px;
+	}
+.blxx ul li .wenzi{
+	position:relative;
+	display:inline-block;
+	height:25px;
+	line-height:25px;
+	width:70px;
+	left:50px;
+	}
+.blxx ul li .user_kuang{
+	display:inline-block;
+	width:338px;
+	margin-left:29px;
+	}
+.blxx ul li .user_kuang textarea{
+	width:336px;
+	height:118px;
+	overflow:hidden;
+	line-height:20px;
+	border:1px solid #7f9db9;
+	}
+.blxx ul li .user_kuang input{
+	width:336px;
+	height:23px;
+	line-height:23px;
+	border:1px solid #7f9db9;
+	}
+.blxx ul li .queding{
+	display:inline-block;
+	padding-left:100px;
+	padding-top:10px;
+	}
+.blxx ul li .queding{
+	display:block;
+	padding-left:125px;
+	padding-top:10px;
+	}
+</style>
+</head>
+
+<body>
+<div class="blxx">
+	<ul>
+    	<li><span class="user_name"><cite style="color:#ff0000;margin-right:5px;">*</cite>举报公司名称：</span><span class="user_kuang"><input type="password" /></span></li>
+        <li><span class="user_name" style="top:-105px;"><cite style="color:#ff0000;margin-right:5px;">*</cite>具体描述：</span><span class="user_kuang"><textarea name="text"></textarea></span></li>
+        <li><span class="user_name">图片附件：</span><span class="xz_pic"><a href="#" target="_blank"><img src="images/xuanzepic.gif" border="0" /></a></span><span class="wenzi">未选择图片</span></li>
+        <li><span class="queding"><a href="#" target="_blank"><img src="images/queding.gif" border="0" /></a></span></li>
+    </ul>
+   	<div style="clear:both;"></div>
+</div>
+</body>
+</html>

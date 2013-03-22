@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>招聘</title>
+<meta name="description" content="{#$page.description#}">
+<meta name="keywords" content="{#$page.keywords#}">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script src="{#$QISHI.site_template#}js/jquery.lazyload.js" type="text/javascript"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/tc.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/xl.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/add_common_function.js"></script>
+<script src="{#$QISHI.site_template#}js/MSClass.js" language="javascript"></script>
+
+</head>
+
+<body>
+<div id="site">
+
+<style>
+#submit_form3{
+	background:url({#$QISHI.site_template#}images/login.gif) no-repeat;
+	width:56px;
+	height:25px;
+	border:0px;
+	cursor:pointer;
+}
+</style>
+
+<!--header begin-->
+{#include file="header_nosearch.htm"#}
+<!--header end-->
+	<!--body start-->
+	<div class="current">您当前所在位置：<a href="/" target="_blank">OFweek人才网</a> &gt;&gt; 企业登录</div>
+	<div id="content">
+		<div class="zp_con">
+		
+		<!--left start-->
+		<form id="Form3" name="Form3" action="{#$QISHI.site_dir#}user/login.php" method="post">
+			<div class="zp_con_left">
+				<div class="zp_login">
+				<table width="244" border="0" cellpadding="0" cellspacing="0" style="margin-left:20px;">
+		<tr>
+				<td height="37" colspan="4" style="font-family:'微软雅黑'; font-size:16px; font-weight:bold; border-bottom:1px dashed #cdced0;">企业用户登录</td>
+				</tr>
+        <tr id="tip" style="display:none">
+				<td height="30" colspan="4" style="padding-left:10px;color:#ff0000; padding-top:10px;">用户名或密码错误</td>
+				</tr>
+		<tr>
+				<td width="54" height="46">用户名：</td>
+				<td colspan="2"><input type="text" id="c_username2" name="username" value="" style="width:150px; height:15px; line-height:15px;" /></td>
+				<td width="37">&nbsp;</td>
+		</tr>
+		<tr>
+				<td valign="middle">密&nbsp;&nbsp;码：</td>
+				<td colspan="2" valign="middle"><input type="password" id="c_password2" name="password" value="" style="width:150px; height:15px; line-height:15px;" /></td>
+				<td>&nbsp;</td>
+		</tr>
+		<tr>
+				<td>&nbsp;</td>
+				<td width="56" align="left" valign="middle" style="padding-top:10px;"><input type="button" id="submit_form3" /></td>
+				<td width="97" align="left" valign="middle" style="padding-top:10px; padding-left:13px;"><strong><a href="{#$QISHI.site_dir#}user/get_password.php" target="_blank">忘记密码？</a></strong></td>
+				<td>&nbsp;</td>
+		</tr>
+        <tr>
+				<td>&nbsp;</td>
+				<td height="60" colspan="3" align="left" valign="middle"><a href="{#$QISHI.site_dir#}user/reg.php" style="color:#0000ff;" target="_blank">注册企业用户&gt;&gt;</a></td>
+				</tr>
+</table>
+			
+	      </div>
+				<div class="zp_tel"><img src="{#$QISHI.site_template#}images/servictel.jpg" border="0" /></div>
+			</div>
+	{#if $smarty.get.forward#}
+	<input type="hidden" name="returnurl" value="{#$smarty.get.forward#}" />
+	{#else#}
+	<input type="hidden" name="returnurl" value="{#$QISHI.cur_url#}" />
+	{#/if#}
+			</form>
+			<!--left end-->
+			
+			<!--right start-->
+			<div class="zp_con_right">
+				<dl>
+					<dt><img src="{#$QISHI.site_template#}images/zp_tb1.gif" border="0" /></dt>
+					<dd>注册会员可以免费在线发布20条职位</dd>
+				</dl>
+				<dl>
+					<dt><img src="{#$QISHI.site_template#}images/zp_tb2.gif" border="0" /></dt>
+					<dd>审核会员可以通过系统或者邮箱接收并查看求职者主动投递的简历</dd>
+				</dl>
+				<dl>
+					<dt><img src="{#$QISHI.site_template#}images/zp_tb3.gif" border="0" /></dt>
+					<dd>查看我的简历库，浏览应聘者</dd>
+				</dl>
+				<dl>
+					<dt><img src="{#$QISHI.site_template#}images/zp_tb4.gif" border="0" /></dt>
+					<dd>向投递简历的应聘者发起面试邀请</dd>
+				</dl>
+				<dl style=" margin-bottom:35px;">
+					<dt><img src="{#$QISHI.site_template#}images/zp_tb5.gif" border="0" /></dt>
+					<dd>可以同时登录OFweek旗下网站，享有OFweek会员服务</dd>
+				</dl>
+				<p style="clear:"></p>
+			</div>
+			
+			<!--right end-->
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<!--body end-->
+	
+<!--footer begin-->
+{#include file="footer.htm"#}
+<!--footer end-->
+</div>
+
+<script>
+$(document).ready(function(){
+	$("#submit_form3").click(function(){
+		var u = $("#c_username2").val();
+		var p = $("#c_password2").val();
+		if(u) {
+			$.post("/user/login.php?ajax=1",{username:u,password:p}, function(result){
+				if(result == '1') {document.location.reload();}
+				else {$("#tip").css("display","table-row");}
+			});
+			return false;
+		} else {
+			return false;
+		}
+	});
+	$("#c_username2").focus(function(){$("#tip").css("display","none");});
+	$("#c_password2").focus(function(){$("#tip").css("display","none");});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+
+      <div class="weiz">您当前所在位置： <a href="personal.html">求职服务</a> >> 简历修改</div>
+   	  <div class="xiu_g">
+      	 <table border="0" width="100%">
+              <tbody><tr>
+                <td align="center" width="22%"><img src="../../skin/default/images/pic.gif"><br><a href="#">修改</a></td>
+                <td valign="top" width="78%"><table class="tb01" bgcolor="#DDDDDD" border="0" cellpadding="1" cellspacing="1" width="100%">
+                  <tbody><tr>
+                    <td bgcolor="#FFFFFF" width="33%">基本信息</td>
+                    <td bgcolor="#FFFFFF" width="31%"><span class="f_gre">已填写</span></td>
+                    <td bgcolor="#FFFFFF" width="36%"><a href="data.html">修改</a></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF" width="33%">教育/工作背景</td>
+                    <td bgcolor="#FFFFFF" width="31%"><span class="f_red">未填写</span></td>
+                    <td bgcolor="#FFFFFF" width="36%"><a href="data.html">去完善</a></td>
+                  </tr>
+                  <tr>
+                    <td bgcolor="#FFFFFF" width="33%">求职意向/特长</td>
+                    <td bgcolor="#FFFFFF" width="31%"><span class="f_red">未填写</span> </td>
+                    <td bgcolor="#FFFFFF" width="36%"><a href="data.html">去完善</a></td>
+                  </tr>
+                </tbody></table></td>
+              </tr>
+              <tr>
+              	<td colspan="2">
+        <strong>求职提醒：</strong><br>        	
+
+1.为了您的信息安全，请不要将联系方式填写在工作经历，自我评价以及特长当中。<br>
+2.当您的联系方式变更时，请及时更新您简历的联系方式。<br>
+3.最近1~2年的工作经历是企业最为关注的部分。请认真填写您的最近的工作经历，如果您不希望公开您目前工作的公司，您可以填写：北京市某大型光电公司
+
+                </td>
+              </tr>
+            </tbody></table>
+      </div>
+    

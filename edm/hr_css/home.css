@@ -1,0 +1,29 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,img,div,dl,dt,dd{margin:0;padding:0;border:0; color:#333; font:12px Arial,'宋体';}
+li{list-style-type:none;}
+h1,h2,h3,h4,h5,h6 {font-size:14px; font-weight:bold;}
+input,button,textarea,select{font:100% Arial,'宋体'; font-size:12px;}
+a{color:#444;text-decoration:none;}
+a:hover{color:#bd0000;text-decoration:underline;}
+
+#page{ width:650px; margin:auto;border-left:1px solid #f0f0f0;border-right:1px solid #f0f0f0;overflow:hidden;*zoom:1;}
+#whole{ float:left; width:650px; background:#fff; overflow:hidden;}
+.top{ float:left; width:650px;}
+.top img{ float:left;}
+.conter{ float:left; width:630px; padding:10px;}
+.guag1{ float:left; width:590px; background:#eaeaea; padding:20px;}
+.qiye{ float:left; width:628px; margin-top:10px; border:1px solid #eaeaea;}
+.tite{ float:left; width:628px; background:#d10000; height:30px;}
+.tite h3{ color:#fff; line-height:30px; padding-left:20px; font-family:"微软雅黑", "黑体"; font-size:15px; font-weight:normal;}
+.tite span{float:right; line-height:30px; margin-right:10px;}
+.tite span a{color:#fff; text-decoration:none;}
+.tite span a:hover{color:#fff; text-decoration:underline;}
+.line{ float:left; width:628px; padding:5px 0; line-height:30px;}
+.line li { float:left; margin:3px 4px; width:117px; overflow:hidden;}
+.line li img{ border:1px solid #cacaca;width:115px; height:39px;}
+.zhaop{float:left; width:628px; margin-top:10px; border:1px solid #eaeaea;}
+.line a{ color:#2768b0;}
+.yuanx{float:left; width:628px; margin-top:10px; border:1px solid #eaeaea;}
+.ylien{float:left; width:628px; padding:5px 0; line-height:30px;}
+.ylien li {float:left; margin:3px 1px 0px 1px; overflow:hidden;}
+.ylien li img {width:102px; height:22px;}
+

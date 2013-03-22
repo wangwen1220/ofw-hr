@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;转发简历</div>
+      <div class="zhao_p">
+      <form id="Form1" action="" method="post">
+      <input type="hidden" name="uid" value="{#$uid#}" />
+        <table width="100%" border="0">
+          <tbody><tr>
+            <td width="22%" align="center"><span class="f_red">*</span>收件人地址：</td>
+            <td width="78%"><label>
+              <input type="text" style="width:200px;" id="to" name="to" maxlength="25">
+              </label>
+              示例：hr@OFweek.com</td>
+          </tr>
+          <tr>
+            <td width="22%" align="center"><span class="f_red">*</span>邮件主题：</td>
+            <td width="78%"><label>
+              <input type="text" value="" style="width:415px; color:#999;" id="title" name="title" maxlength="50"><br />示例：姓名--应聘职位名称
+            </label></td>
+          </tr>
+          <tr>
+            <td width="22%" align="center"><span class="f_red">*</span>邮件正文：</td>
+            <td width="78%"><label>
+              <textarea style="line-height:18px; color:#888; text-align:left; padding:10px; width:395px;" rows="9" cols="70" id="content" name="content" maxlength="1000">
+你好：
+	我在OFweek人才网看到这份简历，觉得很不错。现在将简历转发给你。
+	祝工作愉快！
+                </textarea>
+            </label></td>
+          </tr>
+		  <tr>
+            <td width="22%" align="center">&nbsp;</td>
+            <td width="78%"><input type="submit" class="btnm" value="发送" name="submit"></td>
+          </tr>
+          <tr>
+            <td align="left" colspan="2"><strong>温馨提醒：</strong><br>
+              1.您的简历将直接发送至对方的邮箱当中，对方无法在本系统当中进行查看，请确认您输入的邮箱。 </td>
+          </tr>
+        </tbody></table></form>
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+<script>
+$(function(){
+	$("#Form1").validate({
+		rules:{
+			'to':{
+				'required':true,
+				'email':true
+			},
+			'title':{
+				'required':true,
+				maxlength:50
+			},
+			'content':{
+				'required':true,
+				maxlength:1000
+			}
+		},
+		messages:{
+			'to':{
+				'required':'请填写邮箱地址',
+				'email':'请填写正确的邮件地址'
+			},
+			'title':{
+				'required':'请填写邮件标题',
+				maxlength: jQuery.format("邮件主题不能大于{0}个字符")
+			},
+			'content':{
+				'required':'请填写邮件内容',
+				maxlength: jQuery.format("邮件内容不能大于{0}个字符")
+			}
+		}
+	});
+});
+</script>
+</body>
+</html>

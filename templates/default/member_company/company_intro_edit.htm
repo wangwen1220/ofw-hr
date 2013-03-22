@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	//范例展开
+	$("#model").click(function(){	$("#cp").toggle()});
+	//菜单层
+	showmenulayer("#district_cn","#menu3","#district","#sdistrict",QS_city);
+	showmenu("#nature_cn","#menu1","#nature","#Form1","#nature");
+	showmenu("#trade_cn","#menu2","#trade","#Form1","#trade");	
+	showmenu("#scale_cn","#menu4","#scale","#Form1","#scale");
+	showmenu("#street_cn","#menu_street","#street","#Form1","#street");
+	showmenu("#officebuilding_cn","#menu_officebuilding","#officebuilding","#Form1","#officebuilding");	
+	//道路
+	$("#street_alphabet a").click(function()
+	{
+		$("#streetkey").val('');
+		$("#street_alphabet a").removeClass("select");
+		$(this).addClass("select");
+		var x=$(this).attr('id');
+		$.get("{#$QISHI.site_dir#}plus/ajax_street.php", {"act":"alphabet","x":x,"listtype":"li"},
+			function (data,textStatus)
+			{	
+				$("#street_showtit").html("首字母为：<b>"+x+"</b>");
+				$("#street_showli").html(data);
+				$("#street_showli >li").hover(
+				function()
+				{
+				$(this).css("background-color","#DAECF5");
+				},
+				function()
+				{
+				$(this).css("background-color","");
+				}
+				);
+			}
+		);		
+	});
+	$("#streetkeyso").click(function()
+	{
+		var str=$("#streetkey").val();
+		$("#street_alphabet a").removeClass("select");
+			$.get("{#$QISHI.site_dir#}plus/ajax_street.php", {"act":"key","listtype":"li","key":str},
+				function (data,textStatus)
+				{	
+					$("#street_showtit").html("搜索结果：");
+					$("#street_showli").html(data);
+					$("#street_showli >li").hover(
+					function()
+					{
+					$(this).css("background-color","#DAECF5");
+					},
+					function()
+					{
+					$(this).css("background-color","");
+					}
+					);
+				}
+			);	
+	});
+	//写字楼
+	$("#officebuilding_alphabet a").click(function()
+	{
+		$("#officebuildingkey").val('');
+		$("#officebuilding_alphabet a").removeClass("select");
+		$(this).addClass("select");
+		var x=$(this).attr('id');
+		$.get("{#$QISHI.site_dir#}plus/ajax_officebuilding.php", {"act":"alphabet","x":x,"listtype":"li"},
+			function (data,textStatus)
+			{	
+				$("#officebuilding_showtit").html("首字母为：<b>"+x+"</b>");
+				$("#officebuilding_showli").html(data);
+				$("#officebuilding_showli >li").hover(
+				function()
+				{
+				$(this).css("background-color","#DAECF5");
+				},
+				function()
+				{
+				$(this).css("background-color","");
+				}
+				);
+			}
+		);		
+	});
+	$("#officebuildingkeyso").click(function()
+	{
+		var str=$("#officebuildingkey").val();
+		$("#officebuilding_alphabet a").removeClass("select");
+			$.get("{#$QISHI.site_dir#}plus/ajax_officebuilding.php", {"act":"key","listtype":"li","key":str},
+				function (data,textStatus)
+				{	
+					$("#officebuilding_showtit").html("搜索结果：");
+					$("#officebuilding_showli").html(data);
+					$("#officebuilding_showli >li").hover(
+					function()
+					{
+					$(this).css("background-color","#DAECF5");
+					},
+					function()
+					{
+					$(this).css("background-color","");
+					}
+					);
+				}
+			);	
+	});
+	
+});
+//验证
+$(document).ready(function() {
+ $("#Form1").validate({
+ //debug: true,
+// onsubmit:false,
+//onfocusout :true,
+   rules:{
+   companyname:{
+    required: true,
+	minlength:4
+   },
+   nature:"required",
+   trade:"required",
+   district:"required",
+   scale: "required",
+   contact:{
+   required: true,
+   minlength:2
+    },
+   telephone:{
+   required: true,
+	minlength:7
+   },
+	   email: {
+	   required:true,
+	   email:true
+	   },
+	   address: {
+	   required:true,
+	    minlength:8
+	   },
+	   contents: {
+	   required:true,
+	    minlength:30,
+		maxlength:2000
+	   }
+	},
+    messages: {
+    companyname: {
+    required: "请输入公司名称",
+    minlength: jQuery.format("公司名称不能小于{0}个字符")
+   },
+   nature: {
+    required: jQuery.format("请选择企业性质")
+   },
+   trade: {
+    required: jQuery.format("请选择所属行业")
+   },
+   district: {
+    required: jQuery.format("请选择所在地区")
+   },
+    scale: {
+    required: jQuery.format("请选择企业规模")
+   },
+   contact:{
+    required:jQuery.format("请输入联系人"),
+	minlength:jQuery.format("联系人不能小于{0}个字符")
+   },
+   telephone: {
+    required: jQuery.format("请填写联系电话"),
+	minlength:jQuery.format("联系电话不能小于{0}个字符")
+   },
+   email: {
+    required: jQuery.format("请填写电子邮箱"),
+	email: jQuery.format("请正确填写电子邮箱")
+   },
+   address: {
+    required: jQuery.format("请填写联系地址"),
+	minlength: jQuery.format("请详细填写联系地址")
+   },
+   contents: {
+    required: jQuery.format("请填写公司简介"),
+	minlength: jQuery.format("请填写公司简介，不能小于{0}个字符"),
+	maxlength:jQuery.format("公司简介不能大于{0}个字符，省略一下吧")
+   }
+   
+  },
+  errorPlacement: function(error, element) {
+    if ( element.is(":radio") )
+        error.appendTo( element.parent().next().next() );
+    else if ( element.is(":checkbox") )
+        error.appendTo ( element.next());
+    else
+        error.appendTo(element.parent());
+	}
+    });
+});
+</script>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;公司信息&nbsp;&gt;&gt;&nbsp;修改公司简介</div>
+      <form id="Form1" action="?act=company_intro_edit" method="post" name="Form1">
+      <div class="zhao_p">
+        <div class="tite_qth">
+          <ul>
+            <li><a href="company_info.php?act=company_profile">基本资料</a></li>
+            <li><a href="company_info.php?act=company_intro" class="hover">公司简介</a></li>
+            <li><a href="company_info.php?act=company_auth">营业执照</a></li>
+            <li><a href="company_info.php?act=company_logo">企业LOGO</a></li>
+          </ul>
+        </div>
+        <div class="jiben_ul">
+        	<table width="100%" border="0">
+
+              <tr>
+                <td><label>
+                  <textarea name="contents" id="contents" cols="100" rows="15">{#$company_profile.contents#}</textarea>
+                </label></td>
+              </tr>
+              
+              <tr>
+              	<td><label>
+              <input type="submit" name="save" id="save" value="保 存" class="btn" />
+              </label>&nbsp;&nbsp;&nbsp;&nbsp;<label>
+              <input type="submit" name="save_next" id="save_next" value="保存并下一步" class="btn" />
+              </label></td>
+              </tr>
+            </table>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+</body>
+</html>

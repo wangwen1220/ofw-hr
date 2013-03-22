@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>OFweek人才网</title>
+<link href="../../skin/default/css/home.css" rel="stylesheet" type="text/css" />
+<link href="../../skin/default/css/jobs.css" rel="stylesheet" type="text/css" />
+<script>
+function secBoard(elementID,listName,elementname,n) {
+var elem = document.getElementById(elementID);
+var elemlist = elem.getElementsByTagName(elementname);
+for (var i=0; i<elemlist.length; i++) {
+elemlist[i].className = "sel02";
+var m = i+1;
+document.getElementById(listName+"_"+m).style.display = "none";
+}
+elemlist[n-1].className = "sel01";
+document.getElementById(listName+"_"+n).style.display = "block";
+}
+</script>
+</head>
+<body>
+<div id="mian">
+	<div class="header">
+      <div class="top">
+          <div class="link"><a href="http://www.ofweek.com/" target="_blank">OFweek首页</a>|<a href="http://lights.ofweek.com/" target="_blank">半导体照明</a>|<a href="http://solar.ofweek.com/" target="_blank">太阳能光伏</a>|<a href="http://fiber.ofweek.com/" target="_blank">光通讯</a>|<a href="http://laser.ofweek.com/" target="_blank">激光</a>|<a href="http://ee.ofweek.com/" target="_blank">电子工程</a>|<a href="http://gongkong.ofweek.com/" target="_blank">工控</a></div>
+            <div class="deng"><a href="../../template/member/person/login.html">求职者登陆</a>或者<a href="resume1.html">注册</a><a href="#">企业登陆</a><img src="../../skin/default/images/inco1.gif" /><a href="#">企业注册</a></div>
+        </div>
+        <div class="logo"><a href="index.html"><img src="../../skin/default/images/logo.jpg" border="0" /></a></div>
+       <div class="nav_m">
+          <ul>
+      	<li><a href="../../../index.html">首页</a></li>
+        <li><a href="../../../joblist.html">求职</a></li>
+        <li><a href="../../../hrlogin.html">招聘</a></li>
+        <li><a href="../../../joblist.html">校园招聘</a></li>
+        <li><a href="../../../hr.html">职场资讯</a></li>
+      </ul>
+            <div class="qiye"><a href="../../template/member/company/company.html">企业服务</a>热线：<strong>0755-83279360</strong></div>
+        </div>
+    </div>
+    <div class="conter">
+    	<div class="jiben mtop">
+        	<div class="tetl">
+            	<ul>
+                    <li><a href="resume1.html">第一步：基本信息</a></li>
+                  	<li><a href="resume2.html" class="hover">第二步：教育/工作经历</a></li>
+                    <li><a href="resume3.html">第三步：求职意向特长</a></li>
+                </ul>
+            </div>
+            <div class="xinx">
+            	<div class="tish">提示：<span class="f_red">*</span>表示必选项 <strong>修改简历后请点击“下一步”按钮</strong></div>
+                <div class="jilin">
+                    <div class="liao_z">教育经历：</div>
+                    <div class="liao_a">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="10%"><span class="f_red">*</span>毕业院校：</td>
+                            <td width="90%"><input type="text" name="textfield" id="textfield" class="s01"/><div class="fujia">ddddddddddddddd</div></td>
+                          </tr>
+                          <tr>
+                            <td width="10%"><span class="f_red">*</span>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</td>
+                            <td><input type="text" name="textfield2" id="textfield2"  class="s01"/></td>
+                          </tr>
+                          <tr>
+                            <td width="10%"><span class="f_red">*</span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历：</td>
+                            <td><select name="select" size="1" id="select">
+                              <option>大专</option>
+                            </select></td>
+                          </tr>
+                          <tr>
+                            <td width="10%" valign="top"><span class="f_red">*</span>教育背景：</td>
+                            <td><span style="color:#999;">示例：主修专业：应用电子，电子信息工程，毕业设计：《电子电路设计》</span><br />
+                              <textarea cols="120" rows="9"></textarea><br />
+                            <span style=" margin-left:280px; display:inline; color:#999">请填写主修专业，毕业设计或者参与课题等。不超过4000个字符</span></td>
+                          </tr>
+                      </table>
+    
+                  </div>
+                </div>
+                <div class="jilin">
+                    <div class="liao_z">工作经历：</div>
+                    <div class="liao_a">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td colspan="2"><span class="f_red">*</span>从
+                              <input type="text" name="textfield3" id="textfield3" class="s02" />  
+                            年
+                            <input type="text" name="textfield4" id="textfield4" class="s02" />  
+                            月到
+                            <input type="text" name="textfield5" id="textfield5" class="s02" />   
+                            年
+                            <input type="text" name="textfield6" id="textfield6" class="s02" />  
+                            月  
+                            <label>
+                            <input type="checkbox" name="checkbox" id="checkbox" />
+                            </label>
+                            目前仍然在职&nbsp;&nbsp;<span class="f_red">*</span>月薪  
+                            RMB&nbsp;&nbsp; 
+                            <input type="checkbox" name="checkbox2" id="checkbox2" />
+                            保密</td>
+                          </tr>
+                          <tr>
+                            <td width="9%"><span class="f_red">*</span>职位名称：</td>
+                            <td width="91%"><input type="text" name="textfield2" id="textfield2"  class="s01"/></td>
+                          </tr>
+                          <tr>
+                            <td width="9%"><span class="f_red">*</span>公司名称：</td>
+                            <td width="91%"><input type="text" name="textfield2" id="textfield2"  class="s01"/></td>
+                          </tr>
+                          <tr>
+                            <td width="9%" valign="top"><span class="f_red">*</span>工作经历：</td>
+                            <td><span style="color:#999;">示例：2011/03~至今 深圳市XX有限公司  经理  主意业绩：组建5人团队，为公司创造300万/年业绩</span><br /><textarea cols="120" rows="9"></textarea><br />
+                            <span style=" margin-left:160px; display:inline; color:#999">请填写任职公司，任职时间，岗位，主要的工作职责以及业绩等。不超过10000个字符</span></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"><strong><a href="#">添加更多工作经历>></a></strong></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" align="left"><a href="resume3.html" style="margin-left:190px;">
+                            <input name="" type="image" src="../../skin/default/images/btn01.gif" class="btn" /></a></td>
+                          </tr>
+                      </table>
+    
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="bottom-m">
+      <div class="bottom-m-1"> <a target="_blank" href="http://www.OFweek.com/about.shtml" rel="nofollow">关于我们</a> - <a target="_blank" href="http://www.OFweek.com/user/ArtRequest.do" rel="nofollow">征 稿</a> - <a target="_blank" href="http://www.OFweek.com/ad.shtml" rel="nofollow">广告咨询</a> - <a target="_blank" href="http://www.OFweek.com/help.shtml" rel="nofollow">帮助信息</a> - <a target="_blank" href="http://www.OFweek.com/contact.shtml" rel="nofollow">联系我们</a> - <a target="_blank" href="http://www.OFweek.com/service.shtml" rel="nofollow">会员服务</a> - <a target="_blank" href="http://www.OFweek.com/sitemap.shtml">网站导航</a> </div>
+    </div>
+    <div class="bottom-2">我们的网站：<a target="_blank" href="http://fiber.OFweek.com/" rel="nofollow">光通讯网</a> | <a target="_blank" href="http://lights.OFweek.com/" rel="nofollow">半导体照明网</a> | <a target="_blank" href="http://laser.OFweek.com/" rel="nofollow">激光网</a> | <a target="_blank" href="http://display.OFweek.com/" rel="nofollow">光电显示网</a> | <a target="_blank" href="http://optics.OFweek.com/" rel="nofollow">光学网</a> | <a target="_blank" href="http://solar.OFweek.com/" rel="nofollow">太阳能光伏网</a> | <a target="_blank" href="http://ee.OFweek.com/" rel="nofollow">电子工程网</a> | <a target="_blank" href="http://smartgrids.OFweek.com/" rel="nofollow">智能电网</a> | <a target="_blank" href="http://gongkong.OFweek.com/" rel="nofollow">工控网</a> | <a target="_blank" href="http://instrument.OFweek.com/" rel="nofollow">仪器仪表网</a> | <a target="_blank" href="http://emc.OFweek.com/" rel="nofollow">节能网</a> | <a target="_blank" href="http://b2b.OFweek.com/">产品港湾</a> | <a target="_blank" href="http://cpbay.com/">CPbay</a> <br />
+    客服热线：+86-755-83279360 83279361 83279363 83279365 客服传真：+86-755-83279008 <br />
+    业务联系：+86-755-83279360 <br />
+    Copyright © 2012, All Rights Reserved. <br />
+    中文版权所有－OFweek光电新闻网.网站所有图片、文字未经许可不得拷贝、复制。</div>
+	<div class="bottom-110"><img src="../../skin/default/images/110.gif">粤ICP备06087881 </div>
+    </div>
+</div>
+</body>
+</html>

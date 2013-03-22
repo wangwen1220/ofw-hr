@@ -1,0 +1,127 @@
+        <div class="gao">
+       	  <div class="search">
+				<!--搜索表单-->
+				<form id="search_form" action="{#$QISHI.site_dir#}jobs/" method="get">
+				{#foreach item=item from=$navi_dis_arr#}
+				<input type="hidden" class="data-area" name="district[]" value="{#$item.id#}">
+				{#/foreach#}
+				{#foreach item=item from=$navi_cat_arr#}
+				<input type="hidden" class="data-gw" name="category[]" value="{#$item.id#}">
+				{#/foreach#}
+                <span class="guan"><input type="text" class="so1" value="{#$smarty.get.key|default:"请输入关键字"#}" name="key" id="search_key"/>
+				{#if $navi_dis_str#}
+				<a class='area-select' href="javascript:showDiv()" title="{#$navi_dis_str.origin#}">{#$navi_dis_str.cut#}</a>
+				{#else#}
+                <a class='area-select' href="javascript:showDiv()">意向地区</a>
+				{#/if#}
+								<!-- <input type="hidden" name="district[]" /> -->
+                <div id="popDiv" class="mydiv select-jobs-dialog" style="display:none;">
+                	<div class="diq_t"><h3>意向地区（最多只能选择3项）</h3> <a href="javascript:closeDiv()"><img src="{#$QISHI.site_template#}images/xx.gif" style="float:right;"/></a></div>
+										<div class='area-wrapper'>
+											<div id='area-selected' class='area-selected'>
+											{#foreach item=item from=$navi_dis_arr#}
+											<div class="area-selected-item" data-id="{#$item.id#}" data-val="{#$item.id#}"><span class="text">{#$item.name#}</span><a class="closer" title="点击取消" href="javascript:;">X</a></div>
+											{#/foreach#}
+											</div>
+											<span id="area-err"></span>
+										</div>
+                    <div class="xfen mtop">
+                   	  <table width="100%" border="0" id='area-list'>
+                          <tr>
+                            <td><strong>主要城市：</strong></td>
+                          </tr>
+                          <tr>
+                          		<td><a href='javascript:;' class='no-more' data-id='328'>深圳</a>	<a href='javascript:;' class='no-more' data-id='326'>广州</a>	<a href='javascript:;' class='no-more' data-id='342'>东莞</a>	<a href='javascript:;' class='no-more' data-id='343'>中山</a>	<a href='javascript:;' data-id='2'>上海</a>	<a href='javascript:;' data-id='1'>北京</a><a href='javascript:;' class="no-more" data-id='200'>南京</a> <a href='javascript:;' class="no-more" data-id='204'>苏州</a>	<a href='javascript:;' class='no-more' data-id='213'>杭州</a></td>
+                          </tr>
+                          <tr>
+                          	<td><strong>所有省份(市/区)：</strong></td>
+                          </tr>
+                          <tr>
+                          	<td><a href='javascript:;' data-id='20'>广东</a>	<a href='javascript:;' data-id='2'>上海</a>	<a href='javascript:;' data-id='1'>北京</a>	<a href='javascript:;' data-id='3'>天津</a>	<a href='javascript:;' data-id='4'>重庆</a><a href='javascript:;' data-id='5'>河北</a>	<a href='javascript:;' data-id='6'>山西</a><a href='javascript:;' data-id='7'>内蒙古</a><a href='javascript:;' data-id='8'>辽宁</a><a href='javascript:;' data-id='9'>吉林</a><a href='javascript:;' data-id='10'>黑龙江</a><a href='javascript:;' data-id='11'>江苏</a><a href='javascript:;' data-id='12'>浙江</a><a href='javascript:;' data-id='13'>安徽</a><a href='javascript:;' data-id='14'>福建</a> <a href='javascript:;' data-id='15'>江西</a><a href='javascript:;' data-id='16'>山东</a><a href='javascript:;' data-id='17'>河南</a><a href='javascript:;' data-id='18'>湖北</a>	<a href='javascript:;' data-id='19'>湖南</a><a href='javascript:;' data-id='21'>广西</a><a href='javascript:;' data-id='22'>海南</a><a href='javascript:;' data-id='23'>四川</a> <a href='javascript:;' data-id='24'>贵州</a><a href='javascript:;' data-id='25'>云南</a><a href='javascript:;' data-id='26'>西藏</a>	<a href='javascript:;' data-id='27'>陕西</a>	<a href='javascript:;' data-id='28'>甘肃</a><a href='javascript:;' data-id='29'>青海</a>	<a href='javascript:;' data-id='30'>宁夏</a> <a href='javascript:;' data-id='31'>新疆</a>	<a href='javascript:;' data-id='33'>香港</a>	<a href='javascript:;' data-id='32'>台湾</a>	<a href='javascript:;' data-id='34'>澳门</a>		<a href='javascript:;' data-id='538'>国外</a><a href='javascript:;' data-id='539'>其他</a></td>
+                          </tr>
+                      </table>
+                    </div>
+										<div id="area-sublist" class='area-sublist'><div class='data-loading'></div></div>
+                    <div class="buttom">
+                    	<button id='area-dialog-submit' class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">确定</span></button>
+                        <button id='area-dialog-clear' class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">清除</span></button>
+                       <button id='area-dialog-close' class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false" onclick="javascript:closeDiv()"><span class="ui-button-text">关闭</span></button>
+                  </div>
+                </div>
+                <div id="bg" class="bg" style="display:none;"></div>
+                </span>
+                <span class="yixn">
+				{#if $navi_cat_str#}
+				<a class='gw-select' href="javascript:showUl()" title="{#$navi_dis_str.origin#}">{#$navi_cat_str.cut#}</a>
+				{#else#}
+                <a class='gw-select' href="javascript:showUl()">意向岗位</a>
+				{#/if#}
+								<!-- <input type="hidden" name="category[1]" /> -->
+                <div id="popDiv1" class="mydiv1 select-jobs-dialog" style="display:none;">
+                	<div class="diq_w"><h3>选择意向岗位 （最多只能选择5项）</h3> <a href="javascript:closeDiv1()"><img src="{#$QISHI.site_template#}images/xx.gif" style="float:right;"/></a></div>
+									<div class='gw-search-wrapper'>
+										<div id='gw-search' action=''><input class='search-wd' value='输入岗位名称' /><a class='closer' href='javascript:;'></a></div>
+										<span id="gw-err">没有您要搜索的关键词，建议重新搜索</span>
+										<div id='gw-selected' class='gw-selected'>
+											{#foreach item=item from=$navi_cat_arr#}
+											<div class="gw-selected-item" data-id="ckbx-{#$item.id#}" data-val="{#$item.id#}"><span class="text">{#$item.name#}</span><a class="closer" title="点击取消" href="javascript:;">X</a></div>
+											{#/foreach#}
+										</div>
+                  </div>
+                  <div class="sygw mtop">
+                    	<table width="100%" border="0">
+
+                          <tr>
+                          	<td>
+														<div id='gw-list'>
+														{#foreach item=item from=$jobcategory#}
+														<a href="#" data-id="{#$item.id#}">{#$item.categoryname#}</a>
+														{#/foreach#}
+														</div>
+														<div id="gw-sublist" class='gw-sublist'><div class='data-loading'></div></div>
+													</td>
+                         </tr>
+                       </table>
+                  </div>
+                    <div class="buttom1">
+                    	<button id='gw-dialog-submit' class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">确定</span></button>
+                        <button id='gw-dialog-clear' class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">清除</span></button>
+                        <button id='gw-dialog-close' class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">关闭</span></button>
+                    </div>
+                </div>
+                <div id="bg1" class="bg" style="display:none;"></div>
+                </span>
+                <label>
+                <input type="submit"  value="搜 索"  class="so3"/>
+                </label>
+				</form>
+				<!--搜索表单结束-->
+            	<strong class="suo"><a href="{#$QISHI.site_dir#}jobs/jobsearch.php" style="color:#cb0a00;">高级搜索>></a></strong>            </div>
+               <div class="hot">
+				 {#qishi_hotword set="显示数目:10,列表名:list"#}
+				 <strong>热门搜索：</strong>
+				 {#foreach from=$list item=li#}
+				 <a href="{#$QISHI.site_dir#}jobs/?key={#$li.w_word|escape:"url"#}" target="_blank">{#$li.w_word#}</a>&nbsp;&nbsp;
+				 {#/foreach#}
+			   </div>
+			<script>
+			$(function(){
+				$('#search_key').click(function(){
+					if($(this).val() == '' || $(this).val() == '请输入关键字'){//关键词填写动作
+						$(this).val('');
+					}
+				});
+				$('#search_form').submit(function(){
+/*
+					if( $('#search_key').val() == '' || $('#search_key').val() == '请输入关键字' ){//三个限制条件都无则限制表单提交
+						alert('请输入关键字');
+						return false;
+					}
+*/
+					if( $('#search_key').val() == '请输入关键字' ){
+						 $('#search_key').val('');
+					}
+				})
+			});
+			</script>
+        </div>

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body{
+	font-size:12px;
+	}
+.xg_psw{
+	width:720px;
+	margin:0 auto;
+	padding-left:180px;
+	}
+.xg_psw ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	}
+.xg_psw ul li{
+	margin-bottom:15px;
+	height:25px;
+	line-height:25px;
+	}
+.xg_psw ul li .user_name{
+	display:block;
+	float:left;
+	width:70px;
+	text-align:right;
+	}
+.xg_psw ul li .user_kuang{
+	display:block;
+	width:180px;
+	float:left;
+	margin-left:29px;
+	}
+.xg_psw ul li .user_kuang input{
+	width:178px;
+	height:23px;
+	line-height:23px;
+	border:1px solid #7f9db9;
+	}
+.xg_psw ul li .queding{
+	display:block;
+	padding-left:100px;
+	padding-top:10px;
+	}
+</style>
+</head>
+
+<body>
+<div class="xg_psw">
+	<ul>
+    	<li><span class="user_name">新密码：</span><span class="user_kuang"><input type="password" /></span></li>
+        <li><span class="user_name">确认密码：</span><span class="user_kuang"><input type="password" /></span></li>
+        <li><span class="queding"><a href="#" target="_blank"><img src="images/queding.gif" border="0" /></a></span></li>
+    </ul>
+</div>
+</body>
+</html>

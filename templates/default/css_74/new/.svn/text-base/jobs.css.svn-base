@@ -1,0 +1,35 @@
+.jiben{ float:left; width:988px; border:1px solid #e2e2e2; border-top:none;}
+.tetl{ float:left; background:url(../images/co_bg.gif) repeat-x; width:988px; height:28px; line-height:28px;}
+.tetl h3{ line-height:28px; padding-left:15px;}
+.tetl li{ float:left; line-height:27px; font-weight:bold; margin-top:1px;}
+.tetl li a{padding:0px 15px; border-right:1px solid #ddd; display:block;}
+.tetl li a:hover{ color:#cb0a00; background:#fff; display:block; padding:0px 15px; text-decoration:none;}
+.tetl li a.hover{ color:#cb0a00; background:#fff; display:block; padding:0px 15px;}
+.xinx{ float:left; width:948px; padding:20px;}
+.jilin{ float:left; width:948px;}
+.xinx .tish{ background:url(../images/inco4.gif) left no-repeat; padding-left:15px; float:left; width:948px; line-height:21px;}
+.xinx .tish span{ padding:0px 5px;}
+.liao_z{ float:left; border-bottom:1px solid #ddd; height:30px; line-height:30px; width:923px; background:url(../images/inco5.gif) left no-repeat; padding-left:25px; font-weight:bold; margin-top:20px;}
+.liao_a{ float:left; width:908px; line-height:30px; padding:20px;}
+.liao_a span{ margin-right:5px;}
+.liao_a .s01{ border:1px solid #5a74a4; height:20px; line-height:20px; width:240px; float:left;}
+.liao_a .s02{ border:1px solid #5a74a4; height:20px; line-height:20px; width:40px;}
+.liao_a .btn{ background:url(../images/btn01.gif) none; width:70px; height:24px; margin-top:10px; margin-right:10px;}
+
+.tField {   background: none repeat scroll 0 0 #FFFFFF;  border: 1px solid #CCCCCC;    height: 17px;    padding: 1px;}
+.tt{ float:left; border:none;}
+.s03 { float:left;width: 180px; border:1px solid #ccc; height:18px;}
+.dengl{ float:left;}
+.zhuce{ float:left; padding:20px; width:948px;}
+.zhuce .f_red{ margin-right:5px;}
+.dant p{ float:left; width:150px;}
+.zhuce td{ height:24px;}
+
+.k01{ width:150px; border:1px solid #526988; height:20px; line-height:20px; float:left;}
+.remnd{ line-height:30px; text-align:center;  background:#fcfeff; padding:20px; font-size:14px;}
+.btnm{ background:url(../images/btn_bg3.gif) no-repeat; width:150px; height:24px; border:none; margin-top:5px; cursor:pointer; font-size:13px}
+
+.s11{ width:100px;}
+.fujia{ padding:0px 5px; line-height:22px; width:180px; border:1px solid #ca7343; background:#ffefe0; float:left; margin-left:10px;}
+
+

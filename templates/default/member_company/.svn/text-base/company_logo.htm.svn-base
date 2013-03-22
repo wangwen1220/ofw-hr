@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+//控制图片大小
+{#if $company_profile.logo<>""#}
+var imgwidth=$("#c_img").attr("width");
+if (imgwidth>500)
+{
+$("#c_img").attr("width","500")
+}
+{#/if#}
+});
+//验证
+$(document).ready(function() {
+ $("#Form1").validate({
+// debug: true,
+// onsubmit:false,
+//onfocusout :true,
+   rules:{
+	   logo: {
+	   required:true,
+	   accept:"jpg|gif|png|bmp"
+	   }
+	},
+    messages: {
+   logo:{
+    required:jQuery.format("请上传logo"),
+	accept:jQuery.format("您上传的文件格式不正确")
+   }   
+  },
+  errorPlacement: function(error, element) {
+    if ( element.is(":radio") )
+        error.appendTo( element.parent().next().next() );
+    else if ( element.is(":checkbox") )
+        error.appendTo ( element.next());
+    else
+        error.appendTo(element.parent());
+	}
+    });
+	
+	$("#up").click(function() {
+	if ($("#Form1").valid())
+	{
+	$("#upform").hide();
+	$("#upform_wait").show();
+	}
+	});
+});
+</script>
+</head>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <form action="?act=company_logo_save" method="post"  id="Form1" enctype="multipart/form-data">
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;公司信息&nbsp;&gt;&gt;&nbsp;企业LOGO</div>
+      <div class="zhao_p">
+        <div class="tite_qth">
+          <ul>
+            <li><a href="company_info.php?act=company_profile">基本资料</a></li>
+            <li><a href="company_info.php?act=company_intro">公司简介</a></li>
+            <li><a href="company_info.php?act=company_auth">营业执照</a></li>
+            <li><a href="company_info.php?act=company_logo" class="hover">企业LOGO</a></li>
+          </ul>
+        </div>
+        <div class="jiben_ul">
+        <table width="100%" border="0">
+          <tr>
+            <td width="48%" bgcolor="#e8f0f6">
+   	      <div class="yizh">
+            <strong>企业logo：            </strong><br />
+            {#if $company_profile.logo#}<img src="{#$QISHI.site_dir#}data/logo/{#$company_profile.logo#}?rand={#$rand#}" border="0" id="c_img"/>{#/if#}<br /><input type="button" class="btn" onclick="window.location.href='?act=company_logo_del';" value="删 除"/>
+                </div>
+            </td>
+            <td width="52%" align="left" valign="top" bgcolor="#e8f0f6" style="padding:20px;">
+            <table width="100%" border="0">
+              <tr>
+                <td> <span class="f_red">注意：</span>logo的大小不能超过800*600；<br />
+                文件大小不能超过1M；<br />
+                文件格式限为JPG,GIF；<br />
+              	</td>
+              </tr>
+              <tr>
+              	<td><input type="file" name="logo"  id="logo" style="height:24px; width:275px; font-size:12px; line-height:20px;"  onkeydown="alert('请点击右侧“浏览”选择您电脑上的图片！');return false"/></td>
+              </tr>
+              <tr>
+              	<td><input type="submit" class="btn" value="上传文件"/></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+       <input type="button" onclick="window.location.href='company_index.php';" name="button" id="button" value="完成" / class="btn">
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+</body>
+</html>

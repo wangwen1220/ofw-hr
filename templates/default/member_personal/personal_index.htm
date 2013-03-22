@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$page_title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/personal.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/pager.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' ></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/add_common_function.js"></script>
+
+</head>
+<body>
+<div id="mian">
+<!--header begin-->
+{#include file="header_nosearch.htm"#}
+<!--header end-->
+
+<div class="conter mtop">
+	
+    <div class="lefter">
+      {#include file="member_personal/left.htm"#}
+    </div>
+    </div>
+    <div class="righter"><!--此处修改主体名称-->
+		
+		{#include file="member_personal/`$html_body`.htm"#}
+    </div>
+  </div>
+
+<!--footer begin-->
+{#include file="footer.htm"#}
+<!--footer end-->
+</div>
+</body>
+</html>

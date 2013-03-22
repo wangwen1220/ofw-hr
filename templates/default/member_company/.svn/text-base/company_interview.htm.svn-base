@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/74cms.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+	<div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;简历管理&nbsp;&gt;&gt;&nbsp;面试通知管理</div>
+      <div class="zhao_p">
+        <div class="tite_qh">
+          <ul>
+          	<li><a href="company_recruitment.php?act=apply_jobs">应聘简历（{#$nav_resume_num#}）</a></li>
+            <li class="sel01"><a href="company_recruitment.php?act=interview_list">已发面试通知（{#$nav_interview_num#}）</a></li>
+            <li><a href="company_recruitment.php?act=down_resume_list">已下载简历（{#$nav_down_interview#}）</a></li>
+            <li><a href="company_recruitment.php?act=favorites_list">简历收藏夹（{#$nav_favorites_interview#}）</a></li>
+          </ul>
+        </div>
+        <div class="hr_guan">
+        
+        	<form id="Form1" name="Form1" action="company_recruitment.php?act=interview_del" method="post">
+        	<input type="hidden" name="optype" id="optype" value="" />
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="5%" bgcolor="#eff5ff"><label>
+                  <input type="checkbox" id="selectall1" />
+                </label></td>
+                <td width="10%" bgcolor="#eff5ff">姓名</td>
+                <td width="7%" align="center" bgcolor="#eff5ff">性别 </td>
+                <td width="6%" align="center" bgcolor="#eff5ff">年龄</td>
+                <td width="11%" align="center" bgcolor="#eff5ff"><label>
+                  <select id="education">
+                  <option value="0">学历</option>
+                  {#foreach from=$eduCate item=list#}
+                    <option{#if $education==$list.c_id#} selected="selected"{#/if#} value="{#$list.c_id#}">{#$list.c_name#}</option>
+                  {#/foreach#}
+                  </select>
+                </label></td>
+                <td width="7%" align="center" bgcolor="#eff5ff">经验</td>
+                <td width="10%" bgcolor="#eff5ff">所在地</td>
+                <td width="15%" bgcolor="#eff5ff"><label>
+                  <select id="jobsid" style="width:80px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                    <option value="0" style="width:80px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">应聘职位</option>
+                  {#foreach from=$jobsnameList item=list#}
+                    <option style="width:80px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="{#$list.jobs_name#}"{#if $jobsid==$list.id#} selected="selected"{#/if#} value="{#$list.id#}">{#$list.jobs_name#}</option>
+                  {#/foreach#}
+                                    </select>
+                </label></td>
+                <td width="11%" bgcolor="#eff5ff">目前岗位</td>
+                <td width="11%" bgcolor="#eff5ff">面试时间</td>
+                <td width="7%">&nbsp;</td>
+              </tr>
+              
+              {#foreach from=$resumeList item=list#}
+              <tr>
+                <td width="5%"><label>
+                <input type="checkbox" name="interviewid[]" id="interview_{#$list.did#}" value="{#$list.did#}" />
+                </label></td>
+                <td width="10%"><a href="/user/resume.php?uid={#$list.resume_uid#}" target="_blank">{#$list.fullname#}</a>&nbsp;&nbsp;{#if $list.photo#}<img src="{#$QISHI.site_template#}images/cop_inco1.gif" />{#/if#}</td>
+                <td width="7%" align="center">{#if $list.sex==1#}男{#elseif $list.sex==2#}女{#/if#}</td>
+                <td width="6%" align="center">{#$list.birthdate#}</td>
+                <td width="11%" align="center">{#$list.education_cn#}</td>
+                <td width="7%" align="center"><span title="{#$list.experience_cn#}" style="display:block;width:39px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.experience_cn#}</span></td>
+                <td width="10%">{#$list.district_cn#}</td>
+                <td width="15%"><span title="{#$list.jobs_name#}" style="width:96px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.jobs_name#}</span></td>
+                <td width="11%"><span title="{#$list.recentjobs#}" style="width:96px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.recentjobs#}</span></td>
+                <td width="11%">{#$list.interview_time#}</td>
+                <td width="7%">&nbsp;</td>
+              </tr>
+              {#/foreach#}
+
+              <tr>
+                <td colspan="5" bgcolor="#EEEEEE">共{#$total#}条记录</td>
+                <td colspan="6" align="right" bgcolor="#EEEEEE"><div class="page">{#$pageHTML#}</div></td>
+              </tr>
+              <tr>
+                <td colspan="11" style=" padding-top:10px;"><input type="checkbox" id="selectall2" />
+                全选&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="btn_del" value="删 除" class="btns"/></td>
+              </tr>
+              <tr>
+                <td colspan="11"><span class="f_red">提示：</span><img src="{#$QISHI.site_template#}images/cop_inco1.gif" /> 表示有照片的简历</td>
+              </tr>
+              
+          </table>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+
+<script>
+$(document).ready(function() {
+	//全选
+	$("#selectall1").click(function(){
+		$("input[name='interviewid[]']").attr("checked",$(this).attr("checked"));
+		$("#selectall2").attr("checked",$(this).attr("checked"));
+	});
+	$("#selectall2").click(function(){
+		$("input[name='interviewid[]']").attr("checked",$(this).attr("checked"));
+		$("#selectall1").attr("checked",$(this).attr("checked"));
+	});
+	$("#btn_del").click(function(){
+		if(confirm("确定要删除吗?")) {
+			$("#optype").val('delete');
+			$("#Form1").submit();
+		}
+	});
+	$("#education").change(function(){
+		var pl=$(this).children('option:selected').val();
+		window.location.href="{#$url_education#}"+pl;
+	});
+	$("#jobsid").change(function(){
+		var pl=$(this).children('option:selected').val();
+		window.location.href="{#$url_jobsid#}"+pl;
+	});
+});
+</script>
+
+</body>
+</html>

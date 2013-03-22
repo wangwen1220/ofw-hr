@@ -1,0 +1,68 @@
+
+      <div class="weiz">您当前所在位置： <a href="/user/personal/">个人中心</a> &gt;&gt; 保密设定</div>
+	  <form action="" method="post">
+      <div class="xiu_g">
+      	 <table border="0" width="100%">
+              <tbody><tr>
+                <td>您简历当前的保密状态为：{#if $private.hideall#}隐藏{#else#}公开{#/if#}</td>
+            </tr>
+            <tr>
+            	<td><label>
+            	  <input name="hide" type="radio" id="hideall" value="1" {#if $private.hideall#}checked="checked"{#/if#}>
+            	</label>
+           	    已经有一份好工作，暂时隐藏我的简历，但允许本人发出求职意向的单位查看。</td>
+            </tr>
+            <tr>
+            	<td><label>
+            	  <input name="hide"  type="radio" id="hidesome" value="0" {#if !$private.hideall#}checked="checked"{#/if#}>
+            	</label>
+           	    允许所有招聘单位查阅我的资料；但我的简历不向以下单位开放：（不填写表示全部开放）</td>
+            </tr>
+            <tr>
+            	<td>公司一：
+            	  <input name="company[]" class="s01" type="text" value="{#$private.company.0#}">&nbsp;&nbsp;提示：请输入公司名所包含的短语</td>
+            </tr>
+            <tr>
+           	  <td>公司二：
+            	  <input name="company[]" class="s01" type="text" value="{#$private.company.1#}">&nbsp;</td>
+            </tr>
+            <tr>
+           	  <td>公司三：
+            	  <input name="company[]" class="s01" type="text" value="{#$private.company.2#}">&nbsp;</td>
+            </tr>
+            <tr>
+           	  <td><input value="保存" class="btnm" style="margin-left:50px;" type="submit" name="submit"></td>
+            </tr>
+            <tr>
+            	<td>
+                <strong>温馨提醒：</strong><br>
+                1.简历设置为保密状态之后，企业无法搜索到您的简历。您主动投递的简历，企业可以进行查看<br>
+                2.针对特定的公司保密之后，该公司无法搜索到您的简历，其他的公司依然可以进行查看。
+            </td>
+            </tr>
+        </tbody></table>
+      </div>
+	  </form>
+<script>
+/*
+$(function(){
+	$('#hideall').click(function(){
+		$('#hidesome').attr('checked','');
+	});
+
+	$('#hidesome').click(function(){
+		$('#hideall').attr('checked','');
+	});
+
+
+	$(".s01").each(function(){
+		$(this).blur(function(){
+			if($(this).val() != '' && $(this).val().replace(/\s+/g, '') != ''){
+				$('#hidesome').attr('checked','true');
+				$('#hideall').attr('checked','');
+			}
+		});
+	});
+});
+*/
+</script>

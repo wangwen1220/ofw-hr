@@ -1,0 +1,110 @@
+
+      <div class="weiz">您当前所在位置： <a href="/user/personal/">个人中心</a> >> 附件管理</div>
+      <div class="xiu_g">
+      	 <table border="0" width="100%">
+         	  <tbody><tr>
+              	<td>我上传的附件：</td>
+              </tr>
+              <tr>
+                <td align="right">
+                <table bgcolor="#DDDDDD" border="0" cellpadding="1" cellspacing="1" width="95%">
+                       <tbody>
+				  <tr>
+                        <td align="left" bgcolor="#FFFFFF">附件名称</td>
+                        <td align="left" bgcolor="#FFFFFF">缩略图</td>
+                        <td align="left" bgcolor="#FFFFFF">附件格式</td>
+                        <td align="left" bgcolor="#FFFFFF">附件大小</td>
+                        <td align="left" bgcolor="#FFFFFF">附件管理</td>
+           		  </tr>
+				  {#foreach item=item from=$file_info#}
+                       <tr>
+                        <td align="left" bgcolor="#FFFFFF">{#$item.name#}</td>
+                        <td align="left" bgcolor="#FFFFFF"><img src="{#$QISHI.site_template#}images/thumb_{#$item.type#}.gif"></td>
+                        <td align="left" bgcolor="#FFFFFF">{#$item.ext#}</td>
+                        <td align="left" bgcolor="#FFFFFF">{#$item.size#}</td>
+                        <td align="left" bgcolor="#FFFFFF"><a href="{#$QISHI.site_dir#}data/down.php?id={#$item.id#}">查看</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{#$QISHI.site_dir#}user/personal/personal_file.php?action=del&id={#$item.id#}" onclick="if(confirm('确认删除?')){return true;}else{return false;}">删除</a></td>
+               		  </tr>
+				 {#/foreach#}
+                  </tbody></table>
+                </td>
+             </tr>
+              <tr>
+              	<td>上传附件：</td>
+              </tr>
+              <tr>
+                <td align="right">
+				
+                <table border="0" cellpadding="0" cellspacing="0" width="95%">
+				<form method="post" enctype="multipart/form-data">
+              	   <tbody><tr>
+                     <td align="left" width="13%">附件名称：</td>
+                     <td align="left" width="87%"><input name="name" id="name" class="s01" type="text"></td>
+           		  </tr>
+                  <tr>
+                        <td align="left">附件类型：</td>
+                        <td align="left">
+					<select id="type" style="height:20px;width:200px;" name="type">
+                    <option value="-1">请选择</option>
+					<option value="1">照片</option>
+					<option value="2">作品/证书</option>
+					<option value="3">附件简历</option>
+					<option value="4">其他附件</option>
+                  </select></td>
+           		  </tr>
+                   <tr>
+                        <td align="left">选择附件：</td>
+                        <td align="left"><input id="file" style="height:26px;width:245px;" name="file" type="file"></td>
+           		  </tr>
+                   <tr>
+                        <td></td>
+                     <td align="left"><input value="上　 传" class="btnm" type="submit"></td>
+           		  </tr>
+                    </tbody></form>
+					</table>
+				
+                </td>
+             </tr>
+             <tr>
+                <td>
+                <strong>温馨提醒：</strong><br>
+                1.附件支持格式为：word，ppt，pdf，jpg，gif，gpeg，bmp，tiff格式文件<br>
+                2.附件不能超过2M
+                </td>
+              </tr>
+        </tbody></table>
+      </div>
+    
+<script>
+	$.validator.methods.checkSelect = function(value, element, param){
+		if(value == param){
+			return false;
+		}
+		return true;
+	}
+	$("form").validate({
+		'rules':{
+			'name':{
+				'required':true
+			},
+			'type':{
+				'checkSelect':-1
+			},
+			'file':{
+				'required':true
+			}
+
+		},
+		'messages':{
+			'name':{
+				'required':'请填写附件名'
+			},
+			'type':{
+				'checkSelect':'请选择附件类型'
+			},
+			'file':{
+				'required':'请选择上传附件'
+			}
+		
+		}
+	});
+</script>

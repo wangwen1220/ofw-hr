@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+body{font-size:12px;}
+.qu_psw{
+	width:720px;
+	margin:0 auto;
+	padding-left:180px;
+	}
+.qu_psw ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	}
+.qu_psw ul li{
+	margin-bottom:15px;
+	height:25px;
+	line-height:25px;
+	}
+.qu_psw .tishi{
+	color:#ff0000;
+	}
+.qu_psw ul li .user_name{
+	display:block;
+	float:left;
+	text-align:right;
+	}
+.qu_psw ul li .user_kuang{
+	display:block;
+	width:180px;
+	float:left;
+	margin-left:29px;
+	}
+.qu_psw ul li .yanzheng{
+	display:block;
+	width:101px;
+	float:left;
+	margin-left:29px;
+	}
+.qu_psw ul li .user_kuang input{
+	width:178px;
+	height:23px;
+	line-height:23px;
+	border:1px solid #7f9db9;
+	}
+.qu_psw ul li .yanzheng input{
+	width:99px;
+	height:23px;
+	line-height:23px;
+	border:1px solid #7f9db9;
+	}
+.qu_psw ul li .y_z_ma{
+	display:block;
+	width:60px;
+	height:18px;
+	float:left;
+	margin-top:3px;
+	margin-left:15px;
+	}
+.qu_psw ul li .queding{
+	display:block;
+	padding-left:80px;
+	padding-top:10px;
+	}
+</style>
+</head>
+
+<body>
+<div class="qu_psw">
+	<ul>
+   	  <li class="tishi">取回用户密码</li>
+        <li><span class="user_name">用户名：</span><span class="user_kuang"><input type="text" /></span></li>
+        <li><span class="user_name">验证码：</span><span class="yanzheng"><input type="text" /></span><span class="y_z_ma"><img src="images/yanzhengma.jpg" border="0" /></span></li>
+        <li><span class="queding"><a href="#" target="_blank"><img src="images/queding.gif" border="0" /></a></span></li>
+    </ul>
+</div>
+</body>
+</html>

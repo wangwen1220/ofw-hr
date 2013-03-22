@@ -1,0 +1,239 @@
+@charset 'utf-8';
+
+/*
+名称：人才网用户页面样式
+维护：王文 wangwen1220#139.com
+日期：2013-3-19
+*/
+
+/* Global
+----------------------------------------------------------------------------- */
+body {
+	color: #444;
+	background-color: #F2F2F2;
+}
+.highlight {
+	color: #CE0000;
+}
+
+/* TPL
+----------------------------------------------------------------------------- */
+/*
+@name: ui-box
+@overview: 通用盒样式
+@require: null
+*/
+.ui-box {
+	margin-bottom: 10px;
+	border: 1px solid #E1E1E1;
+	background: #fff;
+	*zoom: 1;
+}
+
+/* Layout
+----------------------------------------------------------------------------- */
+#header, #content, #footer {
+	width: 960px;
+	margin: 10px auto;
+}
+#header {
+	position: relative;
+}
+#header .logo {
+	margin: 0 15px;
+}
+#header .position {
+	margin-top: 0;
+	position: absolute;
+	right: 30px;
+	bottom: 0;
+}
+#header .position a {
+	color: #444;
+}
+#content {
+	background: #fff url(../images/user/bg-regbox-top.png) no-repeat;
+}
+#regbox {
+	padding: 30px;
+	background: url(../images/user/bg-regbox-bot.png) no-repeat 0 100%;
+}
+#regbox h1 {
+	margin: 0 15px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #CE0002;
+}
+#regbox h1 .tips {
+	font-size: 12px;
+	font-weight: normal;
+	color: #444;
+}
+#regbox h1 .tips a {
+	color: #0105C8;
+}
+#regbox form {
+	margin-top: 30px;
+}
+#regbox form .item {
+	margin: 15px 0;
+}
+#regbox form .item label {
+	float: left;
+	margin-right: 10px;
+	width: 200px;
+	height: 35px;
+	line-height: 35px;
+	overflow: hidden;
+	text-align: right;
+	font-size: 14px;
+}
+#regbox form .item label .required {
+	color: #F30300;
+}
+#regbox form .item input {
+	float: left;
+	width: 285px;
+	padding: 0 5px;
+	height: 33px;
+	line-height: 33px;
+	border: 1px solid #A6B6C5;
+	font-size: 14px;
+	background: #F4F9FD;
+	border-radius: 3px;
+}
+#regbox form .item-select label {
+	height: 30px;
+	line-height: 30px;
+}
+#regbox form .item .jselect {
+	float: left;
+	width: 260px;
+	padding: 0 25px 0 12px;
+	height: 30px;
+	line-height: 30px;
+	border: none;
+	border-radius: 3px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: url(../images/user/bg-jobs-select.png) no-repeat 100% 50%;
+	_background-position: -103px 50%;
+	cursor: pointer;
+}
+#regbox form .item input:focus {
+	color: #000;
+	border: 1px solid #3BAEFF;
+	box-shadow: 0 0 3px rgba(59, 174, 2550, .3);
+}
+#regbox form .item button {
+	display: block;
+	margin: 20px 0 0 210px;
+	width: 114px;
+	height: 31px;
+	line-height: 31px;
+	border: none;
+	font-weight: bold;
+	color: #fff;
+	background: url(../images/user/btn-reg.png) no-repeat 0 0;
+}
+#regbox form .protocal {
+	margin: 30px 0 20px;
+	height: 268px;
+	border: 1px solid #8E9BA3;
+	overflow: auto;
+	color: #333;
+	background: #fff;
+}
+#regbox form .protocal h2,
+#regbox form .protocal h3 {
+	margin: 15px 20px 5px;
+	font-weight: bold;
+}
+#regbox form .protocal h2 {
+	text-align: center;
+	font-weight: normal;
+	color: #222;
+	margin-bottom: 10px;
+}
+#regbox form .protocal p {
+	margin: 5px 20px;
+}
+#footer .nav {
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	color: #313435;
+	background: #FFF4F3;
+}
+#footer .nav a {
+	color: #313435;
+}
+
+/*==========Validform 插件样式==========*/
+.Validform_checktip{
+	display: inline-block;
+	margin-left:8px;
+	line-height:34px;
+	height:34px;
+	overflow:hidden;
+	color:#999;
+	font-size:12px;
+	vertical-align: middle;
+}
+.Validform_right{
+	color:#71b83d;
+	padding-left:20px;
+	background:url(../images/validform/right.png) no-repeat left center;
+}
+.Validform_wrong{
+	color:red;
+	padding-left:20px;
+	white-space:nowrap;
+	background:url(../images/validform/error.png) no-repeat left center;
+}
+.Validform_loading{
+	padding-left:20px;
+	background:url(../images/validform/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+	background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}
+
+/* 密码强度提示 */
+.passwordStrength {
+	display: none;
+	float: left;
+	margin: 9px 0 0 8px;
+}
+.passwordStrength em {
+	font-style: normal;
+	color: #F27F02;
+}
+.passwordStrength em,
+.passwordStrength span {
+	display:inline-block;
+	vertical-align:middle;
+	line-height:16px;
+	line-height:18px\9;
+	height:16px;
+}
+.passwordStrength span {
+	width:45px;
+	text-align:center;
+	background-color:#d0d0d0;
+	border-right:1px solid #fff;
+}
+.passwordStrength .last {
+	border-right:none;
+}
+.passwordStrength .bgStrength{
+	color:#fff;
+	background-color:#71b83d;
+}

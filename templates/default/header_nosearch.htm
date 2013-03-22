@@ -1,0 +1,152 @@
+<script type="text/javascript" src="http://images.ofweek.com/js/showfile.js"></script>
+
+<style>
+#submit_form1,#submit_form2{
+	background:url({#$QISHI.site_template#}images/boutton_04.gif) no-repeat;
+	width:93px;
+	height:32px;
+	border:0px;
+	cursor:pointer;
+}
+</style>
+<script type="text/javascript">
+	function of_showmore(v){
+		oMore = document.getElementById('showmore');
+		if(v==1){oMore.style.display = 'block';}
+		else{oMore.style.display = 'none';}
+	}
+	function of_showmember(v){
+		oMore1 = document.getElementById('tab_member_1');
+		oMore2 = document.getElementById('tab_member_2');
+		if(v==1){oMore1.style.display = 'none';oMore2.style.display = 'block';}
+		else{oMore1.style.display = 'block';oMore2.style.display = 'none';}
+	}
+</script>
+
+    <div class="header">
+        <!--顶部导航条-->
+		<div class="top">
+          <div class="link"><a href="http://www.ofweek.com/" target="_blank">OFweek首页</a>|<a href="http://lights.ofweek.com/" target="_blank">半导体照明</a>|<a href="http://solar.ofweek.com/" target="_blank">太阳能光伏</a>|<a href="http://laser.ofweek.com/" target="_blank">激光</a>|<a href="http://smartgrids.ofweek.com/" target="_blank">智能电网</a>|<a href="http://emc.ofweek.com/" target="_blank">节能</a><a onmouseover="of_showmore(1);" href="javascript:void(0);" style="text-decoration:none;">&nbsp;&nbsp;<img src="{#$QISHI.site_template#}images/inco.gif" onclick="return false;">&nbsp;&nbsp;</a>
+		  <div style="display: none;" class="hr_linka" onmouseout="of_showmore(0);" onmouseover="of_showmore(1);" id="showmore"><a title="电子工程" target="_blank" href="http://ee.ofweek.com/">电子工程</a>|<a title="光通讯" target="_blank" href="http://fiber.ofweek.com/">光通讯</a>|<a title="工控" target="_blank" href="http://gongkong.ofweek.com/">工控</a>|<a title="风电" target="_blank" href="http://windpower.ofweek.com/">风电</a>|<a title="仪器仪表" target="_blank" href="http://instrument.ofweek.com/">仪器仪表</a>|<a title="光电显示" target="_blank" href="http://display.ofweek.com/">光电显示</a>|<a title="光学" target="_blank" href="http://optics.ofweek.com/">光学</a></div>
+		  
+		  </div>
+          
+          {#if $member_uid#}
+          <div class="deng" id="site-nav">
+          欢迎 {#$member_username#} <a href="{#if $member_utype==1#}{#$QISHI.site_dir#}user/company/company_index.php{#else#}{#$QISHI.site_dir#}user/personal/{#/if#}">会员中心</a> <a href="#" onclick="return logout();">退出</a>
+          </div>
+          {#else#}
+          
+		  <!--登录状态条-->
+		  <div class="deng" id="site-nav">
+            <ul class="quick-menu">
+				<!--求职者登录区域-->
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="#" onclick="return false;">求职者登录</a>
+                
+                <form id="Form1" nam="Form1" action="http://www.ofweek.com/user/login.do?method=loginUser" method="post">
+                <input type="hidden" id="p_exist" name="talentNetworkLogin" value="">
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+ 			<div class="JobseekersUserLogoncontent" id="userlogin" >
+           <ul><li class="textr w60">用户名：</li><li><input id="p_username" name="username" type="text" maxlength="50" class="tbxInput" onfocus="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg1.gif) no-repeat&#39;" /></li>
+           </ul> 
+           <ul><li class="textr w60">密码：</li><li><input name="password" type="password" maxlength="50" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg1.gif) no-repeat&#39;" />
+           </li></ul>
+           <ul>
+           <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+               <input type="button" id="submit_form1" />
+               <a href="http://www.ofweek.com/user/userGetPassword.do" class="f_bule">忘记密码了？</a>
+			</li></ul>
+           </div>
+          </div>
+                </div>
+                <input type="hidden" name="siteweb" value="hr" />
+				<input type="hidden" name="returnurl" value="{#$QISHI.cur_url#}" />
+                </form>
+                
+                
+                </div>
+                </li>
+				<!--求职者登录区域END-->
+                <li>或者</li>
+                <li><a href="http://www.ofweek.com/user/registerUser.do?talentNetworkLogin=talentNetworkLogin">注册</a></li>
+				<!--企业登录区域-->
+                <li class="services menu-item last">
+                
+                <form id="Form2" nam="Form2" action="{#$QISHI.site_dir#}user/login.php" method="post">
+                <div class=menu>
+                <a class="menu-hd" href="#" onclick="return false;">企业登录</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+                    <div class="JobseekersUserLogoncontent" id="userlogin" >
+                   <ul><li class="textr w60">用户名：</li><li><input id="c_username" name="username" type="text" maxlength="50" class="tbxInput" onfocus="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg1.gif) no-repeat&#39;" /></li>
+                   </ul> 
+                   <ul><li class="textr w60">密码：</li><li><input name="password" type="password" maxlength="50" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url({#$QISHI.site_template#}images/login_boxbg1.gif) no-repeat&#39;" />
+                   </li></ul>
+                   <ul>
+                   <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+                       <input type="button" id="submit_form2" />
+                       <a href="{#$QISHI.site_dir#}user/get_password.php" class="f_bule">忘记密码了？</a>
+                    </li></ul>
+                   </div>
+                  </div>
+                </div>
+                </div>
+				<input type="hidden" name="returnurl" value="{#$QISHI.cur_url#}" />
+                </form>
+                
+                </li>
+				<!--企业登录区域END-->
+                <li><img src="{#$QISHI.site_template#}images/inco1.gif" /></li>
+                <li><a href="{#$QISHI.site_dir#}user/reg.php">企业注册</a></li>
+            </ul>
+            </div>
+		<!--登录条END-->
+		
+		{#/if#}
+		
+      </div>
+	  <!--顶部导航条-->
+        <div class="logo"><span><div id="ad-15"><script type="text/javascript">loadAD(637);</script></div></span><a href="{#$QISHI.site_dir#}"><img src="{#$QISHI.site_template#}images/logo.jpg" border="0" /></a></div>
+        <div class="nav_m">
+          <ul>
+                <li><a href="{#$QISHI.site_dir#}">首页</a></li>
+           		<li><a href="{#$QISHI.site_dir#}jobs/">求职</a></li>
+                <li><a href="{#$QISHI.site_dir#}hrlogin/">招聘</a></li>
+                <li><a href="{#$QISHI.site_dir#}campus">校园招聘</a></li>
+                <!--<li><a href="{#$QISHI.site_dir#}news/">职场资讯</a></li>-->
+            </ul>
+            <div class="qiye"><a href="{#if $member_utype==1#}/user/company/company_index.php{#else#}/hrlogin/{#/if#}">企业服务</a>热线：<strong>0755-83279360</strong></div>
+      </div>
+    </div>
+<script>
+$(document).ready(function(){
+	$("#submit_form1").click(function(){
+		var u = $("#p_username").val();
+		if(u) {
+			$.get("/api/member_exist.php?username="+u, function(result){
+				if(result == 'no-exist') {$("#p_exist").val('talentNetworkLogin');$("#Form1").submit();}
+				else {$("#p_exist").val('');$("#Form1").submit();}
+			});			
+		} else {
+			return false;
+		}
+	});
+	$("#submit_form2").click(function(){
+		var u = $("#c_username").val();
+		if(u) {
+			$("#Form2").submit();
+		} else {
+			return false;
+		}
+	});
+});
+function logout() {
+	$.get("/api/member_logout.php", function(result){
+		if(result == 'ok') {location.href='http://www.ofweek.com/user/userLogout.do?returnurl={#$QISHI.cur_url#}';return false;}
+		else {return false;}
+	});
+}
+</script>

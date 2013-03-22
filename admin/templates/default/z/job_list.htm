@@ -1,0 +1,124 @@
+{#include file="sys/admin_header.htm"#}
+<div class="admin_main_nr_dbox">
+
+<form id="Form1" name="Form1" action="job.php" method="get">
+<input type="hidden" name="act" value="list" />
+{#if $from=='audit'#}
+<input type="hidden" name="from" value="audit" />
+{#/if#}
+<input type="hidden" name="num" value="{#$num#}" />
+<input type="hidden" name="page" value="1" />
+<div id="search" style="margin-bottom:10px;">
+	ID：<input type="text" name="id" value="{#$search.id#}" size="8"/>
+	职位名称：<input type="text" name="jobname" value="{#$search.jobname#}" size="8"/>
+	公司名：<input type="text" name="companyname" value="{#$search.companyname#}" size="8"/>
+	审核状态：
+			{#if $from=='audit'#}
+			<select name="audit" disabled="disabled">
+				<option value="0">全部</option>
+				<option value="1">审核通过</option>
+				<option selected="selected" value="2">等待审核</option>
+				<option value="3">审核未通过</option>
+			 </select>
+			{#else#}
+			<select name="audit">
+				<option value="0">全部</option>
+				<option{#if $search.audit==1#} selected="selected"{#/if#} value="1">审核通过</option>
+				<option{#if $search.audit==2#} selected="selected"{#/if#} value="2">等待审核</option>
+				<option{#if $search.audit==3#} selected="selected"{#/if#} value="3">审核未通过</option>
+			 </select>
+			{#/if#}
+	过期状态：<select name="expire">
+				<option value="0">全部</option>
+				<option{#if $search.expire==1#} selected="selected"{#/if#} value="1">已过期</option>
+				<option{#if $search.expire==2#} selected="selected"{#/if#} value="2">未过期</option>
+			 </select>
+	行业：<select name="trade">
+				<option value="0">全部</option>
+				{#foreach from=$tradeCate item=list#}
+                <option{#if $search.trade==$list.c_id#} selected="selected"{#/if#} value="{#$list.c_id#}">{#$list.c_name#}</option>
+                {#/foreach#}
+			 </select>	<br /><br />
+	发布时间：<input id="addtime_from" readonly name="addtime_from" value="{#$search.addtime_from#}" size="8"/>-<input id="addtime_to" readonly name="addtime_to" value="{#$search.addtime_to#}" size="8"/>
+	到期时间：<input id="deadline_from" readonly name="deadline_from" value="{#$search.deadline_from#}" size="8"/>-<input id="deadline_to" readonly name="deadline_to" value="{#$search.deadline_to#}" size="8"/>
+	<input type="submit" value="搜索" />
+</div>
+</form>
+
+<form id="Form2" name="Form2" action="job.php?act=do" method="post">
+<input type="hidden" name="optype" id="optype" value="" />
+<input type="hidden" name="returnurl" id="returnurl" value="{#$returnurl#}" />
+<table width="100%" border="0" cellpadding="0" cellspacing="0"   class="link_lan">
+	<tr>
+		<td align="center" width="4%" class="admin_list_tit admin_list_first"><input type="checkbox" id="selectall1" title="全选/反选" /></td>
+		<td align="center" width="4%" class="admin_list_tit">ID</td>
+		<td align="center" width="8%" class="admin_list_tit">职位名称</td>
+		<td align="center" width="20%" class="admin_list_tit">公司名</td>
+		<td align="center" width="10%" class="admin_list_tit">职位状态</td>	
+		<td align="center" width="10%" class="admin_list_tit">联系人</td>
+		<td align="center" width="10%" class="admin_list_tit">联系电话</td> 
+		<td align="center" width="10%" class="admin_list_tit">邮箱地址</td> 
+		<td align="center" width="10%" class="admin_list_tit">发布时间</td>
+		<td align="center" width="10%" class="admin_list_tit">到期时间</td>
+		<td align="center" width="10%" class="admin_list_tit">操作</td>
+	</tr>
+	{#foreach from=$jobList item=list#}
+	<tr>
+		<td  class="admin_list" align="center"><input type="checkbox" name="jobid[]" id="uid_{#$list.id#}" value="{#$list.id#}"/></td>
+		<td  class="admin_list" align="center">{#$list.id#}</td>
+		<td  class="admin_list" align="center"><span style="display:block;width:85px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$list.jobs_name#}">{#$list.jobs_name#}</span></td>
+		<td  class="admin_list" align="center"><span style="display:block;width:203px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$list.companyname#}">{#$list.companyname#}</span></td>
+		<td  class="admin_list" align="center"><span style="display:block;width:203px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.audit_cn#}</span></td>
+		<td  class="admin_list" align="center"><span style="display:block;width:87px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$list.contact#}">{#$list.contact#}</span></td>
+		<td  class="admin_list" align="center"><span style="display:block;width:92px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$list.telephone#}">{#$list.telephone#}</td>
+		<td  class="admin_list" align="center"><span style="display:block;width:135px; overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$list.email#}">{#$list.email#}</span></td>
+		<td  class="admin_list" align="center">{#$list.addtime#}</td>
+		<td  class="admin_list" align="center">{#$list.deadline#}</td>
+		<td  class="admin_list" align="center"><a href="job.php?act=edit&jobid={#$list.id#}">编辑</a></td>
+	</tr>
+	{#/foreach#}
+</table>
+<div style="margin-top:10px;margin-bottom:10px;">共{#$total#}条记录&nbsp;&nbsp;&nbsp;&nbsp;{#$pageHTML#}&nbsp;&nbsp;<select id="num"><option{#if $num==10#} selected="selected"{#/if#} value="10">10</option><option{#if $num==20#} selected="selected"{#/if#} value="20">20</option><option{#if $num==30#} selected="selected"{#/if#} value="30">30</option><option{#if $num==60#} selected="selected"{#/if#} value="60">60</option></select></div>
+<div><input type="button" id="btn_audit_1" value="审核通过" />&nbsp;&nbsp;<input type="button" id="btn_audit_3" value="审核不通过" />&nbsp;&nbsp;<input type="button" id="btn_refresh" value="刷新" />&nbsp;&nbsp;<input type="button" id="btn_del" value="删除" /></div>
+</form>
+</div>
+
+<script>
+$(document).ready(function(){
+	$("#num").change(function(){
+		var pl=$(this).children('option:selected').val();
+		window.location.href="{#$num_url#}"+pl;
+	});
+	$("#selectall1").click(function(){
+		$("input[name='jobid[]']").attr("checked",$(this).attr("checked"));
+	});	
+	$("#btn_audit_1").click(function(){
+		$("#optype").val('audit_1');
+		$("#Form2").submit();
+	});
+	$("#btn_audit_3").click(function(){
+		$("#optype").val('audit_3');
+		$("#Form2").submit();
+	});
+	$("#btn_refresh").click(function(){
+		$("#optype").val('refresh');
+		$("#Form2").submit();
+	});
+	$("#btn_del").click(function(){
+		if(confirm("用户信息会被彻底删除，确定删除吗?")) {
+			$("#optype").val('del');
+			$("#Form2").submit();
+		}
+	});
+	
+	$(function(){
+		$("#addtime_from").date_input();
+		$("#addtime_to").date_input();
+		$("#deadline_from").date_input();
+		$("#deadline_to").date_input();
+	});
+});
+</script>
+
+</body>
+</html>

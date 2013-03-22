@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/netway/!svn/ver/25654/ofweek_hr/api
+END
+getdata.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/netway/!svn/ver/25141/ofweek_hr/api/getdata.php
+END
+ofweek_pwd.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/netway/!svn/ver/24571/ofweek_hr/api/ofweek_pwd.php
+END
+ofweek_reset_pwd.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/netway/!svn/ver/24673/ofweek_hr/api/ofweek_reset_pwd.php
+END
+ofweek_reg.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/netway/!svn/ver/25654/ofweek_hr/api/ofweek_reg.php
+END
+member_check_pwd.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/netway/!svn/ver/25279/ofweek_hr/api/member_check_pwd.php
+END
+member_logout.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/netway/!svn/ver/24114/ofweek_hr/api/member_logout.php
+END
+username_exist_company.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/netway/!svn/ver/25276/ofweek_hr/api/username_exist_company.php
+END
+member_exist.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/netway/!svn/ver/24114/ofweek_hr/api/member_exist.php
+END

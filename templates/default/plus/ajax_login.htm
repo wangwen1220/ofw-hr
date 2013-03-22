@@ -1,0 +1,52 @@
+<div class="ajax_login_tit">快速登录</div>
+<div class="ajax_login_err"></div>
+
+<form id="Form4" name="Form4" action="http://www.ofweek.com/user/login.do?method=loginUser" method="post" style='float:left;width:235px;'>
+<input type="hidden" id="p_exist3" name="talentNetworkLogin" value="">
+<table width="100%" border="0" align="center" cellpadding="5" cellspacing="0" >
+    <tr><td width="50" align="right">用户名：</td>
+    <td>
+      <input type="text" id="p_username3" name="username"  class="input_text_150"  maxlength="30"   value="" /></td>
+  </tr>
+  <tr>
+    <td align="right">密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+    <td>
+      <input name="password" type="password"  class="input_text_150"  maxlength="20"/></td>
+  </tr>
+
+  <tr>
+    <td align="right">&nbsp;</td>
+    <td height="40" valign="top" ><input type="button" id="submit_form4" class="but80" value="登录" />
+	&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="http://www.ofweek.com/user/userGetPassword.do" style='color:#00f'>忘记密码？</a></td>
+  </tr>
+  <tr>
+    <td align="right" style="border-top:1px  #E8E8E8 solid">&nbsp;</td>
+    <td height="30" style="border-top:1px  #E8E8E8 solid">还没有账号？ <a href="http://www.ofweek.com/user/registerUser.do?talentNetworkLogin=talentNetworkLogin" style='color:#00f'>免费注册</a></td>
+  </tr>
+</table>
+<input type="hidden" name="siteweb" value="hr" />
+				<input type="hidden" name="returnurl" value="{#$QISHI.referer#}" />
+</form>
+
+<div style='margin-left:50px;'>
+	<p style='margin-bottom:10px;color:#000;line-height:18px;'>1. OFweek会员可直接进行登录，填写求职简历；</p>
+	<p style='margin-bottom:10px;color:#000;line-height:18px;'>2. 经常登录刷新您的求职简历，将获得更多企业查阅的机会</p>
+</div>
+<div style='clear:both'></div>
+
+ <script>
+$(document).ready(function(){
+	$("#submit_form4").click(function(){
+		var u = $("#p_username3").val();
+		if(u) {
+			$.get("/api/member_exist.php?username="+u, function(result){
+				if(result == 'no-exist') {$("#p_exist3").val('talentNetworkLogin');$("#Form4").submit();}
+				else {$("#p_exist3").val('');$("#Form4").submit();}
+			});
+		} else {
+			return false;
+		}
+	});
+});
+</script>

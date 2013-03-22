@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+	margin:0;
+	font-family:"宋体";
+	font-size:12px;
+	color:#444;
+	}
+#content{
+	width:677px;
+	margin:0 auto;
+	background:url(images/bg.gif) repeat-y right top;
+	}
+#header{
+	width:100%;
+	background:url(images/top_right.gif) no-repeat right top;
+	height:66px;
+	}
+.banner{
+	width:650px;
+	border:1px solid #dedede;
+	border-bottom:none;
+	}
+.neirong{
+	
+	}
+</style>
+<title>个人会员注册页面</title>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width:677px;background:url(images/bg.gif) repeat-y right top;font-family:"宋体";font-size:12px;color:#444;">
+		<tr>
+				<td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td align="left" style="background:url(images/top_right.gif) no-repeat right top;height:66px;"><table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+				<td style="width:650px;border:1px solid #dedede;border-bottom:none;"><img src="images/top_bg.jpg" border="0" /></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none; border-bottom:none;">
+		<tr>
+				<td colspan="2" style="padding:0 15px; line-height:25px; ">
+					<span style="border-bottom:1px dashed #dedede;"><strong>尊敬的【姓名】：</strong>
+						<span style="display:block; text-indent:2em;">感谢您注册成为OFweek人才网会员！OFweek人才网是OFweek旗下网站，是全国领先的高科技人才资源平台！</span>					</span>				</td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px; text-indent:2em; line-height:25px; "><strong>您的用户名：</strong>【用户名】</td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px;text-indent:2em; line-height:25px; "><strong>您的密码：</strong>【密码】</td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px;text-indent:2em; line-height:25px; "><strong>邮箱认证地址：</strong><a href="http://hr.ofweek.com/email/r......html">点此认证</a></td>
+		</tr>
+		<tr>
+				<td width="551" style="padding:0 15px;text-indent:2em; line-height:25px; ">请保存好您的用户名以及密码，如果您忘记了密码，您可以通过找回密码的方法找回</td>
+				<td width="99" style="line-height:25px; "><a href="#" target="_blank"><img src="images/zhpw.gif" alt="找回密码" border="0" /></a></td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px; text-indent:2em;border-bottom:1px dashed #dedede;line-height:25px;"><strong>求职小助手：</strong></td>
+		</tr>
+		<tr>
+				<td colspan="2" style="border-bottom:1px dashed #dedede;"><table border="0" cellspacing="0" cellpadding="0" align="center" width="88%" style="line-height:30px;">
+		<tr>
+				<td width="72%">经常刷新您的简历，将获得更多企业关注的机会！</td>
+				<td width="28%"><a href="http://hr.ofweek.com/login.php" target="_blank" style="color:#c2261a;">现在就去刷新</a></td>
+		</tr>
+		<tr>
+				<td>完善的简历，是企业了解您的基础！</td>
+				<td><a href="http://www.ofweek.com/user/registerUser.do" target="_blank" style="color:#c2261a;">现在就去完善</a></td>
+		</tr>
+		<tr>
+				<td>优秀的简历，将使您在更多的求职者中脱颖而出！</td>
+				<td><a href="http://hr.ofweek.com/hr" target="_blank" style="color:#c2261a;">简历填写技巧</a></td>
+		</tr>
+		<tr>
+				<td>祝您求职成功！</td>
+				<td>&nbsp;</td>
+		</tr>
+</table>
+</td>
+		</tr>
+		
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:url(images/bottom_right.gif) no-repeat right bottom; height:35px; line-height:35px;">
+		<tr>
+				<td align="left"><table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none;">
+		<tr>
+				<td align="right" style="padding-right:20px;">OFweek人才网</td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+
+</td>
+		</tr>
+		
+</table>
+</body>
+</html>

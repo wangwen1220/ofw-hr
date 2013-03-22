@@ -1,0 +1,36 @@
+{#include file="sys/admin_header.htm"#}
+<div class="admin_main_nr_dbox">
+<div class="pagetit">
+	<div class="ptit">欢迎登录 管理中心！</div>
+  <div class="clear"></div>
+</div>
+<span id="version"></span>
+
+<div class="toptit">待处理事务</div>
+<div style="margin-left:50px;">
+	<ul>
+	<li>昨日注册简历数：<a href="{#$total_1_url#}">{#$total_1#}</a></li>
+	<li>今日注册简历数：<a href="{#$total_2_url#}">{#$total_2#}</a></li>
+	<li>待审核简历数：<a href="{#$total_3_url#}">{#$total_3#}</a></li>
+	<li>昨日注册企业数：<a href="{#$total_4_url#}">{#$total_4#}</a></li>
+	<li>今日注册企业数：<a href="{#$total_5_url#}">{#$total_5#}</a></li>
+	<li>本周投递简历数：{#$total_6#}</li>
+	<li>上周投递简历数：{#$total_7#}</li>
+	<li>待审核企业：<a href="{#$total_8_url#}">{#$total_8#}</a></li>
+	<li>过期企业：<a href="{#$total_9_url#}">{#$total_9#}</a></li>
+	<li>审核未通过企业：<a href="{#$total_10_url#}">{#$total_10#}</a></li>
+	<li>昨日职位发布数：<a href="{#$total_11_url#}">{#$total_11#}</a></li>
+	<li>今日职位发布数：<a href="{#$total_12_url#}">{#$total_12#}</a></li>
+	<li>待审核职位：<a href="{#$total_13_url#}">{#$total_13#}</a></li>
+	<li>过期职位数：<a href="{#$total_14_url#}">{#$total_14#}</a></li>
+	<!-- 
+	<li>本月开通的免费企业会员数：<a href="admin_set_com.php?act=set_meal">{#$total_16#}</a></li>
+	<li>本月可设置免费企业会员数：<a href="admin_set_com.php?act=set_meal">{#$total_15#}</a></li>
+	 -->
+	</ul>
+</div>
+
+</div>
+{#include file="sys/admin_footer.htm"#}
+</body>
+</html>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/mailqueue
+END
+admin_mailqueue_batchadd.htm
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/mailqueue/admin_mailqueue_batchadd.htm
+END
+admin_mailqueue_list.htm
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/mailqueue/admin_mailqueue_list.htm
+END
+admin_mailqueue_nav.htm
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/mailqueue/admin_mailqueue_nav.htm
+END
+admin_mailqueue_edit.htm
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/mailqueue/admin_mailqueue_edit.htm
+END
+admin_mailqueue_add.htm
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/mailqueue/admin_mailqueue_add.htm
+END

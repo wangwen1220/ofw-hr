@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script src="{#$QISHI.site_template#}js/jquery.lazyload.js" type="text/javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/tc.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/xl.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/add_common_function.js"></script>
+<script src="{#$QISHI.site_template#}js/MSClass.js" language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/select-jobs.js" type="text/javascript"></script>
+<style type="text/css">
+body{
+	font-size:12px;
+	}
+.qyzc{
+	width:990px;
+	margin:0 auto;
+	background:#f6f6f6;
+	}
+.qyzc_con{
+	width:691px;
+	margin:0 auto;
+	}
+.qyzc_con .title{
+	width:100%;
+	height:32px;
+	line-height:32px;
+	background:#e7e7e7;
+	color:#fd0002;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:10px;
+	}
+.qyzc_xinxi{
+	text-align:right;
+	width:100%;
+	margin-top:23px;
+	}
+.qyzc_xinxi ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	}
+.qyzc_xinxi ul li{
+	height:25px;
+	line-height:25px;
+	margin-bottom:15px;
+	}
+.qyzc_xinxi ul li .kong{
+	display:block;
+	float:right;
+	width:274px;
+	}
+.qyzc_xinxi ul li .tishi{
+	width:274px;
+	display:block;
+	float:right;
+	text-align:left;
+	}
+.qyzc_xinxi ul li .ts_dui{
+	width:254px;
+	display:block;
+	float:right;
+	background:url({#$QISHI.site_template#}images/dui.gif) no-repeat 0 6px;
+	padding-left:20px;
+	color:#509a00;
+	text-align:left;
+	}
+.qyzc_xinxi ul li .ts_cuo{
+	width:254px;
+	display:block;
+	float:right;
+	background:url({#$QISHI.site_template#}images/cuo.gif) no-repeat 0 6px;
+	padding-left:20px;
+	color:#cc0001;
+	text-align:left;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	}
+.qyzc_xinxi ul li .qiang{
+	width:194px;
+	display:block;
+	float:right;
+	padding-left:10px;
+	color:#1a9d00;
+	padding-left:80px;
+	text-align:left;
+	background:url({#$QISHI.site_template#}images/qiang.gif) no-repeat 10px 9px;
+	}
+.qyzc_xinxi ul li .zhong{
+	width:194px;
+	display:block;
+	float:right;
+	padding-left:10px;
+	color:#1a9d00;
+	padding-left:80px;
+	text-align:left;
+	background:url({#$QISHI.site_template#}images/zhong.gif) no-repeat 10px 9px;
+	}
+.qyzc_xinxi ul li .ruo{
+	width:194px;
+	display:block;
+	float:right;
+	padding-left:10px;
+	color:#1a9d00;
+	padding-left:80px;
+	text-align:left;
+	background:url({#$QISHI.site_template#}images/ruo.gif) no-repeat 10px 9px;
+	}
+.qyzc_xinxi ul li .xinxi_kuang , .qyzc_xinxi ul li .yuedu{
+	display:block;
+	width:184px;
+	float:right;
+	text-align:left;
+	margin:0 22px 0 12px;
+	}
+.qyzc_xinxi ul li .yuedu input{
+	}
+.qyzc_xinxi ul li .xinxi_kuang input{
+	width:182px;
+	height:23px;
+	line-height:23px;
+	border:1px solid #7e9db9;
+	}
+#submit_reg{
+	background:url(/templates/default/images/queren.jpg) no-repeat;
+	width:122px;
+	height:39px;
+	border:0px;
+	cursor:pointer;
+}
+</style>
+</head>
+<script type="text/javascript">
+function Trim(TRIM_VALUE){
+	if(TRIM_VALUE.length < 1){
+		return"";
+	}
+	TRIM_VALUE = RTrim(TRIM_VALUE);
+	TRIM_VALUE = LTrim(TRIM_VALUE);
+	if(TRIM_VALUE==""){
+		return "";
+	}
+	else{
+		return TRIM_VALUE;
+	}
+}
+function RTrim(VALUE){
+	var w_space = String.fromCharCode(32);
+	var v_length = VALUE.length;
+	var strTemp = "";
+	if(v_length < 0){
+		return"";
+	}
+	var iTemp = v_length -1;
+
+	while(iTemp > -1){
+		if(VALUE.charAt(iTemp) == w_space){
+		}
+		else{
+			strTemp = VALUE.substring(0,iTemp +1);
+			break;
+		}
+		iTemp = iTemp-1;
+
+	} // End While
+	return strTemp;
+}
+function LTrim(VALUE){
+	var w_space = String.fromCharCode(32);
+	if(v_length < 1){
+		return"";
+	}
+	var v_length = VALUE.length;
+	var strTemp = "";
+
+	var iTemp = 0;
+
+	while(iTemp < v_length){
+		if(VALUE.charAt(iTemp) == w_space){
+		}
+		else{
+			strTemp = VALUE.substring(iTemp,v_length);
+			break;
+		}
+		iTemp = iTemp + 1;
+	} // End While
+	return strTemp;
+}
+function isEmail(str) {
+  	var myReg = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  	if (myReg.test(str))  return true;
+  	return false;
+} 
+function pwd_strength(str) {
+	var level = 0;
+	var numReg = /^[0-9]+$/;
+	if(str.length<=9 || numReg.test(str)){level = 1;}
+	else if(str.length <= 15){level = 2;}
+	else{level = 3;}
+	return level;
+}
+function z_tel(tel) {
+	var reg=/^[\+][8][6][\-]\d{3,4}-\d{7,8}(-\d{3,4})?$/;
+	var reg1=/^((0\d{2,3})-)?(\d{7,8})(-(\d{3,}))?$/;
+	// var reg =
+	// /^(([0\+]{0,1}\d{2,3}-)?(\d{2,4})-)?(\d{7,8})(-(\d{2,6}))?$/;
+	//var reg = /^[\+\-\(\),，0-9]+$/;
+	if(tel==''||tel.length==0){
+		return false;
+	}else if(!reg.test(tel) && !reg1.test(tel)){
+		return false; 
+    }else if(tel.length>50){
+		return false;	
+	}else{
+		return true;
+	}
+}
+function z_num_char(str){
+	var reg = /^[0-9a-zA-Z]+$/;
+	return reg.test(str);
+}
+$(document).ready(function(){
+	$("#username").blur(function(){
+		var pl = $("#username").val();
+		pl = Trim(pl);
+		if(pl == '') {$("#tip_username").html('<span class="ts_cuo">对不起，用户名不能为空！</span>');}
+		else {
+			var patn = /^[0-9a-zA-Z_]+$/;
+			if( (patn.test(pl) || isEmail(pl)) && (pl.length>=6 && pl.length<=50) ){
+				$.get("{#$QISHI.site_dir#}api/username_exist_company.php?username="+pl,function(data){
+					if(data == 'exist'){$("#tip_username").html('<span class="ts_cuo">对不起，该用户名已经存在，请更换！</span>');}
+					else if(data == 'no-exist'){$("#tip_username").html('<span class="ts_dui">恭喜您，该用户名可以用来注册！</span>');}
+				});
+			}
+			else{$("#tip_username").html('<span class="ts_cuo">6~50个字符，可使用字母、数字、下划线或邮箱</span>');}
+		}
+	});
+	$("#password").change(function(){
+		var pl = $("#password").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_password").html('<span class="ts_cuo">对不起，登陆密码不能为空！</span>');}
+		else if(!z_num_char(pl)) {$("#tip_password").html('<span class="ts_cuo">6~50个字符，可使用字母、数字.</span>');}
+		else if(pl.length>=6 && pl.length<=50){
+			var level = pwd_strength(pl);
+			if(level == 1){$("#tip_password").html('<span class="ruo">弱</span>');}
+			else if(level == 2){$("#tip_password").html('<span class="zhong">中</span>');}
+			else if(level == 3){$("#tip_password").html('<span class="qiang">强</span>');}
+		}
+		else{$("#tip_password").html('<span class="ts_cuo">6~50个字符，可使用字母、数字</span>');}
+	});
+	$("#password2").blur(function(){
+		var pl = $("#password").val();
+		var pl2 = $("#password2").val();
+		pl = Trim(pl);
+		pl2 = Trim(pl2);
+		if(pl2 == ''){$("#tip_password2").html('<span class="ts_cuo">对不起，请输入确认密码！</span>');}
+		else if(pl == pl2){$("#tip_password2").html('<span class="tishi">&nbsp;</span>');}
+		else{$("#tip_password2").html('<span class="ts_cuo">对不起，您2次输入的密码不一致，请确认！</span>');}
+	});
+	$("#email").blur(function(){
+		var pl = $("#email").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_email").html('<span class="ts_cuo">对不起，邮件地址不能为空！</span>');}
+		else if(isEmail(pl)){$("#tip_email").html('<span class="ts_dui">恭喜您，该邮件地址可用！</span>');}
+		else{$("#tip_email").html('<span class="ts_cuo">您输入的邮件地址格式不对，请正确输入！</span>');}
+	});
+	$("#companyname").blur(function(){
+		var pl = $("#companyname").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_companyname").html('<span class="ts_cuo">请填写公司名称！</span>');}
+		else if(pl.length>=6 && pl.length<=50){$("#tip_companyname").html('<span class="tishi">&nbsp;</span>');}
+		else{$("#tip_companyname").html('<span class="ts_cuo">请填写正确的公司名称！</span>');}
+	});
+	$("#contact").blur(function(){
+		var pl = $("#contact").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_contact").html('<span class="ts_cuo">请填写联系人！</span>');}
+		else if(pl.length<=50){$("#tip_contact").html('<span class="tishi">&nbsp;</span>');}
+		else{$("#tip_contact").html('<span class="ts_cuo">请填写正确的联系人！</span>');}
+	});
+	$("#telephone").blur(function(){
+		var pl = $("#telephone").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_telephone").html('<span class="ts_cuo">请填写联系电话！</span>');}
+		else if(z_tel(pl)){$("#tip_telephone").html('<span class="ts_dui">例如：+86-0755-83279360-800</span>');}
+		else{$("#tip_telephone").html('<span class="ts_cuo">请填写正确的联系电话！</span>');}
+	});
+	$("#readitem").click(function(){
+		if(document.getElementById("readitem").checked){$("#tip_readitem").html('<span>&nbsp;</span>');}
+		else{$("#tip_readitem").html('<span class="ts_cuo">请先阅读注册协议</span>');}
+	});	
+	
+	
+	$("#form_reg").submit(function(){
+		
+		var b = true;
+		//
+		var pl = $("#username").val();
+		pl = Trim(pl);
+		if(pl == '') {$("#tip_username").html('<span class="ts_cuo">对不起，用户名不能为空！</span>');b=false;}
+		else {
+			var patn = /^[0-9a-zA-Z_]+$/;
+			if( (patn.test(pl) || isEmail(pl)) && (pl.length>=6 && pl.length<=50) ){
+				$.get("{#$QISHI.site_dir#}api/username_exist_company.php?username="+pl,function(data){
+					if(data == 'exist'){$("#tip_username").html('<span class="ts_cuo">对不起，该用户名已经存在，请更换！</span>');b=false;}
+					else if(data == 'no-exist'){$("#tip_username").html('<span class="ts_dui">恭喜您，该用户名可以用来注册！</span>');}
+				});
+			}
+			else{$("#tip_username").html('<span class="ts_cuo">6~50个字符，可使用字母、数字、下划线或邮箱</span>');b=false;}
+		}
+		
+		//
+		var pl = $("#password").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_password").html('<span class="ts_cuo">对不起，登陆密码不能为空！</span>');b=false;}
+		else if(!z_num_char(pl)) {$("#tip_password").html('<span class="ts_cuo">6~50个字符，可使用字母、数字.</span>');}
+		else if(pl.length>=6 && pl.length<=50){
+			var level = pwd_strength(pl);
+			if(level == 1){$("#tip_password").html('<span class="ruo">弱</span>');}
+			else if(level == 2){$("#tip_password").html('<span class="zhong">中</span>');}
+			else if(level == 3){$("#tip_password").html('<span class="qiang">强</span>');}
+		}
+		else{$("#tip_password").html('<span class="ts_cuo">6~50个字符，可使用字母、数字</span>');b=false;}
+		
+		//
+		var pl = $("#password").val();
+		var pl2 = $("#password2").val();
+		pl = Trim(pl);
+		pl2 = Trim(pl2);
+		if(pl2 == ''){$("#tip_password2").html('<span class="ts_cuo">对不起，请输入确认密码！</span>');b=false;}
+		else if(pl == pl2){$("#tip_password2").html('<span class="tishi">&nbsp;</span>');}
+		else{$("#tip_password2").html('<span class="ts_cuo">对不起，您2次输入的密码不一致，请确认！</span>');b=false;}
+		
+		//
+		var pl = $("#email").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_email").html('<span class="ts_cuo">对不起，邮件地址不能为空！</span>');b=false;}
+		else if(isEmail(pl)){$("#tip_email").html('<span class="ts_dui">恭喜您，该邮件地址可用！</span>');}
+		else{$("#tip_email").html('<span class="ts_cuo">您输入的邮件地址格式不对，请正确输入！</span>');b=false;}
+		
+		//
+		var pl = $("#companyname").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_companyname").html('<span class="ts_cuo">请填写公司名称！</span>');b=false;}
+		else if(pl.length>=6 && pl.length<=50){$("#tip_companyname").html('<span class="tishi">&nbsp;</span>');}
+		else{$("#tip_companyname").html('<span class="ts_cuo">请填写正确的公司名称！</span>');b=false;}
+		
+		//
+		var pl = $("#contact").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_contact").html('<span class="ts_cuo">请填写联系人！</span>');b=false;}
+		else if(pl.length<=50){$("#tip_contact").html('<span class="tishi">&nbsp;</span>');}
+		else{$("#tip_contact").html('<span class="ts_cuo">请填写正确的联系人！</span>');b=false;}
+		
+		//
+		var pl = $("#telephone").val();
+		pl = Trim(pl);
+		if(pl == ''){$("#tip_telephone").html('<span class="ts_cuo">请填写联系电话！</span>');b=false;}
+		else if(z_tel(pl)){$("#tip_telephone").html('<span class="ts_dui">例如：+86-0755-83279360-800</span>');}
+		else{$("#tip_telephone").html('<span class="ts_cuo">请填写正确的联系电话！</span>');b=false;}
+		
+		//
+		if(document.getElementById("readitem").checked){$("#tip_readitem").html('<span>&nbsp;</span>');}
+		else{$("#tip_readitem").html('<span class="ts_cuo">请先阅读注册协议</span>');}
+		
+		return b;
+	});
+});
+</script>
+<body>
+<div id="site">
+
+<!--header start-->
+	{#include file="header_nosearch.htm"#}
+        
+	<!--header end-->
+	<div class="current">您当前所在位置：<a href="/" target="_blank">OFweek人才网</a> &raquo; 企业注册</div>
+	
+	<!--body start-->
+	<div id="content">
+
+<div class="qyzc">
+	<div class="qyzc_con">
+    	<div class="title">注册OFweek人才网企业会员，即可免费享受OFweek企业招聘服务</div>
+    	
+    	<form id="form_reg" act="reg.php" method="post">
+       	<div class="qyzc_xinxi">
+        	<ul>
+            	<li><span id="tip_username"><span class="tishi">6~50个字符，可使用字母、数字、下划线或邮箱</span></span><span class="xinxi_kuang"><input type="text" name="username" id="username" value="" maxlength="50" /></span>用户名：</li>
+                <li><span id="tip_password"><span class="tishi">6~50个字符，可使用字母、数字</span></span><span class="xinxi_kuang"><input type="password" name="password" id="password" value="" maxlength="50" /></span>密码：</li>
+                <li><span id="tip_password2"><span class="tishi">&nbsp;</span></span><span class="xinxi_kuang"><input type="password" name="password2" id="password2" value="" maxlength="50" /></span>确认密码：</li>
+                <li><span id="tip_email"><span class="tishi">&nbsp;</span></span><span class="xinxi_kuang"><input type="text" name="email" id="email" value="" maxlength="50" /></span>邮箱：</li>
+                <li><span id="tip_companyname"><span class="tishi">&nbsp;</span></span><span class="xinxi_kuang"><input type="text" name="companyname" id="companyname" value="" /></span>公司名称：</li>
+                <li><span id="tip_contact"><span class="tishi">&nbsp;</span></span><span class="xinxi_kuang"><input type="text" name="contact" id="contact" value=""/></span>联系人：</li>
+                <li><span id="tip_telephone"><span class="tishi">例如：+86-0755-83279360-800</span></span><span class="xinxi_kuang"><input type="text" name="telephone" id="telephone" value="" /></span>联系电话：</li>
+              <li><span id="tip_readitem" class="kong">&nbsp;</span><span class="yuedu"><input checked="checked" type="checkbox" name="readitem" value="1" id="readitem" />我已阅读 <a style="color:#0000FF; text-decoration:underline;" href="http://www.ofweek.com/protocol.shtml" target="_blank">注册协议</a></span></li>
+                <li><span class="kong">&nbsp;</span><span class="xinxi_kuang"><input type="submit" id="submit_reg" value=""></span></li>
+            </ul>
+        </div>
+        </form>
+
+    </div>
+</div>
+
+	</div>
+	<!--body end-->
+	
+	<!--bottom start-->
+	{#include file="footer.htm"#}
+<!--bottom end-->
+</div>
+</div>
+</body>
+</html>

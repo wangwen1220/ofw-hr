@@ -1,0 +1,66 @@
+{#include file="sys/admin_header.htm"#}
+<div class="admin_main_nr_dbox">
+ <div class="pagetit">
+	<div class="ptit"> {#$pageheader#}</div>
+	{#include file="set_com/admin_set_com_nav.htm"#}
+  <div class="clear"></div>
+</div>
+<div class="toptip">
+	<h2>提示：</h2>
+	<p>
+服务套餐模式是指会员可以购买不同等级服务，如普通会员，VIP会员等，每个等级都有不同的使用权限
+</p>
+</div>
+<div class="toptit">设置服务套餐</div>
+
+	  <form id="form1" name="form1" method="post" action="?act=set_meal_edit_save">
+	   {#$inputtoken#}
+	   <input name="id" type="hidden" value="{#$show.id#}" />
+    <table width="90%" border="0" cellspacing="3" cellpadding="3">
+      <tr>
+        <td width="200" align="right">套餐名称：</td>
+        <td><input name="setmeal_name" type="text" class="input_text_200" id="setmeal_name" value="{#$show.setmeal_name#}"/></td>
+      </tr>
+      <tr>
+        <td align="right">有效时间：</td>
+        <td><input name="days" type="text" class="input_text_200" id="days" value="{#$show.days#}" maxlength="10"/>
+        天 <span class="admin_note"></span> </td>
+      </tr>
+      <tr>
+        <td align="right">简历搜索权限：</td>
+        <td><input{#if $show.resume_search==0#} checked="checked"{#/if#} name="resume_search" type="radio" value="0" />无&nbsp;&nbsp;
+        <input{#if $show.resume_search==1#} checked="checked"{#/if#} name="resume_search" type="radio" value="1" />有
+         <span class="admin_note"></span> </td>
+      </tr>
+<tr>
+        <td align="right">发布普通职位：</td>
+        <td><input name="jobs_ordinary" type="text" class="input_text_200" id="jobs_ordinary" value="{#$show.jobs_ordinary#}" maxlength="10"/>
+        条   <span class="admin_note">(0为不允许)</span></td>
+      </tr>
+	  
+	  <tr>
+        <td align="right">下载普通人才简历：</td>
+        <td><input name="download_resume_ordinary" type="text" class="input_text_200" id="download_resume_ordinary" value="{#$show.download_resume_ordinary#}" maxlength="10"/>
+        份 <span class="admin_note">(0为不允许)</span></td>
+      </tr>
+
+      <tr>
+        <td align="right">显示顺序：</td>
+        <td><input name="show_order" type="text" class="input_text_200" id="show_order" onkeyup="if(event.keyCode !=37 &amp;&amp; event.keyCode != 39) value=value.replace(/\D/g,'');" value="{#$show.show_order#}" maxlength="3"onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/\D/g,''))"/>
+          数字越大越靠前</td>
+      </tr>
+
+      <tr>
+        <td align="center">&nbsp;</td>
+        <td height="50" align="left"><input type="submit" name="Submit3" value="提交" class="admin_submit"   />
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             <input name="submit22" type="button" class="admin_submit"    value="返 回" onclick="Javascript:window.history.go(-1)"/>
+		</td>
+      </tr>
+    </table>
+  
+    </form>
+    </div>
+{#include file="sys/admin_footer.htm"#}
+</body>
+</html>

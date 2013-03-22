@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="骑士CMS" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/74cms.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;简历管理&nbsp;&gt;&nbsp;搜索简历结果</div>
+      <div class="xiu_g">
+	  <form action="" method="get">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" >
+          <tr>
+            <td width="24%"><strong class="f_red">按关键词搜索：</strong></td>
+            <td width="35%">关键字：
+            <label><input type="text" id="key" name="key" style="width:180px;" value="{#$smarty.get.key#}"/></label></td>
+            <td width="41%"><input type="submit" class="btn" value="搜 索"/></td>
+          </tr>
+        </table>
+	</form>
+    </div>
+      <div class="zhao_p">
+        <div class="tite_qh">
+          <ul>
+            <li><a href="#" onclick="zz('search_favorite');return false;">放入收藏夹</a></li>
+            <li><a href="#" onclick="zz('search_down');return false;">下载联系方式</a></li>
+          </ul>
+        </div>
+        <div class="hr_gua">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="4%" align="center" bgcolor="#eff5ff"><label>
+                  <input type="checkbox" name="checkbox" id="checkbox" />
+                </label></td>
+                <td width="15%" align="center" bgcolor="#eff5ff">姓名</td>
+                <td width="11%" align="left" bgcolor="#eff5ff">目前岗位 </td>
+                <td width="8%" align="center" bgcolor="#eff5ff"><label>
+                <select name="list_sex" class="slist" style="width:50PX;">
+                    <option value="0">性别</option>
+					<option value="1" {#if $smarty.get.list_sex==1#}selected="selected"{#/if#}>男</option>
+					<option value="2" {#if $smarty.get.list_sex==2#}selected="selected"{#/if#}>女</option>
+                </select>
+                </label></td>
+<td width="8%" align="center" bgcolor="#eff5ff"><label>
+<select name="list_experience" class="slist" style="width:80PX;">
+						<option value="0">经验</option>
+						<option label="无经验" value="1" {#if $smarty.get.list_experience==1#}selected="selected"{#/if#}>无经验</option>
+						<option label="1年以下" value="2" {#if $smarty.get.list_experience==2#}selected="selected"{#/if#}>1年以下</option>
+						<option label="1-3年" value="3" {#if $smarty.get.list_experience==3#}selected="selected"{#/if#}>1-3年</option>
+						<option label="3-5年" value="4" {#if $smarty.get.list_experience==4#}selected="selected"{#/if#}>3-5年</option>
+						<option label="5-10年" value="5" {#if $smarty.get.list_experience==5#}selected="selected"{#/if#}>5-10年</option>
+						<option label="10年以上" value="6" {#if $smarty.get.list_experience==6#}selected="selected"{#/if#}>10年以上</option>
+</select></label></td>
+<td width="9%" align="center" bgcolor="#eff5ff">
+<select name="list_age" class="slist" style="width:70PX;">
+                    <option value="0">年龄</option>
+					<option value="1" {#if $smarty.get.list_age==1#}selected="selected"{#/if#}>18-25</option>
+					<option value="2" {#if $smarty.get.list_age==2#}selected="selected"{#/if#}>25-30</option>
+					<option value="3" {#if $smarty.get.list_age==3#}selected="selected"{#/if#}>30-35</option>
+					<option value="4" {#if $smarty.get.list_age==4#}selected="selected"{#/if#}>35-40</option>
+					<option value="5" {#if $smarty.get.list_age==5#}selected="selected"{#/if#}>40-45</option>
+					<option value="6" {#if $smarty.get.list_age==6#}selected="selected"{#/if#}>45以上</option>
+                </select></td>
+                <td width="9%" align="center" bgcolor="#eff5ff">
+                <select name="list_education" class="slist" style="width:50PX;">
+                  <option value="0">学历</option>
+				{#html_options options=$options_edu selected=$smarty.get.list_education#}
+                  </select></td>
+<td width="10%" align="center" bgcolor="#eff5ff">所在地</td>
+				<td width="14%" align="center" bgcolor="#eff5ff"><label>
+				<select name="list_salary" class="slist" style="width:100PX;">
+						<option value="0">薪酬</option>
+						<option label="面议" value="1" {#if $smarty.get.list_salary==1#}selected="selected"{#/if#}>面议</option>
+						<option label="2000以下" value="2" {#if $smarty.get.list_salary==2#}selected="selected"{#/if#}>2000以下/月</option>
+						<option label="2000~3000/月" value="3" {#if $smarty.get.list_salary==3#}selected="selected"{#/if#}>2000~3000元/月</option>
+						<option label="3000~5000元/月" value="4" {#if $smarty.get.list_salary==4#}selected="selected"{#/if#}>3000~5000元/月</option>
+						<option label="5000~8000元/月" value="5" {#if $smarty.get.list_salary==5#}selected="selected"{#/if#}>5000~8000元/月</option>
+						<option label="8000~10000元/月" value="6" {#if $smarty.get.list_salary==6#}selected="selected"{#/if#}>8000~10000元/月</option>
+						<option label="10000~15000元/月" value="7" {#if $smarty.get.list_salary==7#}selected="selected"{#/if#}>10000~15000元/月</option>
+						<option label="15000~30000元/月" value="8" {#if $smarty.get.list_salary==8#}selected="selected"{#/if#}>15000~30000元/月</option>
+						<option label="3万以上/月" value="9" {#if $smarty.get.list_salary==9#}selected="selected"{#/if#}>3万以上/月</option>
+				</select>
+				</label></td>
+        		<td width="12%" align="center" bgcolor="#eff5ff"><label>
+                  <select name="update" class="slist" style="width:80PX;">
+                    <option value="0">更新日期</option>
+					<option value="2" {#if $smarty.get.experience==2#}selected="selected"{#/if#}>三天以内</option>
+					<option value="3" {#if $smarty.get.experience==3#}selected="selected"{#/if#}>一周以内</option>
+					<option value="4" {#if $smarty.get.experience==4#}selected="selected"{#/if#}>一月以内</option>
+					<option value="5" {#if $smarty.get.experience==5#}selected="selected"{#/if#}>三月以内</option>
+					<option value="6" {#if $smarty.get.experience==6#}selected="selected"{#/if#}>半年以内</option>
+                  </select>
+                </label></td>
+              </tr>
+          </table>
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <!--循环开始-->
+		  {#foreach item=item from=$resume_list#}
+              <tr>
+              	<td>
+                <table border="0" cellpadding="0" cellspacing="0" class="jian_l">
+                    <tr>
+                      <td width="30" rowspan="2" align="center"><label><input type="checkbox" name="y_id[]" value="{#$item.uid#}" /></label></td>
+                      <td width="92" rowspan="2" align="center">
+					  {#if $item.photo#}
+					  <img src="{#$QISHI.site_dir#}data/file/{#$item.photo_img#}" width="80" height="80">
+					  {#else#}
+					  <img src="{#$QISHI.site_template#}images/nopic.gif" />
+					  {#/if#}
+					  <br />
+                      <a href="{#$QISHI.site_dir#}user/resume.php?uid={#$item.uid#}" target="_blank">{#$item.fullname#}</a></td>
+                      <td width="113">{#$item.trade_cn#}</td>
+                      <td width="61">{#$item.sex_cn#}</td>
+                      <td width="58" align="center">{#$item.experience_cn#}</td>
+                      <td width="71" align="center">{#$item.birthyear#}</td>
+                      <td width="62" align="center">{#$item.personal_edu#}</td>
+                      <td width="86" align="center"><span title="{#$item.address#}" style="width:70px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$item.district_cn#}</span></td>
+                      <td width="106" align="center">{#$item.expected_salary#}</td>
+                      <td width="94" align="center">{#$item.refreshtime|date_format:"%Y-%m-%d"#}</td>
+                  </tr>
+                    <tr>
+                        <td colspan="8" style="line-height:18px;" > 
+							<span style="height:75px;width:620px;display:block;overflow:hidden;">{#$item.main_content#}</span>
+						</td>
+                    </tr>
+                </table>
+                </td>
+              </tr>
+		{#/foreach#}
+		<!--END-->
+
+
+          </table>
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr colspan="2">
+				<div class="page" style="width:740px;padding-left:10px;">{#$page_html#}</div> 
+			  </tr>
+              <tr>
+              	<td></td>
+                <td colspan="9" style="padding-left:10px;"><span class="f_red">提示：</span>当搜索记录大于1000条时,只显示前1000条记录</td>
+              </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+<script>
+function zz(type){
+	var str = '';
+	$("input[name='y_id[]']").each(function() {
+		if($(this).attr("checked")){
+			var v = $(this).val();
+			if(str) {str = str+','+v;}
+			else {str = v;}
+		}
+	});
+	location.href = "do.php?optype="+type+"&ids="+str;
+}
+$(document).ready(function() {
+
+		$('.slist').bind('change', function(){
+//		$('#search_list').submit();
+		var url = location.href;
+		
+		if(url.indexOf('?')>0){//包含参数
+			url += '&';
+		}
+		else{//不包含
+			url += '?';
+		}
+//list_areaid=0&list_educationid=0&list_sex=1&list_experience=0&list_wage=0
+//		console.log(url.indexOf('list_areaid='));
+		if(url.indexOf('list_sex=') > 0){
+			url = url.substring(0,url.indexOf('list_sex='));
+		}
+		url += $('.slist').serialize();
+		
+		var page = {#$smarty.get.page|default:"0"#};
+		if(page != 0){
+			url += '&page='+page;
+		}
+//		console.log(url);
+		location.href = url;
+	});
+
+	if($('#key').val() == ''){
+		$('#key').val('搜索简介,特长,教育经历及工作经历').css('color','#777');
+	}
+	$('#key').hover(
+		function(){
+			if($(this).val() == '搜索简介,特长,教育经历及工作经历'){
+				$(this).val('');
+			}
+			else{
+				$(this).css('color','black');
+			}
+		},
+		function(){
+			if($(this).val() == ''){
+				$(this).val('搜索简介,特长,教育经历及工作经历').css('color','grey');
+			}
+		}
+	);
+	$('form').submit(function(){
+		if($('#key').val() == '搜索简介,特长,教育经历及工作经历' ){
+			$('#key').val('');
+		}
+		return true;
+	});
+
+});
+</script>
+
+</body>
+</html>
+

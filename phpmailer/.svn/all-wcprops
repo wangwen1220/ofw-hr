@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/netway/!svn/ver/23544/ofweek_hr/phpmailer
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/netway/!svn/ver/23544/ofweek_hr/phpmailer/class.phpmailer.php
+END
+class.pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/netway/!svn/ver/23544/ofweek_hr/phpmailer/class.pop3.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/netway/!svn/ver/23544/ofweek_hr/phpmailer/class.smtp.php
+END

@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />{#qishi_pageinfo set="列表名:page,调用:index"#}
+<title>{#$page.title#}</title>
+<meta name="description" content="{#$page.description#}">
+<meta name="keywords" content="{#$page.keywords#}">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/index.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script src="{#$QISHI.site_template#}js/jquery.lazyload.js" type="text/javascript"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/tc.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/xl.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/add_common_function.js"></script>
+<script src="{#$QISHI.site_template#}js/MSClass.js" language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/select-jobs.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div id="mian">
+<!--header begin-->
+{#include file="header.htm"#}
+<!--header end-->
+    <div class="conter">
+    	<div class="col01 mtop">
+            <div class="gang_l">
+            
+				<div class="zuo_110"><a href="http://hr.ofweek.com/company/company-show-743.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/1.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-551.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/2.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-887.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/3.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-3033.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/4.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-2097.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/5.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-327.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/6.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-1380.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/7.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-1729.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/8.gif" /></a></div>
+				<div class="zuo_40"><a href="http://hr.ofweek.com/company/company-show-2023.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/9.gif" /></a></div>
+  
+			</div>
+            <div class="cont_z">
+            	<div class="zhao">
+            		<div class="tite"><h3>最新招聘岗位</h3><span><a href="/jobs/" target="_blank">更多>></a></span></div>
+                    <div class="list_mian">
+                    <ul id="gd">
+					{#foreach from=$recent_joblist item=item#}
+                    	<li>
+						  <a href="{#$QISHI.site_dir#}jobs/jobs-show-{#$item.id#}.html" title="{#$item.jobs_name#}" target="_blank" style="width:90px;display:block;float:left;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{#$item.jobs_name#}&nbsp;<!--此处截取宽度--></a>
+						  <a href="{#$QISHI.site_dir#}company/company-show-{#$item.uid#}.html" title="{#$item.companyname#}" target="_blank" style="width:190px;display:block;float:left;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"><!--此处截取宽度-->{#$item.companyname#}&nbsp;</a>
+						  <span style="width:85px;display:block;float:left;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" title="{#$item.district_cn|default:"&nbsp;"#}">{#$item.district_cn|default:"&nbsp;"#}</span>
+						  <span style="width:80px;display:block;float:left;">{#if $item.wage_min==0 && $item.wage_max==0 #}面议{#elseif $item.wage_min && $item.wage_max==0#}{#$item.wage_min#}以上{#elseif $item.wage_min==0 && $item.wage_max#}小于{#$item.wage_max#}{#else#}{#$item.wage_min#}-{#$item.wage_max#}{#/if#}</span>
+						  <span style="width:40px;display:block;float:left;">{#$item.education_cn#}&nbsp;</span>
+						</li>
+					{#/foreach#}
+                    </ul>
+
+                    </div>
+
+        </div>
+                <div class="zhan_a mtop">
+                	<div class="tite">
+                    <ul class="chqh_ul" id="new_vouch">
+                    	<li class="sel01" onMouseMove="secBoard('new_vouch','newvouch','li',1);">行业分站</li>
+                        <li class="sel02" onMouseMove="secBoard('new_vouch','newvouch','li',2);">地区分站</li>
+                    </ul>
+                    </div>
+                    <div class="bluech" id="newvouch_1">
+                    	<ul>
+                        	<li><a href="jobs/lights" title="LED"><img src="{#$QISHI.site_template#}images/pic_01.gif" /></a></li>
+                            <li><a href="jobs/solar" title="太阳能光伏"><img src="{#$QISHI.site_template#}images/pic_02.gif" /></a></li>
+                            <li><a href="jobs/fiber" title="光通信"><img src="{#$QISHI.site_template#}images/pic_03.gif" /></a></li>
+                            <li><a href="jobs/laser" title="激光"><img src="{#$QISHI.site_template#}images/pic_04.gif" /></a></li>
+                            <li><a href="jobs/gongkong" title="工控"><img src="{#$QISHI.site_template#}images/pic_05.gif" /></a></li>
+						</ul>
+						<ul>
+                            <li><a href="jobs/display" title="光电/光学"><img src="{#$QISHI.site_template#}images/pic_06.gif" /></a></li>
+                            <li><a href="jobs/smartgrids" title="智能电网"><img src="{#$QISHI.site_template#}images/pic_07.gif" /></a></li>
+                            <li><a href="jobs/instrument" title="仪器/仪表"><img src="{#$QISHI.site_template#}images/pic_08.gif" /></a></li>
+                            <li><a href="jobs/emc" title="节能"><img src="{#$QISHI.site_template#}images/pic_09.gif" /></a></li>
+                            <li><a href="jobs/ee" title="LED"><img src="{#$QISHI.site_template#}images/pic_10.gif" width="91" height="84" /></a></li>
+                        </ul>
+						
+                    </div>
+                    <div class="bluech none" id="newvouch_2">
+                    	<ul>
+                        	<li><a href="/beijing" title="北京"><img src="{#$QISHI.site_template#}images/pic01.gif" /></a></li>
+                            <li><a href="/shanghai" title="上海"><img src="{#$QISHI.site_template#}images/pic02.gif" /></a></li>
+                            <li><a href="/guangdong" title="广东"><img src="{#$QISHI.site_template#}images/pic03.gif" /></a></li>
+                            <li><a href="/zhejiang" title="浙江"><img src="{#$QISHI.site_template#}images/pic04.gif" /></a></li>
+                            <li><a href="/jiangsu" title="江苏"><img src="{#$QISHI.site_template#}images/pic05.gif" /></a></li>
+						</ul>
+						<ul>
+                            <li><a href="/shandong" title="山东"><img src="{#$QISHI.site_template#}images/pic06.gif" /></a></li>
+                            <li><a href="/fujian" title="福建"><img src="{#$QISHI.site_template#}images/pic07.gif" /></a></li>
+                            <li><a href="/hubei" title="湖北"><img src="{#$QISHI.site_template#}images/pic08.gif" /></a></li>
+                            <li><a href="/hunan" title="湖南"><img src="{#$QISHI.site_template#}images/pic09.gif" /></a></li>
+                            <li><a href="/shanxi" title="陕西"><img src="{#$QISHI.site_template#}images/pic10.gif" width="91" height="84" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="gang_r">
+            
+				<div class="kuan_110"><a href="http://hr.ofweek.com/company/company-show-2177.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/10.gif" /></a></div>
+				<div class="kuan_60"><a href="http://hr.ofweek.com/company/company-show-832.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/11.gif" /></a></div>
+				<div class="kuan_60"><a href="http://hr.ofweek.com/company/company-show-420.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/12.gif" /></a></div>
+				<div class="kuan_60"><a href="http://hr.ofweek.com/company/company-show-1811.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/13.gif" /></a></div>
+				<div class="kuan_60"><a href="http://hr.ofweek.com/company/company-show-447.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/14.gif" /></a></div>
+				<div class="kuan_60"><a href="http://hr.ofweek.com/company/company-show-1230.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/15.gif" /></a></div>
+				<div class="kuan_60"><a href="http://hr.ofweek.com/company/company-show-1180.html" target="_blank"><img src="{#$QISHI.site_template#}images/ad/16.gif" /></a></div>
+				
+			</div>
+        </div>
+        <div class="col01 mtop">
+        	<div class="fenl" id="category_list">
+            	<div class="tite"><h3>岗位分类搜索</h3></div>
+				{#foreach from=$category_list item=category_page key=key#}
+                <div class="gang" id="category_{#$key#}" style="display:none;">
+				  {#foreach from=$category_page item=category_parent#}
+               	  <ul>
+                   	<li class="jing"><a href="{#$QISHI.site_dir#}jobs/?jobcategory={#$category_parent.id#}" title="{#$category_parent.categoryname#}">{#$category_parent.categoryname#}</a></li>
+					{#foreach from=$category_parent.sub item=category_sub#}
+                   	<li><a href="{#$QISHI.site_dir#}jobs/?jobcategory={#$category_sub.id#}" title="{#$category_sub.categoryname#}">{#$category_sub.categoryname#}</a> <!--{#$category_sub.stat_jobs#}--></li>
+                    {#/foreach#}
+                  </ul>
+				  {#/foreach#}
+                </div>
+				<div style="clear:both"></div>
+			    {#/foreach#}
+			  <div class="fyen">
+				<a href="javascript:void(0);" onclick="category_page(curr_page-1);"><</a>
+					{#$category_pages#}
+				<a href="javascript:void(0);" onclick="category_page(curr_page+1);">></a>
+			  </div>
+            </div>
+        </div>
+        
+        <div class="col01 mtop">
+        <table>
+	        <tr>
+	        <td><div id="ad-17"><script type="text/javascript">loadAD(758);</script></div></td>
+	        <td><div id="ad-18"><script type="text/javascript">loadAD(759);</script></div></td>
+	        </tr>
+        </table>
+        </div>
+        
+		{#foreach item=item from=$industry_list#}
+		{#if $item.0.display#}
+        <div class="col01 mtop">
+        	<div class="zhaop">
+           	   <div class="titel"><a href="{#$item.0.url#}" title="{#$item.0.trade_cn#}"><h3>{#$item.0.trade_cn#}</h3></a><span><a href="{#$item.0.url#}">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          {#foreach item=job from=$item.0.jobs#}
+						  <tr>
+                            <td width="23%"><a style="width:108px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" href="{#$QISHI.site_dir#}jobs/jobs-show-{#$job.id#}.html" title="{#$job.jobs_name#}">{#$job.jobs_name#}</a><!--此处截取宽度--></td>
+                            <td width="38%" style="padding-left:10px;"><a style="width:164px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" href="{#$QISHI.site_dir#}company/company-show-{#$job.uid#}.html" title="{#$job.companyname#}">{#$job.companyname#}</a></td>
+                            <td width="18%"><span style="width:76px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$job.district_cn#}">{#$job.district_cn#}</span></td>
+                            <td width="21%" align="center">{#if $job.wage_min==0 && $job.wage_max==0 #}面议{#elseif $job.wage_min && $job.wage_max==0#}{#$job.wage_min#}以上{#elseif $job.wage_min==0 && $job.wage_max#}小于{#$job.wage_max#}{#else#}{#$job.wage_min#}-{#$job.wage_max#}{#/if#}</td>
+                          </tr>
+						  {#/foreach#}
+                      </table>
+               </div>
+            </div>
+			
+			{#if $item.1.display#}
+            <div class="zhaop" {#if $item.0.display#}style="margin-left:14px;"{#/if#}>
+           	   <div class="titel"><a href="{#$item.1.url#}" title="{#$item.1.trade_cn#}"><h3>{#$item.1.trade_cn#}</h3></a><span><a href="{#$item.1.url#}">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          {#foreach item=job from=$item.1.jobs#}
+						  <tr>
+                            <td width="23%"><a style="width:108px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" href="{#$QISHI.site_dir#}jobs/jobs-show-{#$job.id#}.html" title="{#$job.jobs_name#}">{#$job.jobs_name#}</a></td>
+                            <td width="38%" style="padding-left:10px;"><a style="width:164px;display:block;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" href="{#$QISHI.site_dir#}company/company-show-{#$job.uid#}.html" title="{#$job.companyname#}">{#$job.companyname#}</a></td>
+                            <td width="18%"><span style="width:76px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$job.district_cn#}">{#$job.district_cn#}</span></td>
+                            <td width="21%" align="center">{#if $job.wage_min==0 && $job.wage_max==0 #}面议{#elseif $job.wage_min && $job.wage_max==0#}{#$job.wage_min#}以上{#elseif $job.wage_min==0 && $job.wage_max#}小于{#$job.wage_max#}{#else#}{#$job.wage_min#}-{#$job.wage_max#}{#/if#}</td>
+                          </tr>
+						  {#/foreach#}
+					</table>
+               </div>
+            </div>
+			{#/if#}
+        </div>
+		{#/if#}
+		{#/foreach#}
+    </div>
+    
+    <div class="col01 mtop">
+        <table width="100%">
+	        <tr>
+	        <td><div id="ad-19"><script type="text/javascript">loadAD(754);</script></div></td>
+	        <td><div id="ad-20"><script type="text/javascript">loadAD(755);</script></div></td>
+	        <td><div id="ad-21"><script type="text/javascript">loadAD(756);</script></div></td>
+	        <td><div id="ad-22"><script type="text/javascript">loadAD(757);</script></div></td>
+	        </tr>
+        </table>
+        </div>
+    
+    <div class="links mtop">
+    <h3>友情链接</h3>
+    <ul>
+		{#qishi_link set="列表名:link,显示数目:100,调用名称:QS_index,类型:1"#}
+		{#foreach from=$link item=list#}
+    	<li><a href="{#$list.link_url#}" title="{#$list.title#}"  target="_blank">{#$list.title#}</a></li>
+		{#/foreach#}
+		
+    </ul>
+    </div>
+<!--footer begin-->
+{#include file="footer.htm"#}
+<!--footer end-->
+</div>
+<script>
+$(document).ready(function(){
+	$(".gang_r img").lazyload({ effect:"fadeOut" });
+	$(".gang_l img").lazyload({ effect:"fadeIn" })
+	$("#newvouch_1 img").lazyload({ effect:"fadeIn" });
+	$("#newvouch_2 img").lazyload({ effect:"fadeIn" });
+	new Marquee("gd",0,1,493,215,50,0,0);//首页最新招聘滚动效果
+	var curr_page = 0;
+	category_page(0);
+});
+</script>
+</body>
+</html>

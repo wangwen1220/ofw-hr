@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<base target='_blank' />
+<style type="text/css">
+body {
+	margin:0;
+	font-family:"宋体";
+	font-size:12px;
+	color:#444;
+}
+a { color: #0002FD; text-decoration: underline; }
+.highlight {
+	color: #E80B0B;
+}
+img { border: none; }
+.jobs-list td {
+	padding: 0 5px;
+	text-align: center;
+}
+.jobs-list td div {
+	width: 114px;
+	white-space: nowrap;
+	height: 30px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.jobs-list td div.cmp {
+	width: 176px;
+}
+.jobs-list td div.area {
+	width: 57px;
+}
+</style>
+<title>简历完善邮件</title>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width:677px;background:url(http://hr.ofweek.com/templates/default/images/email/bg.gif) repeat-y right top;font-family:'宋体';font-size:12px;color:#0A0A0A;">
+		<tr>
+				<td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td align="left" style="background:url(http://hr.ofweek.com/templates/default/images/email/top_right.gif) no-repeat right top;height:66px;"><table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+				<td style="width:650px;border:1px solid #dedede;border-bottom:none;"><a href='http://hr.ofweek.com/' title='人才网'><img border='0' src="http://hr.ofweek.com/templates/default/images/email/top_bg.jpg" alt='人才网' /></a></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none; border-bottom:none;">
+		<tr>
+				<td colspan="2" style="padding:0 20px; line-height:30px; "><span><strong>尊敬的{fullname}：</strong>
+						<span style="display:block; padding-left:2em;line-height:20px;">恭喜您！您在OFweek人才网注册的简历，通过了我们的审核。您可以开始搜索职位、投递简历了，祝您求职成功！</span>
+					</span></td>
+		</tr>
+		<tr>
+				<td style='padding:21px 0; text-align: center'><a href='http://hr.ofweek.com/jobs/' title='搜索职位'><img border='0' src='http://hr.ofweek.com/templates/default/images/email/btn-search-job.png' alt='搜索职位' /></a> <a style='margin-left: 30px' href='http://hr.ofweek.com/user/personal/' title='更新简历'><img border='0' src='http://hr.ofweek.com/templates/default/images/email/btn-update-resume.png' alt='更新简历' /></a></td>
+		</tr>
+<tr>
+				<td style="line-height:30px;"><table class='jobs-list' style='margin: 0 auto' width="622" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td colspan="7" style="text-indent:5px;"><strong>以下是给您推荐的职位：</strong></td>
+				</tr>
+		<tr style='background:#e4e4e4'>
+			<td width="124" style="border-left:1px solid #eae4e4;">职位名称</td>
+			<td width="186">公司名称</td>
+			<td width="67" align="center">工作地点</td>
+			<td width="44" align="center">学历</td>
+			<td width="44" align="center">经验</td>
+			<td width="86" align="center">月薪</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">更新时间</td>
+		</tr>
+		<!--{jobs_list_html}-->
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;" title='公司安全员'><div class='name'><a href='#'>公司安全员</a></div></td>
+			<td width="186"><div class='cmp'><a href='#' title='销售工程师公司名称销售工程师公司名称'>销售工程师公司名称销售工程师公司名称销售工程师公司名</a></div></td>
+			<td width="67" align="center" title='深圳/天涯/海角'><div class='area'>深圳/天涯/海角</div></td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-03-05</td>
+		</tr><tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;" title='公司安全员'><div class='name'><a href='#'>公司安全员</a></div></td>
+			<td width="186"><div class='cmp'><a href='#' title='销售工程师公司名称销售工程师公司名称'>销售工程师公司名称销售工程师公司名称销售工程师公司名</a></div></td>
+			<td width="67" align="center" title='深圳/天涯/海角'><div class='area'>深圳/天涯/海角</div></td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">面议</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-03-05</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;" title='公司安全员'><div class='name'><a href='#'>公司安全员</a></div></td>
+			<td width="186"><div class='cmp'><a href='#' title='销售工程师公司名称销售工程师公司名称'>销售工程师公司名称销售工程师公司名称销售工程师公司名</a></div></td>
+			<td width="67" align="center" title='深圳/天涯/海角'><div class='area'>深圳/天涯/海角</div></td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;" title='公司安全员'><div class='name'><a href='#'>公司安全员</a></div></td>
+			<td width="186"><div class='cmp'><a href='#' title='销售工程师公司名称销售工程师公司名称'>销售工程师公司名称销售工程师公司名称销售工程师公司名</a></div></td>
+			<td width="67" align="center" title='深圳/天涯/海角'><div class='area'>深圳/天涯/海角</div></td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-03-05</td>
+		</tr><tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;" title='公司安全员'><div class='name'><a href='#'>公司安全员</a></div></td>
+			<td width="186"><div class='cmp'><a href='#' title='销售工程师公司名称销售工程师公司名称'>销售工程师公司名称销售工程师公司名称销售工程师公司名</a></div></td>
+			<td width="67" align="center" title='深圳/天涯/海角'><div class='area'>深圳/天涯/海角</div></td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">面议</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-03-05</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;" title='公司安全员'><div class='name'><a href='#'>公司安全员</a></div></td>
+			<td width="186"><div class='cmp'><a href='#' title='销售工程师公司名称销售工程师公司名称'>销售工程师公司名称销售工程师公司名称销售工程师公司名</a></div></td>
+			<td width="67" align="center" title='深圳/天涯/海角'><div class='area'>深圳/天涯/海角</div></td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-03-05</td>
+		</tr><tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;" title='公司安全员'><div class='name'><a href='#'>公司安全员</a></div></td>
+			<td width="186"><div class='cmp'><a href='#' title='销售工程师公司名称销售工程师公司名称'>销售工程师公司名称销售工程师公司名称销售工程师公司名</a></div></td>
+			<td width="67" align="center" title='深圳/天涯/海角'><div class='area'>深圳/天涯/海角</div></td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">面议</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-03-05</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr><tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#fff'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~10000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+		<tr style='background:#E6EFF9'>
+			<td width="124" style="border-left:1px solid #eae4e4;"><a href='#'>销售工程师</a></td>
+			<td width="186" ><a href='#'>销售工程师公司名称</a></td>
+			<td width="67" align="center">深圳</td>
+			<td width="44" align="center">大专</td>
+			<td width="44" align="center">不限</td>
+			<td width="86" align="center">8000~20000</td>
+			<td width="71" style="border-right:1px solid #eae4e4;">2013-3-5</td>
+		</tr>
+
+</table>
+
+</td>
+			</tr>
+			<tr>
+				<td style="padding:0 20px; line-height:22px; padding-top: 20px;"><strong>感谢您对OFweek人才网的支持！祝您求职顺利！</strong></td>
+		</tr>
+		<tr>
+				<td style="padding:0 20px; line-height:22px;" class='highlight'>本邮件由系统自动发出，请勿回复。</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:url(http://hr.ofweek.com/templates/default/images/email/bottom_right.gif) no-repeat right bottom; height:35px; line-height:35px;">
+		<tr>
+				<td align="left"><table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none;">
+		<tr>
+				<td align="right" style="padding:10px 20px 10px 0"><a style='text-decoration:none;color:#0000FE;' href='http://hr.ofweek.com'>OFweek人才网</a></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+
+</td>
+		</tr>
+
+</table>
+</body>
+</html>

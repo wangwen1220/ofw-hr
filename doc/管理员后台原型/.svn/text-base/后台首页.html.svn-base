@@ -1,0 +1,535 @@
+<html>
+<head>
+    <title>后台首页</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="imagetoolbar" content="no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet">
+    <link href="后台首页_files/axurerp_pagespecificstyles.css" type="text/css" rel="stylesheet">
+<!--[if IE 6]>
+    <link href="后台首页_files/axurerp_pagespecificstyles_ie6.css" type="text/css" rel="stylesheet">
+<![endif]-->
+    <script src="data/sitemap.js"></script>
+    <script src="resources/scripts/jquery-1.7.1.min.js"></script>
+    <script src="resources/scripts/axutils.js"></script>
+    <script src="resources/scripts/jquery-ui-1.8.10.custom.min.js"></script>
+    <script src="resources/scripts/axurerp_beforepagescript.js"></script>
+    <script src="resources/scripts/messagecenter.js"></script>
+<script src='后台首页_files/data.js'></script>
+</head>
+<body>
+<div id="main_container">
+
+<div id="u0" class="u0_container"   >
+<div id="u0_img" class="u0_normal detectCanvas"></div>
+<div id="u1" class="u1" style="visibility:hidden;"  >
+<div id="u1_rtf"></div>
+</div>
+</div>
+<div id="u2" class="u2"  data-label="paragraph">
+<div id="u2_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">网站首页</span></p></div>
+</div>
+<div id="u3" class="u3"  data-label="paragraph">
+<div id="u3_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">昨日注册简历数：</span></p></div>
+</div>
+<div id="u4" class="u4"  data-label="paragraph">
+<div id="u4_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">今日注册简历数</span></p></div>
+</div>
+<div id="u5" class="u5"  data-label="paragraph">
+<div id="u5_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">待审核简历：</span></p></div>
+</div>
+<div id="u6" class="u6"  data-label="paragraph">
+<div id="u6_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">昨日企业注册数：</span></p></div>
+</div>
+<div id="u7" class="u7"  data-label="paragraph">
+<div id="u7_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">今日</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">企业注册数：</span></p></div>
+</div>
+<div id="u8" class="u8"  data-label="paragraph">
+<div id="u8_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">待审核</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">企业</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u9" class="u9"  data-label="paragraph">
+<div id="u9_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">待审核</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职位</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u10" class="u10"  data-label="paragraph">
+<div id="u10_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">昨日</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职位发布</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">数：</span></p></div>
+</div>
+<div id="u11" class="u11"  data-label="paragraph">
+<div id="u11_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">今日</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职位发布</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">数：</span></p></div>
+</div>
+<div id="u12" class="u12"  data-label="paragraph">
+<div id="u12_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">过期</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">企业</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">数</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u13" class="u13"  data-label="paragraph">
+<div id="u13_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">过期</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职位</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">数</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u14" class="u14"  data-label="paragraph">
+<div id="u14_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">即将过期广告位：</span></p></div>
+</div>
+<div id="u15" class="u15"  data-label="paragraph">
+<div id="u15_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">待审核友情链接</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u16" class="u16"  data-label="paragraph">
+<div id="u16_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">待回复意见反馈</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u17" class="u17_container"   >
+<div id="u17_img" class="u17_normal detectCanvas"></div>
+<div id="u18" class="u18" style="visibility:hidden;"  >
+<div id="u18_rtf"></div>
+</div>
+</div>
+<div id="u19" class="u19"  data-label="paragraph">
+<div id="u19_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">网站首页</span></p></div>
+</div>
+<div id="u20" class="u20"  data-label="paragraph">
+<div id="u20_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">更新缓存</span></p></div>
+</div>
+<div id="u21" class="u21"  data-label="paragraph">
+<div id="u21_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">生成首页</span></p></div>
+</div>
+<DIV id="u22container" style="position:absolute; left:200px; top:49px; width:900px; height:25px;; overflow:visible">
+
+<DIV id="u22_menu" class="u22_menu data-label="menu" detectCanvas"></DIV>
+
+<DIV id="u23" class="u23;" >
+
+</DIV>
+
+<DIV id="u23container" style="position:absolute; left:0px; top:0px; width:905px; height:30px; overflow:visible">
+
+<div id="u24" class="u24_container"   >
+<div id="u24_img" class="u24_normal detectCanvas"></div>
+<div id="u25" class="u25"  >
+<div id="u25_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">首页</span></p></div>
+</div>
+</div>
+<div id="u26" class="u26_container"   >
+<div id="u26_img" class="u26_normal detectCanvas"></div>
+<div id="u27" class="u27"  >
+<div id="u27_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">简历管理</span></p></div>
+</div>
+</div>
+<div id="u28" class="u28_container"   >
+<div id="u28_img" class="u28_normal detectCanvas"></div>
+<div id="u29" class="u29"  >
+<div id="u29_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">公司管理</span></p></div>
+</div>
+</div>
+<div id="u30" class="u30_container"   >
+<div id="u30_img" class="u30_normal detectCanvas"></div>
+<div id="u31" class="u31"  >
+<div id="u31_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">内容管理</span></p></div>
+</div>
+</div>
+<div id="u32" class="u32_container"   >
+<div id="u32_img" class="u32_normal detectCanvas"></div>
+<div id="u33" class="u33"  >
+<div id="u33_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告管理</span></p></div>
+</div>
+</div>
+<div id="u34" class="u34_container"   >
+<div id="u34_img" class="u34_normal detectCanvas"></div>
+<div id="u35" class="u35"  >
+<div id="u35_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">友情链接</span></p></div>
+</div>
+</div>
+<div id="u36" class="u36_container"   >
+<div id="u36_img" class="u36_normal detectCanvas"></div>
+<div id="u37" class="u37"  >
+<div id="u37_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员</span></p></div>
+</div>
+</div>
+<div id="u38" class="u38_container"   >
+<div id="u38_img" class="u38_normal detectCanvas"></div>
+<div id="u39" class="u39"  >
+<div id="u39_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">网站设置</span></p></div>
+</div>
+</div>
+<div id="u40" class="u40_container"   >
+<div id="u40_img" class="u40_normal detectCanvas"></div>
+<div id="u41" class="u41"  >
+<div id="u41_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">系统工具</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+<DIV id="sm0u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u42container" style="position:absolute; left:0px; top:25px; width:100px; height:20px;; overflow:visible">
+
+<DIV id="u42_menu" class="u42_menu  detectCanvas"></DIV>
+
+<DIV id="u43" class="u43;" >
+
+</DIV>
+
+<DIV id="u43container" style="position:absolute; left:0px; top:0px; width:105px; height:25px; overflow:visible">
+
+<div id="u44" class="u44_container"   >
+<div id="u44_img" class="u44_normal detectCanvas"></div>
+<div id="u45" class="u45" style="visibility:hidden;"  >
+<div id="u45_rtf"></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm0u22', 'u24');
+</script>
+<DIV id="sm1u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u46container" style="position:absolute; left:300px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u46_menu" class="u46_menu  detectCanvas"></DIV>
+
+<DIV id="u47" class="u47;" >
+
+</DIV>
+
+<DIV id="u47container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u48" class="u48_container"   >
+<div id="u48_img" class="u48_normal detectCanvas"></div>
+<div id="u49" class="u49"  >
+<div id="u49_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加资讯</span></p></div>
+</div>
+</div>
+<div id="u50" class="u50_container"   >
+<div id="u50_img" class="u50_normal detectCanvas"></div>
+<div id="u51" class="u51"  >
+<div id="u51_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理资讯</span></p></div>
+</div>
+</div>
+<div id="u52" class="u52_container"   >
+<div id="u52_img" class="u52_normal detectCanvas"></div>
+<div id="u53" class="u53" style="visibility:hidden;"  >
+<div id="u53_rtf"></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm1u22', 'u30');
+</script>
+<DIV id="sm2u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u54container" style="position:absolute; left:500px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u54_menu" class="u54_menu  detectCanvas"></DIV>
+
+<DIV id="u55" class="u55;" >
+
+</DIV>
+
+<DIV id="u55container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u56" class="u56_container"   >
+<div id="u56_img" class="u56_normal detectCanvas"></div>
+<div id="u57" class="u57"  >
+<div id="u57_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加友情链接</span></p></div>
+</div>
+</div>
+<div id="u58" class="u58_container"   >
+<div id="u58_img" class="u58_normal detectCanvas"></div>
+<div id="u59" class="u59"  >
+<div id="u59_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">友情链接管理</span></p></div>
+</div>
+</div>
+<div id="u60" class="u60_container"   >
+<div id="u60_img" class="u60_normal detectCanvas"></div>
+<div id="u61" class="u61"  >
+<div id="u61_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核友情链接</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm2u22', 'u34');
+</script>
+<DIV id="sm3u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u62container" style="position:absolute; left:400px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u62_menu" class="u62_menu  detectCanvas"></DIV>
+
+<DIV id="u63" class="u63;" >
+
+</DIV>
+
+<DIV id="u63container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u64" class="u64_container"   >
+<div id="u64_img" class="u64_normal detectCanvas"></div>
+<div id="u65" class="u65"  >
+<div id="u65_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理广告位</span></p></div>
+</div>
+</div>
+<div id="u66" class="u66_container"   >
+<div id="u66_img" class="u66_normal detectCanvas"></div>
+<div id="u67" class="u67"  >
+<div id="u67_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">广告列表</span></p></div>
+</div>
+</div>
+<div id="u68" class="u68_container"   >
+<div id="u68_img" class="u68_normal detectCanvas"></div>
+<div id="u69" class="u69"  >
+<div id="u69_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加广告</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm3u22', 'u32');
+</script>
+<DIV id="sm4u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u70container" style="position:absolute; left:700px; top:25px; width:100px; height:80px;; overflow:visible">
+
+<DIV id="u70_menu" class="u70_menu  detectCanvas"></DIV>
+
+<DIV id="u71" class="u71;" >
+
+</DIV>
+
+<DIV id="u71container" style="position:absolute; left:0px; top:0px; width:105px; height:85px; overflow:visible">
+
+<div id="u72" class="u72_container"   >
+<div id="u72_img" class="u72_normal detectCanvas"></div>
+<div id="u73" class="u73"  >
+<div id="u73_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">职能设定</span></p></div>
+</div>
+</div>
+<div id="u74" class="u74_container"   >
+<div id="u74_img" class="u74_normal detectCanvas"></div>
+<div id="u75" class="u75"  >
+<div id="u75_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">学历分类设定</span></p></div>
+</div>
+</div>
+<div id="u76" class="u76_container"   >
+<div id="u76_img" class="u76_normal detectCanvas"></div>
+<div id="u77" class="u77"  >
+<div id="u77_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">敏感词过滤设定</span></p></div>
+</div>
+</div>
+<div id="u78" class="u78_container"   >
+<div id="u78_img" class="u78_normal detectCanvas"></div>
+<div id="u79" class="u79"  >
+<div id="u79_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">服务套餐设定</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+<DIV id="sm0u70" style="position:absolute; left:700px; top:25px; width:100px; height:80px; visibility:hidden; width:1px; height:1px;" >
+<DIV id="u80container" style="position:absolute; left:100px; top:40px; width:100px; height:20px;; overflow:visible">
+
+<DIV id="u80_menu" class="u80_menu  detectCanvas"></DIV>
+
+<DIV id="u81" class="u81;" >
+
+</DIV>
+
+<DIV id="u81container" style="position:absolute; left:0px; top:0px; width:105px; height:25px; overflow:visible">
+
+<div id="u82" class="u82_container"   >
+<div id="u82_img" class="u82_normal detectCanvas"></div>
+<div id="u83" class="u83" style="visibility:hidden;"  >
+<div id="u83_rtf"></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm0u70', 'u76');
+</script>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm4u22', 'u38');
+</script>
+<DIV id="sm5u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u84container" style="position:absolute; left:100px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u84_menu" class="u84_menu  detectCanvas"></DIV>
+
+<DIV id="u85" class="u85;" >
+
+</DIV>
+
+<DIV id="u85container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u86" class="u86_container"   >
+<div id="u86_img" class="u86_normal detectCanvas"></div>
+<div id="u87" class="u87"  >
+<div id="u87_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核简历</span></p></div>
+</div>
+</div>
+<div id="u88" class="u88_container"   >
+<div id="u88_img" class="u88_normal detectCanvas"></div>
+<div id="u89" class="u89"  >
+<div id="u89_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">简历列表</span></p></div>
+</div>
+</div>
+<div id="u90" class="u90_container"   >
+<div id="u90_img" class="u90_normal detectCanvas"></div>
+<div id="u91" class="u91"  >
+<div id="u91_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">人才搜索</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm5u22', 'u26');
+</script>
+<DIV id="sm6u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u92container" style="position:absolute; left:600px; top:25px; width:100px; height:60px;; overflow:visible">
+
+<DIV id="u92_menu" class="u92_menu  detectCanvas"></DIV>
+
+<DIV id="u93" class="u93;" >
+
+</DIV>
+
+<DIV id="u93container" style="position:absolute; left:0px; top:0px; width:105px; height:65px; overflow:visible">
+
+<div id="u94" class="u94_container"   >
+<div id="u94_img" class="u94_normal detectCanvas"></div>
+<div id="u95" class="u95"  >
+<div id="u95_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">添加管理员</span></p></div>
+</div>
+</div>
+<div id="u96" class="u96_container"   >
+<div id="u96_img" class="u96_normal detectCanvas"></div>
+<div id="u97" class="u97"  >
+<div id="u97_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">管理员列表</span></p></div>
+</div>
+</div>
+<div id="u98" class="u98_container"   >
+<div id="u98_img" class="u98_normal detectCanvas"></div>
+<div id="u99" class="u99"  >
+<div id="u99_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">设置管理员权限</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm6u22', 'u36');
+</script>
+<DIV id="sm7u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u100container" style="position:absolute; left:800px; top:25px; width:100px; height:80px;; overflow:visible">
+
+<DIV id="u100_menu" class="u100_menu  detectCanvas"></DIV>
+
+<DIV id="u101" class="u101;" >
+
+</DIV>
+
+<DIV id="u101container" style="position:absolute; left:0px; top:0px; width:105px; height:85px; overflow:visible">
+
+<div id="u102" class="u102_container"   >
+<div id="u102_img" class="u102_normal detectCanvas"></div>
+<div id="u103" class="u103"  >
+<div id="u103_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">网站静态</span></p></div>
+</div>
+</div>
+<div id="u104" class="u104_container"   >
+<div id="u104_img" class="u104_normal detectCanvas"></div>
+<div id="u105" class="u105"  >
+<div id="u105_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">更新缓存</span></p></div>
+</div>
+</div>
+<div id="u106" class="u106_container"   >
+<div id="u106_img" class="u106_normal detectCanvas"></div>
+<div id="u107" class="u107"  >
+<div id="u107_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">意见反馈</span></p></div>
+</div>
+</div>
+<div id="u108" class="u108_container"   >
+<div id="u108_img" class="u108_normal detectCanvas"></div>
+<div id="u109" class="u109"  >
+<div id="u109_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">系统错误日志</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm7u22', 'u40');
+</script>
+<DIV id="sm8u22" style="position:absolute; left:200px; top:49px; width:900px; height:25px; visibility:hidden; width:1px; height:1px;" data-label="menu">
+<DIV id="u110container" style="position:absolute; left:200px; top:25px; width:100px; height:100px;; overflow:visible">
+
+<DIV id="u110_menu" class="u110_menu  detectCanvas"></DIV>
+
+<DIV id="u111" class="u111;" >
+
+</DIV>
+
+<DIV id="u111container" style="position:absolute; left:0px; top:0px; width:105px; height:105px; overflow:visible">
+
+<div id="u112" class="u112_container"   >
+<div id="u112_img" class="u112_normal detectCanvas"></div>
+<div id="u113" class="u113"  >
+<div id="u113_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核企业信息</span></p></div>
+</div>
+</div>
+<div id="u114" class="u114_container"   >
+<div id="u114_img" class="u114_normal detectCanvas"></div>
+<div id="u115" class="u115"  >
+<div id="u115_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核职位信息</span></p></div>
+</div>
+</div>
+<div id="u116" class="u116_container"   >
+<div id="u116_img" class="u116_normal detectCanvas"></div>
+<div id="u117" class="u117"  >
+<div id="u117_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看公司列表</span></p></div>
+</div>
+</div>
+<div id="u118" class="u118_container"   >
+<div id="u118_img" class="u118_normal detectCanvas"></div>
+<div id="u119" class="u119"  >
+<div id="u119_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看职位列表</span></p></div>
+</div>
+</div>
+<div id="u120" class="u120_container"   >
+<div id="u120_img" class="u120_normal detectCanvas"></div>
+<div id="u121" class="u121"  >
+<div id="u121_rtf"><p style="text-align:center;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">查看到期职位</span></p></div>
+</div>
+</div>
+</DIV>
+</DIV>
+</DIV>
+<script type="text/javascript">
+InitializeSubmenu('sm8u22', 'u28');
+</script>
+<div id="u122" class="u122"  data-label="paragraph">
+<div id="u122_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#FFFFFF;">退出系统</span></p></div>
+</div>
+<div id="u123" class="u123_container"   >
+<div id="u123_img" class="u123_normal detectCanvas"></div>
+<div id="u124" class="u124" style="visibility:hidden;"  >
+<div id="u124_rtf"></div>
+</div>
+</div>
+<DIV id="u125" style="border-style:dotted; border-color:red; visibility:hidden; position:absolute; left:0px; top:0px; width:1350px; height:75px;;" ></div>
+<div id="u126" class="u126"  data-label="paragraph">
+<div id="u126_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">审核未通过企业</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u127" class="u127_container"   >
+<div id="u127_img" class="u127_normal detectCanvas"></div>
+<div id="u128" class="u128" style="visibility:hidden;"  >
+<div id="u128_rtf"></div>
+</div>
+</div>
+<div id="u129" class="u129"  data-label="paragraph">
+<div id="u129_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">本周</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">投递简历数</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+<div id="u130" class="u130"  data-label="paragraph">
+<div id="u130_rtf"><p style="text-align:left;"><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">上</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">周</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">投递简历数</span><span style="font-family:Arial;font-size:13px;font-weight:normal;font-style:normal;text-decoration:none;color:#333333;">：</span></p></div>
+</div>
+</div>
+<div class="preload"><img src="后台首页_files/u0_normal.png" width="1" height="1"/><img src="顶部导航_files/u17_normal.png" width="1" height="1"/><img src="顶部导航_files/menu_u22_menu.png" width="1" height="1"/><img src="顶部导航_files/u24_mouseOver.png" width="1" height="1"/><img src="顶部导航_files/u24_selected.png" width="1" height="1"/><img src="顶部导航_files/u24_normal.png" width="1" height="1"/><img src="顶部导航_files/u42_menu.png" width="1" height="1"/><img src="顶部导航_files/u44_mouseOver.png" width="1" height="1"/><img src="顶部导航_files/u44_selected.png" width="1" height="1"/><img src="顶部导航_files/u44_normal.png" width="1" height="1"/><img src="顶部导航_files/u46_menu.png" width="1" height="1"/><img src="顶部导航_files/u54_menu.png" width="1" height="1"/><img src="顶部导航_files/u62_menu.png" width="1" height="1"/><img src="顶部导航_files/u70_menu.png" width="1" height="1"/><img src="顶部导航_files/u80_menu.png" width="1" height="1"/><img src="顶部导航_files/u84_menu.png" width="1" height="1"/><img src="顶部导航_files/u92_menu.png" width="1" height="1"/><img src="顶部导航_files/u100_menu.png" width="1" height="1"/><img src="顶部导航_files/u110_menu.png" width="1" height="1"/><img src="顶部导航_files/u123_normal.png" width="1" height="1"/><img src="后台首页_files/u127_normal.png" width="1" height="1"/></div>
+</body>
+<script src="resources/scripts/axurerp_pagescript.js"></script>
+<script src="后台首页_files/axurerp_pagespecificscript.js" charset="utf-8"></script>

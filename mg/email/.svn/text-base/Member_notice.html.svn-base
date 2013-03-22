@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+	margin:0;
+	font-family:"宋体";
+	font-size:12px;
+	color:#444;
+	}
+#content{
+	width:677px;
+	margin:0 auto;
+	background:url(images/bg.gif) repeat-y right top;
+	}
+#header{
+	width:100%;
+	background:url(images/top_right.gif) no-repeat right top;
+	height:66px;
+	}
+.banner{
+	width:650px;
+	border:1px solid #dedede;
+	border-bottom:none;
+	}
+.neirong{
+	
+	}
+</style>
+<title>会员开通提醒</title>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width:677px;background:url(images/bg.gif) repeat-y right top;font-family:"宋体";font-size:12px;color:#444;">
+		<tr>
+				<td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td align="left" style="background:url(images/top_right.gif) no-repeat right top;height:66px;"><table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+				<td style="width:650px;border:1px solid #dedede;border-bottom:none;"><img src="images/top_bg.jpg" border="0" /></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none; border-bottom:none;">
+		<tr>
+				<td style="padding:0 15px; line-height:25px; ">
+					<span style="border-bottom:1px dashed #dedede;"><strong>尊敬的【公司名称】：</strong>
+						<span style="display:block; text-indent:2em;border-bottom:1px dashed #dedede;">感谢您对OFweek人才网的支持！</span>
+						<span style="display:block; text-indent:2em;border-bottom:1px dashed #dedede;">您已开通OFweek人才网【会员类型】服务！您可以登陆OFweek人才网进行体验！ <a href="http://hr.ofweek.com/person/personal.html" target="_blank" style="color:#c2261a">现在去登陆</a></span>					</span>				</td>
+		</tr>
+		<tr>
+				<td style="padding:0 15px; text-indent:2em; line-height:25px; ">以下是您的服务计划：</td>
+		</tr>
+		<tr>
+				<td style="padding:0 15px;text-indent:2em; line-height:25px; ">服务到期时间：2013-06-28</td>
+		</tr>
+		<tr>
+				<td style="padding:0 15px; line-height:25px; "><table border="0" cellspacing="0" cellpadding="0" width="70%" style="margin-left:25px;">
+		<tr>
+				<td width="28%" align="center" bgcolor="#f3f3f3" style="border:1px solid #ddd;">职位数</td>
+				<td width="26%" align="center" style="border:1px solid #ddd; border-left:none; color:#c2261a;">10</td>
+				<td width="26%" align="center" style="border:1px solid #ddd; border-left:none; background:url(images/download.gif) #f3f3f3 no-repeat 11px 7px;">下载简历数</td>
+				<td width="20%" align="center" style="border:1px solid #ddd; border-left:none;color:#c2261a;">200</td>
+		</tr>
+		<tr>
+				<td align="center" bgcolor="#f3f3f3" style="border:1px solid #ddd; border-top:none;">发布职位</td>
+				<td align="center" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;color:#c2261a;">启用</td>
+				<td align="center" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd; background:url(images/tongzhi.gif) #f3f3f3 no-repeat 15px 5px;">面试通知</td>
+				<td align="center" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;color:#c2261a;">启用</td>
+		</tr>
+		<tr>
+				<td align="center" style="border:1px solid #ddd; border-top:none; background:url(images/sousuo.gif) #f3f3f3 no-repeat 22px 5px;">搜索简历</td>
+				<td align="center" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;color:#c2261a;">启用</td>
+				<td align="center" bgcolor="#f3f3f3" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">&nbsp;</td>
+				<td align="center" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">&nbsp;</td>
+		</tr>
+</table>
+</td>
+				</tr>
+		<tr>
+				<td style="padding:0 15px; text-indent:2em;border-bottom:1px dashed #dedede;line-height:25px;"><a href="#" style="color:#c2261a;" target="_blank">OFweek人才网使用手册</a></td>
+		</tr>
+		  <td style="padding:0 15px;padding-left:55px;border-bottom:1px dashed #dedede;line-height:25px; background:url(images/tel.gif) no-repeat 36px 4px;">服务热线：0755-83279360</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:url(images/bottom_right.gif) no-repeat right bottom; height:35px; line-height:35px;">
+		<tr>
+				<td align="left"><table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none;">
+		<tr>
+				<td align="right" style="padding-right:20px;">OFweek人才网</td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+
+</td>
+		</tr>
+		
+</table>
+</body>
+</html>

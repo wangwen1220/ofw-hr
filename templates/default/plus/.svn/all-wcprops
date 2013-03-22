@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/netway/!svn/ver/25573/ofweek_hr/templates/default/plus
+END
+count.htm
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/plus/count.htm
+END
+login_activate.htm
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/plus/login_activate.htm
+END
+top_login_activate.htm
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/plus/top_login_activate.htm
+END
+ajax_login.htm
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/25573/ofweek_hr/templates/default/plus/ajax_login.htm
+END
+login_form.htm
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/plus/login_form.htm
+END
+top_login_form.htm
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/plus/top_login_form.htm
+END
+login_success.htm
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/plus/login_success.htm
+END
+top_login_success.htm
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/netway/!svn/ver/23544/ofweek_hr/templates/default/plus/top_login_success.htm
+END

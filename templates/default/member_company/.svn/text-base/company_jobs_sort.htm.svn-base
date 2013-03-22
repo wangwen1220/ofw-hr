@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+</head>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+    <form id="fm_jblist" name="fm_jblist" action="company_jobs.php?act=sort_save" method="post">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;职位管理&nbsp;&gt;&gt;&nbsp;管理招聘职位</div>
+      <div class="fabu"><img src="{#$QISHI.site_template#}images/fa1.gif" /><strong><a href="company_jobs.php?act=jobs">管理招聘信息</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="company_jobs.php?act=sort" title="修改职位排序">职位排序</a></strong></div>
+      <div class="zhao_p">
+        
+        <div class="hr_gua">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+              	<td width="10%" align="center" bgcolor="#eff5ff"><label>
+              	  顺序
+              	</label></td>
+                <td width="22%" align="center" bgcolor="#eff5ff">职位名称</td>
+                <td width="27%" align="center" bgcolor="#eff5ff">发布时间</td>
+                <td width="23%" align="center" bgcolor="#eff5ff">刷新时间</td>
+                <td width="18%" align="center" bgcolor="#eff5ff">修改</td>
+              </tr>
+              
+              {#foreach from=$jobs item=list#}
+              <tr>
+              	<td width="10%" align="center"><label>
+              	  <input type="text" name="jobsid_{#$list.id#}" value="{#$list.sort#}" size="2" />
+              	</label></td>
+                <td width="22%" align="center"><a href="/jobs/jobs-show-{#$list.id#}.html" title="{#$list.jobs_name#}" style="width:155px;display:block;float:left;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" target="_blank" class="tips">{#$list.jobs_name#}</a></td>
+                <td width="27%" align="center">{#$list.addtime#}</td>
+                <td width="23%" align="center">{#$list.refreshtime#}</td>
+                <td width="18%" align="center"><a href="company_jobs.php?act=editjobs&id={#$list.id#}" title="修改"><img src="{#$QISHI.site_template#}images/fa10.gif" /></a></td>
+              </tr>
+              {#/foreach#}
+              
+              {#if !empty($jobs)#}
+              <tr>
+              	<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="提交" /></td>
+              </tr>
+              {#/if#}
+             
+            </table>
+        </div>
+        
+      </div>
+    </form>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+</body>
+</html>

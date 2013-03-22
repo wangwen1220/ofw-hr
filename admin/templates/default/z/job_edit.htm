@@ -1,0 +1,605 @@
+{#include file="sys/admin_header.htm"#}
+<link href="{#$QISHI.site_template#}css/74cms.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//菜单层
+	showmenulayer("#district_cn","#menu3","#district","#sdistrict",QS_city);
+	
+	//验证表单
+	$("#Form1").validate({
+		//规则
+		rules:{
+		//职位名称
+		jobs_name:{
+			required: true,
+			minlength:2,
+			maxlength:30
+		},
+		
+		//所属行业
+		'value_industry[]':{
+			required: true
+		},
+		
+		//工作岗位
+		'value_category[]':{
+			required: true
+		},
+		
+		//工作地区
+		district: "required",
+		
+		//招聘对象
+		'nature_z': "required",
+		
+		//招聘人数
+		amount:{
+			range:[0,999]
+		},
+		
+		//薪酬min
+		wage_min:{
+			range:[0,99999]
+		},
+		
+		//薪酬max
+		wage_max:{
+			range:[0,99999]
+		},
+		
+		//职位描述/要求
+		contents:{
+			required: true,
+			minlength:30,
+			maxlength:4000
+		},
+
+		//联系人
+		contact:{
+			required: true
+		},
+		
+		//联系电话
+		telephone: "required",
+		
+		//邮箱地址
+		email: {
+			required:true,
+			email:true
+		}
+		},
+	
+		//提示
+		messages: {
+		//职位名称
+		jobs_name:{
+			required: "请输入职位名称",
+			minlength: jQuery.format("职位名称不能小于{0}个字符"),
+			maxlength: jQuery.format("职位名称不能大于{0}个字符")
+		},
+		
+		//所属行业
+		'value_industry[]':{
+			required: '请选择所属行业'
+		},
+		
+		//工作岗位
+		'value_category[]':{
+			required: '请选择工作岗位'
+		},
+		
+		//工作地区
+		district:{
+			required: '请选择工作地区'
+		},
+		
+		//招聘对象
+		'nature_z':{
+			required: '请选择招聘对象'
+		},
+		
+		//招聘人数
+		amount: {
+			range: jQuery.format("请输入一个介于 {0} 和 {1} 之间的值")
+		},
+		
+		//薪酬wage_min
+		wage_min: {
+			range: jQuery.format("请输入一个介于 {0} 和 {1} 之间的值")
+		},
+		
+		//薪酬wage_max
+		wage_max: {
+			range: jQuery.format("请输入一个介于 {0} 和 {1} 之间的值")
+		},
+		
+		//职位描述/要求
+		contents: {
+			required: jQuery.format("请填写职位描述"),
+			minlength: jQuery.format("职位描述内容不能小于{0}个字符"),
+			maxlength: jQuery.format("职位描述内容不能大于{0}个字符")
+		},
+		
+		//联系人
+		contact: {
+			required: jQuery.format("请填写联系人")
+		},
+		
+		//联系电话
+		telephone: {
+			required: jQuery.format("请填写联系电话")
+		},
+
+		//邮箱地址
+		email: {
+		required: jQuery.format("请填写电子邮箱"),
+		email: jQuery.format("请正确填写电子邮箱")
+		}
+		},
+		
+		errorPlacement: function(error, element) {
+			if ( element.is(":radio") )
+				error.appendTo( element.parent().next().next() );
+			else if ( element.is(":checkbox") )
+				error.appendTo ( element.next());
+			else
+				error.appendTo(element.parent());
+		}
+	});
+	
+	
+	//表单提交
+	$("#save_a").click(function(){
+		$('#value_industry option').each(function(){this.selected=true;});
+		$('#value_category option').each(function(){this.selected=true;});
+		
+		$("#optype").val('save');
+		$("#Form1").submit();
+	});
+	$("#save").click(function(){
+		$('#value_industry option').each(function(){this.selected=true;});
+		$('#value_category option').each(function(){this.selected=true;});
+		
+		$("#optype").val('save');
+		$("#Form1").submit();
+	});
+	
+	//行业
+	var type = ['industry', 'category', 'speciality'];
+	$(type).each(function(){
+		var ename = this;
+		var num_max = 5;
+		
+		$('#button_r_'+ename).click(function(){
+			var options = $('#content_'+ename+' :selected');
+			var num_c = options.length;
+			var num_v = $('#value_'+ename+' option').length;
+			
+			if((num_c + num_v) > num_max) {
+				alert('请选择不多于'+num_max+'个条目');
+				return;
+			}
+			
+			$('#value_'+ename).append(options);
+		});
+		
+		$('#button_l_'+ename).click(function(){
+			var options = $('#value_'+ename+' :selected');
+			$('#content_'+ename).append(options);
+		});
+	});
+	
+	//岗位
+	$('#ajax_category').change(function(){
+		var parentid = $(this).val();
+		if(parentid==0){
+			$('#content_category').html('');
+			return;
+		}
+		
+		//ajax
+		$.ajax({
+			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_jobs&parentid='+parentid,
+			success:function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';
+				}
+				
+				options = '<option value="'+$('#ajax_category option:selected').val()+'">'+$('#ajax_category option:selected').html()+'</option>'+options;
+				$('#content_category').html(options);
+			}
+		});
+	});
+	
+	//专业
+	$('#ajax_speciality').change(function(){
+		var parentid = $(this).val();
+		if(parentid==0){
+			$('#content_speciality').html('');
+			return;
+		}
+		
+		//ajax
+		$.ajax({
+			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_speciality&parentid='+parentid,
+			success:function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';
+				}
+				
+				options = '<option value="'+$('#ajax_speciality option:selected').val()+'">'+$('#ajax_speciality option:selected').html()+'</option>'+options;
+				$('#content_speciality').html(options);
+			}
+		});
+	});
+	
+	//户籍
+	$('#cencus_province').change(function(){
+		var parentId = $(this).val();
+		if(parentId == -1){
+			$('#cencus_city').html('<option value="-1">请选择</option>');
+			$('#cencus_city').attr('disabled','disabled');
+			return;
+		}
+		$('#cencus_city').removeAttr('disabled');
+		//ajax
+		$.ajax({
+			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
+			success: function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">'+cur.categoryname+'</option>';				
+				}
+//				console.log(options);
+				options = '<option value="-1">请选择</option>'+options;
+				$('#cencus_city').html(options);
+			}
+		});
+	});
+	
+	//招聘对象
+	$('input[name="nature[]"]').change(function(){
+		var f = '';
+		$('input[name="nature[]"]').each(function(){
+			if(this.checked){f = 'ok';}
+		});
+		$("#nature_z").val(f);
+	});
+});
+</script>
+<div class="admin_main_nr_dbox">
+<div class="pagetit">
+	<div class="ptit"> {#$pageheader#}</div>
+  <div class="clear"></div>
+</div>
+<div class="toptit">修改职位- <span style="color:#0066CC">{#$jobs.jobs_name#}</span> </div>
+<form id="Form1" name="Form1" method="post" action="?act=edit_save">
+
+      <input type="hidden" name="id" id="id" value="{#$jobs.id#}" />
+      <input type="hidden" name="optype" id="optype" value="" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="2" align="center" bgcolor="#eff5ff"><strong>基本信息</strong></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>职位名称：</td>
+                <td width="87%"><label>
+                  <input name="jobs_name" type="text" class="input_text_200" id="jobs_name" maxlength="30"  style="width:200px; margin-right:10px;" value="{#$jobs.jobs_name#}" />
+                </label></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>所属行业：<br />
+                  (不多于5个)</td>
+                <td width="87%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="37%" valign="top">
+                      	<select multiple="multiple" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" id="content_industry">
+                      		{#foreach from=$tradeCate_Left item=list#}
+                      		<option value="{#$list.c_id#}">{#$list.c_name#}</option>
+                      		{#/foreach#}
+						</select>
+					 </td>
+                      <td width="15%" align="left"><input id="button_r_industry" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input id="button_l_industry" type="button" style="width:50px;" value="<<" /></td>
+                      <td width="48%"><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="value_industry[]" id="value_industry">
+                        {#foreach from=$tradeCate_Right item=list#}
+                      		<option value="{#$list.c_id#}">{#$list.c_name#}</option>
+                      		{#/foreach#}
+                        </select>
+                        </label></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>工作岗位：<br />
+                  (不多于5个)</td>
+                <td width="87%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="37%" valign="bottom" ><select id="ajax_category" style="WIDTH:17em">
+                         <option value="0">请选择</option>
+                          {#foreach from=$jobCate item=list#}
+						  <option value="{#$list.id#}">{#$list.categoryname#}</option>
+						  {#/foreach#}
+                        </select></td>
+                      <td width="15%" align="left"></td>
+                      <td width="48%" valign="top"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><select id="content_category" multiple="multiple"  size="6" style="WIDTH: 17em">
+                        <!--AJAX分类数据回传区-->
+						<!--END-->
+                        </select>                      </td>
+                      <td align="left"><input id="button_r_category" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input id="button_l_category" type="button" style="width:50px;" value="<<" /></td>
+                      <td><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="value_category[]" id="value_category">
+                        {#foreach from=$category_Right item=list#}
+						  <option value="{#$list.id#}">{#$list.categoryname#}</option>
+						  {#/foreach#}
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>工作地区：</td>
+                <td width="87%">
+                <div>
+                <input type="text" value="{#$jobs.district_cn#}"  readonly="readonly" name="district_cn" id="district_cn" class="input_text_200 input_text_200_selsect"/>
+				<input name="district" id="district" type="hidden" value="{#$jobs.district#}" />
+				<input name="sdistrict" id="sdistrict" type="hidden" value="{#$jobs.sdistrict#}" />
+				
+				<div id="menu3" class="dmenu shadow">
+					<ul>
+					{#qishi_get_classify set="类型:QS_district,id:0,列表名:c_province"#}{#foreach from=$c_province item=list#}
+					<li id="{#$list.id#}" title="{#$list.categoryname#}">{#$list.categoryname#}</li>
+					{#/foreach#}
+					</ul>
+				</div>
+				<div id="menu3_s" class="dmenu shadow" style="display:none"></div>
+				</div>
+				</td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>招聘对象：</td>
+                <td width="87%">
+                
+                <input type="checkbox" name="nature[]" value="1"{#if $jobs.nature.1==1#} checked="checked"{#/if#} />全职&nbsp;&nbsp;
+                <input type="checkbox" name="nature[]" value="2"{#if $jobs.nature.2==1#} checked="checked"{#/if#} />兼职&nbsp;&nbsp;
+                <input type="checkbox" name="nature[]" value="4"{#if $jobs.nature.4==1#} checked="checked"{#/if#} />应届生&nbsp;&nbsp;
+                <input type="checkbox" name="nature[]" value="8"{#if $jobs.nature.8==1#} checked="checked"{#/if#} />实习&nbsp;&nbsp;
+                <input type="hidden" name="nature_z" id="nature_z" {#if ($jobs.nature.1==1||$jobs.nature.2==1||$jobs.nature.4==1||$jobs.nature.8==1)#} value="ok"{#else#}value=""{#/if#} />&nbsp;&nbsp;
+                </td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>招聘人数：</td>
+                <td width="87%"><input name="amount" type="text" class="input_text_200" id="amount" value="{#$jobs.amount#}" maxlength="4" style="width:40px;" /> 
+                  人&nbsp;&nbsp;&nbsp;&nbsp;0表示不限</td>
+              </tr>
+              <tr>
+                <td width="13%" align="right">薪酬：</td>
+                <td width="87%"><input name="wage_min" type="text" value="{#$jobs.wage_min#}" style="width:40px;"/> 
+                  至&nbsp;&nbsp;
+                  <input name="wage_max" type="text" value="{#$jobs.wage_max#}" style="width:40px;"/>         0表示面议         &nbsp;&nbsp;&nbsp;&nbsp;
+                  <input name="room" type="checkbox"{#if $jobs.room#} checked="checked"{#/if#} value="1" />能提供住宿</td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td colspan="2" align="center" bgcolor="#eff5ff"><strong>具体要求</strong></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right">年龄要求：</td>
+                <td width="87%"><input name="age_min" type="text" value="{#$jobs.age_min#}" style="width:40px;"/> 
+                至&nbsp;&nbsp;<input name="age_max" type="text" value="{#$jobs.age_max#}" style="width:40px;"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;性别：<select name="sex" style="width:100px;">
+                  <option{#if $jobs.sex==3#} selected="selected"{#/if#} value="3">不限</option>
+                  <option{#if $jobs.sex==1#} selected="selected"{#/if#} value="1">男</option>
+                  <option{#if $jobs.sex==2#} selected="selected"{#/if#} value="2">女</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right">工作经验：</td>
+                <td width="87%"><select name="experience" id="experience" style="width:60px;">
+						<option value="0"{#if $jobs.experience==0#} selected="selected"{#/if#}>不限</option>
+						<option label="无经验" value="1"{#if $jobs.experience==1#} selected="selected"{#/if#}>无经验</option>
+						<option label="1年以下" value="2"{#if $jobs.experience==2#} selected="selected"{#/if#}>1年以下</option>
+						<option label="1-3年" value="3"{#if $jobs.experience==3#} selected="selected"{#/if#}>1-3年</option>
+						<option label="3-5年" value="4"{#if $jobs.experience==4#} selected="selected"{#/if#}>3-5年</option>
+						<option label="5-10年" value="5"{#if $jobs.experience==5#} selected="selected"{#/if#}>5-10年</option>
+						<option label="10年以上" value="6"{#if $jobs.experience==6#} selected="selected"{#/if#}>10年以上</option>
+                                </select>
+                以上&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;户口所在地：
+<select id="cencus_province" style="height:20px;width:120px;" name="cencus_province">
+                            <option value="0">请选择</option>
+							{#html_options options=$select_district selected=$select_district_val#}
+                            </select>              				
+							<select id="cencus_city" style="height:20px;width:120px;" name="cencus_city" {#if $select_district_val == ''#}disabled="disabled"{#/if#}>
+                            <option value="0">请选择</option> 
+							{#html_options options=$select_sdistrict selected=$select_sdistrict_val#}
+							</select>
+
+</td>
+              </tr>
+              
+              <tr>
+                <td width="13%" align="right">英语等级：</td>
+                <td width="87%">
+                <label>
+                <select name="english" style="width:100px;">
+                  <option{#if $jobs.english==0#} selected="selected"{#/if#} value="0">不限</option>
+                  <option{#if $jobs.english==1#} selected="selected"{#/if#} value="1">一般</option>
+                  <option{#if $jobs.english==2#} selected="selected"{#/if#} value="2">良好</option>
+                  <option{#if $jobs.english==3#} selected="selected"{#/if#} value="3">优秀</option>
+                </select>
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;计算机能力：<label>
+                <select name="computer" style="width:100px;">
+                  <option{#if $jobs.computer==0#} selected="selected"{#/if#} value="0">不限</option>
+                  <option{#if $jobs.computer==1#} selected="selected"{#/if#} value="1">一般</option>
+                  <option{#if $jobs.computer==2#} selected="selected"{#/if#} value="2">良好</option>
+                  <option{#if $jobs.computer==3#} selected="selected"{#/if#} value="3">优秀</option>
+                </select>
+                </label></td>
+              </tr>
+              
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>学历要求：</td>
+                <td width="87%"><select name="education" id="education" style="width:100px;">
+                  <option value="0">不限</option>
+                {#foreach from=$eduCate item=list#}
+                  <option{#if $jobs.education==$list.c_id#} selected="selected"{#/if#} value="{#$list.c_id#}">{#$list.c_name#}</option>
+                {#/foreach#}
+                </select>                  &nbsp;&nbsp;以上</td>
+              </tr>
+                            
+              <tr>
+                <td width="13%" align="right">专业要求：<br />
+                  (不多于5个)</td>
+                <td width="87%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="37%" valign="bottom" ><select id="ajax_speciality" style="WIDTH:17em">
+                         <option value="0">请选择</option>
+                          {#foreach from=$specialityCate item=list#}
+						  <option value="{#$list.id#}">{#$list.categoryname#}</option>
+						  {#/foreach#}
+                        </select></td>
+                      <td width="15%" align="left"></td>
+                      <td width="48%" valign="top"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><select id="content_speciality" multiple="multiple"  size="6" style="WIDTH: 17em">
+                        <!--AJAX分类数据回传区-->
+						<!--END-->
+                        </select>                      </td>
+                      <td align="left"><input id="button_r_speciality" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input id="button_l_speciality" type="button" style="width:50px;" value="<<" /></td>
+                      <td><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="value_speciality[]" id="value_speciality">
+                        {#foreach from=$speciality_Right item=list#}
+						  <option value="{#$list.id#}">{#$list.categoryname#}</option>
+						  {#/foreach#}
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>有效期：</td>
+                <td width="87%"><select name="effect" style="width:100px;">
+                <option{#if $jobs.effect==0#} selected="selected"{#/if#} value="0">长期有效</option>
+				<option{#if $jobs.effect==1#} selected="selected"{#/if#} value="1">一个月</option>
+				<option{#if $jobs.effect==2#} selected="selected"{#/if#} value="2">三个月</option>
+				<option{#if $jobs.effect==3#} selected="selected"{#/if#} value="3">六个月</option>
+				<option{#if $jobs.effect==4#} selected="selected"{#/if#} value="4">一年</option>
+				</select></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>职位描述/要求：</td>
+                <td width="87%">
+                  <label></label>
+                  
+                <textarea name="contents" id="contents" cols="100" rows="9">{#$jobs.contents#}</textarea></td>
+              </tr>
+            </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>联系人：</td>
+                <td width="87%"><input name="contact" id="contact" type="text" style="width:150px;" value="{#$jobs.contact#}"/></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>联系电话：</td>
+                <td width="87%"><input name="telephone" id="telephone" type="text" style="width:150px;" value="{#$jobs.telephone#}"/></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"><span class="f_red">*</span>邮箱地址：</td>
+                <td width="87%"><input name="email" id="email" type="text" style="width:150px;" value="{#$jobs.email#}"/></td>
+              </tr>
+              <tr>
+                <td width="13%" align="right"></td>
+                <td width="87%">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="save" class="btn" value="保存"/></td>
+              </tr>
+        </table>
+        </div>
+        
+      </div>
+  </form>
+  
+<div class="toptit">审核职位- <span style="color:#0066CC">{#$jobs.jobs_name#}</span> </div>
+<form id="Form2" name="Form2" method="post" action="?act=audit">
+
+      <input type="hidden" name="id" id="id" value="{#$jobs.id#}" />
+      <input type="hidden" name="optype" id="optype" value="" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        	<table width="100%" border="0"  cellspacing="5" cellpadding="5">
+        		<tr>
+               	  <td width="13%" align="right">当前状态：</td>
+               	  <td width="87%">{#if $jobs.audit == 1#}审核通过{#elseif $jobs.audit == 2#}待审核{#elseif $jobs.audit == 4#}修改待审核{#elseif $jobs.audit == 3#}审核不通过{#/if#}
+               	  </td>
+                </tr>
+              <tr>
+               	  <td width="13%" align="right">审核：</td>
+               	  <td width="87%">
+               	  <input type="radio" checked="checked" name="audit" value="1" />审核通过
+               	  <input type="radio" name="audit" value="3" />审核不通过
+               	  </td>
+                </tr>
+<tr>
+                	<td width="13%" align="right">审核不通过原因</td>
+                	<td>
+                	<input checked="checked" type="radio" checked="checked" name="audit_reason" value="职位描述过于简单" />职位描述过于简单
+                	<input type="radio" name="audit_reason" value="发布虚假职位" />发布虚假职位
+                	<input type="radio" name="audit_reason" value="公司未通过审核" />公司未通过审核<br /><br />
+                	其他：<input type="text" name="audit_reason_other" value="" size="50" />
+                	</td>
+                </tr>
+                <!-- 
+                <tr>
+                	<td width="13%" align="right">是否发邮件</td>
+                	<td>
+                	<input type="radio" name="audit_email" value="1" />发送
+                	<input type="radio" checked="checked" name="audit_email" value="0" />不发送
+                	</td>
+                </tr> -->
+                <tr>
+                	<td></td>
+                	<td>
+                	<input type="submit" value="提交" />
+                	</td>
+                </tr>
+                  </table>
+        </div>
+        
+      </div>
+  </form>
+  
+</div>
+{#include file="sys/admin_footer.htm"#}
+</body>
+</html>

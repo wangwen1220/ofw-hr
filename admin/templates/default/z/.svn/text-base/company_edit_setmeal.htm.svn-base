@@ -1,0 +1,93 @@
+{#include file="sys/admin_header.htm"#}
+
+<div class="admin_main_nr_dbox">
+<div class="pagetit">
+	<div class="ptit"> {#$pageheader#}</div>
+  <div class="clear"></div>
+</div>
+<!--
+	<div class="toptit">会员服务套餐- 修改</div>
+	<form id="form2" name="form2" method="post" action="?act=edit_setmeal_save">
+	<input type="hidden" name="uid" value="{#$setmeal.uid#}">
+	<table width="100%" border="0" cellpadding="4" cellspacing="0" >
+	  <tr>
+        <td width="120" height="30" align="right"  style=" border-bottom:1px #CCCCCC dashed">
+		服务套餐名称：		</td>
+        <td  style=" border-bottom:1px #CCCCCC dashed;" >
+{#$setmeal.setmeal_name#}		</td>
+      </tr>
+      <tr>
+        <td   height="30" align="right"  style=" border-bottom:1px #CCCCCC dashed">服务时间：</td>
+        <td  style=" border-bottom:1px #CCCCCC dashed;" >
+		开始时间：{#$setmeal.starttime|date_format:"%Y-%m-%d"#}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		结束时间：{#if $setmeal.endtime=="0"#}
+		无限制
+		{#else#}
+		{#$setmeal.endtime|date_format:"%Y-%m-%d"#}
+		{#/if#}
+		 <input type="hidden" name="oldendtime"  value="{#$setmeal.endtime#}" />		</td>
+      </tr>
+      
+	  <tr>
+        <td  height="30" align="right"  style=" border-bottom:1px #CCCCCC dashed">发布普通招聘剩余：</td>
+        <td  style=" border-bottom:1px #CCCCCC dashed;" >
+          <input name="jobs_ordinary" type="text" class="input_text_200" id="jobs_ordinary" maxlength="50" value="{#$setmeal.jobs_ordinary#}"  >
+          条</td>
+      </tr>
+	  <tr>
+        <td   height="30" align="right"  style=" border-bottom:1px #CCCCCC dashed">下载普通简历剩余：</td>
+        <td  style=" border-bottom:1px #CCCCCC dashed;" >
+          <input name="download_resume_ordinary" type="text" class="input_text_200" id="download_resume_ordinary" maxlength="50" value="{#$setmeal.download_resume_ordinary#}"  >
+          条</td>
+      </tr>
+      <tr>
+        <td   height="30" align="right"  style=" border-bottom:1px #CCCCCC dashed">简历搜索权限：</td>
+        <td  style=" border-bottom:1px #CCCCCC dashed;" >
+          <input{#if $setmeal.resume_search==0#} checked="checked"{#/if#} name="resume_search" type="radio" value="0"  />无&nbsp;&nbsp;
+          <input{#if $setmeal.resume_search==1#} checked="checked"{#/if#} name="resume_search" type="radio" value="1"  />有</td>
+      </tr>
+
+	  <tr>
+      <td width="120" height="30" align="right"   >&nbsp;</td>
+      <td height="35"   > 
+        <input type="hidden" name="company_uid"  value="{#$company_user.uid#}" />
+		<input type="hidden" name="url"  value="{#$url#}" />
+        <input name="submit3" type="submit" class="admin_submit"    value="确定"/>
+        <input name="submit22" type="button" class="admin_submit"    value="返 回" onclick="Javascript:window.history.go(-1)"/> </td>
+    </tr>
+    </table>
+	</form>
+-->
+	<div class="toptit">重新开通服务套餐</div>
+	<form id="form4" name="form4" method="post" action="?act=edit_setmeal_save">
+	<input type="hidden" name="uid" value="{#$setmeal.uid#}">
+	<table width="700" border="0" cellpadding="4" cellspacing="0"   id="edit_setmeal2" >
+      <tr>
+        <td width="120" height="30" align="right"  style=" border-bottom:1px #CCCCCC dashed">选择套餐：</td>
+        <td  style=" border-bottom:1px #CCCCCC dashed;" >
+          {#foreach from=$givesetmeal item=list#}		   
+		    <label>
+          <input type="radio" name="reg_service" value="{#$list.id#}" {#if $setmeal.setmeal_id==$list.id#}checked="checked"{#/if#}/>
+          {#$list.setmeal_name#}
+		  </label>
+		  &nbsp;&nbsp;&nbsp;&nbsp;
+
+		   {#/foreach#}
+	
+		</td>
+      </tr>
+      <tr>
+        <td height="30" align="right"  >&nbsp;</td>
+        <td height="35"  >
+		<input type="hidden" name="company_uid"  value="{#$company_user.uid#}" />
+            <input type="hidden" name="url"  value="{#$url#}" />
+            <input name="submit32" type="submit" class="admin_submit"    value="确定"/>
+          <input name="submit222" type="button" class="admin_submit"    value="返 回" onclick="Javascript:window.history.go(-1)"/>
+        </td>
+      </tr>
+    </table>
+	</form>	
+</div>
+{#include file="sys/admin_footer.htm"#}
+</body>
+</html>

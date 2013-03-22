@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/safety
+END
+admin_safety_filter.htm
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/safety/admin_safety_filter.htm
+END
+admin_safety_ip.htm
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/safety/admin_safety_ip.htm
+END
+admin_safety_csrf.htm
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/safety/admin_safety_csrf.htm
+END
+admin_safety_captcha.htm
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/safety/admin_safety_captcha.htm
+END
+admin_safety_nav.htm
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/safety/admin_safety_nav.htm
+END

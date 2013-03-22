@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+</head>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;职位管理&nbsp;&gt;&gt;&nbsp;查找招聘职位</div>
+      <div class="fabu"><img src="{#$QISHI.site_template#}images/fa1.gif" /><strong>查找招聘职位</strong></div>
+      <div class="zhao_p">
+        <div class="tite_qh"><span style=" padding-left:15px;">查找</span></div>
+        <div class="hr_gua" style="padding:50px 0px;">
+        	<form id="fm_jobsearch" action="company_jobs.php" method="GET">
+        	<input type="hidden" name="act" value="jobs" />
+        	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td align="center">查找职位：<input type="text" id="key" name="key" value="请输入关键字" style="width:150px;"/></td>
+            </tr>
+            <tr>
+              <td align="center"></td>
+            </tr>
+            <tr>
+              <td align="center"><input type="submit" class="btn" value="查 找"/></td>
+            </tr>
+            </table>
+            </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+<script>
+$(function(){
+	$('#key').click(function(){
+		if($(this).val() == '' || $(this).val() == '请输入关键字'){//关键词填写动作
+			$(this).val('');
+		}
+	});
+	$('#fm_jobsearch').submit(function(){
+		if( ($('#key').val() == '' || $('#key').val() == '请输入关键字') ){
+			$('#key').val('请输入关键字');
+			return false;
+		}
+	})
+});
+</script>
+</body>
+</html>

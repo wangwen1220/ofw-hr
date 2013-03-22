@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312" />
+<base target='_blank' />
+<style type="text/css">
+body {
+	margin:0;
+	font-family:"宋体";
+	font-size:12px;
+	color:#444;
+}
+a { color: #0002FD; text-decoration: underline; }
+.highlight {
+	color: #E80B0B;
+}
+img { border: none; }
+</style>
+<title>企业认证</title>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width:677px;background:url(http://hr.ofweek.com/templates/default/images/email/bg.gif) repeat-y right top;font-family:'宋体';font-size:12px;color:#0A0A0A;">
+		<tr>
+				<td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td align="left" style="background:url(http://hr.ofweek.com/templates/default/images/email/top_right.gif) no-repeat right top;height:66px;"><table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+				<td style="width:650px;border:1px solid #dedede;border-bottom:none;"><a href='http://hr.ofweek.com/' title='人才网'><img border='0' src="http://hr.ofweek.com/templates/default/images/email/top_bg.jpg" alt='人才网' /></a></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none; border-bottom:none;line-height:25px;">
+		<tr>
+				<td colspan="2" style="padding:0 20px; line-height:25px; "><span style=""><strong>尊敬的{companyname}：</strong>
+						<span style="display:block; text-indent:2em; margin-bottom:5px;">感谢您注册OFweek人才网会员。非常遗憾的通知您：您在OFweek人才网注册的企业会员未通过我们的审核。</span>
+						<span style="display:block; text-indent:2em; margin-bottom:5px;">未通过审核的原因：<a style="color:#FF0000">{reason}</a></span>
+					</span></td>
+		</tr>
+		<tr>
+				<td width="544" style="padding:0 20px;text-indent:2em; line-height:25px;">这将会影响到您在我们网站的使用，请及时进行修改。修改后，我们将重新进行审核。</td>
+		</tr>
+		<tr>
+				<td style='padding:21px 0; text-align: center'><a href="http://hr.ofweek.com/user/company/company_info.php?act=company_profile_edit" target="_blank" title='修改简历'><img border='0' src="http://hr.ofweek.com/templates/default/images/email/btn-edit-info.png" alt="修改简历" border="0" /></a></td>
+		</tr>
+		<tr>
+				<td style="padding:0 20px;text-indent:2em;"><strong>祝商祺！</strong></td>
+		</tr>
+		<tr>
+				<td style='padding:0 20px;text-indent:2em;color:#E90D05'>本邮件由系统自动发出，请勿回复。</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:url(http://hr.ofweek.com/templates/default/images/email/bottom_right.gif) no-repeat right bottom; height:35px; line-height:35px;">
+		<tr>
+				<td align="left"><table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none;">
+		<tr>
+				<td align="right" style="padding:10px 20px 10px 0"><a style='text-decoration:none;color:#0000FE;' href='http://hr.ofweek.com'>OFweek人才网</a></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+
+</td>
+		</tr>
+
+</table>
+</body>
+</html>

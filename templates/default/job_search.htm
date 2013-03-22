@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />{#qishi_pageinfo set="列表名:page,调用:search"#}
+<title>{#$page.title#}</title>
+<meta name="description" content="{#$page.description#}">
+<meta name="keywords" content="{#$page.keywords#}">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/index.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/add_common_function.js"></script>
+
+<title>高级搜索</title>
+</head>
+
+<body>
+<div id="site">
+	
+	<!--header start-->
+	{#include file="header_nosearch.htm"#}
+	<!--header end-->
+	<div class="current">您当前所在位置：<a href="{#$QISHI.site_dir#}" target="_self">OFweek人才网</a> >> <a href="{#$QISHI.site_dir#}jobs/jobsearch.php" target="_self">高级搜索</a></div>
+	<!--body start-->
+	<div id="content" style="border:1px solid #e4e4e4; margin:0px 0 10px;">
+		<div class="gjss_tl">
+		<table width="239" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="68" align="left"><img src="{#$QISHI.site_template#}images/zwss.png" border="0" /></td>
+				<td width="196">职位搜索（高级查询）</td>
+		</tr>
+</table>
+		</div>
+		
+		<form method="get" action="{#$QISHI.site_dir#}jobs/">
+		<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td style="padding-left:245px;"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="85"><input type="radio" name="keytype" value="0" checked="checked"/>不限</td>
+				<td width="105"><input type="radio" name="keytype" value="1"/>公司名称</td>
+				<td width="175"><input type="radio" name="keytype" value="2"/>职位名称</td>
+		</tr>
+</table>
+</td>
+		</tr>
+		<tr>
+				<td><table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="85">关键字：</td>
+				<td width="320"><input id="keyword" type="text" name="key" style="height:20px; line-height:20px; width:285px;margin-left:1px;" /></td>
+				<td width="258">(搜索公司名称、招聘职位名称)</td>
+		</tr>
+</table>
+</td>
+		</tr>
+		<tr>
+				<td valign="top" style="padding-top:14px; line-height:22px;"><table width="663" border="0" cellpadding="0" cellspacing="0" align="center">
+              <tr>
+                <td width="13%" valign="top">行业分类：<br />
+                  （不多于3个）</td>
+                <td width="87%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="42%" valign="top">
+					  <!--行业分类-->
+					   <select id="content_industry" size="6" multiple="multiple" style="WIDTH: 17em">
+                          {#foreach item=item from=$category_industry#}
+						  <option value="{#$item.c_id#}">{#$item.c_name#}</option>
+						  {#/foreach#}
+                        </select>
+					  <!--END-->
+						</td>
+                      <td width="14%" align="left"><input id="button_r_industry" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input id="button_l_industry" type="button" style="width:50px;" value="<<" /></td>
+                      <td width="44%"><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="industry[]" id="industry">
+						<!-- 所选行业显示区-->
+						<!--END-->
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="13%" valign="top"><p>职位分类<br />
+                    （不多于3个）</p></td>
+                <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td width="42%" height="35" valign="bottom" >
+					  <!--岗位分类-->
+					  <select id="ajax_category" style="WIDTH:17em">
+						  <option value="-1">请选择</option>
+                          {#foreach item=item from=$parent_category#}
+						  <option value="{#$item.id#}">{#$item.categoryname#}</option>
+						  {#/foreach#}
+                        </select>
+					  <!--END-->
+						</td>
+                      <td colspan="2" align="left" valign="bottom"><table border="0" cellspacing="0" cellpadding="0">
+                      		<tr>
+                      				<td><label>
+                      						<input type="text" id="categorykey" class="s03" />
+                      						</label></td>
+                      				<td><input id="search_category" type="button" style="background:url({#$QISHI.site_template#}images/btn03.jpg) no-repeat 2px 2px; width:25px; height:25px;"/></td>
+                      				</tr>
+                      		</table>                      		</td>
+                      </tr>
+                    <tr>
+                      <td valign="top"><select id="content_category" multiple="multiple"  size="6" style="WIDTH: 17em">
+					  <!--AJAX分类数据回传区-->
+						<!--END-->
+					    </select>
+                      </td>
+                      <td width="14%" align="left"><input id="button_r_category" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input id="button_l_category" type="button" style="width:50px;" value="<<" /></td>
+                      <td width="44%"><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="category[]" id="category">
+						<!-- 所选职位分类显示区-->
+						<!--END-->
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td width="13%" valign="top"><p>地区分类<br />
+                    （不多于3个）</p></td>
+                <td valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+				<td width="42%" height="35" valign="bottom" >
+				<!--地区分类-->
+				<select id="ajax_district" style="WIDTH:17em">
+							<option value="-1">请选择</option>
+                          {#foreach item=item from=$parent_district#}
+						  <option value="{#$item.id#}">{#$item.categoryname#}</option>
+						  {#/foreach#}
+                        </select>
+				<!--END-->		
+						</td>
+                      <td width="14%" align="left"></td>
+                     
+                    <tr>
+                      <td valign="top" width="42%"><select id="content_district" size="6" multiple="multiple" style="WIDTH: 17em">
+                          <!--AJAX地区内容回传区-->
+						  <!--END-->
+                        </select></td>
+                      <td width="14%" align="left"><input id="button_r_district" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input type="button" id="button_l_district" style="width:50px;" value="<<" /></td>
+                      <td width="44%"><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="district[]" id="district">
+						<!-- 所选地区显示区-->
+						<!--END-->
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              
+			
+             
+              
+             
+              
+            </table></td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">性别：</td>
+				<td width="577" align="left"><table width="192" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="51"><input type="radio" name="sex" value="1"/>
+				男</td>
+				<td width="50"><input type="radio" name="sex" value="2"/>
+				女</td>
+				<td width="91"><input type="radio" name="sex" value="0" checked="checked"/>
+				不限</td>
+		</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86"><p>招聘类别：</p></td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="60"><input type="checkbox" name="nature[]" value="1"/>
+				全职</td>
+				<td width="60"><input type="checkbox" name="nature[]" value="2"/>
+				兼职</td>
+				<td width="69"><input type="checkbox" name="nature[]" value="4"/>
+				应届生</td>
+				<td width="176"><input type="checkbox" name="nature[]" value="8"/>实习</td>
+		</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">学历要求：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="233"><select name="education" size="1" style="WIDTH: 17em">
+                          <option value="0">不限</option>
+						{#html_options options=$options_edu selected=$smarty.get.list_educationid#}
+						</select>
+						</td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">年龄：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="44"><input type="text" name="age1" style="width:30px; height:15px; line-height:15px;"/></td>
+				<td width="16">到</td>
+				<td width="305"><input type="text" name="age2" style="width:30px; height:15px; line-height:15px;" /></td>
+		</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">工作经验：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="233"><select name="experience" size="1" style="WIDTH: 17em">
+
+						<option value="0">不限</option>
+						<option label="无经验" value="1">无经验</option>
+						<option label="1年以下" value="2">1年以下</option>
+						<option label="1-3年" value="3">1-3年</option>
+						<option label="3-5年" value="4">3-5年</option>
+						<option label="5-10年" value="5">5-10年</option>
+						<option label="10年以上" value="6">10年以上</option>
+                        </select>
+						</td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">更新日期：</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td><select name="update" size="1" style="WIDTH: 17em">
+					<option value="0">不限</option>
+					<option value="1">一天以内</option>
+					<option value="2">三天以内</option>
+					<option value="3">一周以内</option>
+					<option value="4">一月以内</option>
+					<option value="5">三月以内</option>
+					<option value="6">半年以内</option>
+					<option value="7">一年以内</option>
+						</select></td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+		<tr>
+				<td>
+				
+				<table width="663" height="30" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="86">&nbsp;</td>
+				<td width="577" align="left"><table width="365" height="42" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td><input type="submit" value="搜  索" class="so31"/></td>
+				</tr>
+</table></td>
+		</tr>
+</table>
+				
+</td>
+		</tr>
+</table>
+</form>
+	</div>
+	<!--body end-->
+	<!--bottom start-->
+	{#include file="footer.htm"#}
+	<!--bottom end-->
+
+</div>
+<!--autocomplete-->
+<script src="{#$QISHI.site_template#}js/jquery.autocomplete.js" type='text/javascript' ></script>
+<script>
+$(document).ready(function(){
+/*关键词自动完成
+	var a = $('#keyword').autocomplete({ 
+		serviceUrl:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=autocomplete_keyword',
+		minChars:1, 
+		maxHeight:400,
+		width:285,
+		zIndex: 9999,
+		deferRequestBy: 0 
+	});
+*/
+	//分类
+	$('#ajax_category').change(function(){
+		var parentId = $(this).val();
+		if(parentId == -1){
+			$('#content_category').html('');
+			return;
+		}
+		//ajax
+		$.ajax({
+			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_jobs&parentid='+parentId,
+			success: function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';				
+				}
+//				console.log(options);
+				options = '<option value="'+$('#ajax_category option:selected').val()+'">'+$('#ajax_category option:selected').html()+'</option>'+options;
+
+				$('#content_category').html(options);
+			}
+		});
+	});
+	//地区
+	$('#ajax_district').change(function(){
+		var parentId = $(this).val();
+		if(parentId == -1){
+			$('#content_district').html('');
+			return;
+		}
+		//ajax
+		$.ajax({
+			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
+			success: function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';				
+				}
+//				console.log(options);
+				options = '<option value="'+$('#ajax_district option:selected').val()+'">'+$('#ajax_district option:selected').html()+'</option>'+options;
+
+				$('#content_district').html(options);
+			}
+		});
+	});
+
+	$('#search_category').click(function(){
+		var keyword = $('#categorykey').val();
+		if(keyword == ''){
+			return;
+		}
+		$.ajax({
+			url: '{#$QISHI.site_dir#}plus/ajax_zt.php?action=related_category&key='+keyword,
+			success: function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">'+(cur.parentid>0? '>': '')+cur.categoryname+'</option>';				
+				}
+				$('#content_category').html(options);
+			}
+		});
+	});
+	
+	var type = ['industry','category','district'];
+	
+	$(type).each(function(){
+		var ename = this;
+		var num = 3;
+		$('#button_r_'+ename).click(function(){
+			var options = $('#content_'+ename+' :selected');
+			var num_c = options.length;
+			var num_v = $('#'+ename+' option').length;
+			
+			if((num_c+num_v) > num){
+				alert('请选择不多于'+num+'个条目');
+				return;
+			}
+			
+			$('#'+ename).append(options);
+		});
+		$('#button_l_'+ename).click(function(){
+			var options = $('#'+ename+' :selected');
+			$('#content_'+ename).append(options);
+		});
+	});
+	
+});
+</script>
+
+
+
+<!-- body JS end-->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<form id="Form1" action="" method="post">
+<div class="weiz">您当前所在位置： <a href="/user/personal/">个人中心</a> >> 外发简历
+        <table width="100%" border="0">
+          <tbody><tr>
+            <td width="22%" align="center"><span class="f_red">*</span>收件人地址：</td>
+            <td width="78%"><label>
+              <input type="text" style="width:200px;" id="to" name="to" maxlength="25">
+              </label>
+              示例：hr@OFweek.com</td>
+          </tr>
+          <tr>
+            <td width="22%" align="center"><span class="f_red">*</span>邮件主题：</td>
+            <td width="78%"><label>
+              <input type="text" value="" style="width:415px; color:#999;" id="title" name="title" maxlength="50"><br />示例：姓名--应聘职位名称
+            </label></td>
+          </tr>
+          <tr>
+            <td width="22%" align="center"><span class="f_red">*</span>邮件正文：</td>
+            <td width="78%"><label>
+              <textarea style="line-height:18px; color:#888; text-align:left; padding:10px; width:395px;" rows="9" cols="70" id="content" name="content" maxlength="1000">尊敬的人事经理您好！
+    感谢您在百忙之中阅读我的简历！期待与您的面谈！
+    祝商琪！
+                </textarea>
+            </label></td>
+          </tr>
+		  <tr>
+            <td width="22%" align="center">&nbsp;</td>
+            <td width="78%"><input type="submit" class="btnm" value="发送" name="submit"></td>
+          </tr>
+          <tr>
+            <td align="left" colspan="2"><strong>温馨提醒：</strong><br>
+              1.您的简历将直接发送至对方的邮箱当中，对方无法在本系统当中进行查看，请确认您输入的邮箱。 </td>
+          </tr>
+        </tbody></table>
+      </div>
+</form>
+<script>
+$(function(){
+	$("#Form1").validate({
+		rules:{
+			'to':{
+				'required':true,
+				'email':true
+			},
+			'title':{
+				'required':true,
+				maxlength:50
+			},
+			'content':{
+				'required':true,
+				maxlength:1000
+			}
+		},
+		messages:{
+			'to':{
+				'required':'请填写邮箱地址',
+				'email':'请填写正确的邮件地址'
+			},
+			'title':{
+				'required':'请填写邮件标题',
+				maxlength: jQuery.format("邮件主题不能大于{0}个字符")
+			},
+			'content':{
+				'required':'请填写邮件内容',
+				maxlength: jQuery.format("邮件内容不能大于{0}个字符")
+			}
+		}
+	});
+});
+</script>

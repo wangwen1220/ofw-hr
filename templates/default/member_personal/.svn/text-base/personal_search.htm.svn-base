@@ -1,0 +1,71 @@
+
+      <div class="weiz">您当前所在位置： 求职服务 ? 职位搜索</div>
+      <div class="xiu_g">
+        <table border="0" width="100%">
+            <tbody><tr>
+              <td align="center" width="22%"></td>
+               <td width="78%"><label>
+                 <input name="radio" id="radio" value="radio" type="radio">
+               </label>
+                 全文&nbsp;&nbsp;&nbsp;&nbsp;<label>
+                 <input name="radio2" id="radio2" value="radio2" type="radio">
+                 </label>公司名称&nbsp;&nbsp;&nbsp;&nbsp;<label>
+                 <input name="radio2" id="radio3" value="radio3" type="radio">
+                 </label>职位名称</td>
+            </tr>
+            <tr>
+              <td align="right" width="22%">关键字：</td>
+              <td width="78%"><input size="45" type="text"></td>
+            </tr>
+            
+
+
+            <tr>
+              <td align="right" width="22%">性别：</td>
+              <td width="78%"><label>
+                 <input name="radio" id="radio" value="radio" type="radio">
+               </label>
+                 男&nbsp;&nbsp;&nbsp;&nbsp;<label>
+                 <input name="radio2" id="radio2" value="radio2" type="radio">
+                 </label>女&nbsp;&nbsp;&nbsp;&nbsp;<label>
+                 <input name="radio2" id="radio3" value="radio3" type="radio">
+                 </label>不限</td>
+            </tr>
+            <tr>
+              <td align="right" width="22%">学历要求：</td>
+              <td width="78%"><label>
+                    <select name="select" id="select" style="width:180px;">
+                    </select>
+                  </label>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" width="22%">年龄：</td>
+              <td width="78%"><label>
+                <input name="textfield" id="textfield" style="width:50px;" value="18" type="text">
+                &nbsp;&nbsp;&nbsp;&nbsp;到&nbsp;&nbsp;&nbsp;&nbsp;<input name="textfield" id="textfield" style="width:50px;" value="45" type="text">
+              </label>
+              &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" width="22%">工作经验：</td>
+              <td width="78%"><label>
+                    <select name="select" id="select" style="width:180px;">
+                    </select>
+                  </label>
+              &nbsp;&nbsp;&nbsp;&nbsp;以上</td>
+            </tr>
+            <tr>
+              <td align="right" width="22%">更新日期：</td>
+              <td width="78%"><label>
+                    <select name="select" id="select" style="width:180px;">
+                    </select>
+                  </label>
+              &nbsp;&nbsp;&nbsp;&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" width="22%"></td>
+              <td width="78%"><a href="../../search.html"><input value="搜 索" class="btnm" type="button"></a></td>
+            </tr>
+        </tbody></table>
+      </div>
+    

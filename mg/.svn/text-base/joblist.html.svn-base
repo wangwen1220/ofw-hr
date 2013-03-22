@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="skin/default/css/home.css" />
+<link type="text/css" rel="stylesheet" href="skin/default/css/css.css" />
+<script type="text/javascript" src="skin/default/js/tc.js"></script>
+<script type="text/javascript" src="skin/default/js/xl.js"></script>
+<title>求职</title>
+</head>
+
+<body>
+	<div id="site">
+
+	<!--header start-->
+	  <div class="header">
+        <div class="top">
+          <div class="link"><a href="http://www.ofweek.com/" target="_blank">OFweek首页</a>|<a href="http://lights.ofweek.com/" target="_blank">半导体照明</a>|<a href="http://solar.ofweek.com/" target="_blank">太阳能光伏</a>|<a href="http://fiber.ofweek.com/" target="_blank">光通讯</a>|<a href="http://laser.ofweek.com/" target="_blank">激光</a>|<a href="http://ee.ofweek.com/" target="_blank">电子工程</a>|<a href="http://gongkong.ofweek.com/" target="_blank">工控</a></div>
+          <div class="deng" id="site-nav">
+            <ul class="quick-menu">
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="login.html">求职者登陆</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+ 			<div class="JobseekersUserLogoncontent" id="userlogin" >
+           <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+           </ul>
+           <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+           </li></ul>
+           <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+           <ul>
+           <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+               <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="password.html" class="f_bule">忘记密码了？</a>
+			</li></ul>
+           </div>
+          </div>
+                </div>
+                </div>
+                </li>
+                <li>或者</li>
+                <li><a href="reg/person/index.html">注册</a></li>
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="hrlogin.html">企业登录</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+                    <div class="JobseekersUserLogoncontent" id="userlogin" >
+                   <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+                   </ul>
+                   <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+                   </li></ul>
+                   <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+                   <ul>
+                   <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+                       <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="password.html" class="f_bule">忘记密码了？</a>
+                    </li></ul>
+                   </div>
+                  </div>
+                </div>
+                </div>
+                </li>
+                <li><img src="skin/default/images/inco1.gif" /></li>
+                <li><a href="#">企业注册</a></li>
+            </ul>
+          </div>
+      </div>
+        <div class="logo"><a href="index.html"><img src="skin/default/images/logo.jpg" border="0" /></a></div>
+        <div class="nav_m">
+          <ul>
+                <li><a href="index.html">首页</a></li>
+           		<li><a href="joblist.html">求职</a></li>
+                <li><a href="hrlogin.html">招聘</a></li>
+                <li><a href="joblist.html">校园招聘</a></li>
+                <li><a href="hr.html">职场资讯</a></li>
+          </ul>
+            <div class="qiye"><a href="member/company/company.html">企业服务</a>热线：<strong>0755-83279360</strong></div>
+      </div>
+
+         <div class="gao">
+       	  <div class="search">
+                <span class="guan"><input type="text" class="so1" value="请输入关键字" />
+                <a href="javascript:showDiv()"><img src="skin/default/images/btn1.gif" /></a>
+                <div id="popDiv" class="mydiv" style="display:none;">
+                	<div class="diq_t"><h3>意向地区（最多只能选择3项）</h3> <a href="javascript:closeDiv()"><img src="skin/default/images/xx.gif" style="float:right;"/></a></div>
+                    <div class="xfen mtop">
+                   	  <table width="100%" border="0">
+                          <tr>
+                            <td><strong>主要城市：</strong></td>
+                          </tr>
+                          <tr>
+                          	<td><a href="#">深圳</a>	<a href="#">广州</a>	<a href="#">东莞</a>	<a href="#">中山</a>	<a href="#">上海</a>	<a href="#">北京</a><a href="#">南京</a> <a href="#">苏州</a>	<a href="#">杭州</a></td>
+                          </tr>
+                          <tr>
+                          	<td><strong>所有省份(市/区)：</strong></td>
+                          </tr>
+                          <tr>
+                          	<td><a href="#">广东</a>	<a href="#">上海</a>	<a href="#">北京</a>	<a href="#">天津</a>	<a href="#">河北</a>	<a href="#">山西</a><a href="#">内蒙古</a><a href="#">辽宁</a><a href="#">吉林</a><a href="#">黑龙江</a><a href="#">江苏</a><a href="#">浙江</a><a href="#">安徽</a><a href="#">福建</a> <a href="#">江西</a><a href="#">山东</a><a href="#">河南</a><a href="#">湖北</a>	<a href="#">湖南</a><a href="#">广西</a><a href="#">四川</a> <a href="#">贵州</a><a href="#">云南</a><a href="#">西藏</a>	<a href="#">陕西</a>	<a href="#">甘肃</a><a href="#">青海</a>	<a href="#">宁夏</a> <a href="#">新疆</a>	<a href="#">香港</a>	<a href="#">台湾</a>	<a href="#">澳门</a>	<a href="#">重庆</a><a href="#">海南</a>	<a href="#">国外</a><a href="#">其他</a></td>
+                          </tr>
+                      </table>
+                    </div>
+                    <div class="buttom">
+                    	<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">确定</span></button>
+                        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">清除</span></button>
+                       <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">关闭</span></button>
+                  </div>
+                </div>
+                <div id="bg" class="bg" style="display:none;"></div>
+                </span>
+                <span class="yixn">
+                <a href="javascript:showUl()"><img src="skin/default/images/btnw.gif" /></a>
+                <div id="popDiv1" class="mydiv1" style="display:none;">
+                	<div class="diq_w"><h3>选择意向岗位 （最多只能选择5项）</h3> <a href="javascript:closeDiv1()"><img src="skin/default/images/xx.gif" style="float:right;"/></a></div>
+                  <div class="sygw mtop">
+                    	<table width="100%" border="0">
+                          <tr>
+                            <td><strong class="gw_lb">所有岗位类别：</strong>
+                            <div class="tField">
+                            <input id="jobQuickSearch" class="tt" type="text" name="jobQuickSearch">
+                            <input id="clearJobQuickSearch" type="button" name="clearJobQuickSearch">
+                            </div>
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td height="5"></td>
+                          </tr>
+                          <tr>
+                          	<td><a href="#">计算机硬件类</a><a href="#">计算机软件类</a><a href="#">信息技术管理/集成/运行维护类</a> <a href="#">互联网/电子商务/网游</a><a href="#">电子/电器类</a><a href="#">手机/通信技术类</a><a href="#">经营管理类</a><a href="#">人力资源类</a><a href="#">行政/文职/后勤类</a><a href="#">销售管理类</a>	<a href="#">销售业务类</a><a href="#">销售行政/商务类</a><a href="#">计算机硬件类</a><a href="#">计算机软件类</a><a href="#">信息技术管理/集成/运行维护类</a> <a href="#">互联网/电子商务/网游</a><a href="#">电子/电器类</a><a href="#">手机/通信技术类</a><a href="#">经营管理类</a><a href="#">人力资源类</a><a href="#">行政/文职/后勤类</a><a href="#">销售管理类</a>	<a href="#">销售业务类</a><a href="#">销售行政/商务类</a><a href="#">计算机硬件类</a><a href="#">计算机软件类</a><a href="#">信息技术管理/集成/运行维护类</a> <a href="#">互联网/电子商务/网游</a><a href="#">电子/电器类</a><a href="#">手机/通信技术类</a><a href="#">经营管理类</a><a href="#">人力资源类</a><a href="#">行政/文职/后勤类</a><a href="#">销售管理类</a>	<a href="#">销售业务类</a><a href="#">销售行政/商务类</a></td>
+                          </tr>
+                        </table>
+                  </div>
+                    <div class="buttom1">
+                    	<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">确定</span></button>
+                        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">清除</span></button>
+                        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">关闭</span></button>
+                    </div>
+                </div>
+                <div id="bg1" class="bg" style="display:none;"></div>
+                </span>
+                <label>
+                <a href="joblist.html"><input type="submit" name="button" id="button" value="搜 索"  class="so3"/></a>
+                </label>
+            	<strong class="suo"><a href="search.html" style="color:#cb0a00;">高级搜索>></a></strong>            </div>
+               <div class="hot"><strong>热门搜索：</strong><a href="#">LED</a><a href="#">工程师</a><a href="#">经理</a></div>
+        </div>
+	  </div>
+
+	<!--header end-->
+
+	<!--body start-->
+		<div id="content">
+			<div class="leibie">
+				<ul>
+						<ul>
+								<li style="color:#ac0000; font-weight:bold;">在经营管理类下工作找到20000个职位</li>
+								<li>按岗位类别选择
+										<ul>
+												<li><a href="joblist.html" target="_blank">总经理（20）</a></li>
+												<li><a href="#" target="_blank">副总经理（80）</a></li>
+												<li><a href="#" target="_blank">分公司经理（200）</a></li>
+												<li><a href="#" target="_blank">合伙人（200）</a></li>
+												<li><a href="#" target="_blank">经理（14000）</a></li>
+												<li><a href="#" target="_blank">人事经理（2000）</a></li>
+												<li><a href="#" target="_blank">其他管理岗位（2000）</a></li>
+										</ul>
+										<p class="clear"></p>
+								</li>
+						</ul>
+					</ul>
+			</div>
+			<div class="zdhy">
+				<dl>
+								<dt>也可以指定行业：</dt>
+								<dd><a href="#" target="_blank">光通信</a></dd>
+								<dd><a href="#" target="_blank">LED</a></dd>
+								<dd><a href="#" target="_blank">太阳能光伏</a></dd>
+								<dd><a href="#" target="_blank">光通信</a></dd>
+								<dd><a href="#" target="_blank">LED</a></dd>
+								<dd><a href="#" target="_blank">太阳能光伏</a></dd>
+						</dl>
+				<p class="clear"></p>
+			</div>
+			<div class="code">
+				<div class="page">当前第1页，共50页 1000条记录</div>
+				<div class="page_num">
+					<ul>
+							<ul>
+									<li><a href="#" target="_blank">首页</a></li>
+									<li><a href="#" target="_blank">上一页</a></li>
+									<li><a href="#" target="_blank">1</a></li>
+									<li><a href="#" target="_blank">2</a></li>
+									<li><a href="#" target="_blank">3</a></li>
+									<li><a href="#" target="_blank">4</a></li>
+									<li><a href="#" target="_blank">5</a></li>
+									<li><a href="#" target="_blank">6</a></li>
+									<li><a href="#" target="_blank">7</a></li>
+									<li><a href="#" target="_blank">8</a></li>
+									<li><a href="#" target="_blank">9</a></li>
+									<li><a href="#" target="_blank">10</a></li>
+									<li><a href="#" target="_blank">下一页</a></li>
+									<li><a href="#" target="_blank">尾页</a></li>
+									<li><a href="#" target="_blank">2/50页</a></li>
+							</ul>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="jianjie">
+				<div class="jtou"></div>
+				<div class="jj_con">
+					<table border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="#FFFFFF">
+		<tr>
+				<td height="40" colspan="4" align="center" style="font-size:15px;"><strong>深圳市互联港湾有限公司</strong></td>
+				</tr>
+		<tr>
+				<td width="19%" height="20" style="border:1px solid #555;">学历要求：</td>
+				<td width="27%" style="border:1px solid #555; border-left:none;">大专</td>
+				<td width="26%" style="border:1px solid #555; border-left:none;">工作地点：</td>
+				<td width="28%" style="border:1px solid #555; border-left:none;">深圳</td>
+		</tr>
+		<tr bgcolor="#f0f0f0">
+				<td height="20" style="border:1px solid #555; border-top:none;">经验：</td>
+				<td style="border-bottom:1px solid #555; border-right:1px solid #555;">2</td>
+				<td style="border-bottom:1px solid #555; border-right:1px solid #555;">薪酬</td>
+				<td style="border-bottom:1px solid #555; border-right:1px solid #555;">面议</td>
+		</tr>
+		<tr>
+				<td height="20" style="border:1px solid #555; border-top:none;">专业要求：</td>
+				<td style="border-bottom:1px solid #555; border-right:1px solid #555;">不限</td>
+				<td style="border-bottom:1px solid #555; border-right:1px solid #555;">更新时间：</td>
+				<td style="border-bottom:1px solid #555; border-right:1px solid #555;">2012-07-01</td>
+		</tr>
+		<tr>
+				<td colspan="4" style="padding:10px 15px; line-height:22px; border:1px solid #555; border-top:none;">1、大专及以上学历，具有市场营销或电子行业销售经验。<br />
+                                 2、具备较强的市场分析、营销、推广能力和良好的人际沟通、协调能力，分析和解决问题的能力；<br />
+								3、为人诚信，工作勤奋，有较强的团队合作精神。<br />
+								4、能承受较大的工作压力，能适应出差。<br />
+								5、有驾照者优先。
+								<span style="display:block; float:right; "><a style="color:#ac0000;" href="#" target="_blank">职位详情&raquo;</a></span>
+				</td>
+				</tr>
+
+</table>
+				</div>
+				<div class="jj_bottom"></div>
+
+
+			</div>
+		  <div class="jblist">
+			<table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr class="zhiwei">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td width="14%" height="30" align="left">职位名称</td>
+				<td width="28%" style="padding-left:20px;">公司名称</td>
+				<td width="12%" align="center" valign="middle">
+					<select name="1">
+						<option value="1">所有地区</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+				   </select>
+				</td>
+				<td width="8%" align="center" valign="middle">
+					<select name="2">
+						<option value="1">学历</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+				   </select>
+				</td>
+				<td width="8%" align="center" valign="middle">
+					<select name="3">
+						<option value="1">性别</option>
+						<option value="2">男</option>
+						<option value="3">女</option>
+				   </select>
+				</td>
+				<td width="8%" align="center" valign="middle">
+					<select name="4">
+						<option value="1">经验</option>
+						<option>应届生</option>
+  						<option>1-3年</option>
+						 <option>3-5年</option>
+						 <option>5-10年</option>
+						 <option>10年以上</option>
+				   </select>
+				</td>
+				<td width="8%" align="center" valign="middle">
+					<select name="5">
+						<option value="1">薪酬</option>
+						<option>面议</option>
+						<option>2000以下</option>
+				 		<option>2000-3000</option>
+				  		<option>3000-5000</option>
+				  		<option>5000-8000</option>
+				   		<option>8000-10000</option>
+				   		<option>10000-15000</option>
+				   		<option>15000以上</option>
+				   </select>
+				</td>
+				<td width="10%" style="padding-left:10px;">更新日期</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="company/job.html" target="_blank">销售工程师</a></td>
+				<td><a href="company/company.html" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">8000-10000</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">8000-10000</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">8000-10000</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">8000-10000</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">8000-10000</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr>
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">8000-10000</td>
+				<td>2012-06-26</td>
+		</tr>
+		<tr class="zwlist">
+				<td width="4%" align="left" valign="middle" style="padding-left:15px;"><input type="checkbox" name="zhiwei"  /></td>
+				<td height="30" align="left"><a href="#" target="_blank">销售工程师</a></td>
+				<td><a href="#" target="_blank">深圳市互联港湾有限公司</a></td>
+				<td align="center" valign="middle">深圳</td>
+				<td align="center" valign="middle">大专</td>
+				<td align="center" valign="middle">男</td>
+				<td align="center" valign="middle">不限</td>
+				<td align="center" valign="middle">面议</td>
+				<td>2012-06-26</td>
+		</tr>
+</table>
+		</div>
+		<div class="zdgz">还没找到合适的工作?<a href="#" style="color:#0FF;" target="_blank">马上注册</a>填写一份个人简历，在线投简历，在线申请职位，搜索职位，刷新简历，查看面试邀请，浏览职场信息等...</div>
+		<div class="code">
+				<div class="page">当前第1页，共50页 1000条记录</div>
+				<div class="page_num">
+					<ul>
+							<ul>
+									<li><a href="#" target="_blank">首页</a></li>
+									<li><a href="#" target="_blank">上一页</a></li>
+									<li><a href="#" target="_blank">1</a></li>
+									<li><a href="#" target="_blank">2</a></li>
+									<li><a href="#" target="_blank">3</a></li>
+									<li><a href="#" target="_blank">4</a></li>
+									<li><a href="#" target="_blank">5</a></li>
+									<li><a href="#" target="_blank">6</a></li>
+									<li><a href="#" target="_blank">7</a></li>
+									<li><a href="#" target="_blank">8</a></li>
+									<li><a href="#" target="_blank">9</a></li>
+									<li><a href="#" target="_blank">10</a></li>
+									<li><a href="#" target="_blank">下一页</a></li>
+									<li><a href="#" target="_blank">尾页</a></li>
+									<li><a href="#" target="_blank">2/50页</a></li>
+							</ul>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<table width="359" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:15px;">
+		<tr>
+				<td height="40" align="left" valign="middle" style="padding-left:15px;">&nbsp;</td>
+				<td width="33%"><a href="company/job.html" target="_blank"><img src="skin/default/images/jianli.gif" border="0" /></a></td>
+				<td width="45%"><a href="search.html" target="_blank"><img src="skin/default/images/genggai.gif" border="0" /></a></td>
+		</tr>
+</table>
+
+		</div>
+
+		<!--body end-->
+		<!--bottom start-->
+		<div id="bottom">
+	<div class="bottom-m">
+		<div class="bottom-m-1">
+			<a target="_blank" href="#">关于我们</a> -
+			<a target="_blank" href="#">征 稿</a> -
+			<a target="_blank" href="#">广告咨询</a> -
+			<a target="_blank" href="#">帮助信息</a> -
+			<a target="_blank" href="#">联系我们</a> -
+			<a target="_blank" href="#">会员服务</a> -
+			<a target="_blank" href="#">网站导航</a>
+		</div>
+	</div>
+	<div class="bottom-2">
+
+		我们的网站：
+		<a target="_blank" href="http://lights.ofweek.com/">半导体照明网</a> |
+		<a target="_blank" href="http://solar.ofweek.com/">太阳能光伏网</a> |
+		<a target="_blank" href="http://laser.ofweek.com/">激光网</a> |
+		<a target="_blank" href="http://smartgrids.ofweek.com/">智能电网</a> |
+		<a target="_blank" href="http://emc.ofweek.com/">节能网</a> |
+		<a target="_blank" href="http://ee.ofweek.com/">电子工程网</a> |
+		<a target="_blank" href="http://fiber.ofweek.com/">光通讯网</a> |
+		<a target="_blank" href="http://gongkong.ofweek.com/">工控网</a> |
+		<a target="_blank" href="http://windpower.ofweek.com/">风电网</a> |
+		<a target="_blank" href="http://instrument.ofweek.com/">仪器仪表网</a> |
+		<a target="_blank" href="http://display.ofweek.com/">光电显示网</a> |
+		<a target="_blank" href="http://optics.ofweek.com/">光学网</a> |
+		<a target="_blank" href="http://b2b.ofweek.com/">产品港湾</a> |
+		<a target="_blank" href="http://cpbay.com/">CPbay</a>
+		<br>
+		客服热线：086-755-83279360 83279361 83279363 83279365 客服传真：0755-83279008
+		<br>
+		业务联系：086-755-83279360
+		<br>
+		Copyright &#169; 2012, All Rights Reserved.
+		<br>
+		中文版权所有－OFweek光电新闻网.网站所有图片、文字未经许可不得拷贝、复制。
+  </div>
+    <div class="bottom110">
+
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="22%"><img src="skin/default/images/110.gif" width="115" height="75" /></td>
+          <td width="78%" align="left" valign="bottom">粤ICP备06087881</td>
+        </tr>
+      </table>
+    </div>
+</div>
+<!--bottom end-->
+	</div>
+</body>
+</html>

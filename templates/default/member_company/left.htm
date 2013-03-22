@@ -1,0 +1,47 @@
+<div class="lefter">
+      <div class="job">
+        <div class="fuwu"><img src="{#$QISHI.site_template#}images/tb_5.gif" />
+          <h3><a href="company_index.php">企业招聘</a></h3>
+        </div>
+        <div class="guan mtop">
+        	<div class="jian">
+              <h3><img src="{#$QISHI.site_template#}images/tb_6.gif" />职位管理</h3>
+              <ul>
+                <li><a href="company_jobs.php?act=addjobs">发布招聘信息</a></li>
+                <li><a href="company_jobs.php?act=jobs">管理招聘信息</a></li>
+                <li><a href="company_jobs.php?act=search">查找招聘信息</a></li>
+              </ul>
+           </div>
+            <div class="jian">
+              <h3><img src="{#$QISHI.site_template#}images/tb_7.gif" />简历管理</h3>
+              <ul>
+                <li><a href="company_recruitment.php?act=apply_jobs">应聘简历管理</a></li>
+                <li><a href="company_recruitment.php?act=interview_list">已发面试通知</a></li>
+                <li><a href="company_recruitment.php?act=down_resume_list">已下载简历</a></li>
+				<li><a href="company_recruitment.php?act=favorites_list">简历收藏夹</a></li>
+                <li><a href="company_recruitment.php?act=search">搜索简历库</a></li>
+              </ul>
+           </div>
+            <div class="jian">
+              <h3><img src="{#$QISHI.site_template#}images/tb_8.gif" />公司信息</h3>
+              <ul>
+                <li><a href="company_info.php?act=company_profile">基本信息</a></li>
+                <li><a href="company_info.php?act=company_intro">公司简介</a></li>
+                <li><a href="company_info.php?act=company_auth">营业执照</a></li>
+                <li><a href="company_info.php?act=company_logo">企业LOGO</a></li>
+              </ul>
+           </div>
+            <div class="jian">
+              <h3><img src="{#$QISHI.site_template#}images/tb_4.gif" />系统工具</h3>
+              <ul>
+                 <li><a href="company_message.php?act=list">系统消息</a></li>
+                 {#if $z_auth==0#}
+                <li><a href="company_user.php?act=password_edit">修改密码</a></li>
+                {#/if#}
+                <li><a href="company_message.php?act=feedback">意见反馈</a></li>
+                <li><a href="#" onclick="return logout();">安全退出</a></li>
+              </ul>
+           </div>
+        </div>
+      </div>
+    </div>

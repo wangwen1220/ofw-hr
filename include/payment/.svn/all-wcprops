@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment
+END
+respond_alipay.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment/respond_alipay.php
+END
+respond_tenpay.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment/respond_tenpay.php
+END
+remittance.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment/remittance.php
+END
+chinabank.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment/chinabank.php
+END
+alipay.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment/alipay.php
+END
+tenpay.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment/tenpay.php
+END
+respond_chinabank.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/23544/ofweek_hr/include/payment/respond_chinabank.php
+END

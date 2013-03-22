@@ -1,0 +1,240 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人注册_OFweek人才网</title>
+<link href="../../skin/default/css/home.css" rel="stylesheet" type="text/css" />
+<link href="../../skin/default/css/jobs.css" rel="stylesheet" type="text/css" />
+<script>
+function secBoard(elementID,listName,elementname,n) {
+var elem = document.getElementById(elementID);
+var elemlist = elem.getElementsByTagName(elementname);
+for (var i=0; i<elemlist.length; i++) {
+elemlist[i].className = "sel02";
+var m = i+1;
+document.getElementById(listName+"_"+m).style.display = "none";
+}
+elemlist[n-1].className = "sel01";
+document.getElementById(listName+"_"+n).style.display = "block";
+}
+</script>
+</head>
+<body>
+<div id="mian">
+	<div class="header">
+      <div class="top">
+          <div class="link"><a href="http://www.ofweek.com/" target="_blank">OFweek首页</a>|<a href="http://lights.ofweek.com/" target="_blank">半导体照明</a>|<a href="http://solar.ofweek.com/" target="_blank">太阳能光伏</a>|<a href="http://fiber.ofweek.com/" target="_blank">光通讯</a>|<a href="http://laser.ofweek.com/" target="_blank">激光</a>|<a href="http://ee.ofweek.com/" target="_blank">电子工程</a>|<a href="http://gongkong.ofweek.com/" target="_blank">工控</a></div>
+            <div class="deng"><a href="../../template/member/person/login.html">求职者登陆</a>或者<a href="resume1.html">注册</a><a href="#">企业登陆</a><img src="../../skin/default/images/inco1.gif" /><a href="#">企业注册</a></div>
+      </div>
+        <div class="logo"><a href="../../index.html"><img src="../../skin/default/images/logo.jpg" border="0" /></a></div>
+    <div class="nav_m">
+          <ul>
+          		<li><a href="../../index.html">首页</a></li>
+          		<li><a href="../../joblist.html">求职</a></li>
+                <li><a href="../../hrlogin.html">招聘</a></li>
+                <li><a href="../../joblist.html">校园招聘</a></li>
+                <li><a href="../../hr.html">职场资讯</a></li>
+            </ul>
+            <div class="qiye"><a href="../../member/company/company.html">企业服务</a>热线：<strong>0755-83279360</strong></div>
+        </div>
+    </div>
+    <div class="conter">
+    	<div class="jiben mtop">
+        	<div class="dengl">
+                <div class="tetl"><h3>登录信息</h3></div>
+                <div class="zhuce">
+                <table width="100%" border="0">
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>用&nbsp;&nbsp;户&nbsp;&nbsp;名：</td>
+                    <td width="91%"><label><input name="textfield" type="text" id="textfield" size="30" />
+                    </label>
+                    <span class="f_gray">（长度3~50位，可用：字母A-Z数字0-9@.）</span></td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+                    <td width="91%"><label><input name="textfield" type="text" id="textfield" size="30" />
+                    </label>
+                    <span class="f_gray">（主意区分字母大小写，长度6~30位）</span></td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>确认密码：</td>
+                    <td width="91%"><label><input name="textfield" type="text" id="textfield" size="30" />
+                    </label>
+                    <span class="f_gray">（请再输入一遍您上面输入的密码）</span></td>
+                  </tr>
+                </table>
+                </div>
+            </div>
+            <div class="dengl">
+                <div class="tetl"><h3>会员信息</h3></div>
+                <div class="zhuce">
+                <table width="100%" border="0">
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+                    <td width="91%"><label><input name="textfield" type="text" id="textfield" size="30"/>
+                    </label>
+                    <span class="f_gray">（请填写您的姓名，长度1~40）</span></td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+                    <td width="91%"><label><input type="radio" name="radio" id="radio" value="radio" />男</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <label><input type="radio" name="radio2" id="radio2" value="radio2" />女</label></td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>&nbsp;&nbsp;&nbsp;&nbsp;E-mail：</td>
+                    <td width="91%"><label><input name="textfield" type="text" id="textfield" size="30" />
+                    </label>
+                    <span class="f_gray">（建议使用常用邮箱注册）</span></td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>手机号码：</td>
+                    <td width="91%"><label><input name="textfield" type="text" id="textfield" size="30" />
+                    </label>                    </td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>国家/地区：</td>
+                    <td width="91%"><input name="" type="radio" value="" />中国&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="radio" value="" />
+                    中国以外地区</td>
+                  </tr>
+                  <tr>
+                    <td width="9%">&nbsp;</td>
+                    <td width="45%"><select name="select3" style="width:100px;">
+                      <option>------选择------</option>
+                    </select>
+                    <select name="select2" style="width:100px;">
+                      <option>------选择------</option>
+                    </select></td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;址：</td>
+                    <td width="91%"><label><input name="textfield" type="text" id="textfield" size="30" />
+                    </label>                    </td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编：</td>
+                    <td width="91%"><label>
+                      <input name="textfield2" type="text" id="textfield2" size="30" />
+                    </label>                    </td>
+                  </tr>
+                  <tr>
+                    <td width="9%" valign="top"><span class="f_red">*</span>工作性质：</td>
+                    <td width="91%" class="dant"><table width="100%" border="0">
+                      <tr>
+                        <td width="17%"><input name="" type="radio" value="设计及开发工程" />设计及开发工程</td>
+                        <td width="17%"><input name="" type="radio" value="产品工程" />产品工程</td>
+                        <td width="17%"><input name="" type="radio" value="企业管理/总负责" />企业管理/总负责</td>
+                        <td width="49%"><input name="" type="radio" value="工程管理" />工程管理</td>
+                      </tr>
+                      <tr>
+                        <td><input name="" type="radio" value="生产管理" />生产管理</td>
+                        <td><input name="" type="radio" value="采购" />采购</td>
+                        <td><input name="" type="radio" value="测试与测量" />测试与测量</td>
+                        <td><input name="" type="radio" value="行业服务/咨询顾问 " />行业服务/咨询顾问 </td>
+                      </tr>
+                      <tr>
+                        <td><input name="" type="radio" value="市场及销售" />市场及销售</td>
+                        <td><input name="" type="radio" value="品质保证/质量控制 " />品质保证/质量控制</td>
+                        <td><input name="" type="radio" value=" 学术/研究" />学术/研究</td>
+                        <td><input name="" type="radio" value="学生" />学生</td>
+                      </tr>
+                    </table>                    </td>
+                  </tr>
+                  <tr>
+                    <td width="9%"><span class="f_red">*</span>从事行业：</td>
+                    <td width="91%"><label><select name="select" id="select" style="width:150px;">
+                      <option>搜索</option>
+                    </select></label></td>
+                  </tr>
+                  <tr>
+                    <td width="9%">&nbsp;</td>
+                    <td width="91%" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                      <td width="24%" valign="top"><select multiple="multiple" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" name="JobLocation_CODE2">
+                        </select>                      </td>
+                      <td width="9%" align="center"><input type="button" style="width:50px;" onclick="addOption(this.form.selLocation,this.form.JobLocation_CODE)" value=">>" />
+                        <br />
+                        <br />
+                        <input type="button" style="width:50px;" onclick="removeOption(this.form.JobLocation_CODE)" value="<<" /></td>
+          <td width="67%"><label>
+                        <select multiple="true" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" name="JobLocation_CODE">
+                        </select>
+                        </label></td>
+                      </tr>
+                    </table>                    </td>
+                  </tr>
+                </table>
+                </div>
+            </div>
+            <div class="dengl">
+                <div class="tetl"><h3>订阅服务（免费）</h3></div>
+                <div class="zhuce">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="3%"><input name="" type="checkbox" value="" /></td>
+                    <td width="98%">信息速递（电子版）：所关注行业的最新热点新闻及技术文章;</td>
+                  </tr>
+                  <tr>
+                    <td width="3%"><input name="" type="checkbox" value="" /></td>
+                    <td width="98%">信息速递（电子版）：所关注行业的最新热点新闻及技术文章;</td>
+                  </tr>
+                  <tr>
+                    <td width="3%"><input name="" type="checkbox" value="" /></td>
+                    <td width="98%">信息速递（电子版）：所关注行业的最新热点新闻及技术文章;</td>
+                  </tr>
+                  <tr>
+                    <td width="3%"><input name="" type="checkbox" value="" /></td>
+                    <td width="98%">信息速递（电子版）：所关注行业的最新热点新闻及技术文章;</td>
+                  </tr>
+                  <tr>
+                    <td width="3%"><input name="" type="checkbox" value="" /></td>
+                    <td width="98%">信息速递（电子版）：所关注行业的最新热点新闻及技术文章;</td>
+                  </tr>
+                  <tr>
+                    <td width="3%"><input name="" type="checkbox" value="" /></td>
+                    <td width="98%">信息速递（电子版）：所关注行业的最新热点新闻及技术文章;</td>
+                  </tr>
+                  <tr>
+                    <td width="3%"><input name="" type="checkbox" value="" /></td>
+                    <td width="98%">信息速递（电子版）：所关注行业的最新热点新闻及技术文章;</td>
+                  </tr>
+                </table>
+                <table width="100%" border="0">
+                  <tr>
+                    <td width="8%"><span class="f_red">*</span>验证码：</td>
+                    <td width="92%" valign="middle"><label>
+                    <input name="textfield3" type="text" id="textfield3" size="30" />
+                      </label>
+                      <a href="#"><img src="../../skin/default/images/yz.gif" style="margin-left:5px; margin-top:2px;"/></a>
+                      <span class="f_gray">（请按图片显示的内容输入）</span></td>
+                  </tr>
+                  <tr>
+                    <td width="8%"></td>
+                    <td width="92%"><input name="input" type="checkbox" value="" />
+                    我已阅读OFweek.com<a href="#" class="f_red" style="margin-left:5px;">注册协议</a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" height="10"></td>
+                  </tr>
+                  <tr>
+                    <td width="8%"></td>
+                    <td><a href="resume1.html"><input name="" type="image" src="../../skin/default/images/d_btn1.gif" /></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="image" name="imageField" id="imageField" src="../../skin/default/images/d_btn2.gif" />                    </td>
+                  </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div class="bottom-m">
+      <div class="bottom-m-1"> <a target="_blank" href="http://www.OFweek.com/about.shtml" rel="nofollow">关于我们</a> - <a target="_blank" href="http://www.OFweek.com/user/ArtRequest.do" rel="nofollow">征 稿</a> - <a target="_blank" href="http://www.OFweek.com/ad.shtml" rel="nofollow">广告咨询</a> - <a target="_blank" href="http://www.OFweek.com/help.shtml" rel="nofollow">帮助信息</a> - <a target="_blank" href="http://www.OFweek.com/contact.shtml" rel="nofollow">联系我们</a> - <a target="_blank" href="http://www.OFweek.com/service.shtml" rel="nofollow">会员服务</a> - <a target="_blank" href="http://www.OFweek.com/sitemap.shtml">网站导航</a> </div>
+    </div>
+    <div class="bottom-2">我们的网站：<a target="_blank" href="http://fiber.OFweek.com/" rel="nofollow">光通讯网</a> | <a target="_blank" href="http://lights.OFweek.com/" rel="nofollow">半导体照明网</a> | <a target="_blank" href="http://laser.OFweek.com/" rel="nofollow">激光网</a> | <a target="_blank" href="http://display.OFweek.com/" rel="nofollow">光电显示网</a> | <a target="_blank" href="http://optics.OFweek.com/" rel="nofollow">光学网</a> | <a target="_blank" href="http://solar.OFweek.com/" rel="nofollow">太阳能光伏网</a> | <a target="_blank" href="http://ee.OFweek.com/" rel="nofollow">电子工程网</a> | <a target="_blank" href="http://smartgrids.OFweek.com/" rel="nofollow">智能电网</a> | <a target="_blank" href="http://gongkong.OFweek.com/" rel="nofollow">工控网</a> | <a target="_blank" href="http://instrument.OFweek.com/" rel="nofollow">仪器仪表网</a> | <a target="_blank" href="http://emc.OFweek.com/" rel="nofollow">节能网</a> | <a target="_blank" href="http://b2b.OFweek.com/">产品港湾</a> | <a target="_blank" href="http://cpbay.com/">CPbay</a> <br />
+    客服热线：+86-755-83279360 83279361 83279363 83279365 客服传真：+86-755-83279008 <br />
+    业务联系：+86-755-83279360 <br />
+    Copyright © 2012, All Rights Reserved. <br />
+    中文版权所有－OFweek光电新闻网.网站所有图片、文字未经许可不得拷贝、复制。</div>
+	<div class="bottom-110"><img src="../../skin/default/images/110.gif">粤ICP备06087881 </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/74cms.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;简历管理&nbsp;&gt;&gt;&nbsp;搜索我的简历库</div>
+      <div class="xiu_g" style="padding:15px 10px">
+      <form action="search.php" method="get">
+        <table border="0" cellpadding="0" cellspacing="5" width="100%">
+		<tr>
+		<td width="15%" align="right">关键字: </td>
+		<td  align="left"><input type="text" value="" style="width:200px;" name="key" id="key"></td>
+		</tr>
+      <tr>
+                <td width="15%" align="right">意向岗位类别：<br />(最多可选5项)</td>
+                <td valign="top" width="85%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                      <td width="37%" valign="bottom" >
+                      <select id="ajax_category" style="WIDTH:17em">
+						<option value="-1">请选择</option>
+                        {#foreach from=$jobCate item=list#}
+						  <option value="{#$list.id#}">{#$list.categoryname#}</option>
+						  {#/foreach#}
+                      </select></td>
+                      <td width="15%" align="left"></td>
+                      <td width="48%" valign="top"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top"><select id="content_category" multiple="multiple"  size="6" style="WIDTH: 17em">
+                        <!--AJAX分类数据回传区-->
+						<!--END-->
+                        </select>                      </td>
+                      <td align="left"><input id="button_r_category" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input id="button_l_category" type="button" style="width:50px;" value="<<" /></td>
+                      <td><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="category[]" id="category">
+                        </select>
+                        </label></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="15%" align="right">意向工作地区：<br />(最多可选5项)</td>
+                <td width="85%" valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<td width="259" valign="bottom" >
+				<!--地区分类-->
+				<select id="ajax_district" style="WIDTH:17em">
+							<option value="-1">请选择</option>
+                          {#foreach item=item from=$parent_district#}
+						  <option value="{#$item.id#}">{#$item.categoryname#}</option>
+						  {#/foreach#}
+                        </select>
+				<!--END-->		
+
+				</td>
+                      <td width="120" align="left"></td>
+                     
+                    <tr>
+                      <td valign="top"><select id="content_district" size="6" multiple="multiple" style="WIDTH: 17em">
+                          <!--AJAX地区内容回传区-->
+						  <!--END-->
+                        </select></td>
+                      <td align="left"><input id="button_r_district" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input type="button" id="button_l_district" style="width:50px;" value="<<" /></td>
+                      <td width="358"><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="district[]" id="district">
+						<!-- 所选地区显示区-->
+						<!--END-->
+                        </select>
+                        </label></td>
+                    </tr>
+                  </table></td>
+              </tr>
+
+			  <tr>
+                <td width="15%" align="right">更新日期：</td>
+                <td width="85%"><select name="update" style="WIDTH:100px;">
+					<option value="0">不限</option>
+					<option value="2">三天以内</option>
+					<option value="3">一周以内</option>
+					<option value="4">一月以内</option>
+					<option value="5">三月以内</option>
+					<option value="6">半年以内</option>
+                </select></td>
+              </tr>
+              <tr>
+                <td width="15%" align="right">年龄：</td>
+                <td width="85%" valign="top"><input name="age1" type="text" style="width:40px;"/>&nbsp;&nbsp;至&nbsp;&nbsp;<input name="age2" type="text"style="width:40px;"/>&nbsp;&nbsp;岁</td>
+              </tr>
+              <tr>
+                <td width="15%" align="right" valign="top">&nbsp;&nbsp;&nbsp;&nbsp;学历要求：</td>
+                <td width="85%"><label>
+                  <select name="education1" id="select" style="width:60px;">
+						<option value="0">不限</option>
+						{#html_options options=$options_edu selected=$smarty.get.list_educationid#}				  
+				  </select>
+                </label>&nbsp;&nbsp;至&nbsp;&nbsp;<label>
+                  <select name="education2" id="select" style="width:60px;">
+				  <option value="0">不限</option>
+						{#html_options options=$options_edu selected=$smarty.get.list_educationid#}
+				  </select>
+                </label></td>
+              </tr>
+              <tr>
+                <td width="15%" align="right" valign="top">工作经验：</td>
+                <td width="85%">
+				<!--<input name="workyear1" type="text" style="width:40px;"/>&nbsp;&nbsp;至&nbsp;&nbsp;<input name="workyear2" type="text"style="width:40px;"/>&nbsp;&nbsp;年-->
+					<select class="jslist"  name="experience">
+						<option value="0">经验</option>
+						<option value="1" label="无经验">无经验</option>
+						<option value="2" label="1年以下">1年以下</option>
+						<option value="3" label="1-3年">1-3年</option>
+						<option value="4" label="3-5年">3-5年</option>
+						<option value="5" label="5-10年">5-10年</option>
+						<option value="6" label="10年以上">10年以上</option>
+				   </select>				
+				</td>
+              </tr>
+              <tr>
+                <td width="15%" align="right" valign="top">期望月薪：</td>
+                <td width="85%"><input name="exsalary1" type="text" style="width:40px;"/>&nbsp;&nbsp;至&nbsp;&nbsp;<input name="exsalary2" type="text"style="width:40px;"/>&nbsp;&nbsp;元&nbsp;&nbsp;<input name="discuss" type="checkbox" value="1" />
+                  包括面议</td>
+              </tr>
+              <tr>
+                <td width="15%" align="right" valign="top">英语级别：</td>
+                <td width="85%"><label>
+                  <select name="english" id="select" style="width:60px;">
+                  <option value="0">无限制</option>
+                  <option value="3">三级</option>
+				  <option value="4">四级</option>
+				  <option value="6">六级</option>
+                  <option value="8">八级</option>
+                  </select>
+                </label></td>
+              </tr>
+              <tr>
+                <td width="15%" align="right" ></td>
+                <td width="85%"><input type="submit" class="btn" value="搜 索"/></td>
+              </tr>
+              <tr>
+                <td colspan="2" height="10"> </td>
+              </tr>
+              
+            </table>
+            </form>
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+<script>
+$(document).ready(function(){
+
+	//分类
+	$('#ajax_category').change(function(){
+		var parentId = $(this).val();
+		if(parentId == -1){
+			$('#content_category').html('');
+			return;
+		}
+		//ajax
+		$.ajax({
+			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_jobs&parentid='+parentId,
+			success: function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';				
+				}
+//				console.log(options);
+				options = '<option value="'+$('#ajax_category option:selected').val()+'">'+$('#ajax_category option:selected').html()+'</option>'+options;
+
+				$('#content_category').html(options);
+			}
+		});
+	});
+	//地区
+	$('#ajax_district').change(function(){
+		var parentId = $(this).val();
+		if(parentId == -1){
+			$('#content_district').html('');
+			return;
+		}
+		//ajax
+		$.ajax({
+			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
+			success: function(data){
+				var res = eval('('+data+')');
+				var options = '';
+				for(var item in res){
+					var cur = res[item];
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';				
+				}
+//				console.log(options);
+				options = '<option value="'+$('#ajax_district option:selected').val()+'">'+$('#ajax_district option:selected').html()+'</option>'+options;
+
+				$('#content_district').html(options);
+			}
+		});
+	});
+
+
+
+	var type = ['category','district'];
+	
+	$(type).each(function(){
+		var ename = this;
+		var num = 3;
+		$('#button_r_'+ename).click(function(){
+			var options = $('#content_'+ename+' :selected');
+			var num_c = options.length;
+			var num_v = $('#'+ename+' option').length;
+			
+			if((num_c+num_v) > num){
+				alert('请选择不多于'+num+'个条目');
+				return;
+			}
+			
+			$('#'+ename).append(options);
+		});
+		$('#button_l_'+ename).click(function(){
+			var options = $('#'+ename+' :selected');
+			$('#content_'+ename).append(options);
+		});
+	});
+
+	
+	$('#key').val('搜索简介,特长,教育经历及工作经历').css('color','#777');
+
+	$('#key').hover(
+		function(){
+			if($(this).val() == '搜索简介,特长,教育经历及工作经历'){
+				$(this).val('');
+			}
+			else{
+				$(this).css('color','black');
+			}
+		},
+		function(){
+			if($(this).val() == ''){
+				$(this).val('搜索简介,特长,教育经历及工作经历').css('color','grey');
+			}
+		}
+	);
+
+	$('form').submit(function(){
+		if( $('#key').val() == '搜索简介,特长,教育经历及工作经历' ){
+			$('#key').val('');
+		}
+		return true;
+	});
+});
+</script>
+</body>
+</html>
+

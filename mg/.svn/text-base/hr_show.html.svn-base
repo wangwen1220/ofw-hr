@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="skin/default/css/home.css" />
+<link type="text/css" rel="stylesheet" href="skin/default/css/css.css" />
+<script type="text/javascript" src="skin/default/js/tc.js"></script>
+<script type="text/javascript" src="skin/default/js/xl.js"></script>
+<title>求职者登陆</title>
+</head>
+
+<body>
+<div id="site">
+
+<!--header start-->
+	<div class="header">
+        <div class="top">
+          <div class="link"><a href="http://www.ofweek.com/" target="_blank">OFweek首页</a>|<a href="http://lights.ofweek.com/" target="_blank">半导体照明</a>|<a href="http://solar.ofweek.com/" target="_blank">太阳能光伏</a>|<a href="http://fiber.ofweek.com/" target="_blank">光通讯</a>|<a href="http://laser.ofweek.com/" target="_blank">激光</a>|<a href="http://ee.ofweek.com/" target="_blank">电子工程</a>|<a href="http://gongkong.ofweek.com/" target="_blank">工控</a></div>
+          <div class="deng" id="site-nav">
+            <ul class="quick-menu">
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="login.html">求职者登陆</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+ 			<div class="JobseekersUserLogoncontent" id="userlogin" >
+           <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+           </ul> 
+           <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+           </li></ul>
+           <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+           <ul>
+           <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+               <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="password.html" class="f_bule">忘记密码了？</a>
+			</li></ul>
+           </div>
+          </div>
+                </div>
+                </div>
+                </li>
+                <li>或者</li>
+                <li><a href="reg/person/index.html">注册</a></li>
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="hrlogin.html">企业登录</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+                    <div class="JobseekersUserLogoncontent" id="userlogin" >
+                   <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+                   </ul> 
+                   <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+                   </li></ul>
+                   <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+                   <ul>
+                   <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+                       <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="password.html" class="f_bule">忘记密码了？</a>
+                    </li></ul>
+                   </div>
+                  </div>
+                </div>
+                </div>
+                </li>
+                <li><img src="skin/default/images/inco1.gif" /></li>
+                <li><a href="#">企业注册</a></li>
+            </ul>
+            </div>
+      </div>
+        <div class="logo"><a href="index.html"><img src="skin/default/images/logo.jpg" border="0" /></a></div>
+        <div class="nav_m">
+          <ul>
+                <li><a href="index.html">首页</a></li>
+           		<li><a href="joblist.html">求职</a></li>
+                <li><a href="hrlogin.html">招聘</a></li>
+                <li><a href="joblist.html">校园招聘</a></li>
+                <li><a href="hr.html">职场资讯</a></li>
+            </ul>
+            <div class="qiye"><a href="member/company/company.html">企业服务</a>热线：<strong>0755-83279360</strong></div>
+      </div>
+        
+	<!--header end-->
+	<div class="current">您当前所在位置：<a href="hr.ofweek.com" target="_blank">OFweek人才网</a> »<a href="hr.html" target="_blank">职场资讯</a>»<a href="hr_list-id.html" target="_blank">简历指南</a></div>
+	
+	<!--body start-->
+	<div id="content">
+		<DIV class=news-show>
+<DIV class=left>
+<DIV class=show>
+<H1>金山手机卫士：安卓下载丑脸评分带毒</H1>
+<DIV class="date link_bk">点击：<SPAN id=click></SPAN> 次&nbsp;&nbsp;&nbsp;&nbsp; 
+添加日期：2012-05-23 &nbsp;&nbsp;&nbsp;&nbsp; [ <A 
+href="javascript:window.print();">打印</A> ]&nbsp;&nbsp;[ <A 
+onclick=window.external.addFavorite(parent.location.href,document.title); 
+href="http://demo32.74cms.com/news/news-show.php?id=22#">收藏</A> ]&nbsp;&nbsp;[ 
+<A href="javascript:self.close()">关闭</A> ] </DIV>
+<DIV class=txt>泡泡网软件频道5月22日 Ugly 
+Meter（中文译名：丑脸评分），是一个纯娱乐类的应用，近段时间被某些娱乐节目推荐而大热，Ugly 
+Meter的开发者因此获得了50多万美元的下载收入。近日金山手机安全中心监测到，这个好玩儿的应用...&nbsp;&nbsp;</DIV></DIV></DIV>
+<DIV class=right>
+<DIV class=listbox>
+<DIV class=tit><STRONG>资讯分类</STRONG></DIV>
+<DIV class=category><A 
+href="http://demo32.74cms.com/news/news-list.php?id=2">职业指导</A> <A 
+href="http://demo32.74cms.com/news/news-list.php?id=3">简历指南</A> <A 
+href="http://demo32.74cms.com/news/news-list.php?id=4">面试宝典</A> <A 
+href="http://demo32.74cms.com/news/news-list.php?id=5">职场八卦</A> <A 
+href="http://demo32.74cms.com/news/news-list.php?id=6">劳动法苑</A> <A 
+href="http://demo32.74cms.com/news/news-list.php?id=7">职场观察</A> 
+<DIV class=clear></DIV></DIV></DIV>
+<DIV class=listbox>
+<DIV class=tit><STRONG>推荐资讯</STRONG></DIV>
+<DIV class=txt>
+<UL class=link_bk>
+  <LI><A href="hr_show.html" 
+  target=_blank title="全程移动互联网启动仪式成功在北京">全程移动互联网启动仪式成功在北京</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=36" 
+  target=_blank>重庆农村商业银行 联手第三方支付平</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=34" 
+  target=_blank>中概股周二涨跌互现 13只股票跌幅超</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=32" 
+  target=_blank>Chrome超Internet Explorer成全球应</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=29" 
+  target=_blank>马化腾重组棋局：电商、搜搜、微信</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=28" 
+  target=_blank>移动社交：暗战打响前景难料</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=27" 
+  target=_blank>刘炽平辟谣：搜搜退出PC搜索和裁员</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=26" 
+  target=_blank>IPO之后，Facebook增收的四大王牌</A> </LI></UL></DIV></DIV>
+<DIV class=listbox>
+<DIV class=tit><STRONG>最新资讯</STRONG></DIV>
+<DIV class=txt>
+<UL class=link_bk>
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=38" 
+  target=_blank>策划四i新闻标题</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=37" 
+  target=_blank>全程移动互联网启动仪式成功在北京</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=36" 
+  target=_blank>重庆农村商业银行 联手第三方支付平</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=35" 
+  target=_blank>解读阿里雅虎股权交易：马云推动战</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=34" 
+  target=_blank>中概股周二涨跌互现 13只股票跌幅超</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=33" 
+  target=_blank>即使赔一两百万也不愿赔一个朋友</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=32" 
+  target=_blank>Chrome超Internet Explorer成全球应</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=31" 
+  target=_blank>Flickr被雅虎收购后逐步走向没落</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=30" 
+  target=_blank>58同城姚劲波：百度联盟推动了互联</A> 
+  <LI><A href="http://demo32.74cms.com/news/news-show.php?id=29" 
+  target=_blank>马化腾重组棋局：电商、搜搜、微信</A> </LI></UL></DIV></DIV></DIV>
+<DIV class=clear></DIV></DIV>
+	</div>
+	<!--body end-->
+	
+	<!--bottom start-->
+	<div id="bottom">
+	<div class="bottom-m">
+		<div class="bottom-m-1">
+			<a target="_blank" href="#">关于我们</a> -
+			<a target="_blank" href="#">征 稿</a> -
+			<a target="_blank" href="#">广告咨询</a> -
+			<a target="_blank" href="#">帮助信息</a> -
+			<a target="_blank" href="#">联系我们</a> -
+			<a target="_blank" href="#">会员服务</a> - 
+			<a target="_blank" href="#">网站导航</a>
+		</div>
+	</div>
+	<div class="bottom-2">
+	
+		我们的网站：
+		<a target="_blank" href="http://lights.ofweek.com/">半导体照明网</a> | 
+		<a target="_blank" href="http://solar.ofweek.com/">太阳能光伏网</a> | 
+		<a target="_blank" href="http://laser.ofweek.com/">激光网</a> | 
+		<a target="_blank" href="http://smartgrids.ofweek.com/">智能电网</a> | 
+		<a target="_blank" href="http://emc.ofweek.com/">节能网</a> | 
+		<a target="_blank" href="http://ee.ofweek.com/">电子工程网</a> | 
+		<a target="_blank" href="http://fiber.ofweek.com/">光通讯网</a> | 
+		<a target="_blank" href="http://gongkong.ofweek.com/">工控网</a> | 
+		<a target="_blank" href="http://windpower.ofweek.com/">风电网</a> | 
+		<a target="_blank" href="http://instrument.ofweek.com/">仪器仪表网</a> | 
+		<a target="_blank" href="http://display.ofweek.com/">光电显示网</a> | 
+		<a target="_blank" href="http://optics.ofweek.com/">光学网</a> | 
+		<a target="_blank" href="http://b2b.ofweek.com/">产品港湾</a> | 
+		<a target="_blank" href="http://cpbay.com/">CPbay</a>
+		<br>
+		客服热线：086-755-83279360 83279361 83279363 83279365 客服传真：0755-83279008
+		<br>
+		业务联系：086-755-83279360
+		<br>
+		Copyright &#169; 2012, All Rights Reserved.
+		<br>
+		中文版权所有－OFweek光电新闻网.网站所有图片、文字未经许可不得拷贝、复制。
+  </div>
+    <div class="bottom110">
+    
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="22%"><img src="skin/default/images/110.gif" width="115" height="75" /></td>
+          <td width="78%" align="left" valign="bottom">粤ICP备06087881</td>
+        </tr>
+      </table>
+    </div>
+</div>
+<!--bottom end-->
+</div>
+</div>
+</body>
+</html>

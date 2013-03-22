@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>求职者登录</title>
+<meta name="description" content="{#$page.description#}">
+<meta name="keywords" content="{#$page.keywords#}">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/css.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script src="{#$QISHI.site_template#}js/jquery.lazyload.js" type="text/javascript"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/tc.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/xl.js"></script>
+<script type="text/javascript" src="{#$QISHI.site_template#}js/add_common_function.js"></script>
+<script src="{#$QISHI.site_template#}js/MSClass.js" language="javascript"></script>
+
+</head>
+
+<body>
+<div id="site">
+
+<style>
+#submit_form3{
+	background:url({#$QISHI.site_template#}images/login.gif) no-repeat;
+	width:56px;
+	height:25px;
+	border:0px;
+	cursor:pointer;
+}
+</style>
+
+<!--header begin-->
+{#include file="header_nosearch.htm"#}
+<!--header end-->
+	<!--body start-->
+	<div class="current">您当前所在位置：<a href="/" target="_blank">OFweek人才网</a> &gt;&gt; 求职者登录</div>
+	<form id="Form3" name="Form3" action="http://www.ofweek.com/user/login.do?method=loginUser" method="post">
+	<input type="hidden" id="p_exist2" name="talentNetworkLogin" value="">
+	<div id="content">
+		<div class="login">
+			<table width="900" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="218" rowspan="5" align="center" valign="middle"><img src="{#$QISHI.site_template#}images/suo.png" border="0" /></td>
+				<td height="60" colspan="4" align="left" valign="middle" style="font-size:16px; font-family:'微软雅黑';"><strong>个人会员登陆</strong></td>
+				</tr>
+		<tr>
+				<td width="66" height="39">用户名：</td>
+				<td width="183" height="50"><input type="text" id="p_username2" name="username" style="width:150px; height:25px; line-height:25px;" /></td>
+				<td width="382">&nbsp;</td>
+				<td width="51">&nbsp;</td>
+		</tr>
+		<tr>
+				<td height="39">密码：</td>
+				<td height="50"><input type="password" name="password" style="width:150px; height:25px; line-height:25px;" /></td>
+				<td><a class="for_psw" href="http://www.ofweek.com/user/userGetPassword.do">忘记密码了？</a></td>
+				<td>&nbsp;</td>
+		</tr>
+
+		<tr>
+				<td height="35">&nbsp;</td>
+				<td height="40"> <label>
+                
+				<input type="button" id="submit_form3" />
+                </label></td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+		</tr>
+			</table>
+			<table border="0" cellspacing="0" cellpadding="0" width="900" style="border-top:1px dashed #ccc;">
+		<tr>
+				<td height="50" align="center" valign="middle">还没有OFweek人才网个人帐号？ <a class="for_psw" href="http://www.ofweek.com/user/registerUser.do?talentNetworkLogin=talentNetworkLogin" target="_blank">马上注册</a> 若您是企业用户，请点此<a class="for_psw" href="/hrlogin/" target="_blank">登录</a>。 </td>
+		</tr>
+</table>
+
+		</div>
+	</div>
+	<input type="hidden" name="siteweb" value="hr" />
+	{#if $smarty.get.forward#}
+	<input type="hidden" name="returnurl" value="{#$smarty.get.forward#}" />
+	{#else#}
+	<input type="hidden" name="returnurl" value="{#$QISHI.cur_url#}" />
+	{#/if#}
+	</form>
+	<!--body end-->
+	
+<!--footer begin-->
+{#include file="footer.htm"#}
+<!--footer end-->
+</div>
+
+<script>
+$(document).ready(function(){
+	$("#submit_form3").click(function(){
+		var u = $("#p_username2").val();
+		if(u) {
+			$.get("/api/member_exist.php?username="+u, function(result){
+				if(result == 'no-exist') {$("#p_exist2").val('talentNetworkLogin');$("#Form3").submit();}
+				else {$("#p_exist2").val('');$("#Form3").submit();}
+			});
+		} else {
+			return false;
+		}
+	});
+});
+</script>
+</body>
+</html>

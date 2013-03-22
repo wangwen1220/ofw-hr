@@ -1,0 +1,15 @@
+.hr_rcbiaoti{width:680px;height:28px; background-image:url(../img/d.jpg);
+background-repeat:no-repeat; font-size:14px; font-weight:bold; text-indent:30px;
+line-height:28px; color:#FFF;}
+.hr_rcbiaoti_span{font-size:12px; font-weight:normal;margin-left:520px; color:#333;}
+.hr_rckuang{border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    color: #1E376D;
+    font-family: "宋体",arial;
+    font-size: 12px;
+    height: auto;
+    padding-top: 10px;
+    width: 678px;}
+.hr_rckuang a{ color:#0066ff;;text-decoration:none;}
+.hr_rckuang a:hover{color:#0066ff;text-decoration:underline;}

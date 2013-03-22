@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;系统工具&nbsp;&gt;&gt;&nbsp;系统消息</div>
+      <div class="xiu_g" style="border:none;">
+        
+        
+        <table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#DDDDDD">
+          <tr>
+            <td width="57%" align="center" bgcolor="#FFFFFF">标题</td>
+            <td width="16%" align="center" bgcolor="#FFFFFF">时间</td>
+            <td width="13%" align="center" bgcolor="#FFFFFF">来源</td>
+            <td width="14%" align="center" bgcolor="#FFFFFF">操作</td>
+          </tr>
+          {#if empty($messageList)#}
+          <tr><td bgcolor="#FFFFFF" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无</td></tr>
+          {#/if#}
+          {#foreach from=$messageList item=list#}
+          <tr>
+            <td bgcolor="#FFFFFF"><label style="float:left;">
+             </label><a href="company_message.php?act=view&id={#$list.id#}"><span title="{#$list.title#}" style="width:380px;padding-left:10px;display:block;float:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.title#}</span>{#if $list.readed==0#}<img style="float:left;margin-top:7px;" src="{#$QISHI.site_template#}images/new.gif" />{#/if#}</a></td>
+            <td align="center" bgcolor="#FFFFFF">{#$list.addtime_cn#}</td>
+            <td align="center" bgcolor="#FFFFFF">系统</td>
+            <td align="center"  bgcolor="#FFFFFF"><a href="company_message.php?act=del&id={#$list.id#}&page={#$page#}" onclick="return confirm('确定要删除吗？');">删除</a></td>
+          </tr>
+          {#/foreach#}
+          <tr>
+                <td bgcolor="#EEEEEE" colspan="4"><span style="float:left; padding:0px 20px;">共{#$total#}条记录</span><div class="page">{#$pageHTML#}</div></td>
+                
+            </tr>
+
+        </table>
+        
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+</body>
+<script>
+function message_show(v){
+	$.get("{#$QISHI.site_dir#}user/company/company_message.php?act=show&id="+v,function(data){
+		$("#show_div").html(data);
+	});
+}
+$(document).ready(function(){
+	$('#allcheck').click(function(){
+		var f = this.checked;
+		$('.a_check').each(function(){
+			this.checked = f;
+		});
+	});
+});
+
+</script>
+</html>

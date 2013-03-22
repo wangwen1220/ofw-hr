@@ -1,0 +1,642 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>OFweek人才网</title>
+<link href="skin/default/css/home.css" rel="stylesheet" type="text/css" />
+<link href="skin/default/css/index.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="skin/default/js/tc.js"></script>
+<script type="text/javascript" src="skin/default/js/xl.js"></script>
+<script src="skin/default/js//MSClass.js" language="javascript"></script>
+<script>
+function secBoard(elementID,listName,elementname,n) {
+var elem = document.getElementById(elementID);
+var elemlist = elem.getElementsByTagName(elementname);
+for (var i=0; i<elemlist.length; i++) {
+elemlist[i].className = "sel02";
+var m = i+1;
+document.getElementById(listName+"_"+m).style.display = "none";
+}
+elemlist[n-1].className = "sel01";
+document.getElementById(listName+"_"+n).style.display = "block";
+}
+</script>
+</head>
+<body>
+<div id="mian">
+    <div class="header">
+        <div class="top">
+          <div class="link"><a href="http://www.ofweek.com/" target="_blank">OFweek首页</a>|<a href="http://lights.ofweek.com/" target="_blank">半导体照明</a>|<a href="http://solar.ofweek.com/" target="_blank">太阳能光伏</a>|<a href="http://fiber.ofweek.com/" target="_blank">光通讯</a>|<a href="http://laser.ofweek.com/" target="_blank">激光</a>|<a href="http://ee.ofweek.com/" target="_blank">电子工程</a>|<a href="http://gongkong.ofweek.com/" target="_blank">工控</a></div>
+          <div class="deng" id="site-nav">
+            <ul class="quick-menu">
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="login.html">求职者登陆</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+ 			<div class="JobseekersUserLogoncontent" id="userlogin" >
+           <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+           </ul>
+           <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+           </li></ul>
+           <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+           <ul>
+           <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+               <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="member/person/password.html" class="f_bule">忘记密码了？</a>
+			</li></ul>
+           </div>
+          </div>
+                </div>
+                </div>
+                </li>
+                <li>或者</li>
+                <li><a href="reg/person/index.html">注册</a></li>
+                <li class="services menu-item last">
+                <div class=menu>
+                <a class="menu-hd" href="hrlogin.html">企业登录</a>
+                <div class="menu-bd">
+                	<div class="JobseekersUserLogon">
+                    <div class="JobseekersUserLogoncontent" id="userlogin" >
+                   <ul><li class="textr w60">用户名：</li><li><input name="txtUserName" type="text" maxlength="50" id="txtUserName" class="tbxInput" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" /></li>
+                   </ul>
+                   <ul><li class="textr w60">密码：</li><li><input name="txtPassword" type="password" maxlength="50" id="txtPassword" class="tbxInput" autocomplete="off" onfocus="this.style.background=&#39;url(skin/default/images/login_boxbg2.gif) no-repeat&#39;" onblur="this.style.background=&#39;url(skin/default/images/login_boxbg1.gif) no-repeat&#39;" />
+                   </li></ul>
+                   <ul><li class="textr w60">&nbsp;</li><li><input id="cbxPeriod" type="checkbox" name="cbxPeriod" />&nbsp;两周内自动登录&nbsp;</li></ul>
+                   <ul>
+                   <li style="margin-top:10px; line-height:30px; padding-left:20px;">
+                       <input type="image" name="btnLogin" id="btnLogin" src="skin/default/images/boutton_04.gif" onclick="return go();" /><a href="password.html" class="f_bule">忘记密码了？</a>
+                    </li></ul>
+                   </div>
+                  </div>
+                </div>
+                </div>
+                </li>
+                <li><img src="skin/default/images/inco1.gif" /></li>
+                <li><a href="http://www.ofweek.com/user/registerUser.do">企业注册</a></li>
+            </ul>
+            </div>
+      </div>
+        <div class="logo"><a href="index.html"><img src="skin/default/images/logo.jpg" border="0" /></a></div>
+        <div class="nav_m">
+          <ul>
+                <li><a href="index.html">首页</a></li>
+           		<li><a href="joblist.html">求职</a></li>
+                <li><a href="hrlogin.html">招聘</a></li>
+                <li><a href="joblist.html">校园招聘</a></li>
+                <li><a href="hr.html">职场资讯</a></li>
+            </ul>
+            <div class="qiye"><a href="member/company/company.html">企业服务</a>热线：<strong>0755-83279360</strong></div>
+      </div>
+        <div class="gao">
+       	  <div class="search">
+                <span class="guan"><input type="text" class="so1" value="请输入关键字" />
+                <a href="javascript:showDiv()"><img src="skin/default/images/btn1.gif" /></a>
+                <div id="popDiv" class="mydiv" style="display:none;">
+                	<div class="diq_t"><h3>意向地区（最多只能选择3项）</h3> <a href="javascript:closeDiv()"><img src="skin/default/images/xx.gif" style="float:right;"/></a></div>
+                    <div class="xfen mtop">
+                   	  <table width="100%" border="0">
+                          <tr>
+                            <td><strong>主要城市：</strong></td>
+                          </tr>
+                          <tr>
+                          	<td><a href="#">深圳</a>	<a href="#">广州</a>	<a href="#">东莞</a>	<a href="#">中山</a>	<a href="#">上海</a>	<a href="#">北京</a><a href="#">南京</a> <a href="#">苏州</a>	<a href="#">杭州</a></td>
+                          </tr>
+                          <tr>
+                          	<td><strong>所有省份(市/区)：</strong></td>
+                          </tr>
+                          <tr>
+                          	<td><a href="#">广东</a>	<a href="#">上海</a>	<a href="#">北京</a>	<a href="#">天津</a>	<a href="#">河北</a>	<a href="#">山西</a><a href="#">内蒙古</a><a href="#">辽宁</a><a href="#">吉林</a><a href="#">黑龙江</a><a href="#">江苏</a><a href="#">浙江</a><a href="#">安徽</a><a href="#">福建</a> <a href="#">江西</a><a href="#">山东</a><a href="#">河南</a><a href="#">湖北</a>	<a href="#">湖南</a><a href="#">广西</a><a href="#">四川</a> <a href="#">贵州</a><a href="#">云南</a><a href="#">西藏</a>	<a href="#">陕西</a>	<a href="#">甘肃</a><a href="#">青海</a>	<a href="#">宁夏</a> <a href="#">新疆</a>	<a href="#">香港</a>	<a href="#">台湾</a>	<a href="#">澳门</a>	<a href="#">重庆</a><a href="#">海南</a>	<a href="#">国外</a><a href="#">其他</a></td>
+                          </tr>
+                      </table>
+                    </div>
+                    <div class="buttom">
+                    	<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">确定</span></button>
+                        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">清除</span></button>
+                       <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">关闭</span></button>
+                  </div>
+                </div>
+                <div id="bg" class="bg" style="display:none;"></div>
+                </span>
+                <span class="yixn">
+                <a href="javascript:showUl()"><img src="skin/default/images/btnw.gif" /></a>
+                <div id="popDiv1" class="mydiv1" style="display:none;">
+                	<div class="diq_w"><h3>选择意向岗位 （最多只能选择5项）</h3> <a href="javascript:closeDiv1()"><img src="skin/default/images/xx.gif" style="float:right;"/></a></div>
+                  <div class="sygw mtop">
+                    	<table width="100%" border="0">
+                          <tr>
+                            <td><strong class="gw_lb">所有岗位类别：</strong>
+                            <div class="tField">
+                            <input id="jobQuickSearch" class="tt" type="text" name="jobQuickSearch">
+                            <input id="clearJobQuickSearch" type="button" name="clearJobQuickSearch">
+                            </div>
+                            </td>
+                          </tr>
+                          <tr>
+                          	<td height="5"></td>
+                          </tr>
+                          <tr>
+                          	<td><a href="#">计算机硬件类</a><a href="#">计算机软件类</a><a href="#">信息技术管理/集成/运行维护类</a> <a href="#">互联网/电子商务/网游</a><a href="#">电子/电器类</a><a href="#">手机/通信技术类</a><a href="#">经营管理类</a><a href="#">人力资源类</a><a href="#">行政/文职/后勤类</a><a href="#">销售管理类</a>	<a href="#">销售业务类</a><a href="#">销售行政/商务类</a><a href="#">计算机硬件类</a><a href="#">计算机软件类</a><a href="#">信息技术管理/集成/运行维护类</a> <a href="#">互联网/电子商务/网游</a><a href="#">电子/电器类</a><a href="#">手机/通信技术类</a><a href="#">经营管理类</a><a href="#">人力资源类</a><a href="#">行政/文职/后勤类</a><a href="#">销售管理类</a>	<a href="#">销售业务类</a><a href="#">销售行政/商务类</a><a href="#">计算机硬件类</a><a href="#">计算机软件类</a><a href="#">信息技术管理/集成/运行维护类</a> <a href="#">互联网/电子商务/网游</a><a href="#">电子/电器类</a><a href="#">手机/通信技术类</a><a href="#">经营管理类</a><a href="#">人力资源类</a><a href="#">行政/文职/后勤类</a><a href="#">销售管理类</a>	<a href="#">销售业务类</a><a href="#">销售行政/商务类</a></td>
+                          </tr>
+                        </table>
+                  </div>
+                    <div class="buttom1">
+                    	<button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">确定</span></button>
+                        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">清除</span></button>
+                        <button class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" type="button" role="button" aria-disabled="false"><span class="ui-button-text">关闭</span></button>
+                    </div>
+                </div>
+                <div id="bg1" class="bg" style="display:none;"></div>
+                </span>
+                <label>
+                <a href="joblist.html"><input type="submit" name="button" id="button" value="搜 索"  class="so3"/></a>
+                </label>
+            	<strong class="suo"><a href="search.html" style="color:#cb0a00;">高级搜索>></a></strong>            </div>
+               <div class="hot"><strong>热门搜索：</strong><a href="#">LED</a><a href="#">工程师</a><a href="#">经理</a></div>
+        </div>
+    </div>
+    <div class="conter">
+    	<div class="col01 mtop">
+            <div class="gang_l">
+                <div class="zuo_110"><a href="#"><img src="skin/default/images/tup1.gif" alt="图片" /></a></div>
+              <div class="zuo_40"><a href="#"><img src="skin/default/images/tup5.gif" alt="图片" /></a></div>
+              <div class="zuo_40"><a href="#"><img src="skin/default/images/tup2.gif" alt="图片" /></a></div>
+                 <div class="zuo_40"><a href="#"><img src="skin/default/images/tup5.gif" alt="图片" /></a></div>
+                <div class="zuo_40"><a href="#"><img src="skin/default/images/tup2.gif" alt="图片" /></a></div>
+              <div class="zuo_40"><a href="#"><img src="skin/default/images/tup5.gif" alt="图片" /></a></div>
+              <div class="zuo_40"><a href="#"><img src="skin/default/images/tup2.gif" alt="图片" /></a></div>
+              <div class="zuo_40"><a href="#"><img src="skin/default/images/tup5.gif" alt="图片" /></a></div>
+                <div class="zuo_40"><a href="#"><img src="skin/default/images/tup2.gif" alt="图片" /></a></div>
+           </div>
+            <div class="cont_z">
+            	<div class="zhao">
+            		<div class="tite"><h3>最新招聘岗位</h3><span><a href="joblist.html" target="_blank">更多>></a></span></div>
+                    <div class="list_mian">
+                    <ul id="gd">
+                    	<li><a href="company/job.html" title="销售工程师" target="_blank" style="width:90px;">销售工程师</a><a href="#" title="深圳市互联港湾有限公司" target="_blank" style="width:160px;">深圳市互联港湾有限公司</a><span style="width:85px;">广东省/深圳市</span><span style="width:110px;">8000~10000元/月</span><span style="width:40px;">不限制</span></li>
+                    </ul>
+                     <script>new Marquee("gd",0,1,493,215,50,0,0)</script>
+                    </div>
+
+        </div>
+                <div class="zhan_a mtop">
+                	<div class="tite">
+                    <ul class="chqh_ul" id="new_vouch">
+                    	<li class="sel01" onMouseMove="secBoard('new_vouch','newvouch','li',1);">行业分站</li>
+                        <li class="sel02" onMouseMove="secBoard('new_vouch','newvouch','li',2);">地区分站</li>
+                    </ul>
+                    </div>
+                    <div class="bluech" id="newvouch_1">
+                    	<ul>
+                        	<li><a href="hr.ofweek.com/led" title="LED"><img src="skin/default/images/pic_01.gif" /></a></li>
+                            <li><a href="#" title="太阳能光伏"><img src="skin/default/images/pic_02.gif" /></a></li>
+                            <li><a href="#" title="光通信"><img src="skin/default/images/pic_03.gif" /></a></li>
+                            <li><a href="#" title="激光"><img src="skin/default/images/pic_04.gif" /></a></li>
+                            <li><a href="#" title="工控"><img src="skin/default/images/pic_05.gif" /></a></li>
+                            <li><a href="#" title="光电/光学"><img src="skin/default/images/pic_06.gif" /></a></li>
+                            <li><a href="#" title="智能电网"><img src="skin/default/images/pic_07.gif" /></a></li>
+                            <li><a href="#" title="仪器/仪表"><img src="skin/default/images/pic_08.gif" /></a></li>
+                            <li><a href="#" title="节能"><img src="skin/default/images/pic_09.gif" /></a></li>
+                            <li><a href="#" title="LED"><img src="skin/default/images/pic_10.gif" width="91" height="84" /></a></li>
+                        </ul>
+                    </div>
+                    <div class="bluech none" id="newvouch_2">
+                    	<ul>
+                        	<li><a href="hr.ofweek.com/beijing" title="北京"><img src="skin/default/images/pic01.gif" /></a></li>
+                            <li><a href="#" title="上海"><img src="skin/default/images/pic02.gif" /></a></li>
+                            <li><a href="#" title="广东"><img src="skin/default/images/pic03.gif" /></a></li>
+                            <li><a href="#" title="浙江"><img src="skin/default/images/pic04.gif" /></a></li>
+                            <li><a href="#" title="江苏"><img src="skin/default/images/pic05.gif" /></a></li>
+                            <li><a href="#" title="山东"><img src="skin/default/images/pic06.gif" /></a></li>
+                            <li><a href="#" title="福建"><img src="skin/default/images/pic07.gif" /></a></li>
+                            <li><a href="#" title="湖北"><img src="skin/default/images/pic08.gif" /></a></li>
+                            <li><a href="#" title="湖南"><img src="skin/default/images/pic09.gif" /></a></li>
+                            <li><a href="#" title="陕西"><img src="skin/default/images/pic10.gif" width="91" height="84" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+          <div class="gang_r">
+            <div class="kuan_110"><img src="skin/default/images/tup4.gif" alt="图片" /></div>
+                <div class="kuan_60"><a href="#"><img src="skin/default/images/tup6.gif" alt="图片" /></a></div>
+                <div class="kuan_60"><a href="#"><img src="skin/default/images/tup3.gif" alt="图片" /></a></div>
+                <div class="kuan_60"><a href="#"><img src="skin/default/images/tup6.gif" alt="图片" /></a></div>
+                <div class="kuan_60"><a href="#"><img src="skin/default/images/tup3.gif" alt="图片" /></a></div>
+                <div class="kuan_60"><a href="#"><img src="skin/default/images/tup6.gif" alt="图片" /></a></div>
+                <div class="kuan_60"><a href="#"><img src="skin/default/images/tup3.gif" alt="图片" /></a></div>
+          </div>
+        </div>
+        <div class="col01 mtop">
+        	<div class="fenl">
+            	<div class="tite"><h3>岗位分类搜索</h3></div>
+                <div class="gang">
+               	  <ul>
+                   	<li class="jing"><a href="#" title="经营管理类">经营管理类</a></li>
+                   	<li><a href="joblist.html" title="首席执行官CEO/总裁/总经理">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#" title="首席运营官COO/副总经理/..">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#" title="总监">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <ul>
+                   	<li class="jing"><a href="#" title="经营管理类">经营管理类</a></li>
+                   	<li><a href="#" title="首席执行官CEO/总裁/总经理">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#" title="总监">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <ul>
+                   	<li class="jing"><a href="#">经营管理类</a></li>
+                   	<li><a href="#">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <ul>
+                   	<li class="jing"><a href="#">经营管理类</a></li>
+                   	<li><a href="#">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <ul>
+                   	<li class="jing"><a href="#">经营管理类</a></li>
+                   	<li><a href="#">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <ul>
+                   	<li class="jing"><a href="#">经营管理类</a></li>
+                   	<li><a href="#">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <ul>
+                   	<li class="jing"><a href="#">经营管理类</a></li>
+                   	<li><a href="#">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <ul>
+                   	<li class="jing"><a href="#">经营管理类</a></li>
+                   	<li><a href="#">首席执行官CEO/总裁/总经理</a> （155）</li>
+                    <li><a href="#">首席运营官COO/副总经理/..</a>（300）</li>
+                    <li><a href="#">总监</a>（1000）</li>
+                    <li><a href="#">分公司经理</a>（3000）</li>
+                    <li><a href="#">合伙人</a>（500）</li>
+                  </ul>
+                  <div class="fyen">
+                  	<a href="#"><</a> <span>1</span> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a> <a href="#">8</a><a href="#">9</a><a href="#">10</a><a href="#">></a>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col01 mtop">
+        	<div class="zhaop">
+           	   <div class="titel"><a href="#" title="LED照明招聘"><h3>LED照明</h3></a><span><a href="hr.ofweek.com/led">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+            <div class="zhaop" style="margin-left:14px;">
+           	   <div class="titel"><a href="#" title="太阳能光伏招聘"><h3>太阳能光伏</h3></a><span><a href="#">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+        </div>
+        <div class="col01 mtop">
+        	<div class="zhaop">
+           	   <div class="titel"><a href="#" title="光通信招聘"><h3>光通信</h3></a><span><a href="#">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+            <div class="zhaop" style="margin-left:14px;">
+           	   <div class="titel"><a href="#" title="激光招聘"><h3>激光</h3></a><span><a href="#">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+        </div>
+        <div class="col01 mtop">
+        	<div class="zhaop">
+           	   <div class="titel"><a href="#" title="光电/光学招聘"><h3>光电/光学</h3></a><span><a href="#">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+            <div class="zhaop" style="margin-left:14px;">
+           	   <div class="titel"><a href="#" title="智能电网招聘"><h3>智能电网</h3></a><span><a href="#">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+        </div>
+        <div class="col01 mtop">
+        	<div class="zhaop">
+           	   <div class="titel"><a href="#" title="仪器/仪表招聘"><h3>仪器/仪表</h3></a><span><a href="#">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+            <div class="zhaop" style="margin-left:14px;">
+           	   <div class="titel"><a href="#" title="节能招聘"><h3>节能</h3></a><span><a href="#">更多>></a></span></div>
+               <div class="list_man">
+               		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">8000-10000</td>
+                      </tr>
+                          <tr>
+                            <td width="23%"><a href="#" title="销售工程师">销售工程师</a></td>
+                            <td width="38%"><a href="#" title="深圳市互联港湾有限公司">深圳市互联港湾有限公司</a></td>
+                            <td width="18%">广东省</td>
+                            <td width="21%" align="center">面议</td>
+                          </tr>
+                      </table>
+               </div>
+            </div>
+        </div>
+    </div>
+    <div class="links mtop">
+    <h3>友情链接</h3>
+    <ul>
+    	<li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#" title="OFweek人才网">OFweek人才网</a></li>
+        <li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#">OFweek人才网</a></li>
+        <li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#">OFweek人才网</a></li>
+        <li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#">OFweek人才网</a></li>
+        <li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#">OFweek人才网</a></li>
+        <li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#">OFweek人才网</a></li>
+        <li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#">OFweek人才网</a></li>
+        <li><a href="#" title="光电新闻网">光电新闻网</a></li>
+        <li><a href="#">OFweek人才网</a></li>
+    </ul>
+    </div>
+    <div class="footer">
+        <div class="bottom-m">
+          <div class="bottom-m-1"> <a target="_blank" href="http://www.OFweek.com/about.shtml" rel="nofollow">关于我们</a> - <a target="_blank" href="http://www.OFweek.com/user/ArtRequest.do" rel="nofollow">征 稿</a> - <a target="_blank" href="http://www.OFweek.com/ad.shtml" rel="nofollow">广告咨询</a> - <a target="_blank" href="http://www.OFweek.com/help.shtml" rel="nofollow">帮助信息</a> - <a target="_blank" href="http://www.OFweek.com/contact.shtml" rel="nofollow">联系我们</a> - <a target="_blank" href="http://www.OFweek.com/service.shtml" rel="nofollow">会员服务</a> - <a target="_blank" href="http://www.OFweek.com/sitemap.shtml">网站导航</a> </div>
+        </div>
+        <div class="bottom-2">我们的网站：<a target="_blank" href="http://fiber.OFweek.com/" rel="nofollow">光通讯网</a> | <a target="_blank" href="http://lights.OFweek.com/" rel="nofollow">半导体照明网</a> | <a target="_blank" href="http://laser.OFweek.com/" rel="nofollow">激光网</a> | <a target="_blank" href="http://display.OFweek.com/" rel="nofollow">光电显示网</a> | <a target="_blank" href="http://optics.OFweek.com/" rel="nofollow">光学网</a> | <a target="_blank" href="http://solar.OFweek.com/" rel="nofollow">太阳能光伏网</a> | <a target="_blank" href="http://ee.OFweek.com/" rel="nofollow">电子工程网</a> | <a target="_blank" href="http://smartgrids.OFweek.com/" rel="nofollow">智能电网</a> | <a target="_blank" href="http://gongkong.OFweek.com/" rel="nofollow">工控网</a> | <a target="_blank" href="http://instrument.OFweek.com/" rel="nofollow">仪器仪表网</a> | <a target="_blank" href="http://emc.OFweek.com/" rel="nofollow">节能网</a> | <a target="_blank" href="http://b2b.OFweek.com/">产品港湾</a> | <a target="_blank" href="http://cpbay.com/">CPbay</a> <br />
+        客服热线：+86-755-83279360 83279361 83279363 83279365 客服传真：+86-755-83279008 <br />
+        业务联系：+86-755-83279360 <br />
+        Copyright © 2012, All Rights Reserved. <br />
+        中文版权所有－OFweek光电新闻网.网站所有图片、文字未经许可不得拷贝、复制。</div>
+        <div class="bottom-110"><img src="skin/default/images/110.gif">粤ICP备06087881 </div>
+    </div>
+</div>
+</body>
+</html>

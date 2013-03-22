@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body{
+	margin:0;
+	font-family:"宋体";
+	font-size:12px;
+	color:#444;
+	}
+#content{
+	width:677px;
+	margin:0 auto;
+	background:url(images/bg.gif) repeat-y right top;
+	}
+#header{
+	width:100%;
+	background:url(images/top_right.gif) no-repeat right top;
+	height:66px;
+	}
+.banner{
+	width:650px;
+	border:1px solid #dedede;
+	border-bottom:none;
+	}
+.neirong{
+	
+	}
+</style>
+<title>简历完善邮件</title>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="width:677px;background:url(images/bg.gif) repeat-y right top;font-family:"宋体";font-size:12px;color:#444;">
+		<tr>
+				<td><table border="0" cellspacing="0" cellpadding="0" width="100%">
+		<tr>
+				<td align="left" style="background:url(images/top_right.gif) no-repeat right top;height:66px;"><table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+				<td style="width:650px;border:1px solid #dedede;border-bottom:none;"><img src="images/top_bg.jpg" border="0" /></td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none; border-bottom:none;">
+		<tr>
+				<td colspan="2" style="padding:0 15px; line-height:25px; "><span style="border-bottom:1px dashed #dedede;"><strong>尊敬的【公司名称】：</strong>
+						<span style="display:block; text-indent:2em;border-bottom:1px dashed #dedede; margin-bottom:5px;">感谢您注册OFweek人才网会员。非常遗憾的通知您：您在OFweek人才网注册的发布的职位【职位名称】未通过我们的审核，未通过审核的原因是<a style="color:#FF0000">【未通过审核原因】</a>。该职位职位无法让求职者查看或者搜索。</span>					
+					</span>				</td>
+		</tr>
+		<tr>
+				<td width="544" style="padding:0 15px;text-indent:2em; line-height:25px;border-bottom:1px dashed #dedede;">请您及时进行修改，修改后我们将会重新进行审核。</td>
+				<td width="108" style="line-height:25px; "><a href="http://hr.ofweek.com/company/edit1.html" target="_blank"><img src="images/xiugai.gif" alt="现在去修改" border="0" /></a></td>
+		</tr>
+		<tr>
+				<td colspan="2" style="padding:0 15px;text-indent:2em; line-height:25px;border-bottom:1px dashed #dedede;">祝商祺！</td>
+		</tr>
+		
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:url(images/bottom_right.gif) no-repeat right bottom; height:35px; line-height:35px;">
+		<tr>
+				<td align="left"><table border="0" cellspacing="0" cellpadding="0" style="width:652px;border:1px solid #dedede; border-top:none;">
+		<tr>
+				<td align="right" style="padding-right:20px;">OFweek人才网</td>
+		</tr>
+</table>
+</td>
+		</tr>
+</table>
+
+</td>
+		</tr>
+		
+</table>
+</body>
+</html>

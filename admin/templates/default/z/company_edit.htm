@@ -1,0 +1,514 @@
+{#include file="sys/admin_header.htm"#}
+<link href="{#$QISHI.site_template#}css/74cms.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+	//菜单层
+	showmenulayer("#district_cn","#menu3","#district","#sdistrict",QS_city);
+	
+	//行业
+	var type = ['industry'];
+	$(type).each(function(){
+		var ename = this;
+		var num_max = 5;
+		
+		$('#button_r_'+ename).click(function(){
+			var options = $('#content_'+ename+' :selected');
+			var num_c = options.length;
+			var num_v = $('#value_'+ename+' option').length;
+			
+			if((num_c + num_v) > num_max) {
+				alert('请选择不多于'+num_max+'个条目');
+				return;
+			}
+			
+			$('#value_'+ename).append(options);
+		});
+		
+		$('#button_l_'+ename).click(function(){
+			var options = $('#value_'+ename+' :selected');
+			$('#content_'+ename).append(options);
+		});
+	});
+	
+	//验证
+	$("#Form1").validate({
+		//规则
+		rules:{
+			//所属行业
+			'value_industry[]':{
+				required: true
+			},
+			
+			//注册年
+			register_year:{
+				required:false,
+				range:[1800,{#$year_now#}]
+			},
+			
+			//注册月
+			register_month:{
+				required:false,
+				range:[1,12]
+			},
+			
+			//注册日
+			register_day:{
+				required:false,
+				range:[1,31]
+			},
+			
+			//注册资金
+			registered:{
+				required:false,
+				range:[1,100000]
+			},
+			
+			//联系人
+			contact:{
+				required: true,
+				minlength:2
+		    },
+		    
+		    //联系电话
+			telephone:{
+				required: true,
+				minlength:7
+			},
+			
+			//邮箱地址
+			email: {
+				required:true,
+				email:true
+			},
+		    
+		    //FAX
+			fax:{
+				required: false,
+				minlength:7
+			},
+			
+			//传真号码
+			fax:{
+				required: false,
+				minlength:7
+			},
+			
+			//通讯地址
+			address: {
+				required:true,
+				minlength:8
+			},
+		},
+		
+		//提示信息
+		messages: {
+			'value_industry[]': {
+				required: jQuery.format("<br/>请选择所属行业")
+			},
+			register_year:{
+				range:jQuery.format("请输入正确的年份（1800到{#$year_now#}）"),
+			},
+			register_month:{
+				range:jQuery.format("请输入正确的月份（1到12）"),
+			},
+			register_day:{
+				range:jQuery.format("请输入正确的日期（1到31）"),
+			},
+			registered:{
+				range:jQuery.format("请输入正确的注册资金（1到100000）"),
+			},
+			contact:{
+				required:jQuery.format("请输入联系人"),
+				minlength:jQuery.format("联系人不能小于{0}个字符")
+			},
+			telephone: {
+				required: jQuery.format("请填写联系电话"),
+				minlength:jQuery.format("联系电话不能小于{0}个字符")
+			},
+			email: {
+				required: jQuery.format("请填写电子邮箱"),
+				email: jQuery.format("请正确填写电子邮箱")
+			},
+			fax: {
+				minlength:jQuery.format("传真号码不能小于{0}个字符")
+			},
+			address: {
+				required: jQuery.format("请填写联系地址"),
+				minlength: jQuery.format("请详细填写联系地址")
+			},
+		},
+		
+		errorPlacement: function(error, element) {
+			if ( element.is(":radio") )
+				error.appendTo( element.parent().next().next() );
+			else if ( element.is(":checkbox") )
+				error.appendTo ( element.next());
+			else
+				error.appendTo(element.parent());
+		}
+	});
+	
+	//表单提交
+	$("#save1").click(function(){
+		$('#value_industry option').each(function(){this.selected=true;});
+		$("#Form1").submit();
+	});
+	$("#cid1").click(function(){
+		$.ajax({
+		'url':'company.php?act=cid&uid={#$smarty.get.uid#}&type=1',
+		'success':function(response){
+			if(response == 1){
+				alert('操作成功');			
+			}
+			else{
+				alert('操作失败');
+			}	
+		}
+		});
+	});
+	$("#cid2").click(function(){
+		$.ajax({
+		'url':'company.php?act=cid&uid={#$smarty.get.uid#}&type=2',
+		'success':function(response){
+			if(response == 1){
+				alert('操作成功');			
+			}
+			else{
+				alert('操作失败');
+			}	
+		}	
+		});
+	});
+	$("#cid3").click(function(){
+		$.ajax({
+		'url':'company.php?act=cid&uid={#$smarty.get.uid#}&type=3',
+		'success':function(response){
+			if(response == 1){
+				alert('操作成功');			
+			}
+			else{
+				alert('操作失败');
+			}	
+		}
+		});
+	});
+});
+</script>
+<div class="admin_main_nr_dbox">
+<div class="pagetit">
+	<div class="ptit"> {#$pageheader#}</div>
+  <div class="clear"></div>
+</div>
+<div class="toptit">基本资料 </div>
+<form id="Form1" name="Form1" method="post" action="?act=edit_save_base">
+
+      <input type="hidden" name="uid" value="{#$company_profile.uid#}" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        <table width="100%" border="0">
+          <tr>
+            <td width="100" align="right"><span class="f_red">*</span>公司名称：</td>
+            <td><input name="companyname" type="text" style="width:250px;" value="{#$company_profile.companyname#}"/></td>
+          </tr>
+		  {#if $samename#}
+          <tr>
+            <td width="100" align="right"><span class="f_red">重名的公司：</span></td>
+            <td>
+			{#foreach item=item from=$samename#}
+			<a href="company.php?act=edit&uid={#$item.uid#}" target="_blank">
+			{#if $item.audit == 1#}
+			<span class="f_red">{#$item.companyname#}</span>
+			{#else#}
+			{#$item.companyname#}
+			{#/if#}
+			</a>[{#$item.audit_cn#}]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			{#/foreach#}
+			</td>
+          </tr>
+		  {#/if#}
+          <tr>
+            <td align="right"><span class="f_red">*</span>公司性质：</td>
+            <td><label>
+              <select name="nature" id="nature" style="width:150px;">
+              {#foreach from=$companyType item=list#}
+			  <option{#if $company_profile.nature==$list.c_id#} selected="selected"{#/if#} value="{#$list.c_id#}">{#$list.c_name#}</option>
+			  {#/foreach#}
+              </select>
+            </label></td>
+          </tr>
+          <tr>
+            <td align="right"><span class="f_red">*</span>所属行业：<br />(不多于5个)</td>
+            <td><label>
+              <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td width="37%" valign="top">
+                      	<select multiple="multiple" ondblclick="removeOption(this)" size="6" style="WIDTH: 17em" id="content_industry">
+                      		{#foreach from=$tradeCate_Left item=list#}
+                      		<option value="{#$list.c_id#}">{#$list.c_name#}</option>
+                      		{#/foreach#}
+						</select>
+					 </td>
+                      <td width="15%" align="left"><input id="button_r_industry" type="button" style="width:50px;" value=">>" />
+                        <br />
+                        <br />
+                        <input id="button_l_industry" type="button" style="width:50px;" value="<<" /></td>
+                      <td width="48%"><label>
+                        <select multiple="true" size="6" style="WIDTH: 17em" name="value_industry[]" id="value_industry">
+                        {#foreach from=$tradeCate_Right item=list#}
+                      		<option value="{#$list.c_id#}">{#$list.c_name#}</option>
+                      		{#/foreach#}
+                        </select>
+                        </label></td>
+                    </tr>
+                </table>
+            </label></td>
+          </tr>
+          <tr>
+            <td align="right">成立日期：</td>
+            <td><input name="register_year" value="{#if $company_profile.register_year#}{#$company_profile.register_year#}{#/if#}" type="text" style="width:80px;"/>&nbsp;&nbsp;年&nbsp;&nbsp;<input name="register_month" value="{#if $company_profile.register_month#}{#$company_profile.register_month#}{#/if#}" type="text" style="width:40px;" />&nbsp;&nbsp;月&nbsp;&nbsp;<input name="register_day" value="{#if $company_profile.register_day#}{#$company_profile.register_day#}{#/if#}" type="text" style="width:40px;" />&nbsp;&nbsp;日</td>
+          </tr>
+          <tr>
+            <td align="right">注册资金：</td>
+            <td><input name="registered" value="{#if $company_profile.registered#}{#$company_profile.registered#}{#/if#}" type="text" style="width:80px;"/>
+            &nbsp;&nbsp;万元</td>
+          </tr>
+          <tr>
+            <td align="right"><span class="f_red">*</span>联系人：</td>
+            <td><input name="contact" type="text" style="width:150px;" value="{#$company_profile.contact#}"/>{#if $company_profile.contact_tmp#}&nbsp;&nbsp;&nbsp;&nbsp;修改前: {#$company_profile.contact_tmp#}{#/if#}</td>
+          </tr>
+          <tr>
+            <td align="right"><span class="f_red">*</span>联系电话：</td>
+            <td><input name="telephone" type="text" style="width:150px;" value="{#$company_profile.telephone#}"/>{#if $company_profile.telephone_tmp#}&nbsp;&nbsp;&nbsp;&nbsp;修改前: {#$company_profile.telephone_tmp#}{#/if#}</td>
+          </tr>
+          <tr>
+            <td align="right"><span class="f_red">*</span>邮箱地址：</td>
+            <td><input name="email" type="text" style="width:150px;" value="{#$company_profile.email#}"/></td>
+          </tr>
+          <tr>
+            <td align="right">传真号码：</td>
+            <td><input name="fax" type="text" style="width:150px;" value="{#$company_profile.fax#}"/></td>
+          </tr>
+          <tr>
+            <td align="right"><span class="f_red">*</span>公司主页：</td>
+            <td><input name="website" type="text" style="width:150px;" value="{#$company_profile.website#}"/>{#if $company_profile.website_tmp#}&nbsp;&nbsp;&nbsp;&nbsp;修改前: {#$company_profile.website_tmp#}{#/if#}</td>
+          </tr>
+          <tr>
+            <td align="right">所在区域：</td>
+            <td>
+            <div>
+				<input type="text" value="{#$company_profile.district_cn#}"  readonly="readonly" name="district_cn" id="district_cn" class="input_text_200 input_text_200_selsect"/>
+				<input name="district" id="district" type="hidden" value="{#$company_profile.district#}" />
+				<input name="sdistrict" id="sdistrict" type="hidden" value="{#$company_profile.sdistrict#}" />
+				
+				<div id="menu3" class="dmenu shadow">
+					<ul>
+					{#qishi_get_classify set="类型:QS_district,id:0,列表名:c_province"#}{#foreach from=$c_province item=list#}
+					<li id="{#$list.id#}" title="{#$list.categoryname#}">{#$list.categoryname#}</li>
+					{#/foreach#}
+					</ul>
+				</div>
+				<div id="menu3_s" class="dmenu shadow" style="display:none"></div>
+			</div>
+			</td>
+          </tr>
+          <tr>
+            <td align="right"><span class="f_red">*</span>通讯地址：</td>
+            <td><input name="address" type="text" style="width:150px;" value="{#$company_profile.address#}"/>{#if $company_profile.address_tmp#}&nbsp;&nbsp;&nbsp;&nbsp;修改前: {#$company_profile.address_tmp#}{#/if#}</td>
+          </tr>
+          
+          <tr>
+          		<td align="right"> </td>
+              	<td><label>
+              <input type="button" id="save1" value="保 存" class="btn" />
+              </label></td>
+              </tr>
+        </table>
+        </div>
+        
+      </div>
+  </form>
+  
+  
+<div class="toptit">公司简介 </div>
+<form id="Form2" name="Form2" method="post" action="?act=edit_save_intro">
+
+       <input type="hidden" name="uid" value="{#$company_profile.uid#}" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        <table width="100%" border="0">
+
+              <tr>
+                <td><label>
+                  <textarea name="contents" id="contents" cols="100" rows="15">{#$company_profile.contents#}</textarea>
+                </label></td>
+              </tr>
+              
+              <tr>
+              	<td><label>
+              <input type="submit" id="save2" value="保 存" class="btn" />
+              </label></td>
+              </tr>
+            </table>
+        </div>
+        
+      </div>
+  </form>
+{#if $company_profile.contents_tmp#}
+<!--修改前简介-->
+<div class="toptit">修改前公司简介 </div>
+<div class="zhao_p"><div class="hr_gua">
+        <table width="100%" border="0">
+
+              <tr>
+                <td><label>
+                  <textarea name="contents" id="contents" cols="100" rows="15">{#$company_profile.contents_tmp#}</textarea>
+                </label></td>
+              </tr>
+              
+         </table>
+</div></div> 
+<!--END-->
+{#/if#}
+<div class="toptit">营业执照 </div>
+<form id="Form3" name="Form3" method="post" action="?act=edit_save_auth" enctype="multipart/form-data">
+
+	 <input type="hidden" name="uid" value="{#$company_profile.uid#}" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        <table width="100%" border="0">
+          <tr>
+            <td width="48%" bgcolor="#e8f0f6">
+<div class="yizh">
+                	<strong>营业执照：</strong><br />
+                	{#if $company_profile.certificate_img#}<img src="{#$QISHI.site_dir#}data/{#$QISHI.updir_certificate#}/{#$company_profile.certificate_img#}" border="0" id="c_img"  />{#/if#}<br />
+               	  <input type="button" class="btn" onclick="window.location.href='?act=edit_del_auth&uid={#$company_profile.uid#}';" value="删 除"/>
+                </div>
+            </td>
+            <td width="52%" align="left" valign="top" bgcolor="#e8f0f6" style="padding:20px;">
+            <table width="100%" border="0">
+              <tr>
+                <td> <span class="f_red">注意：</span>logo的大小不能超过800*600；<br />
+                文件大小不能超过1M；<br />
+                文件格式限为JPG,GIF；<br />
+              	</td>
+              </tr>
+              <tr>
+              	<td><input type="file" name="certificate_img"  style="height:24px; width:275px; font-size:12px; line-height:20px;"  onkeydown="alert('请点击右侧“浏览”选择您电脑上的图片！');return false" id="certificate_img"/></td>
+              </tr>
+              <tr>
+              	<td><input type="submit" class="btn"  name="save" value="上传文件"/></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        </div>
+        
+      </div>
+  </form>
+<div class="zhao_p"><div class="hr_gua">
+<table width="100%" border="0">
+	  <tr>
+		<td>执照审核状态: &nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" id="cid1" name="cid" {#if $company_profile.certificate_status==1#}checked="checked"{#/if#}/><label for="cid1">审核通过&nbsp;&nbsp;</label><input type="radio" id="cid2" name="cid" {#if $company_profile.certificate_status==2#}checked="checked"{#/if#}/><label for="cid2" >待审核&nbsp;&nbsp;</label><input type="radio" id="cid3" name="cid" {#if $company_profile.certificate_status==3#}checked="checked"{#/if#}/><label for="cid3">审核不通过</label>  </td>
+	  </tr>
+	  
+ </table>
+</div></div> 
+
+<div class="toptit">企业LOGO </div>
+<form id="Form4" name="Form4" method="post" action="?act=edit_save_logo" enctype="multipart/form-data">
+
+      <input type="hidden" name="uid" value="{#$company_profile.uid#}" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        <table width="100%" border="0">
+          <tr>
+            <td width="48%" bgcolor="#e8f0f6">
+   	      <div class="yizh">
+            <strong>企业logo：            </strong><br />
+            {#if $company_profile.logo#}<img src="{#$QISHI.site_dir#}data/logo/{#$company_profile.logo#}?rand={#$rand#}" border="0" id="c_img"/>{#/if#}<br /><input type="button" class="btn" onclick="window.location.href='?act=edit_del_logo&uid={#$company_profile.uid#}';" value="删 除"/>
+                </div>
+            </td>
+            <td width="52%" align="left" valign="top" bgcolor="#e8f0f6" style="padding:20px;">
+            <table width="100%" border="0">
+              <tr>
+                <td> <span class="f_red">注意：</span>logo的大小不能超过800*600；<br />
+                文件大小不能超过1M；<br />
+                文件格式限为JPG,GIF；<br />
+              	</td>
+              </tr>
+              <tr>
+              	<td><input type="file" name="logo"  id="logo" style="height:24px; width:275px; font-size:12px; line-height:20px;"  onkeydown="alert('请点击右侧“浏览”选择您电脑上的图片！');return false"/></td>
+              </tr>
+              <tr>
+              	<td><input type="submit" class="btn" value="上传文件"/></td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+        </table>
+        </div>
+        
+      </div>
+  </form>  
+  
+<div class="toptit">审核 </div>
+<form id="Form2" name="Form2" method="post" action="?act=audit">
+
+      <input type="hidden" name="uid" value="{#$company_profile.uid#}" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        	<table width="100%" border="0"  cellspacing="5" cellpadding="5">
+              <tr>
+               	  <td width="13%" align="right">审核状态：</td>
+               	  <td width="87%">
+               	  <input type="radio"{#if $company_profile.audit == 1#} checked="checked"{#/if#} name="audit" value="1" />审核通过
+               	  <input type="radio"{#if ($company_profile.audit == 2 || $company_profile.audit == 4) #} checked="checked"{#/if#} name="audit" value="2" />待审核
+               	  <input type="radio"{#if $company_profile.audit == 3#} checked="checked"{#/if#} name="audit" value="3" />审核不通过
+               	  </td>
+                </tr>
+<tr>
+                	<td width="13%" align="right">审核不通过原因</td>
+                	<td>
+                	<input checked="checked" type="radio" checked="checked" name="audit_reason" value="公司信息不完整" />公司信息不完整
+                	<input type="radio" name="audit_reason" value="公司简介不符合规范" />公司简介不符合规范
+                	<input type="radio" name="audit_reason" value="虚假的联系方式" />虚假的联系方式<br /><br />
+                	其他：<input type="text" name="audit_reason_other" value="" size="50" />
+                	</td>
+                </tr>
+                <tr>
+                	<td width="13%" align="right">是否发邮件</td>
+                	<td>
+                	<input type="radio" name="audit_email" value="1" />发送
+                	<input type="radio" checked="checked" name="audit_email" value="0" />不发送
+                	</td>
+                </tr>
+                <tr>
+                	<td></td>
+                	<td>
+                	<input type="submit" value="提交" />
+                	</td>
+                </tr>
+                  </table>
+        </div>
+        
+      </div>
+  </form>
+  
+  
+  
+</div>
+{#include file="sys/admin_footer.htm"#}
+</body>
+</html>

@@ -1,0 +1,499 @@
+{#qishi_jobs_show set="列表名:show,职位ID:GET[id]"#}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />{#qishi_pageinfo set="列表名:page,调用:job_detail,分类ID:GET[id]"#}
+<title>{#$page.title#}</title>
+<meta name="description" content="{#$page.description#}">
+<meta name="keywords" content="{#$page.keywords#}">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/index.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/css.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/pager.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type="text/javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.pager.js" type="text/javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.dialog.js" type='text/javascript' ></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	  $(".zpxx_lm").idTabs();
+	  $(".zpxx_lm a").click(function(){
+		$(this).attr('class','selected');
+	  });
+
+	  $(".toptabs  a").click(function(){
+		$(this).blur();
+		});	
+		var id="{#$show.id#}";
+		var company_id="{#$show.company_id#}";
+		var tsTimeStamp= new Date().getTime();
+		$.get("{#$QISHI.site_dir#}plus/ajax_click.php", { "id": id,"time":tsTimeStamp,"act":"jobs_click"},
+			function (data,textStatus)
+			 {			
+				$(".click").html(data);
+			 }
+		);
+		$.get("{#$QISHI.site_dir#}plus/ajax_contact.php", { "id": id,"time":tsTimeStamp,"act":"jobs_contact"},
+			function (data,textStatus)
+			 {			
+				$("#jobs_contact").html(data);
+			 }
+		);
+		$.get("{#$QISHI.site_dir#}plus/ajax_contact.php", { "id": company_id,"time":tsTimeStamp,"act":"company_contact"},
+			function (data,textStatus)
+			 {			
+				$("#company_contact").html(data);
+			 }
+		);
+		//申请职位
+//		$(".app_jobs").click(function(){
+//		dialog("申请职位","url:get?{#$QISHI.site_dir#}user/user_apply_jobs.php?id="+id+"&act=app","500px","auto","");
+//		});	
+		$(".apply_resume").click(function(){
+			dialog("申请职位","url:get?{#$QISHI.site_dir#}user/user_apply_jobs.php?id="+id+"&act=app","500px","auto","");
+		});
+		//推荐好友
+		$(".recommend_friend").click(function(){
+//			alert('推荐好友');
+			var userlogin = '{#$smarty.session.uid#}';
+			if (userlogin == ''){
+				alert("请登录");
+				return false;
+			}
+			dialog("推荐给好友","text:"+$("#recommend_html").html(),"500px","auto","");
+			$(".postcaptcha").val('点击获取验证码');
+			$(".postcaptcha").css('color','#999');
+			imgcaptcha(".postcaptcha",".imgdiv");
+			$(".r_submit").click(function(){
+				var validatechar = $(".link_lan .postcaptcha").val();
+				var email = $(".link_lan .r_email").val();//邮箱
+				var title = $(".link_lan .r_title").val();//标题
+				var jobs_name = '{#$show.jobs_name#}';//职位名
+				if(!validatedEmail(email)){//验证邮箱
+					alert('邮箱地址不正确,请重新填写');
+					$(".link_lan .r_email").focus();
+					return;
+				}
+					
+				//id, company_id,职位ID,公司ID
+				$.post('{#$QISHI.site_dir#}include/imagecaptcha.php',{'act':'verify','postcaptcha':validatechar},function(data){
+					if(data == 'true'){//验证码通过,则可以发邮件
+						//ajax发送
+						$.post('{#$QISHI.site_dir#}plus/ajax_zt.php?action=recommend_email',{'jobsid':id, 'email':email, 'title': title},function(data){
+							if(data != ''){
+								alert('发送成功');
+								 $(".FloatBg").remove();
+								 $(".FloatBox").remove();
+								 dialogFirst=true; 
+							}
+							else{
+								alert('发送失败,请重新发送');
+							}
+						});
+					}
+					else{
+						alert('验证码错误');
+					}
+				});
+			});
+
+		});
+		//单个添加收藏
+		$(".add_favorites").click(function(){
+		dialog("加入收藏","url:get?{#$QISHI.site_dir#}user/user_favorites_job.php?id="+id+"&act=add","500px","auto","");
+		});
+		//打印页面
+		$(".print_page").click(function(){
+			print();
+		});
+
+	function validatedEmail(email){
+		var filter  = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if (filter.test(email)) return true;
+		else {
+			return false;
+		}		
+	}
+
+	//默认加载
+	function page_init(pagenumber){
+		//向服务器发送请求，查询满足条件的记录
+		var areaid = $('#list_areaid').val();
+		var eduid = $('#list_educationid').val();
+
+		$.getJSON('{#$QISHI.site_dir#}jobs/jobs-show.php',{'id':{#$smarty.get.id#},'page':pagenumber,'areaid':areaid,'eduid':eduid},function(data){
+			//data 为返回json 对象 并包括(pagecount、totalcount)的key-value值;
+//			var data = {'pagecount':15,'totalcount':150};
+			var table = new String;
+			$.each(data.list,function(i,val){
+				if(i % 2 == 1){
+					table += '<tr class="zwlist">';
+				}
+				else{
+					table += '<tr>';
+				}
+				table += '<td valign="middle" height="30" align="left" style="padding-left:15px;"><a title="'+val.jobs_name+'" target="_blank" href="{#$QISHI.site_dir#}jobs/jobs-show-'+val.id+'.html">'+val.jobs_name+'</a></td>';
+				table += '<td valign="middle" align="center">'+val.district_cn+'</td>';
+				table += '<td valign="middle" align="center">'+val.education_cn+'</td>';
+				table += '<td valign="middle" align="center">'+val.experience_cn+'</td>';
+				table += '<td valign="middle" align="center">'+val.wage_cn+'</td>';
+				table += '<td valign="middle" align="center">'+val.refreshtime+'</td>';
+				table += '</tr>';
+
+			});
+			if(table == ''){
+				table = '<span>无数据</span>';
+			}
+			$('#tab2 .zpxx_con table tr:first-child').nextAll().remove();
+			$('#tab2 .zpxx_con table tbody').append(table);
+
+			$('#list_educationid').unbind().bind('change',function(){page_init(1);this.blur();});
+			$('#list_areaid').unbind().bind('change',function(){page_init(1);this.blur();});
+			
+			$("#pager").pager({ pagenumber: pagenumber, pagecount:data.pagecount,totalcount:data.totalcount, buttonClickCallback: PageClick});
+		});
+	}
+
+	//回调函数
+	PageClick = function(pageclickednumber) {
+		page_init(pageclickednumber);
+	}
+
+	$('#tab2 .zpxx_con table tbody').append('<span>加载中...</span>');
+	page_init(1);
+
+
+	//验证码部分
+	function imgcaptcha(inputID,imgdiv)
+	{
+		$(inputID).focus(function(){
+			if ($(inputID).val()=="点击获取验证码")
+			{
+			$(inputID).val("");
+			$(inputID).css("color","#333333");
+			}
+			$(inputID).parent("div").css("position","relative");
+			//设置验证码DIV
+			$(imgdiv).css({ position: "absolute", left: "240px", "bottom": "60px" , "z-index": "10", "background-color": "#FFFFFF", "border": "1px #A3C8DC solid","display": "none","margin-left": "15px"});
+			$(imgdiv).show();
+			if ($(imgdiv).html()=='')
+			{
+			$(imgdiv).append("<img src=\"{#$QISHI.site_dir#}include/imagecaptcha.php?t={#$random#}\" class=\"getcode\" align=\"absmiddle\"  style=\"cursor:pointer; margin:3px;\" title=\"看不请验证码？点击更换一张\"  border=\"0\"/>");
+			}
+			$(imgdiv+" img").click(function()
+			{
+				$(imgdiv+" img").attr("src",$(imgdiv+" img").attr("src")+"1");
+			});
+			$(document).click(function(event)
+			{
+				var clickid=$(event.target).attr("class");
+				if (clickid!="getcode" &&  clickid!="postcaptcha")
+				{
+				$(imgdiv).hide();
+				$(inputID).parent("div").css("position","");
+				}			
+			});
+		});
+	}
+//	imgcaptcha("#postcaptcha","#imgdiv");
+	//验证码结束
+
+
+});
+</script>
+</head>
+<body>
+<div id="site">
+
+<style>
+#submit_form3{
+	background:url({#$QISHI.site_template#}images/load.gif) no-repeat;
+	width:56px;
+	height:25px;
+	border:0px;
+	cursor:pointer;
+}
+.tupian{background:url({#$QISHI.site_template#}images/v1.gif) no-repeat right 7px;padding-right:25px;}
+</style>
+
+{#include file="header_nosearch.htm"#}
+<div class="current">您当前所在位置：<a href="{#$QISHI.site_dir#}">OFweek人才网</a>&nbsp;>>&nbsp;<a href="{#"QS_jobs"|qishi_url#}">招聘信息</a>&nbsp;>>&nbsp;<a href="{#$show.company_url#}">{#$show.companyname#}</a>&nbsp;>>&nbsp;{#$show.jobs_name#}</div>
+
+<div id="content">
+		<div class="zpxx_up">
+			<dl>
+				<dt><img border="0" src="{#$show.company.logo#}" width="157" height="109"></dt>
+				<dd>
+					<span class="zpxx_gs_tl{#if $show.company.certificate_status==1#} tupian{#/if#}">{#$show.companyname#}</span>
+					公司性质：{#$show.company.nature_cn#}<br>
+					所属行业：{#$show.company.trade_cn#}<br>
+					公司地址：{#$show.company.address#}{#if $show.company.website#}<br>公司网址：{#$show.company.website#}{#/if#}
+				</dd>
+			</dl>
+			<p class="clear"></p>
+		</div>
+		<div class="zpxx_down">
+			<div class="zpxx_lm">
+				<span><a href="#tab1" >公司简介</a></span>
+				<span><a href="#tab2">招聘职位</a></span>
+				<span><a href="#tab3" class="selected">{#$show.jobs_name#}</a></span>
+			</div>
+			<div id="tab1" class="blk_03">
+				<div class="zpxx_con">
+				{#if $show.audit == 4 && $show.uid == $smarty.session.uid #}
+				{#$show.company.contents_tmp|nl2br#}
+				{#else#}
+				{#$show.company.contents|nl2br#}
+				{#/if#}
+				</div>
+				<!--未登录用户提示区域-->
+				{#if !$smarty.session.uid#}
+				<div class="zpxx_logout" style="display:none;">
+				
+				
+				<form id="Form3" name="Form3" action="http://www.ofweek.com/user/login.do?method=loginUser" method="post">
+				<input type="hidden" id="p_exist2" name="talentNetworkLogin" value="">
+				<table width="560" align="center" cellspacing="0" cellpadding="0" border="0">
+		<tbody><tr>
+				<td valign="middle" height="40" align="center" colspan="5">只有注册个人会员才能查看企业的联系方式，请登录或注册</td>
+		</tr>
+		<tr>
+				<td width="50" height="35">用户名：</td>
+				<td width="120"><input type="text" id="p_username2" name="username" value="" style="width:120px; height:20px; line-height:20px;"></td>
+				<td width="50">密码：</td>
+				<td width="120"><input type="password" name="password" value="" style="width:120px; height:20px; line-height:20px;"></td>
+				<td><input type="button" id="submit_form3" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{#$QISHI.site_dir#}hrlogin/">企业用户登录</a></td>
+		</tr>
+		<tr>
+				<td valign="middle" height="35" align="center" colspan="5"><a target="_blank" href="http://www.ofweek.com/user/registerUser.do?talentNetworkLogin=talentNetworkLogin" style="color:#cb0a00; text-decoration:underline;">如果您还没有注册，请点击这里进行注册</a></td>
+		</tr>
+</tbody></table>
+				<input type="hidden" name="siteweb" value="hr" />
+				<input type="hidden" name="returnurl" value="{#$QISHI.cur_url#}" />
+				</form>
+
+
+				</div>
+				<!-- END-->
+				{#else#}
+				<!--已登录显示-->
+				<div class="zpxx_login" style="display:none;">
+					<ul>
+						<li>联 系 人：{#$show.company.contact#}</li>
+						<li>联系电话：{#$show.company.telephone#}</li>
+						<li>邮箱地址：请通过系统投递邮件</li>
+						<li>公司网址：{#$show.company.website#}</li>
+					</ul>
+				</div>
+				{#/if#}
+				<!-- END-->
+
+			</div>
+
+<!--列表页-->
+			<div id="tab2" class="blk_03">
+				<div style="border-bottom:none; padding-top:10px;" class="zpxx_con">
+					<table width="100%" cellspacing="0" cellpadding="0" border="0" >
+		<tr style="background:#f2f2f2;">
+				<td width="26%" valign="middle" height="30" align="left" style="padding-left:15px;">职位名称</td>
+				<td width="17%" valign="middle" align="center">
+						<select name="list_areaid" id="list_areaid">
+						<option value="-1">工作地点</option>
+						{#html_options options=$options_area selected=$smarty.get.list_areaid#}
+				   </select>
+				</td>
+				<td width="15%" valign="middle" align="center">
+						<select name="list_educationid" id="list_educationid">
+						<option value="-1">学历</option>
+						{#html_options options=$options_edu selected=$smarty.get.list_educationid#}
+				   </select>
+</td>
+				<td width="15%" valign="middle" align="center">
+						经验
+				</td>
+				<td width="13%" valign="middle" align="center">
+					月薪
+				</td>
+				<td width="14%" valign="middle" align="center">更新日期</td>
+		</tr>
+		</table>
+				</div>
+	<div id="pager" class="code"></div>	
+	<div style="clear:both;"></div>		
+			</div>
+<!--END-->
+
+			<div id="tab3" class="blk_03">
+				<div class="zpxx_detail">
+					<div class="detail_tl">
+						基本要求
+					</div>
+					<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody><tr>
+				<td width="14%" height="24" bgcolor="#f2f2f2" style="border:1px solid #ddd;">专业要求</td>
+				<td width="19%" style="border:1px solid #ddd; border-left:none;">{#$show.request|default:"不限"#}</td>
+				<td width="15%" bgcolor="#f2f2f2" style="border:1px solid #ddd; border-left:none;">学历要求</td>
+				<td width="20%" style="border:1px solid #ddd; border-left:none;">{#$show.education_cn|default:"不限"#}</td>
+				<td width="15%" bgcolor="#f2f2f2" style="border:1px solid #ddd; border-left:none;">薪酬</td>
+				<td width="17%" style="border:1px solid #ddd; border-left:none;">{#if $show.wage_min==0 && $show.wage_max==0 #}面议{#elseif $show.wage_min && $show.wage_max==0#}{#$show.wage_min#}以上{#elseif $show.wage_min==0 && $show.wage_max#}小于{#$show.wage_max#}{#else#}{#$show.wage_min#}-{#$show.wage_max#}{#/if#}</td>
+		</tr>
+		<tr>
+				<td height="24" bgcolor="#f2f2f2" style="border:1px solid #ddd; border-top:none;">工作地点</td>
+				<td style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">{#$show.district_cn|default:"不限"#}</td>
+				<td bgcolor="#f2f2f2" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">英语要求</td>
+				<td style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">{#if $show.english==1 #}一般{#elseif $show.english==2 #}良好{#elseif $show.english==3 #}优秀{#else#}不限{#/if#}</td>
+				<td bgcolor="#f2f2f2" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">年龄要求</td>
+				<td style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">{#if $show.age_min==0 && $show.age_max==0 #}不限{#elseif $show.age_min && $show.age_max==0#}{#$show.age_min#}以上{#elseif $show.age_min==0 && $show.age_max#}小于{#$show.age_max#}{#else#}{#$show.age_min#}-{#$show.age_max#}{#/if#}</td>
+		</tr>
+		<tr>
+				<td height="24" bgcolor="#f2f2f2" style="border:1px solid #ddd; border-top:none;">工作年限</td>
+				<td style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">{#$show.experience_cn|default:"不限"#}</td>
+				<td bgcolor="#f2f2f2" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">招聘人数</td>
+				<td style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">{#$show.amount#}人</td>
+				<td bgcolor="#f2f2f2" style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">工作性质</td>
+				<td style="border-right:1px solid #ddd; border-bottom:1px solid #ddd;">{#$show.nature_cn|default:"&nbsp;"#} </td>
+		</tr>
+</tbody></table>
+					<div class="detail_tl">
+						职责描述
+					</div>
+
+					<div class="zpxx_ms"><!--此处还需要处理-->
+					
+						<div class="ms_left">
+						{#if $show.contents#}
+							{#$show.contents#}
+						{#else#}
+						暂无描述
+						{#/if#}
+						</div>
+						<div class="ms_fabiao">
+						<div class="ms_fenx">
+							<table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody><tr>
+				<td><table width="100%" cellspacing="0" cellpadding="0" border="0">
+		<tbody><tr>
+				<td width="11%" align="center"><a href="javascript:void(0);" class="recommend_friend"><img border="0" src="{#$QISHI.site_template#}images/tuijian.gif"></a></td>
+				<td width="30%" height="24"><a href="javascript:void(0);" class="recommend_friend">推荐给好友</a></td>
+				<td width="9%" align="center"><a href="javascript:void(0);" class="add_favorites"><img border="0" src="{#$QISHI.site_template#}images/shoucang.gif"></a></td>
+				<td width="23%"><a href="javascript:void(0);" class="add_favorites">职位收藏</a></td>
+				<td width="11%" align="center"><a href="javascript:void(0);" class="print_page"><img border="0" src="{#$QISHI.site_template#}images/dayin.gif"></a></td>
+				<td width="16%"><a href="javascript:void(0);" class="print_page">打印</a></td>
+		</tr>
+</tbody></table>
+</td>
+		</tr>
+		<tr>
+				<td height="30" style="float:right;"><!-- Baidu Button BEGIN -->
+    <div class="bdshare_t bds_tools get-codes-bdshare" id="bdshare">
+        <span class="bds_more">分享到：</span>
+        <a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+        <a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+        <a class="bds_tqq" title="分享到腾讯微博" href="#"></a>
+        <a class="bds_renren" title="分享到人人网" href="#"></a>
+		<a class="shareCount" href="#" title="累计分享1次">1</a>
+    </div>
+
+<!--推荐好友-->
+<div id="recommend_html" style="display:none;">
+<div>
+					<div>
+								<table border="0" cellspacing="0" cellpadding="0" width="95%" style="border-bottom:1px dashed #ccc;">
+		<tr>
+				<td height="25" colspan="5">您好！您将以下职位推荐给好友：
+</td>
+		</tr>
+		<tr bgcolor="#c3c3c3">
+				<td width="38%" height="30">职位名称</td>
+				<td width="40%">公司名称</td>
+				<td width="22%">工作地点</td>
+		</tr>
+		<tr>
+				<td height="30">{#$show.jobs_name#}</td>
+				<td>{#$show.companyname#}</td>
+				<td>{#$show.district_cn|default:"不限"#}</td>
+		</tr>
+		
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="95%" style="border-bottom:1px dashed #ccc;">
+		<tr>
+				<td height="25" colspan="2">输入您的姓名及朋友的邮箱，点击“发送邮件邀请”即可成功推荐！</td>
+				</tr>
+		<tr>
+				<td width="17%" height="40">Email：</td>
+				<td width="83%"><table width="91%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="51%" height="40" style="padding-left:0;"><input type="text" style="width:150px; height:20px; line-height:20px;" class="r_email" maxlength="25"/></td>
+				<td width="49%" colspan="2">例如：abc@ofweek.com</td>
+		</tr>
+</table>
+</td>
+				</tr>
+		<tr>
+				<td height="27">邮件主题：</td>
+				<td><input type="text" style="width:300px; height:20px; line-height:20px;" value="您的好友通过OFweek人才网给您推荐了一个职位" class="r_title" maxlength="50"/></td>
+		</tr>
+		<tr>
+				<td height="35">验证码：</td>
+				<td><table width="93%" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+				<td width="50%" height="40" style="padding-left:0;"><div class="imgdiv"></div><input style="width:150px; height:20px; line-height:20px; color:#999999;" class="postcaptcha" type="text" value="点击获取验证码" /></td>
+		</tr>
+</table>
+</td>
+				</tr>
+		<tr>
+				<td height="40" colspan="2" align="center" valign="middle"><input class="r_submit" type="button" value="发送邮件邀请" /></td>
+				</tr>
+</table>
+
+							</div>
+						</div>
+</div>
+<!--推荐好友页面-->
+
+<script data="type=tools" id="bdshare_js" type="text/javascript" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=20120918.2"></script>
+<script id="bdshell_js" type="text/javascript" src="http://share.baidu.com/static/js/shell_v2.js?cdnversion=15"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "http://share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+</script>
+<!-- Baidu Button END --></td>
+		</tr>
+</tbody></table>
+
+						</div>
+						<div class="ms_tdjl"><a href="javascript:void(0);" class="apply_resume"><img border="0" src="{#$QISHI.site_template#}images/toujl.jpg"></a></div>
+						<div class="clear"></div>
+					</div>
+					</div>
+				</div>
+				
+				
+
+				
+			</div>
+		</div>
+	</div>
+
+{#include file="footer.htm"#}
+</div>
+
+<script>
+$(document).ready(function(){
+	$("#submit_form3").click(function(){
+		var u = $("#p_username2").val();
+		if(u) {
+			$.get("/api/member_exist.php?username="+u, function(result){
+				if(result == 'no-exist') {$("#p_exist2").val('talentNetworkLogin');$("#Form3").submit();}
+				else {$("#p_exist2").val('');$("#Form3").submit();}
+			});
+		} else {
+			return false;
+		}
+	});
+});
+</script>
+
+</body>
+</html>

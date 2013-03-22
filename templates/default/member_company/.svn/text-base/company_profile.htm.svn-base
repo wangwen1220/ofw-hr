@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{#$title#}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link rel="shortcut icon" href="{#$QISHI.site_dir#}favicon.ico" />
+<meta name="author" content="OFweek人才网" />
+<meta name="copyright" content="74cms.com" />
+<link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
+<link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.user.selectlayer.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.vtip-min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_dir#}data/cache_classify.js" type="text/javascript" charset="utf-8"></script>
+<body>
+<div id="mian">
+  {#include file="header_nosearch.htm"#}
+  <div class="conter mtop">
+    {#include file="member_company/left.htm"#}
+    <div class="righter">
+      <div class="weiz">您当前所在位置：<a href="company_index.php">企业中心</a>&nbsp;&gt;&gt;&nbsp;公司信息&nbsp;&gt;&gt;&nbsp;基本资料</div>
+      <div class="zhao_p">
+        <div class="tite_qth">
+          <ul>
+            <li><a href="company_info.php?act=company_profile" class="hover">基本资料</a></li>
+            <li><a href="company_info.php?act=company_intro">公司简介</a></li>
+            <li><a href="company_info.php?act=company_auth">营业执照</a></li>
+            <li><a href="company_info.php?act=company_logo">企业LOGO</a></li>
+          </ul>
+        </div>
+        <div class="jiben_ul">
+        <a href="company_info.php?act=company_profile_edit" class="f_bule"><img src="{#$QISHI.site_template#}images/xgu.gif" />修改</a>
+        <div class="gzil">
+        <table width="100%" border="0">
+          <tr>
+            <td width="16%">公司名称：</td>
+            <td width="84%"><span id="ctl00_M_labTitle">{#$company_profile.companyname#}</span></td>
+          </tr>
+          <tr>
+            <td width="16%">公司性质：</td>
+            <td width="84%">【{#$company_profile.nature_cn#}】</td>
+          </tr>
+          <tr>
+            <td width="16%">所属行业：</td>
+            <td width="84%">【{#$company_profile.trade_cn#}】</td>
+          </tr>
+          <tr>
+            <td width="16%">成立日期：</td>
+            <td width="84%">{#$company_profile.register#}</td>
+          </tr>
+          <tr>
+            <td width="16%">注册资金：</td>
+            <td width="84%">{#if $company_profile.registered#}{#$company_profile.registered#}万元{#/if#}</td>
+          </tr>
+          <tr>
+            <td width="16%">通信地址：</td>
+            <td width="84%">{#$company_profile.address#}</td>
+          </tr>
+          <tr>
+            <td width="16%">联系人：</td>
+            <td width="84%">{#$company_profile.contact#}</td>
+          </tr>
+          <tr>
+            <td width="16%">联系电话：</td>
+            <td width="84%"><span id="ctl00_M_labPhone">{#$company_profile.telephone#}</span></td>
+          </tr>
+          <tr>
+            <td width="16%">传真号码：</td>
+            <td width="84%"><span id="ctl00_M_labFax">{#$company_profile.fax#}</span></td>
+          </tr>
+          <tr>
+            <td width="16%">Email：</td>
+            <td width="84%">{#$company_profile.email#}</td>
+          </tr>
+          <tr>
+            <td width="16%">公司主页：</td>
+            <td width="84%">{#$company_profile.website#}</td>
+          </tr>
+          <tr>
+            <td width="16%">所在区域：</td>
+            <td width="84%">{#$company_profile.district_cn#}</td>
+          </tr>
+        </table>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {#include file="footer.htm"#}
+</div>
+</body>
+</html>

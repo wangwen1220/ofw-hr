@@ -1,0 +1,226 @@
+
+      <div class="weiz">您当前所在位置：<a href="/user/personal/">个人中心</a> >> <a href="personal_apply.php">面试管理</a> >> 
+		{#if $smarty.get.act=="interview" or $smarty.get.act==""#}面试通知
+		{#elseif $smarty.get.act=="apply_jobs"#}申请记录
+		{#elseif $smarty.get.act=="favorites"#}职位收藏
+		{#/if#}
+		</div>
+      <div class="zhao_p">
+	     <div class="tite_qh">
+            <ul class="chqh_ul" id="new_vouch"><!--sel01选中 sel02未选中-->
+            	<li class="sel0{#if $smarty.get.act=="interview" or $smarty.get.act==""#}1{#else#}2{#/if#}" ><a href="personal_apply.php?act=interview" target="_self">面试通知（{#$countnum.interview#}）</a></li>
+                <li class="sel0{#if $smarty.get.act=="apply_jobs"#}1{#else#}2{#/if#}" ><a href="personal_apply.php?act=apply_jobs" target="_self">申请记录（{#$countnum.apply_jobs#}）</a></li>
+                <li class="sel0{#if $smarty.get.act=="favorites"#}1{#else#}2{#/if#}" ><a href="personal_apply.php?act=favorites" target="_self">职位收藏（{#$countnum.favorites#}）</a></li>
+            </ul>
+        </div>
+         <div class="shen_ul">
+			{#if $smarty.get.act=="interview" or $smarty.get.act==""#}
+			<form id="form1" name="form1" method="post" action="?act=set_interview" >
+         	 <div class="bluech" id="newvouch_1"style="line-height:22px;">
+            	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tbody><tr>
+                    <th align="left" bgcolor="eff5ff" width="16%">应聘岗位</th>
+                    <th align="center" bgcolor="eff5ff" width="23%">公司名称</th>
+                    <th align="center" bgcolor="eff5ff" width="16%">面试时间</th>
+                    <th align="center" bgcolor="eff5ff" width="11%">联系人</th>
+                    <th align="center" bgcolor="eff5ff" width="23%">面试地点</th>
+                    <th align="center" bgcolor="eff5ff" width="11%">操作</th>
+                  </tr>
+
+				  <!--循环开始-->
+				  {#foreach from=$interview item=list#}
+                  <tr>
+                    <td><label style="float:left;">
+                      <input name="y_id[]" class="a_check" type="checkbox" value="{#$list.did#}">
+                    </label>
+                      <a class="tip" href="{#$list.jobs_url#}" title="{#$list.jobs_name#}" target="_blank"><span style="width:60px;float:left; display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.jobs_name#}</span></a></td>
+                    <td align="center"><a href="{#$list.company_url#}" title="{#$list.company_name#}" target="_blank"><span style="width:160px;float:left; display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.company_name#}</span></a></td>
+                    <td align="center">{#$list.interview_time|date_format:"%Y-%m-%d %H:%M:%S"#}</td>
+                    <td align="center">{#$list.contact#}</td>
+                    <td align="center">{#$list.address#}</td>
+                    <td align="center"><div class="chak" ><a href="javascript:void(0);" onclick="resume_show({#$list.did#});">查看</a>
+                    	<div class="lxin" style="display:none;" id="c_{#$list.did#}">
+                        	<table bgcolor="#CCCCCC" border="0" cellpadding="1" cellspacing="1" width="100%">
+                              <tbody><tr>
+                                <td colspan="2" align="right" bgcolor="#e4efff"><a href="javascript:void(0);" onclick="document.getElementById('c_{#$list.did#}').style.display='none';"">关闭</a></td>
+                              </tr>
+                              <tr>
+                                <td align="right" bgcolor="#FFFFFF" width="24%">应聘岗位：</td>
+                                <td align="left" bgcolor="#FFFFFF" width="76%">{#$list.jobs_name#}</td>
+                              </tr>
+                              <tr>
+                                <td align="right" bgcolor="#FFFFFF">面试时间：</td>
+                                <td align="left" bgcolor="#FFFFFF">{#$list.interview_time|date_format:"%Y-%m-%d %H:%M:%S"#}</td>
+                              </tr>
+                              <tr>
+                                <td align="right" bgcolor="#FFFFFF">面试地点：</td>
+                                <td align="left" bgcolor="#FFFFFF">{#$list.address#}</td>
+                              </tr>
+                              <tr>
+                                <td align="right" bgcolor="#FFFFFF">联系人：</td>
+                                <td align="left" bgcolor="#FFFFFF">{#$list.contact#}</td>
+                              </tr>
+                              <tr>
+                                <td align="right" bgcolor="#FFFFFF">联系电话：</td>
+                                <td align="left" bgcolor="#FFFFFF">{#$list.telephone#}</td>
+                              </tr>
+                              <tr>
+                                <td align="right" bgcolor="#FFFFFF">Email：</td>
+                                <td align="left" bgcolor="#FFFFFF">{#$list.email#}</td>
+                              </tr>
+                              <tr>
+                                <td align="right" bgcolor="#FFFFFF">附言 ：</td>
+                                <td align="left" bgcolor="#FFFFFF">{#$list.notes#}</td>
+                              </tr>
+                            </tbody></table>
+                      </div></div>
+                    </td>
+                  </tr>
+				  {#/foreach#}
+				<!--END-->
+
+                  <tr>
+                    <td colspan="6" style="height:30px;" bgcolor="#EEEEEE"><label><input type="checkbox" id="allcheck" ></label>&nbsp;&nbsp;&nbsp;&nbsp;全选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="set" value="删除" class="btn_s" onclick="return confirm('您确定删除吗?')">
+					每页显示：<select onchange="location.href=location.pathname+'?act=interview&per='+this.value;">
+                      <option value="10" {#if $smarty.get.per == 10#}selected="selected"{#/if#}>10</option>
+					  <option value="20" {#if $smarty.get.per == 20#}selected="selected"{#/if#}>20</option>
+					  <option value="30" {#if $smarty.get.per == 30#}selected="selected"{#/if#}>30</option>
+					  <option value="50" {#if $smarty.get.per == 50#}selected="selected"{#/if#}>50</option>
+					  <option value="100" {#if $smarty.get.per == 100#}selected="selected"{#/if#}>100</option>
+                    </select>
+					</td>
+                  </tr>
+                  <tr>
+                  	<td colspan="6"><div class="pages mtop">{#$listpage#}</div></td>
+                  </tr>
+                  <tr>
+                  	<td colspan="6">
+                    <strong>温馨提醒：</strong><br>
+                    1.面试之前，详细了解该公司的情况，谨防诈骗。<br>
+                    2.详细了解岗位的工作职责以及要求，将有助于您在面试当中更好的表现。                    </td>
+                  </tr>
+               </tbody></table>
+           </div>
+		   </form>
+		{#elseif $smarty.get.act=="apply_jobs"#}
+		<form id="form1" name="form1" method="post" action="?act=del_jobs_apply" >
+		<div id="newvouch_2" class="bluech" style="line-height:22px;">
+             <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tbody><tr>
+                    <th width="20%" bgcolor="eff5ff" align="left">职位名称</th>
+                    <th width="26%" bgcolor="eff5ff" align="center">公司名称</th>
+                    <th width="21%" bgcolor="eff5ff" align="center">申请时间</th>
+                    <th width="12%" bgcolor="eff5ff" align="center">学历</th>
+                    <th width="12%" bgcolor="eff5ff" align="center">月薪</th>
+                    <th width="9%" bgcolor="eff5ff" align="center">经验</th>
+                  </tr>
+				<!--循环开始-->
+				{#foreach from=$jobs_apply item=list#}
+                  <tr>
+                    <td>
+					  <label style="float:left;">
+                      <input name="y_id[]" type="checkbox" class="a_check" value="{#$list.did#}">
+                      </label>
+                      <a title="{#$list.jobs_name#}" href="{#$list.jobs_url#}" target="_blank"><span style="width:85px;float:left; display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.jobs_name#}</span>{#if $list.if_interview#}<img style="float:left;margin-top:4px;" src="{#$QISHI.site_template#}images/tzx.gif">{#/if#}</a>
+				    </td>
+                    <td align="center"><a title="{#$list.company_name#}" href="{#$list.company_url#}" target="_blank"><span style="width:170px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.company_name#}</span></a></td>
+                    <td align="center">{#$list.apply_addtime|date_format:"%Y-%m-%d"#}</td>
+                    <td align="center">{#$list.education_cn#}</td>
+                    <td align="center">{#$list.wage_cn#}</td>
+                    <td align="center">{#$list.experience_cn#}</td>
+                  </tr>
+				  {#/foreach#}
+				<!--END-->
+			
+                  <tr>
+                    <td bgcolor="#EEEEEE" style="height:30px;" colspan="6"><label><input type="checkbox" id="allcheck" name="checkbox"></label>&nbsp;&nbsp;&nbsp;&nbsp;全选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="delete" value="删除所选" class="btn_s" onclick="return confirm('您确定删除吗?')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每页显示：<select onchange="location.href=location.pathname+'?act=apply_jobs&per='+this.value;">
+                      <option value="10" {#if $smarty.get.per == 10#}selected="selected"{#/if#}>10</option>
+					  <option value="20" {#if $smarty.get.per == 20#}selected="selected"{#/if#}>20</option>
+					  <option value="30" {#if $smarty.get.per == 30#}selected="selected"{#/if#}>30</option>
+					  <option value="50" {#if $smarty.get.per == 50#}selected="selected"{#/if#}>50</option>
+					  <option value="100" {#if $smarty.get.per == 100#}selected="selected"{#/if#}>100</option>
+                    </select>                    </td>
+                  </tr>
+                  <tr>
+                    <td style="height:35px;" colspan="6"><span class="f_red">提示：</span><img src="{#$QISHI.site_template#}images/tzx.gif">&nbsp;&nbsp;表示收到企业的面试通知</td>
+                  </tr>
+                  <tr>
+                  	<td colspan="6"><div class="pages mtop">{#$listpage#}</div></td>
+                  </tr>
+               </tbody></table>
+             </div>
+		</form>
+		{#elseif $smarty.get.act=="favorites"#}
+		<form id="form1" name="form1" method="post" action="?act=del_favorites" >
+		<div id="newvouch_3" class="bluech" style="line-height:22px;">
+             	<table width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tbody><tr>
+                    <th width="20%" bgcolor="eff5ff" align="left">职位名称</th>
+                    <th width="26%" bgcolor="eff5ff" align="center">公司名称</th>
+                    <th width="21%" bgcolor="eff5ff" align="center">收藏时间</th>
+                    <th width="12%" bgcolor="eff5ff" align="center">学历</th>
+                    <th width="12%" bgcolor="eff5ff" align="center">月薪</th>
+                    <th width="9%" bgcolor="eff5ff" align="center">经验</th>
+                  </tr>
+				  <!--循环-->
+				  {#foreach from=$favorites item=list#}
+                  <tr>
+                    <td>
+					<label style="float:left;">
+                      <input name="y_id[]" type="checkbox" class="a_check" value="{#$list.did#}">
+                    </label>
+                      <a title="{#$list.jobs_name#}" href="{#$list.jobs_url#}" target="_blank"><span style="width:85px;float:left; display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$list.jobs_name#}</span>{#if $list.if_apply#}<img style="float:left;margin-top:4px;" src="{#$QISHI.site_template#}images/sq.gif">{#/if#}</a></td>
+                    <td align="center"><a title="{#$list.companyname#}" href="{#$list.company_url#}" target="_blank">{#$list.companyname#}</a></td>
+                    <td align="center">{#$list.addtime|date_format:"%Y-%m-%d"#}</td>
+                    <td align="center">{#$list.education_cn#}</td>
+                    <td align="center">{#$list.wage_cn#}</td>
+                    <td align="center">{#$list.experience_cn#}</td>
+                  </tr>
+				  {#/foreach#}
+				  <!--END-->
+
+                  <tr>
+                    <td bgcolor="#EEEEEE" style="height:30px;" colspan="6"><label><input type="checkbox" id="allcheck" name="checkbox"></label>&nbsp;&nbsp;&nbsp;&nbsp;全选&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="delete" value="删除所选" class="btn_s" onclick="return confirm('您确定删除吗?')">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每页显示：<select onchange="location.href=location.pathname+'?act=favorites&per='+this.value;">
+                      <option value="10" {#if $smarty.get.per == 10#}selected="selected"{#/if#}>10</option>
+					  <option value="20" {#if $smarty.get.per == 20#}selected="selected"{#/if#}>20</option>
+					  <option value="30" {#if $smarty.get.per == 30#}selected="selected"{#/if#}>30</option>
+					  <option value="50" {#if $smarty.get.per == 50#}selected="selected"{#/if#}>50</option>
+					  <option value="100" {#if $smarty.get.per == 100#}selected="selected"{#/if#}>100</option>
+                    </select>                  </td>
+                  </tr>
+                  <tr>
+                    <td style="height:35px;" colspan="6"><span class="f_red">提示：</span><img src="{#$QISHI.site_template#}images/sq.gif">&nbsp;&nbsp;表示已经申请</td>
+                  </tr>
+                  <tr>
+                  	<td colspan="6">
+					<div class="pages mtop">{#$listpage#}</div>
+					<div style="clear:both;"></div>
+					</td>
+                  </tr>
+               </tbody></table>
+             </div>
+			 </form>
+			 {#/if#}   
+
+         </div>
+      </div>
+    
+	<script>
+$(function(){
+$('#allcheck').click(function(){
+	var f = this.checked;
+	$('.a_check').each(function(){
+		this.checked = f;
+	});
+});
+});
+
+function resume_show(id){
+	$('#c_'+id).show();
+	//ajax将消息状态改为已读.
+	$.get('/user/personal/personal_apply.php?act=look&id='+id, function(data){
+//		console.log(data);
+	});
+}
+
+	</script>
