@@ -26,117 +26,37 @@
 {#include file="header.htm"#}
 <div id="content">
 		<!--工作分类-->
-		<div id="navi" class="current" style="padding-left:20px;overflow:hidden;"></div>
 		<div id='js-jobs-box' class='hr-jobs-box'>
-			<div class='hr-pos'>您当前所在位置：<a href='#'>OFweek人才网</a> &gt;&gt; <a href='#'>招聘信息</a> &gt;&gt <a href='#'>行业</a> &gt;&gt <a href='#'>一级岗位类别</a> &gt;&gt <a href='#'>二级岗位类别</a></div>
-			<dl class='hr-jobs-list'>
-				<dt><a href='#'>按类别选择：</a></dt>
+			<div class='hr-pos' id="navi"></div>
+
+				
+			<dl class='hr-jobs-list' {#if $backup_level_id > 0#}style="display:none;"{#/if#}>
+				<dt><a href='javascript:void(0);'>按类别选择：</a></dt>
 				<dd>
-					<h3><a href='#'>技术研发类</a></h3>
+				{#if $related_category_info#}
+					<h3><a href='#'>{#$related_category_info.categoryname#}</a></h3>
+				{#/if#}
 					<ul>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/类</a></li>
-						<li><a href='#'>建筑/工程装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/类</a></li>
-						<li><a href='#'>建筑/工程装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑//装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑//装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
+						{#foreach item=item from=$related_category#}
+							<li><a target="_self" href="{#$related_category_url#}{#$item.id#}">{#$item.categoryname#}<!--{#$item.stat_jobs#}--></a></li>
+						{#/foreach#}
 					</ul>
 				</dd>
 			</dl>
-			<dl id='js-jobs-list' class='hr-jobs-list hr-jobs-list-fold'>
-				<dt><a href='#'>按行业选择：</a></dt>
+			
+			<dl id='js-jobs-list' class='hr-jobs-list hr-jobs-list-fold' {#if $smarty.get.trade > 0#}style="display:none;"{#/if#}>
+				<dt><a href='javascript:void(0);'>按行业选择：</a></dt>
 				<dd>
 					<ul>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/类</a></li>
-						<li><a href='#'>建筑/工程装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑//装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/类</a></li>
-						<li><a href='#'>建筑/工程装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑//装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
-						<li><a href='#'>建筑/工程潢类</a></li>
-						<li><a href='#'>建筑/工程/装潢类</a></li>
+					{#foreach item=item from=$category_industry#}
+						<li><a id="trade_{#$item.c_id#}" target="_self" href="{#$category_industry_url#}{#$item.c_id#}"  {#if $smarty.get.trade == $item.c_id#}style="color:#ac0000; font-weight:bold;"{#/if#}>{#$item.c_name#}</a></li>
+					{#/foreach#}
 					</ul>
 				</dd>
 			</dl>
-			<div id='js-jobs-list-more' class='hr-jobs-list-more'><a href='javascript:;'>更多</a></div>
+			{#if $smarty.get.trade <= 0#}
+			<div id='js-jobs-list-more' class='hr-jobs-list-more' ><a href='javascript:;'>更多</a></div>
+			{#/if#}
 			<!-- <ul>
 				{#if $related_category_info#}
 				<li style="color:#ac0000; font-weight:bold;">
@@ -333,7 +253,7 @@ $(document).ready(function(){
 	var upLevel = {#if $backup_level#}{#$backup_level#}{#else#}0{#/if#};
 	var parent_info = {#if $parent_info#}{#$parent_info#}{#else#}null{#/if#};
 	var current_info = {#if $current_info#}{#$current_info#}{#else#}null{#/if#};
-	var naviHtml = '';
+	var naviHtml = '您当前所在的位置: <a href="{#$QISHI.site_domain#}/" target="_self">OFweek人才网</a>';
 
 
 
@@ -347,28 +267,74 @@ $(document).ready(function(){
 	}
 	var school = '';
 	if(urlSelf == '/campus' || param['school'] > 0){//校园招聘
-		if(!$.isEmptyObject(param)){
-			naviHtml += '<a href="{#$QISHI.site_domain#}/campus" target="_self" >校园招聘</a>';
-		}
+//		if(!$.isEmptyObject(param)){
+			naviHtml += '>> <a href="{#$QISHI.site_domain#}/campus" target="_self" >校园招聘</a>';
+//		}
 		school = 'school=1&';
 	}
-	else if(!$.isEmptyObject(param)){
-		naviHtml += '<a href="{#$QISHI.site_domain#}/jobs/" target="_self" >招聘信息</a>';
+//	else if(urlSelf == '/jobs/lights'){
+	else if(new RegExp(/\/jobs\/\w+$/).test(urlSelf)){
+		var match_trade = urlSelf.substring(urlSelf.lastIndexOf('/')+1);
+		var match_id = 0;
+		switch (match_trade){
+			case 'lights':
+				match_id = 1;break;
+			case 'solar':
+				match_id = 2;break;
+			case 'fiber':
+				match_id = 3;break;
+			case 'laser':
+				match_id = 4;break;
+			case 'ee':
+				match_id = 5;break;
+			case 'gongkong':
+				match_id = 6;break;
+			case 'display':
+			case 'optics':
+				match_id = 7;break;
+			case 'smartgrids':
+				match_id = 8;break;
+			case 'instrument':
+				match_id = 9;break;
+			case 'emc':
+				match_id = 10;break;
+		}
+		if(match_id > 0){
+			naviHtml += '>> <a href="{#$QISHI.site_domain#}/jobs/" target="_self" >招聘信息</a>>> <a href="{#$QISHI.site_domain#}/jobs/?trade='+match_id+'" target="_self" >'+$('#trade_'+match_id).text()+'</a>';
+		}
+	}
+//	else if(!$.isEmptyObject(param)){
+	else{
+		naviHtml += '>> <a href="{#$QISHI.site_domain#}/jobs/" target="_self" >招聘信息</a>';
 	}
 
-
-	if(param['trade'] > 0 ){//行业
-		var flag = (naviHtml=='')?'':'>>';
-		naviHtml += flag+ '<a href="?'+school+'trade='+param['trade']+'" target="_self" >'+$('#trade_'+param['trade']).text()+'</a>';
+//调整行业跟分类的显示位置
+	var referrer = document.referrer;
+	var ref_pat = /(\/\?|school=1&)trade=\d+?/;
+	var ref_pat1 = /\/jobs\/\w+$/;
+	var trade_front = ref_pat.test(referrer) || ref_pat1.test(referrer);
+	var trade_url = '';
+	if(trade_front){//行业在前
+		if(param['trade'] > 0 ){//行业
+			trade_url = 'trade='+param['trade']+'&';
+			var flag = (naviHtml=='')?'':'>>';
+			naviHtml += flag+ '<a href="?'+school+'trade='+param['trade']+'" target="_self" >'+$('#trade_'+param['trade']).text()+'</a>';
+		}
 	}
-
 	if(parent_info != null){//分类
 		var flag = (naviHtml=='')?'':'>>';
-		naviHtml += flag+ '<a href="?'+school+'jobcategory='+parent_info.id+'" target="_self" >'+parent_info.name+'</a>';
+		naviHtml += flag+ '<a href="?'+school+trade_url+'jobcategory='+parent_info.id+'" target="_self" >'+parent_info.name+'</a>';
 	}
 	if(current_info != null){//分类
 		var flag = (naviHtml=='')?'':'>>';
-		naviHtml += flag+'<a href="?'+school+'jobcategory='+current_info.id+'" target="_self" >'+current_info.name+'</a>';
+		naviHtml += flag+'<a href="?'+school+trade_url+'jobcategory='+current_info.id+'" target="_self" >'+current_info.name+'</a>';
+	}
+
+	if(!trade_front){//行业在后
+		if(param['trade'] > 0 ){//行业
+			var flag = (naviHtml=='')?'':'>>';
+			naviHtml += flag+ '<a href="?'+school+'trade='+param['trade']+'" target="_self" >'+$('#trade_'+param['trade']).text()+'</a>';
+		}
 	}
 
 	if(naviHtml != ''){

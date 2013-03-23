@@ -506,7 +506,32 @@ $(document).ready(function(){
       </div>
   </form>
   
-  
+<div class="toptit">名企设定</div>
+<form id="Form3" name="Form3" method="post" action="?act=brand">
+
+      <input type="hidden" name="uid" value="{#$company_profile.uid#}" />
+      <div class="zhao_p">
+
+        <div class="hr_gua">
+        	<table width="100%" border="0"  cellspacing="5" cellpadding="5">
+                <tr>
+                	<td width="13%" align="right"> </td>
+                	<td>
+                	<input{#if $company_profile.company_type==2#} checked="checked"{#/if#} type="radio" name="company_type" value="2" />名企
+                	<input{#if $company_profile.company_type==1#} checked="checked"{#/if#} type="radio" name="company_type" value="1" />普通
+                	</td>
+                </tr>
+                <tr>
+                	<td></td>
+                	<td>
+                	<input type="submit" value="提交" />
+                	</td>
+                </tr>
+                  </table>
+        </div>
+        
+      </div>
+  </form>
   
 </div>
 {#include file="sys/admin_footer.htm"#}

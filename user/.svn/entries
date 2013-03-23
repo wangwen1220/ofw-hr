@@ -1,14 +1,14 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/user
 http://huoshow.3322.org:8999/svn/netway
 
 
 
-2013-03-13T09:17:31.472930Z
-25673
+2013-03-20T07:32:51.782656Z
+25715
 zhangchengjun
 
 
@@ -97,16 +97,16 @@ zhangchengjun
 personal
 dir
 
-user_invited.php
+resume.php
 file
 
 
 
 
 2013-03-19T02:07:09.343750Z
-5f4bccf8e8594dae116110d0192d41de
-2012-08-29T11:28:18.702162Z
-23544
+08a920a4dd47e1a3f43e9f5d297de1f1
+2014-02-20T16:22:09.727918Z
+25464
 zhangchengjun
 
 
@@ -129,7 +129,7 @@ zhangchengjun
 
 
 
-11436
+4247
 
 user_apply_jobs.php
 file
@@ -165,16 +165,16 @@ zhoutian
 
 8901
 
-resume.php
+user_invited.php
 file
 
 
 
 
 2013-03-19T02:07:09.343750Z
-08a920a4dd47e1a3f43e9f5d297de1f1
-2014-02-20T16:22:09.727918Z
-25464
+5f4bccf8e8594dae116110d0192d41de
+2012-08-29T11:28:18.702162Z
+23544
 zhangchengjun
 
 
@@ -197,7 +197,7 @@ zhangchengjun
 
 
 
-4247
+11436
 
 get_password.php
 file
@@ -301,40 +301,6 @@ zhangchengjun
 
 1040
 
-user_reg.php
-file
-
-
-
-
-2013-03-19T02:07:09.343750Z
-dfed84cb37e9dfb1ee9a246cf230b865
-2012-08-29T11:28:18.702162Z
-23544
-zhangchengjun
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2410
-
 user_complete_information.php
 file
 
@@ -368,6 +334,40 @@ zhangchengjun
 
 
 14190
+
+user_reg.php
+file
+
+
+
+
+2013-03-19T02:07:09.343750Z
+dfed84cb37e9dfb1ee9a246cf230b865
+2012-08-29T11:28:18.702162Z
+23544
+zhangchengjun
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2410
 
 reg.php
 file
@@ -403,6 +403,9 @@ zhangchengjun
 
 5469
 
+company
+dir
+
 user_favorites_resume.php
 file
 
@@ -436,9 +439,6 @@ zhangchengjun
 
 
 2325
-
-company
-dir
 
 user_download_resume.php
 file

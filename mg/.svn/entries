@@ -1,7 +1,7 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/mg
 http://huoshow.3322.org:8999/svn/netway
 
@@ -72,6 +72,12 @@ fulei
 company
 dir
 
+member
+dir
+
+行业招聘
+dir
+
 hr_list.html
 file
 
@@ -105,12 +111,6 @@ hanyang
 
 
 18707
-
-行业招聘
-dir
-
-member
-dir
 
 Search.html
 file
@@ -248,40 +248,6 @@ fulei
 
 9897
 
-hr_show.html
-file
-
-
-
-
-2013-03-19T02:07:08.890625Z
-ef250bb15bee646f935821962c7bf89e
-2012-09-17T11:40:00.036907Z
-23747
-hanyang
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-12376
-
 Hr.html
 file
 
@@ -315,6 +281,40 @@ hanyang
 
 
 14833
+
+hr_show.html
+file
+
+
+
+
+2013-03-19T02:07:08.890625Z
+ef250bb15bee646f935821962c7bf89e
+2012-09-17T11:40:00.036907Z
+23747
+hanyang
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+12376
 
 reg
 dir

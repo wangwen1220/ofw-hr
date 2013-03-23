@@ -1,25 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 69
-/svn/netway/!svn/ver/25597/ofweek_hr/templates/default/member_company
-END
-company_favorites.htm
-K 25
-svn:wc:ra_dav:version-url
-V 91
-/svn/netway/!svn/ver/24687/ofweek_hr/templates/default/member_company/company_favorites.htm
-END
-company_apply_jobs.htm
-K 25
-svn:wc:ra_dav:version-url
-V 92
-/svn/netway/!svn/ver/24531/ofweek_hr/templates/default/member_company/company_apply_jobs.htm
-END
-company_password.htm
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/netway/!svn/ver/25292/ofweek_hr/templates/default/member_company/company_password.htm
+/svn/netway/!svn/ver/25728/ofweek_hr/templates/default/member_company
 END
 header.htm
 K 25
@@ -27,11 +9,35 @@ svn:wc:ra_dav:version-url
 V 80
 /svn/netway/!svn/ver/23544/ofweek_hr/templates/default/member_company/header.htm
 END
+company_password.htm
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/netway/!svn/ver/25292/ofweek_hr/templates/default/member_company/company_password.htm
+END
+company_apply_jobs.htm
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/netway/!svn/ver/25715/ofweek_hr/templates/default/member_company/company_apply_jobs.htm
+END
+company_favorites.htm
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/netway/!svn/ver/25715/ofweek_hr/templates/default/member_company/company_favorites.htm
+END
 company_editjobs.htm
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svn/netway/!svn/ver/25597/ofweek_hr/templates/default/member_company/company_editjobs.htm
+/svn/netway/!svn/ver/25728/ofweek_hr/templates/default/member_company/company_editjobs.htm
+END
+left.htm
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/netway/!svn/ver/25715/ofweek_hr/templates/default/member_company/left.htm
 END
 company_jobs_sort.htm
 K 25
@@ -39,11 +45,11 @@ svn:wc:ra_dav:version-url
 V 91
 /svn/netway/!svn/ver/24777/ofweek_hr/templates/default/member_company/company_jobs_sort.htm
 END
-left.htm
+company_search.htm
 K 25
 svn:wc:ra_dav:version-url
-V 78
-/svn/netway/!svn/ver/25427/ofweek_hr/templates/default/member_company/left.htm
+V 88
+/svn/netway/!svn/ver/24744/ofweek_hr/templates/default/member_company/company_search.htm
 END
 company_profile_edit.htm
 K 25
@@ -51,29 +57,23 @@ svn:wc:ra_dav:version-url
 V 94
 /svn/netway/!svn/ver/25482/ofweek_hr/templates/default/member_company/company_profile_edit.htm
 END
-company_search.htm
-K 25
-svn:wc:ra_dav:version-url
-V 88
-/svn/netway/!svn/ver/24744/ofweek_hr/templates/default/member_company/company_search.htm
-END
 company_addjobs.htm
 K 25
 svn:wc:ra_dav:version-url
 V 89
-/svn/netway/!svn/ver/25597/ofweek_hr/templates/default/member_company/company_addjobs.htm
+/svn/netway/!svn/ver/25728/ofweek_hr/templates/default/member_company/company_addjobs.htm
 END
 company_index.htm
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/netway/!svn/ver/25480/ofweek_hr/templates/default/member_company/company_index.htm
+/svn/netway/!svn/ver/25716/ofweek_hr/templates/default/member_company/company_index.htm
 END
 company_interview.htm
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/netway/!svn/ver/24656/ofweek_hr/templates/default/member_company/company_interview.htm
+/svn/netway/!svn/ver/25715/ofweek_hr/templates/default/member_company/company_interview.htm
 END
 company_message_view.htm
 K 25
@@ -103,7 +103,7 @@ company_send_interview.htm
 K 25
 svn:wc:ra_dav:version-url
 V 96
-/svn/netway/!svn/ver/24963/ofweek_hr/templates/default/member_company/company_send_interview.htm
+/svn/netway/!svn/ver/25715/ofweek_hr/templates/default/member_company/company_send_interview.htm
 END
 company_down_resume.htm
 K 25

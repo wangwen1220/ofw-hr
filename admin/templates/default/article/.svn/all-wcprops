@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svn/netway/!svn/ver/24723/ofweek_hr/admin/templates/default/article
+/svn/netway/!svn/ver/25733/ofweek_hr/admin/templates/default/article
 END
 admin_article_category.htm
 K 25
@@ -43,13 +43,13 @@ admin_article_edit.htm
 K 25
 svn:wc:ra_dav:version-url
 V 91
-/svn/netway/!svn/ver/24723/ofweek_hr/admin/templates/default/article/admin_article_edit.htm
+/svn/netway/!svn/ver/25733/ofweek_hr/admin/templates/default/article/admin_article_edit.htm
 END
 admin_article_add.htm
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svn/netway/!svn/ver/24723/ofweek_hr/admin/templates/default/article/admin_article_add.htm
+/svn/netway/!svn/ver/25733/ofweek_hr/admin/templates/default/article/admin_article_add.htm
 END
 admin_article_property_edit.htm
 K 25

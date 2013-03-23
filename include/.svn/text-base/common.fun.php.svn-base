@@ -1040,7 +1040,9 @@ function get_categoryname_by_id($id, $table){
  * ZT 2012年9月20日 09:33:42
  */
 function rebuild_url($variable,$split='&'){
+	global $_CFG;
 	$rurl = $_SERVER['REQUEST_URI'];
+	$rurl = str_replace($_CFG['site_domain'], '', $rurl);
 	//校园招聘链接
 	if ($rurl == '/campus'){
 		$rurl = '/jobs/?school=1';
@@ -1957,13 +1959,24 @@ function z_article($id) {
 }
 
 //资讯列表
-function z_article_list($type, $num = 5) {
+function z_article_list($type, $num = 5, $idarr = array()) {
 	global $db;
-	$list = $db->getall("SELECT id,title,addtime FROM hr_article WHERE is_display=1 AND type_id=$type ORDER BY addtime DESC LIMIT $num");
+	
+	$addsql = '';
+	if (!empty($idarr)) {
+		$addsql .= ' AND id NOT IN('.implode(',', $idarr).')';
+	}
+	$list = $db->getall("SELECT id,title,addtime FROM hr_article WHERE is_display=1 AND type_id=$type $addsql ORDER BY addtime DESC LIMIT $num");
 	foreach ($list as $key=>$value) {
 		$list[$key]['addtime_cn'] = date('Y-m-d', $value['addtime']);
 	}
 	return $list;
+}
+
+//资讯带图片的头条
+function z_article_pic($type) {
+	global $db;
+	return $db->getone("SELECT * FROM hr_article WHERE is_display=1 AND type_id=$type AND Small_img !='' AND focos=4 ORDER BY addtime DESC");
 }
 
 //资讯分类

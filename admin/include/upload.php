@@ -139,4 +139,120 @@ if($toh < 45) $toh = 45;
         return $dstfile; 
     } 
 }
+
+/**
+ * 生成缩略图
+ * @param string $srcName
+ * @param int $newWidth
+ * @param int $newHeight
+ * @param string $newName
+ */
+function resizeImg($srcName, $newName, $newWidth, $newHeight, $cut = false) {
+
+	 //判断文件是否存在 
+	if (!file_exists($srcName))return false;
+	 //生成新的同名文件，但目录不同 
+	$imgname=explode('/',$srcName); 
+	$arrcount=count($imgname); 
+	$newName = $newName.$imgname[$arrcount-1]; 
+	
+	//读取图片信息
+	$info = '';
+	$data = getimagesize($srcName, $info);
+	
+	switch ($data[2]) {
+		case 1:
+			if (function_exists("imagecreatefromgif")) {
+				$im = imagecreatefromgif($srcName);
+			} else {
+				die('你的GD库不能使用GIF格式的图片');
+			}
+			break;
+		case 2:
+			if (function_exists("imagecreatefromjpeg")) {
+				$im = imagecreatefromjpeg($srcName);
+			} else {
+				die('你的GD库不能使用jpeg格式的图片');
+			}
+			break;
+		case 3:
+			$im = imagecreatefrompng($srcName);
+			break;
+		default:
+			return false;
+		break;
+	}	
+	$srcW = imagesx($im);#宽度
+	$srcH = imagesy($im);#高度
+	
+	//裁剪
+	if ($cut) {
+		//缩放后的尺寸
+		$newRate = $newWidth / $newHeight;
+		$srcRate = $srcW / $srcH;
+		if ($newRate <= $srcRate) {
+			$toH = $newHeight;
+			$toW = $toH * ($srcW / $srcH);
+		} else {
+			$toW = $newWidth;
+			$toH = $toW * ($srcH / $srcW);
+		}
+	} else {
+		//缩放后的尺寸
+		$newRate = $newWidth / $newHeight;
+		$srcRate = $srcW / $srcH;
+		if ($newRate <= $srcRate) {
+			$toW = $newWidth;
+			$toH = $toW * ($srcH / $srcW);
+		} else {
+			$toH = $newHeight;
+			$toW = $toH * ($srcW / $srcH);
+		}
+	}
+	
+	
+	//开始缩放
+	if ($srcW > $newWidth || $srcH > $newHeight) {
+		if (function_exists("imagecreatetruecolor")) {
+			@$ni = imagecreatetruecolor($toW, $toH);
+			if ($ni) {
+				imagecopyresampled($ni, $im, 0, 0, 0, 0, $toW, $toH, $srcW, $srcH);
+			} else {
+				$ni = imagecreate($toW, $toH);
+				imagecopyresampled($ni, $im, 0, 0, 0, 0, $toW, $toH, $srcW, $srcH);
+			}
+		} else {
+			$ni = imagecreate($toW, $toH);
+			imagecopyresampled($ni, $im, 0, 0, 0, 0, $toW, $toH, $srcW, $srcH);			
+		}
+		
+		
+		//图片裁剪
+		if ($cut) {			
+			$toW = min($newWidth, $toW);
+			$toH = min($newHeight, $toH);
+			@$ni2 = imagecreatetruecolor($newWidth, $toH);
+			imagecopy ( $ni2, $ni, 0, 0, 0, 0, $toW, $toH);
+			
+			if (function_exists("imagejpeg")) {
+				imagejpeg($ni2, $newName);
+			} else {
+				imagepng($ni2, $newName);
+			}
+			
+			imagedestroy($ni);
+			imagedestroy($ni2);
+		} else {			
+			if (function_exists("imagejpeg")) {
+				imagejpeg($ni, $newName);
+			} else {
+				imagepng($ni, $newName);
+			}
+			
+			imagedestroy($ni);
+		}		
+	}
+	
+	imagedestroy($im);
+}
 ?>

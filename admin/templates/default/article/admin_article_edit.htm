@@ -40,7 +40,21 @@ $(document).ready(function()
 		  </div>
 		  </td>
       </tr>
-
+	  <tr>
+        <td align="right" >缩&nbsp;&nbsp;略&nbsp;&nbsp;图：</td>
+        <td colspan="2" >
+		{#if $edit_article.Small_img#}
+		<a href="{#$thumb_dir#}{#$edit_article.Small_img#}" target="_blank" >
+		<img src="{#$thumb_dir#}{#$edit_article.Small_img#}" border="0" />
+		 </a>
+		 <a href="?act=del_img&id={#$edit_article.id#}&img={#$edit_article.Small_img#}&{#$urltoken#}" style="color: #006600">
+		 [删除重新上传]
+		 </a>
+		 {#else#}
+		<input type="file" name="Small_img"    onKeyDown="alert('请点击右侧“浏览”选择您电脑上的图片！');return false"   style="height:21px; width:210px; border:1px #999999 solid" />
+		{#/if#}
+		</td>
+      </tr>
     </table>
     <table width="700" border="0" cellpadding="0" cellspacing="0">
       <tr>

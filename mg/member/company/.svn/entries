@@ -1,7 +1,7 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/mg/member/company
 http://huoshow.3322.org:8999/svn/netway
 
@@ -94,40 +94,6 @@ fulei
 
 7788
 
-edit-jobs.html
-file
-
-
-
-
-2013-03-19T02:07:07.531250Z
-ab988250bc2bf34f9b72a8ac722136cd
-2012-12-20T07:32:13.767248Z
-24764
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-16772
-
 release.html
 file
 
@@ -162,14 +128,14 @@ fulei
 
 17184
 
-edit1_2.html
+edit-jobs.html
 file
 
 
 
 
 2013-03-19T02:07:07.531250Z
-aadfa3ac992e212835fc987195d71623
+ab988250bc2bf34f9b72a8ac722136cd
 2012-12-20T07:32:13.767248Z
 24764
 fulei
@@ -194,7 +160,7 @@ fulei
 
 
 
-8095
+16772
 
 复件 interview.html
 file
@@ -230,6 +196,40 @@ fulei
 
 8767
 
+edit1_2.html
+file
+
+
+
+
+2013-03-19T02:07:07.531250Z
+aadfa3ac992e212835fc987195d71623
+2012-12-20T07:32:13.767248Z
+24764
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8095
+
 edit2_2.html
 file
 
@@ -264,40 +264,6 @@ fulei
 
 14660
 
-edit3_2.html
-file
-
-
-
-
-2013-03-19T02:07:07.546875Z
-417cfa46c6bbe68ceb9d5b73bfb323cf
-2012-12-20T07:32:13.767248Z
-24764
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-9077
-
 send.html
 file
 
@@ -331,6 +297,40 @@ fulei
 
 
 8731
+
+edit3_2.html
+file
+
+
+
+
+2013-03-19T02:07:07.546875Z
+417cfa46c6bbe68ceb9d5b73bfb323cf
+2012-12-20T07:32:13.767248Z
+24764
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9077
 
 edit4_2.html
 file
@@ -400,40 +400,6 @@ fulei
 
 17442
 
-interview1.html
-file
-
-
-
-
-2013-03-19T02:07:07.546875Z
-a7600ffcdb5c940f736f170fad5eb206
-2012-12-20T07:32:13.767248Z
-24764
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-10020
-
 jobs.html
 file
 
@@ -468,14 +434,14 @@ fulei
 
 15523
 
-candidates.html
+interview1.html
 file
 
 
 
 
 2013-03-19T02:07:07.546875Z
-46e85cc9a75fabda07fdcae55d2672a8
+a7600ffcdb5c940f736f170fad5eb206
 2012-12-20T07:32:13.767248Z
 24764
 fulei
@@ -500,7 +466,7 @@ fulei
 
 
 
-18292
+10020
 
 job-sort.html
 file
@@ -535,6 +501,40 @@ fulei
 
 
 12367
+
+candidates.html
+file
+
+
+
+
+2013-03-19T02:07:07.546875Z
+46e85cc9a75fabda07fdcae55d2672a8
+2012-12-20T07:32:13.767248Z
+24764
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+18292
 
 sms.html
 file

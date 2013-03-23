@@ -122,7 +122,7 @@
 		
       </div>
 	  <!--顶部导航条-->
-        <div class="logo"><span><div id="ad-15"><script type="text/javascript">loadAD(637);</script></div></span><a href="{#$QISHI.site_dir#}"><img src="{#$QISHI.site_template#}images/logo.jpg" border="0" /></a></div>
+        <div class="logo"><span><div id="ad-15"><script type="text/javascript">loadAD(637);</script></div></span><a href="{#$QISHI.site_dir#}" title="OFweek人才网"><img src="{#$QISHI.site_template#}images/logo.jpg"  border="0" /></a></div>
         <div class="nav_m">
           <ul>
                 <li><a href="{#$QISHI.site_dir#}">首页</a></li>

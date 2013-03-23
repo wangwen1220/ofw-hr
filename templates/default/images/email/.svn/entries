@@ -1,7 +1,7 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/templates/default/images/email
 http://huoshow.3322.org:8999/svn/netway
 
@@ -94,40 +94,6 @@ has-props
 
 4129
 
-btn-search-job.png
-file
-
-
-
-
-2013-03-19T02:06:48.875000Z
-4a60be5a4397e9dc02cbeb337075dd30
-2013-03-05T08:26:22.878820Z
-25554
-wangwen
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3984
-
 shen_q.gif
 file
 
@@ -162,14 +128,14 @@ has-props
 
 2501
 
-btn-post-info.png
+btn-search-job.png
 file
 
 
 
 
-2013-03-19T02:06:48.890625Z
-d435dc69874a0e2667a960cb9caa2794
+2013-03-19T02:06:48.875000Z
+4a60be5a4397e9dc02cbeb337075dd30
 2013-03-05T08:26:22.878820Z
 25554
 wangwen
@@ -194,7 +160,7 @@ has-props
 
 
 
-3513
+3984
 
 btn-edit-info.png
 file
@@ -229,6 +195,40 @@ has-props
 
 
 3668
+
+btn-post-info.png
+file
+
+
+
+
+2013-03-19T02:06:48.890625Z
+d435dc69874a0e2667a960cb9caa2794
+2013-03-05T08:26:22.878820Z
+25554
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3513
 
 btn-update-resume.png
 file
@@ -434,40 +434,6 @@ has-props
 
 54137
 
-btn-perfect-resume.png
-file
-
-
-
-
-2013-03-19T02:06:48.937500Z
-5603beb1d2279aa4bed5e850b2860816
-2013-03-05T08:26:22.878820Z
-25554
-wangwen
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3482
-
 xiugai.gif
 file
 
@@ -501,6 +467,40 @@ has-props
 
 
 3387
+
+btn-perfect-resume.png
+file
+
+
+
+
+2013-03-19T02:06:48.937500Z
+5603beb1d2279aa4bed5e850b2860816
+2013-03-05T08:26:22.878820Z
+25554
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3482
 
 zhpw.gif
 file

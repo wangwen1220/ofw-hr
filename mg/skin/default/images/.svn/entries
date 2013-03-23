@@ -1,7 +1,7 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/mg/skin/default/images
 http://huoshow.3322.org:8999/svn/netway
 
@@ -536,40 +536,6 @@ has-props
 
 927
 
-1.png
-file
-
-
-
-
-2013-03-19T02:07:06.250000Z
-f9f6a30f174a7f45d285e73c426c7ef8
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-16530
-
 fa9.gif
 file
 
@@ -603,6 +569,40 @@ has-props
 
 
 1221
+
+1.png
+file
+
+
+
+
+2013-03-19T02:07:06.250000Z
+f9f6a30f174a7f45d285e73c426c7ef8
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+16530
 
 ui-icons_ffffff_256x240.png
 file
@@ -672,40 +672,6 @@ has-props
 
 168
 
-btn02.gif
-file
-
-
-
-
-2013-03-19T02:07:06.281250Z
-50fa23ab3286ed3cc613782e5d5e008c
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1077
-
 tzx.gif
 file
 
@@ -739,6 +705,40 @@ has-props
 
 
 431
+
+btn02.gif
+file
+
+
+
+
+2013-03-19T02:07:06.281250Z
+50fa23ab3286ed3cc613782e5d5e008c
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1077
 
 btn04.gif
 file
@@ -944,40 +944,6 @@ has-props
 
 2619
 
-tu1.gif
-file
-
-
-
-
-2013-03-19T02:07:06.312500Z
-26c968cb1fe656cccf07933e5407839c
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-33418
-
 zx_tlbg.gif
 file
 
@@ -1012,14 +978,14 @@ has-props
 
 112
 
-inco2.gif
+tu1.gif
 file
 
 
 
 
 2013-03-19T02:07:06.312500Z
-f5a509dd53aab8797ed3dc1120bf0021
+26c968cb1fe656cccf07933e5407839c
 2012-09-04T11:56:52.192526Z
 23574
 tanyuling
@@ -1044,7 +1010,7 @@ has-props
 
 
 
-105
+33418
 
 btnw.gif
 file
@@ -1079,6 +1045,40 @@ has-props
 
 
 871
+
+inco2.gif
+file
+
+
+
+
+2013-03-19T02:07:06.312500Z
+f5a509dd53aab8797ed3dc1120bf0021
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+105
 
 inco4.gif
 file
@@ -2202,16 +2202,16 @@ has-props
 
 379
 
-login_boxbg02.gif
+gzjj_down.gif
 file
 
 
 
 
-2013-03-19T02:07:06.453125Z
-93518947694ff980aba8d0a16b31d318
-2012-09-10T17:10:41.364496Z
-23673
+2013-03-19T02:07:06.437500Z
+e7e48fec89aa63d87b4831543f2e51e1
+2012-09-04T11:56:52.192526Z
+23574
 tanyuling
 has-props
 
@@ -2234,7 +2234,7 @@ has-props
 
 
 
-343
+3880
 
 btn_bg.gif
 file
@@ -2270,16 +2270,16 @@ has-props
 
 1056
 
-gzjj_down.gif
+login_boxbg02.gif
 file
 
 
 
 
-2013-03-19T02:07:06.437500Z
-e7e48fec89aa63d87b4831543f2e51e1
-2012-09-04T11:56:52.192526Z
-23574
+2013-03-19T02:07:06.453125Z
+93518947694ff980aba8d0a16b31d318
+2012-09-10T17:10:41.364496Z
+23673
 tanyuling
 has-props
 
@@ -2302,7 +2302,7 @@ has-props
 
 
 
-3880
+343
 
 xx.gif
 file
@@ -2372,40 +2372,6 @@ has-props
 
 4527
 
-110.gif
-file
-
-
-
-
-2013-03-19T02:07:06.468750Z
-6c150eb92640c538c611a60948e68def
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3321
-
 detail_tl.gif
 file
 
@@ -2439,6 +2405,40 @@ has-props
 
 
 301
+
+110.gif
+file
+
+
+
+
+2013-03-19T02:07:06.468750Z
+6c150eb92640c538c611a60948e68def
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3321
 
 zp_tb4.gif
 file
@@ -2576,40 +2576,6 @@ has-props
 
 1130
 
-bunt.gif
-file
-
-
-
-
-2013-03-19T02:07:06.484375Z
-4b56fe9632dd4a0650bf24980a7176c0
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-939
-
 toujl.jpg
 file
 
@@ -2644,14 +2610,14 @@ has-props
 
 17518
 
-login_boxbg1.gif
+bunt.gif
 file
 
 
 
 
 2013-03-19T02:07:06.484375Z
-4ffda22679b54613479b206386e13b04
+4b56fe9632dd4a0650bf24980a7176c0
 2012-09-04T11:56:52.192526Z
 23574
 tanyuling
@@ -2676,7 +2642,7 @@ has-props
 
 
 
-233
+939
 
 top_bg.gif
 file
@@ -2711,6 +2677,40 @@ has-props
 
 
 99
+
+login_boxbg1.gif
+file
+
+
+
+
+2013-03-19T02:07:06.484375Z
+4ffda22679b54613479b206386e13b04
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+233
 
 logo.jpg
 file
@@ -2882,40 +2882,6 @@ has-props
 
 1250
 
-l_bg.gif
-file
-
-
-
-
-2013-03-19T02:07:06.515625Z
-22a0a8a57909d1107063760d09acb50f
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-101
-
 findpassword.gif
 file
 
@@ -2949,6 +2915,40 @@ has-props
 
 
 2219
+
+l_bg.gif
+file
+
+
+
+
+2013-03-19T02:07:06.515625Z
+22a0a8a57909d1107063760d09acb50f
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+101
 
 ofweekgs_logo.jpg
 file
@@ -3018,14 +3018,14 @@ has-props
 
 2256
 
-login.gif
+gzjj_up.gif
 file
 
 
 
 
-2013-03-19T02:07:06.531250Z
-afee15e8ca9a6341aeb69011e34f8c74
+2013-03-19T02:07:06.515625Z
+9c7191fbda3077ab38562f4a0f4ded85
 2012-09-04T11:56:52.192526Z
 23574
 tanyuling
@@ -3050,7 +3050,7 @@ has-props
 
 
 
-1931
+556
 
 fa2.gif
 file
@@ -3086,14 +3086,14 @@ has-props
 
 958
 
-gzjj_up.gif
+login.gif
 file
 
 
 
 
-2013-03-19T02:07:06.515625Z
-9c7191fbda3077ab38562f4a0f4ded85
+2013-03-19T02:07:06.531250Z
+afee15e8ca9a6341aeb69011e34f8c74
 2012-09-04T11:56:52.192526Z
 23574
 tanyuling
@@ -3118,7 +3118,7 @@ has-props
 
 
 
-556
+1931
 
 co_bg.gif
 file
@@ -3222,14 +3222,14 @@ has-props
 
 1157
 
-btn_bg1.gif
+复件 genggai.gif
 file
 
 
 
 
-2013-03-19T02:07:06.546875Z
-b6f5d4254010ce2b6401c35059c60def
+2013-03-19T02:07:06.531250Z
+2fdabcf37aa5b5386b72c1f3276b93a2
 2012-09-04T11:56:52.192526Z
 23574
 tanyuling
@@ -3254,7 +3254,7 @@ has-props
 
 
 
-1155
+2476
 
 fa6.gif
 file
@@ -3290,14 +3290,14 @@ has-props
 
 915
 
-复件 genggai.gif
+btn_bg1.gif
 file
 
 
 
 
-2013-03-19T02:07:06.531250Z
-2fdabcf37aa5b5386b72c1f3276b93a2
+2013-03-19T02:07:06.546875Z
+b6f5d4254010ce2b6401c35059c60def
 2012-09-04T11:56:52.192526Z
 23574
 tanyuling
@@ -3322,41 +3322,7 @@ has-props
 
 
 
-2476
-
-btn_bg3.gif
-file
-
-
-
-
-2013-03-19T02:07:06.562500Z
-8257e58b4093aa3ea73a1d51e2d493fe
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1017
+1155
 
 fa8.gif
 file
@@ -3391,6 +3357,40 @@ has-props
 
 
 1287
+
+btn_bg3.gif
+file
+
+
+
+
+2013-03-19T02:07:06.562500Z
+8257e58b4093aa3ea73a1d51e2d493fe
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1017
 
 复件 jianli.gif
 file
@@ -3460,40 +3460,6 @@ has-props
 
 1026
 
-suo.png
-file
-
-
-
-
-2013-03-19T02:07:06.562500Z
-d1aff4ea157ddc021d73dfeea56f47ce
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-25730
-
 zwss.png
 file
 
@@ -3527,6 +3493,40 @@ has-props
 
 
 7147
+
+suo.png
+file
+
+
+
+
+2013-03-19T02:07:06.562500Z
+d1aff4ea157ddc021d73dfeea56f47ce
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+25730
 
 btn03.gif
 file
@@ -3868,40 +3868,6 @@ has-props
 
 24104
 
-picture_10.gif
-file
-
-
-
-
-2013-03-19T02:07:06.609375Z
-eb91e0af29fd9afc3d36de6ea79f95df
-2012-09-04T11:56:52.192526Z
-23574
-tanyuling
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-470
-
 inco3.gif
 file
 
@@ -3935,6 +3901,40 @@ has-props
 
 
 49
+
+picture_10.gif
+file
+
+
+
+
+2013-03-19T02:07:06.609375Z
+eb91e0af29fd9afc3d36de6ea79f95df
+2012-09-04T11:56:52.192526Z
+23574
+tanyuling
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+470
 
 pic01.gif
 file
@@ -4208,16 +4208,16 @@ has-props
 
 617
 
-tb_3.gif
+bta1.gif
 file
 
 
 
 
-2013-03-19T02:07:06.640625Z
-0c687ab84cbb19375506fb007b0cc816
-2012-09-04T11:56:52.192526Z
-23574
+2013-03-19T02:07:06.625000Z
+ce3c2e865ec25dc52dafa3816258ce1f
+2012-09-21T16:44:10.102272Z
+23791
 tanyuling
 has-props
 
@@ -4240,7 +4240,7 @@ has-props
 
 
 
-595
+2126
 
 heq_curr.png
 file
@@ -4276,16 +4276,16 @@ has-props
 
 2808
 
-bta1.gif
+tb_3.gif
 file
 
 
 
 
-2013-03-19T02:07:06.625000Z
-ce3c2e865ec25dc52dafa3816258ce1f
-2012-09-21T16:44:10.102272Z
-23791
+2013-03-19T02:07:06.640625Z
+0c687ab84cbb19375506fb007b0cc816
+2012-09-04T11:56:52.192526Z
+23574
 tanyuling
 has-props
 
@@ -4308,7 +4308,7 @@ has-props
 
 
 
-2126
+595
 
 t_tite.gif
 file

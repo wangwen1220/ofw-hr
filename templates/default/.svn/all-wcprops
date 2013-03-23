@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/netway/!svn/ver/25691/ofweek_hr/templates/default
+/svn/netway/!svn/ver/25750/ofweek_hr/templates/default
 END
 jobs-contrast.htm
 K 25
@@ -13,7 +13,7 @@ footer.htm
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/svn/netway/!svn/ver/25454/ofweek_hr/templates/default/footer.htm
+/svn/netway/!svn/ver/25708/ofweek_hr/templates/default/footer.htm
 END
 notice-show.htm
 K 25
@@ -97,13 +97,7 @@ header.htm
 K 25
 svn:wc:ra_dav:version-url
 V 65
-/svn/netway/!svn/ver/25481/ofweek_hr/templates/default/header.htm
-END
-notice-list.htm
-K 25
-svn:wc:ra_dav:version-url
-V 70
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/notice-list.htm
+/svn/netway/!svn/ver/25739/ofweek_hr/templates/default/header.htm
 END
 news-show.htm
 K 25
@@ -111,23 +105,29 @@ svn:wc:ra_dav:version-url
 V 68
 /svn/netway/!svn/ver/24777/ofweek_hr/templates/default/news-show.htm
 END
+notice-list.htm
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/notice-list.htm
+END
 jobs.htm
 K 25
 svn:wc:ra_dav:version-url
 V 63
-/svn/netway/!svn/ver/25714/ofweek_hr/templates/default/jobs.htm
+/svn/netway/!svn/ver/25750/ofweek_hr/templates/default/jobs.htm
+END
+job_search.htm
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/netway/!svn/ver/25722/ofweek_hr/templates/default/job_search.htm
 END
 resumetag-search.htm
 K 25
 svn:wc:ra_dav:version-url
 V 75
 /svn/netway/!svn/ver/24244/ofweek_hr/templates/default/resumetag-search.htm
-END
-job_search.htm
-K 25
-svn:wc:ra_dav:version-url
-V 69
-/svn/netway/!svn/ver/24744/ofweek_hr/templates/default/job_search.htm
 END
 jobs-list.htm
 K 25
@@ -139,7 +139,7 @@ index.htm
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/svn/netway/!svn/ver/25681/ofweek_hr/templates/default/index.htm
+/svn/netway/!svn/ver/25743/ofweek_hr/templates/default/index.htm
 END
 showmsg1.htm
 K 25
@@ -147,11 +147,11 @@ svn:wc:ra_dav:version-url
 V 67
 /svn/netway/!svn/ver/25226/ofweek_hr/templates/default/showmsg1.htm
 END
-jobtag-search.htm
+street-search.htm
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/jobtag-search.htm
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/street-search.htm
 END
 resume-list.htm
 K 25
@@ -159,11 +159,11 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/netway/!svn/ver/24244/ofweek_hr/templates/default/resume-list.htm
 END
-street-search.htm
+jobtag-search.htm
 K 25
 svn:wc:ra_dav:version-url
 V 72
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/street-search.htm
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/jobtag-search.htm
 END
 thumbnail.jpg
 K 25

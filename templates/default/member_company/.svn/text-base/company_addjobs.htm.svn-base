@@ -445,7 +445,7 @@ $(document).ready(function(){
               </tr>
               <tr>
                 <td width="13%" align="right">邮箱地址：</td>
-                <td width="87%"><input name="email" id="email" type="text" style="width:150px;margin-left:1px;" value="{#if $inport#}{#$jobInfo.contact.email#}{#else#}{#$company_profile.email#}{#/if#}"/><span>不填写email，则不会受到简历邮件</span></td>
+                <td width="87%"><input name="email" id="email" type="text" style="width:150px;margin-left:1px;" value="{#if $inport#}{#$jobInfo.contact.email#}{#else#}{#$company_profile.email#}{#/if#}"/><span>不填写email，则不会收到简历邮件</span></td>
               </tr>
               <tr>
                 <td width="13%" align="right"></td>

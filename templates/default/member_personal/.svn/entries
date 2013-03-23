@@ -1,7 +1,7 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/templates/default/member_personal
 http://huoshow.3322.org:8999/svn/netway
 
@@ -638,17 +638,17 @@ fulei
 
 17244
 
-personal_resume_tpl.htm
+personal_file.htm
 file
 
 
 
 
 2013-03-19T02:06:54.921875Z
-37c3156ffe66f2607c7d039c09c95397
-2012-11-27T08:38:53.302035Z
-24244
-fulei
+9629b48e7a24e5f24cba2b254ea7dedf
+2012-12-12T09:24:05.400718Z
+24631
+zhoutian
 
 
 
@@ -670,7 +670,7 @@ fulei
 
 
 
-3821
+4030
 
 personal_resume_make2.htm
 file
@@ -706,17 +706,17 @@ fulei
 
 14648
 
-personal_file.htm
+personal_resume_tpl.htm
 file
 
 
 
 
 2013-03-19T02:06:54.921875Z
-9629b48e7a24e5f24cba2b254ea7dedf
-2012-12-12T09:24:05.400718Z
-24631
-zhoutian
+37c3156ffe66f2607c7d039c09c95397
+2012-11-27T08:38:53.302035Z
+24244
+fulei
 
 
 
@@ -738,7 +738,7 @@ zhoutian
 
 
 
-4030
+3821
 
 personal_resume_make3.htm
 file
@@ -774,14 +774,14 @@ fulei
 
 6167
 
-personal_resume_make4.htm
+personal_user_status.htm
 file
 
 
 
 
-2013-03-19T02:06:54.937500Z
-95fd97fd245ca41181affda6b89fbb20
+2013-03-19T02:06:54.921875Z
+ec1b85bbbb0be7f37f0d0fc053f69ba2
 2012-11-27T08:38:53.302035Z
 24244
 fulei
@@ -806,75 +806,7 @@ fulei
 
 
 
-8984
-
-body_index.htm
-file
-
-
-
-
-2013-03-19T02:06:54.937500Z
-d88d0a1f27e01bce2770cd09c8830516
-2012-12-20T06:16:07.254065Z
-24755
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-17282
-
-personal_notice.htm
-file
-
-
-
-
-2013-03-19T02:06:54.937500Z
-27e562a89f5bff28863c73db8c0ccf17
-2012-11-27T08:38:53.302035Z
-24244
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2489
+2576
 
 personal_notice_show.htm
 file
@@ -910,14 +842,14 @@ fulei
 
 1976
 
-personal_user_status.htm
+personal_notice.htm
 file
 
 
 
 
-2013-03-19T02:06:54.921875Z
-ec1b85bbbb0be7f37f0d0fc053f69ba2
+2013-03-19T02:06:54.937500Z
+27e562a89f5bff28863c73db8c0ccf17
 2012-11-27T08:38:53.302035Z
 24244
 fulei
@@ -942,7 +874,75 @@ fulei
 
 
 
-2576
+2489
+
+body_index.htm
+file
+
+
+
+
+2013-03-19T02:06:54.937500Z
+d88d0a1f27e01bce2770cd09c8830516
+2012-12-20T06:16:07.254065Z
+24755
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+17282
+
+personal_resume_make4.htm
+file
+
+
+
+
+2013-03-19T02:06:54.937500Z
+95fd97fd245ca41181affda6b89fbb20
+2012-11-27T08:38:53.302035Z
+24244
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8984
 
 personal_resume_make5.htm
 file
@@ -1012,40 +1012,6 @@ fulei
 
 8521
 
-personal_resume_make7.htm
-file
-
-
-
-
-2013-03-19T02:06:54.937500Z
-d9540c40a6bd7f1dd8a4b7ff917ebd02
-2012-11-27T08:38:53.302035Z
-24244
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-4916
-
 personal_feedback.htm
 file
 
@@ -1079,6 +1045,40 @@ zhangchengjun
 
 
 2845
+
+personal_resume_make7.htm
+file
+
+
+
+
+2013-03-19T02:06:54.937500Z
+d9540c40a6bd7f1dd8a4b7ff917ebd02
+2012-11-27T08:38:53.302035Z
+24244
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4916
 
 header.htm
 file

@@ -1,7 +1,7 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/admin/images
 http://huoshow.3322.org:8999/svn/netway
 
@@ -128,40 +128,6 @@ has-props
 
 1071
 
-close_frame.gif
-file
-
-
-
-
-2013-03-19T02:06:39.609375Z
-f5b2994494315b61e28cd1626447fa34
-2012-08-29T11:28:18.702162Z
-23544
-zhangchengjun
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-188
-
 act_add.gif
 file
 
@@ -195,6 +161,40 @@ has-props
 
 
 134
+
+close_frame.gif
+file
+
+
+
+
+2013-03-19T02:06:39.609375Z
+f5b2994494315b61e28cd1626447fa34
+2012-08-29T11:28:18.702162Z
+23544
+zhangchengjun
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+188
 
 topnavbg.gif
 file
@@ -298,40 +298,6 @@ has-props
 
 198
 
-admin_submit.jpg
-file
-
-
-
-
-2013-03-19T02:06:39.625000Z
-74c085725f90a5ae8a6cd1d92bd872f2
-2012-08-29T11:28:18.702162Z
-23544
-zhangchengjun
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1461
-
 admin_left_li.gif
 file
 
@@ -365,6 +331,40 @@ has-props
 
 
 77
+
+admin_submit.jpg
+file
+
+
+
+
+2013-03-19T02:06:39.625000Z
+74c085725f90a5ae8a6cd1d92bd872f2
+2012-08-29T11:28:18.702162Z
+23544
+zhangchengjun
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1461
 
 dialogbg.png
 file
@@ -400,40 +400,6 @@ has-props
 
 20768
 
-login_logo.gif
-file
-
-
-
-
-2013-03-19T02:06:39.671875Z
-aaa6493fa36edae9d8efea48c6e39f38
-2013-01-07T01:20:01.235996Z
-25068
-fulei
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-42234
-
 sehbg.gif
 file
 
@@ -467,6 +433,40 @@ has-props
 
 
 600
+
+login_logo.gif
+file
+
+
+
+
+2013-03-19T02:06:39.671875Z
+aaa6493fa36edae9d8efea48c6e39f38
+2013-01-07T01:20:01.235996Z
+25068
+fulei
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+42234
 
 comment_alert.gif
 file

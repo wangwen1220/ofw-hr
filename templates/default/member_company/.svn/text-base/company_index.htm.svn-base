@@ -44,14 +44,14 @@ $(document).ready(function()
             <td width="19%" rowspan="2" align="center" bgcolor="#e6eef9"><strong>服务计划</strong></td>
             <td width="21%" align="center" bgcolor="#e6eef9">已发职位数</td>
             <td width="18%" align="center" bgcolor="#e6eef9">剩余职位数</td>
-            <td width="23%" align="center" bgcolor="#e6eef9">已下简历</td>
-            <td width="19%" align="center" bgcolor="#e6eef9">剩余简历</td>
+            <td width="23%" align="center" bgcolor="#e6eef9">{#if $setmeal.setmeal_id==3#}已下简历{#/if#} </td>
+            <td width="19%" align="center" bgcolor="#e6eef9">{#if $setmeal.setmeal_id==3#}剩余简历{#/if#} </td>
           </tr>
           <tr>
             <td align="center" bgcolor="#FFFFFF"><a href="company_jobs.php?act=jobs">{#$count_jobs#}</a></td>
             <td align="center" bgcolor="#FFFFFF">{#$count_jobs_leave#}</td>
-            <td align="center" bgcolor="#FFFFFF"><a href="company_recruitment.php?act=down_resume_list">{#$count_down_resume#}</a></td>
-            <td align="center" bgcolor="#FFFFFF">{#$count_down_resume_leave#}</td>
+            <td align="center" bgcolor="#FFFFFF">{#if $setmeal.setmeal_id==3#}<a href="company_recruitment.php?act=down_resume_list">{#$count_down_resume#}</a>{#/if#} </td>
+            <td align="center" bgcolor="#FFFFFF">{#if $setmeal.setmeal_id==3#}{#$count_down_resume_leave#}{#/if#} </td>
           </tr>
           <tr>
             <td width="19%" rowspan="2" align="center" bgcolor="#e6eef9"><strong>招聘信息</strong></td>
@@ -129,7 +129,7 @@ $(document).ready(function()
               </tr>
               <tr>
               	<td>会籍有效期：</td>
-                <td>【{#if $expire#}<span class="f_red">已过期</span>{#else#}{#$setmeal_endtime#}{#/if#}】</td>
+                <td>【{#if $setmeal.setmeal_id==3#}{#if $expire#}<span class="f_red">已过期</span>{#else#}{#$setmeal_endtime#}{#/if#}{#else#}长期有效{#/if#}】</td>
               </tr>
               <tr>
               	<td>未读系统消息：</td>

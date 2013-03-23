@@ -17,7 +17,7 @@
               <ul>
                 <li><a href="company_recruitment.php?act=apply_jobs">应聘简历管理</a></li>
                 <li><a href="company_recruitment.php?act=interview_list">已发面试通知</a></li>
-                <li><a href="company_recruitment.php?act=down_resume_list">已下载简历</a></li>
+                {#if $setmeal.setmeal_id==3#}<li><a href="company_recruitment.php?act=down_resume_list">已下载简历</a></li>{#/if#}
 				<li><a href="company_recruitment.php?act=favorites_list">简历收藏夹</a></li>
                 <li><a href="company_recruitment.php?act=search">搜索简历库</a></li>
               </ul>

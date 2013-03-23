@@ -1148,4 +1148,10 @@ INSERT INTO `hr_category_speciality` (`parentid`, `categoryname`, `category_orde
 (21, '药物制剂', 0, '', ''),
 (21, '制药工程', 0, '', '');
 
-ALTER TABLE  `hr_members` ADD  `operatetype` INT NOT NULL DEFAULT  '1' COMMENT  '1注册，2同步'
+ALTER TABLE  `hr_members` ADD  `operatetype` INT NOT NULL DEFAULT  '1' COMMENT  '1注册，2同步';
+ALTER TABLE  `hr_company_profile` ADD  `company_type` TINYINT NOT NULL DEFAULT  '1' COMMENT  '企业类型：1普通，2名企';
+ALTER TABLE  `hr_company_profile` ADD  `company_type_addtime` INT NOT NULL COMMENT  '添加时间';
+
+
+UPDATE hr_members_setmeal SET `endtime`=`endtime`+315360000 WHERE (endtime<1600000000 AND endtime>0);
+UPDATE hr_jobs SET `setmeal_deadline`=`setmeal_deadline`+315360000 WHERE (setmeal_deadline<1600000000 AND setmeal_deadline>0);

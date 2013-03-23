@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svn/netway/!svn/ver/25636/ofweek_hr/admin/templates/default/z
+/svn/netway/!svn/ver/25736/ofweek_hr/admin/templates/default/z
 END
 company_edit.htm
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svn/netway/!svn/ver/25485/ofweek_hr/admin/templates/default/z/company_edit.htm
+/svn/netway/!svn/ver/25733/ofweek_hr/admin/templates/default/z/company_edit.htm
 END
 personal_list.htm
 K 25
@@ -25,7 +25,7 @@ company_list.htm
 K 25
 svn:wc:ra_dav:version-url
 V 79
-/svn/netway/!svn/ver/24997/ofweek_hr/admin/templates/default/z/company_list.htm
+/svn/netway/!svn/ver/25736/ofweek_hr/admin/templates/default/z/company_list.htm
 END
 company_edit_setmeal.htm
 K 25

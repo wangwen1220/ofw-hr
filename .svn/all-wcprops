@@ -1,7 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 36
-/svn/netway/!svn/ver/25695/ofweek_hr
+/svn/netway/!svn/ver/25752/ofweek_hr
+END
+merge_trade.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/netway/!svn/ver/25752/ofweek_hr/merge_trade.php
 END
 robots.txt
 K 25

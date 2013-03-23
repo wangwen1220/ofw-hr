@@ -95,7 +95,11 @@ elseif($act == 'addsave')
 		$Small_img=_asUpFiles($upfiles_dir, "Small_img", 1024*2, 'jpg/gif/png',true);
 		$makefile=$upfiles_dir.$Small_img;
 		make_dir($thumb_dir.date("Y/m/d/"));
-		makethumb($makefile,$thumb_dir.date("Y/m/d/"),$thumbwidth,$thumbheight);
+		if ($setsqlarr['type_id']==5) {
+			resizeImg($makefile,$thumb_dir.date("Y/m/d/"),74,99,1);
+		} else {
+			makethumb($makefile,$thumb_dir.date("Y/m/d/"),$thumbwidth,$thumbheight);
+		}
 		$setsqlarr['Small_img']=date("Y/m/d/").$Small_img;
 	}
 	$setsqlarr['addtime']=$timestamp;
@@ -140,12 +144,18 @@ elseif($act == 'editsave')
 	$setsqlarr['article_order']=intval($_POST['article_order']);
 	if($_FILES['Small_img']['name'])
 	{
+		if($setsqlarr['type_id']==5){}
+	
 		$upfiles_dir.=date("Y/m/d/");
 		make_dir($upfiles_dir);
 		$Small_img=_asUpFiles($upfiles_dir, "Small_img", 1024*2, 'jpg/gif/png',true);
 		$makefile=$upfiles_dir.$Small_img;
 		make_dir($thumb_dir.date("Y/m/d/"));
-		makethumb($makefile,$thumb_dir.date("Y/m/d/"),$thumbwidth,$thumbheight);
+		if ($setsqlarr['type_id']==5) {
+			resizeImg($makefile,$thumb_dir.date("Y/m/d/"),74,99,1);
+		} else {
+			makethumb($makefile,$thumb_dir.date("Y/m/d/"),$thumbwidth,$thumbheight);
+		}
 		$setsqlarr['Small_img']=date("Y/m/d/").$Small_img;
 	}
 	$setsqlarr['parentid']=get_article_parentid($setsqlarr['type_id']);

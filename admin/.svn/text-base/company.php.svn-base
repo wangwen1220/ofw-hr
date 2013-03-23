@@ -39,6 +39,7 @@ if ($act == 'list') {
 	$search['setmeal'] = isset($_GET['setmeal']) ? intval($_GET['setmeal']) : 0;
 	$search['expire'] = isset($_GET['expire']) ? intval($_GET['expire']) : 0;
 	$search['sort'] = isset($_GET['sort']) ? trim($_GET['sort']) : '';
+	$search['company_type'] = isset($_GET['company_type']) ? intval($_GET['company_type']) : 0;
 	if ($from == 'audit') {
 		$search['audit'] = 2;
 	} else {
@@ -91,6 +92,11 @@ if ($act == 'list') {
 		$addsql .= " AND ms.setmeal_id =$t";
 	}
 	
+	if ($search['company_type']) {
+		$t = $search['company_type'];
+		$addsql .= " AND cp.company_type=$t";
+	}
+	
 	if ($search['sort']) {
 		$t = $search['sort'];
 		$sortsql = "ORDER BY m.$t DESC";
@@ -106,7 +112,7 @@ if ($act == 'list') {
 		LEFT JOIN hr_company_profile cp ON cp.uid=m.uid
 		LEFT JOIN hr_members_setmeal ms ON ms.uid=m.uid
 		WHERE m.utype=1$addsql");
-	$sql = "SELECT m.uid,m.username,m.reg_time,cp.audit,cp.companyname,cp.contact,cp.telephone,ms.setmeal_id,ms.setmeal_name,ms.endtime,cp.nature_cn,cp.certificate_img
+	$sql = "SELECT m.uid,m.username,m.reg_time,cp.audit,cp.companyname,cp.contact,cp.telephone,cp.company_type,ms.setmeal_id,ms.setmeal_name,ms.endtime,cp.nature_cn,cp.certificate_img
 		FROM hr_members m
 		LEFT JOIN hr_company_profile cp ON cp.uid=m.uid
 		LEFT JOIN hr_members_setmeal ms ON ms.uid=m.uid
@@ -563,6 +569,18 @@ elseif ($act == 'audit') {
 		adminmsg('操作成功！',2);
 	}
 }
+
+//名企设定
+elseif ($act == 'brand') {
+	$uid = $_POST['uid'];
+	
+	$setsqlarr['company_type'] = intval($_POST['company_type']);
+	$setsqlarr['company_type_addtime'] = time();
+	
+	updatetable(table('company_profile'),$setsqlarr,array('uid'=>$uid));
+	adminmsg('保存成功！',2);
+}
+
 else if($act == 'cid'){
 	$uid = intval($_GET['uid']);
 	

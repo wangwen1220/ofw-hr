@@ -433,6 +433,12 @@ $(document).ready(function(){
 	});
 	
 });
+$('form').submit(function(){
+		$('#industry option').each(function(){this.selected=true;});
+		$('#category option').each(function(){this.selected=true;});
+		$('#district option').each(function(){this.selected=true;});
+		return true;
+});
 </script>
 
 

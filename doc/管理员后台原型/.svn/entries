@@ -1,7 +1,7 @@
 10
 
 dir
-25701
+25754
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/doc/%E7%AE%A1%E7%90%86%E5%91%98%E5%90%8E%E5%8F%B0%E5%8E%9F%E5%9E%8B
 http://huoshow.3322.org:8999/svn/netway
 
@@ -100,6 +100,9 @@ fulei
 
 1129
 
+系统_files
+dir
+
 chm_start.html
 file
 
@@ -133,9 +136,6 @@ fulei
 
 
 1242
-
-系统_files
-dir
 
 敏感词过滤.html
 file
@@ -205,6 +205,9 @@ fulei
 
 32811
 
+友情链接_files
+dir
+
 待审核公司（数值）.html
 file
 
@@ -239,7 +242,10 @@ fulei
 
 60589
 
-友情链接_files
+人才搜索_files
+dir
+
+简历列表_files
 dir
 
 公司编辑.html
@@ -275,12 +281,6 @@ fulei
 
 
 39509
-
-简历列表_files
-dir
-
-人才搜索_files
-dir
 
 职位列表.html
 file
@@ -426,6 +426,12 @@ dir
 顶部导航_files
 dir
 
+简历管理_files
+dir
+
+意见反馈_files
+dir
+
 简历编辑审核.html
 file
 
@@ -460,10 +466,7 @@ fulei
 
 62438
 
-意见反馈_files
-dir
-
-简历管理_files
+新页面_2_files
 dir
 
 职位编辑.html
@@ -500,9 +503,6 @@ fulei
 
 46501
 
-新页面_2_files
-dir
-
 New_Page_1.html
 file
 
@@ -536,6 +536,9 @@ fulei
 
 
 9982
+
+添加管理员_files
+dir
 
 套餐权限设定.html
 file
@@ -571,7 +574,7 @@ fulei
 
 37120
 
-添加管理员_files
+待审核公司（数值）_files
 dir
 
 职能设定.html
@@ -607,9 +610,6 @@ fulei
 
 
 74391
-
-待审核公司（数值）_files
-dir
 
 待审核职位（数值）_files
 dir
@@ -648,40 +648,6 @@ fulei
 
 1226
 
-意见反馈.html
-file
-
-
-
-
-2013-03-19T02:06:32.921875Z
-841ffc32a407a57ae4c62d3cb4f33203
-2012-10-27T03:32:17.548045Z
-23952
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-43172
-
 简历管理.html
 file
 
@@ -715,6 +681,40 @@ fulei
 
 
 84722
+
+意见反馈.html
+file
+
+
+
+
+2013-03-19T02:06:32.921875Z
+841ffc32a407a57ae4c62d3cb4f33203
+2012-10-27T03:32:17.548045Z
+23952
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+43172
 
 新页面_1.html
 file
@@ -750,10 +750,10 @@ fulei
 
 11526
 
-New_Page_1_files
+户籍选择_files
 dir
 
-户籍选择_files
+New_Page_1_files
 dir
 
 修改密码.html
@@ -895,9 +895,6 @@ fulei
 
 1226
 
-管理员_files
-dir
-
 导航设置.html
 file
 
@@ -932,42 +929,11 @@ fulei
 
 34320
 
-修改密码_files
+管理员_files
 dir
 
-管理员列表.html
-file
-
-
-
-
-2013-03-19T02:06:32.921875Z
-13aa49c5ca9bca95b35265b2d59c05db
-2012-10-27T03:32:17.548045Z
-23952
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-35971
+修改密码_files
+dir
 
 当月可设置免费企业数.html
 file
@@ -1002,6 +968,40 @@ fulei
 
 
 1665
+
+管理员列表.html
+file
+
+
+
+
+2013-03-19T02:06:32.921875Z
+13aa49c5ca9bca95b35265b2d59c05db
+2012-10-27T03:32:17.548045Z
+23952
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+35971
 
 data
 dir
@@ -1043,40 +1043,6 @@ fulei
 职位编辑_files
 dir
 
-人才搜索.html
-file
-
-
-
-
-2013-03-19T02:06:32.937500Z
-56a64ac0d82e926c876c629f65c777cd
-2012-10-27T03:32:17.548045Z
-23952
-fulei
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-31284
-
 简历列表.html
 file
 
@@ -1110,6 +1076,40 @@ fulei
 
 
 1226
+
+人才搜索.html
+file
+
+
+
+
+2013-03-19T02:06:32.937500Z
+56a64ac0d82e926c876c629f65c777cd
+2012-10-27T03:32:17.548045Z
+23952
+fulei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+31284
 
 新页面_2.html
 file

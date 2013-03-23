@@ -51,5 +51,6 @@ require_once(QISHI_ROOT_PATH.'include/fun_company.php');
 	z_goto($_CFG['site_domain']);
 	}
 	
-	
+$setmeal = z_setmeal($_SESSION['uid']);
+$smarty->assign('setmeal',$setmeal);	
 ?>

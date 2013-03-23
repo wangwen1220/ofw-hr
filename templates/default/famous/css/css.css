@@ -1,0 +1,217 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+p,ul,li,h1,h2,h3,h4,h5{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	}
+
+.main01{
+	width:990px;
+	margin:10px auto;
+	overflow:hidden;
+	*zoom:1;
+	}
+.main02{
+	width:990px;
+	margin:10px auto;
+	overflow:hidden;
+	*zoom:1;
+	}
+.main02 img{
+	margin-bottom:2px;
+	}
+.main03{
+	width:990px;
+	margin:0 auto;
+	word-break:break-all;
+	overflow:hidden;
+	*zoom:1;
+	}
+.main03 ul{
+	margin-right:-10px;
+	overflow:hidden;
+	*zoom:1;
+	}
+.main03 ul li{
+	float:left;
+	margin-right:7px;
+	margin-bottom:10px;
+	margin-bottom:12px\9;
+	*margin-bottom:10px;
+	text-align:center;
+	}
+.main03 ul li img{
+	width:157px;
+	height:109px;
+	}
+.main03 ul li ul{
+	margin:0;
+	padding:0;
+	width:157px;
+	border:1px solid #ccc;
+	}
+.main03 ul li ul li{
+	font-size:12px;
+	float:none;
+	width:142px;
+	background:url(../images/dian.gif) no-repeat 5px 10px;
+	padding-left:15px;
+	line-height:22px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	border:none;
+	text-align:left;
+	margin:0;
+	}
+.main03 ul li ul li a{
+	color:#2244dd;
+	text-decoration:none;
+	}
+.main03 ul li ul li a:hover{
+	color:#ec3701;
+	text-decoration:underline;
+	}
+.main01_left {
+    float: left;
+    width: 652px;
+}
+.pic_top {
+    background: url("../images/focus_top.gif") no-repeat scroll 0 0 transparent;
+    height: 6px;
+    overflow: hidden;
+}
+.m_l_midd {
+    border-right:3px solid #C50007;
+	border-left:3px solid #C50007;
+    overflow: hidden;
+    padding: 8px 7px;
+    width: 632px;
+}
+#boxImg {
+    background: none repeat scroll 0 0 #FEE19D;
+    border: 1px solid #FEE19D;
+    float: left;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    width: 628px;
+}
+#boxImg #img {
+    float: left;
+    height: 286px;
+    width: 520px;
+}
+#boxImg #btn {
+    float: left;
+    height: 280px;
+    left: 503px;
+    padding: 2px;
+    position: absolute;
+    width: 122px;
+}
+#boxImg #btn span {
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    text-align: right;
+}
+#boxImg #btn span.current {
+    background: url("../images/hover.gif") no-repeat scroll center center transparent;
+}
+.pic_bott {
+    background: url("../images/focus_bottom.gif") no-repeat scroll 0 0 transparent;
+    height: 6px;
+}
+
+.main01_right {
+    float: right;
+    width: 322px;
+}
+.title_t {
+    background: url("../images/news_top.gif") no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    height: 33px;
+    line-height: 33px;
+}
+.title_t h2 {
+    color: #FFFFFF;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    text-indent: 32px;
+}
+.title_t a {
+    color: #FFFFFF;
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    padding-right: 8px;
+    text-decoration: none;
+}
+.m_r_midd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #C50007;
+    border-image: none;
+    border-left: 3px solid #C50007;
+    border-right: 3px solid #C50007;
+    border-style: none solid;
+    border-width: medium 3px;
+    width: 316px;
+}
+.news_one {
+    border-bottom: 1px solid #FFE5AA;
+    height: 111px;
+    margin: 0 auto;
+    padding-top: 6px;
+    width: 295px;
+}
+
+.news_one img {
+    float: left;
+}
+.news_one_font {
+    float: right;
+    font-size: 12px;
+    width: 205px;
+}
+
+.news_one_font h3 {
+    font-weight: bold;
+    line-height: 25px;
+	font-size:12px;
+}
+.news_one_font p {
+    font-weight: normal;
+    line-height: 24px;
+}
+.news_list {
+    margin: 0 auto;
+    padding-top: 3px;
+    width: 295px;
+}
+.news_list li {
+    background: url("../images/news_icon.gif") no-repeat scroll 3px 10px transparent;
+    line-height: 25px;
+    padding-left: 16px;
+	font-size:12px;
+}
+.news_list li a {
+    color: #000000;
+    text-decoration: none;
+}
+.news_list li a:hover {
+    color: #C60008;
+    text-decoration: underline;
+}
+.m_r_bott {
+    background: url("../images/news_bottom.gif") no-repeat scroll 0 0 transparent;
+    height: 6px;
+}
