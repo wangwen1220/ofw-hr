@@ -5,7 +5,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <link href="{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
 <link href="{#$QISHI.site_template#}css/jobs.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="http://www.cjolimg.com/v7/jms/ui-lightness/jquery-ui-1.8.10.custom.min02.css" />
 <script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
+<script type="text/javascript" src="http://js.cjolimg.com/v7/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://js.cjolimg.com/v7/js/jquery-ui.min.js"></script>
+ <script type="text/javascript" src="http://js.cjolimg.com/v7/js/plugin/jquery.ui.datepicker.min.js"></script>
+ <script type="text/javascript" src="http://js.cjolimg.com/v7/Jms/jquery.ui.datepicker-zh-CN.js"></script>
 <script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' ></script>
 <script type="text/javascript" src="{#$QISHI.site_template#}js/add_common_function.js"></script>
 </head>
@@ -55,7 +60,7 @@
 					<td width="10%"><span class="f_red">*</span>出生年月：</td>
 					<td width="3%"></td>
 					<td width="42%"><label>
-							<input name="user_birthday" id="user-birthday" class="s01" type="text">
+							<input name="user_birthday" id="user-birthday" class="s01" type="text" autocomplete="off">
 						</label></td>
 				</tr>
 				<tr>
@@ -685,6 +690,50 @@
 					'address':{
 						'required':'请填写通信地址',
 						'maxlength':'请输入少于50个字符'
+					}
+				}
+			});
+		});
+
+		// 展开/收起信息
+		$(function() {
+			var base_info_more_txt = "+填写更多基本资料",
+				no_deeed_txt = "-收起非必填项",
+				contact_info_more_txt = "+填写更多联系方式";
+
+			$("#user-birthday").datepicker({
+				defaultDate: "1980-01-01",
+				minDate: "-100Y",
+				maxDate: "-16Y",
+				yearRange: "-100:-16",
+				changeMonth: true,
+				changeYear: true,
+				onClose: function() {
+					var f = $("#user-birthday").val();
+					if (f.length == 0) {
+						$("#tbxbirthday_ok,#tbxbirthday_default").hide();
+						$("#Tab_panelBasicInfo_tbxbirthday_error").html("出生日期不能为空").show()
+					} else {
+						var e = null;
+						try {
+							e = $.datepicker.parseDate("yy-mm-dd", f)
+						} catch(d) {
+							e = null
+						}
+						var g = new Date();
+						g.setFullYear(g.getFullYear() - 16);
+						if (e == null) {
+							$("#tbxbirthday_ok,#tbxbirthday_default").hide();
+							$("#Tab_panelBasicInfo_tbxbirthday_error").html("出生日期格式错误").show()
+						} else {
+							if (e > g) {
+								$("#tbxbirthday_ok,#tbxbirthday_default").hide();
+								$("#Tab_panelBasicInfo_tbxbirthday_error").html("仅可选择当前年份-16年以前的年份").show()
+							} else {
+								$("#Tab_panelBasicInfo_tbxbirthday_error,#tbxbirthday_default").hide();
+								$("#tbxbirthday_ok").show()
+							}
+						}
 					}
 				}
 			});
