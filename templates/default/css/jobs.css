@@ -9,7 +9,8 @@
 .jilin{ float:left; width:948px;}
 .xinx .tish{ background:url(../images/inco4.gif) left no-repeat; padding-left:15px; float:left; width:948px; line-height:21px;}
 .xinx .tish span{ padding:0px 5px;}
-.liao_z{ float:left; border-bottom:1px solid #ddd; height:30px; line-height:30px; width:923px; background:url(../images/inco5.gif) left no-repeat; padding-left:25px; font-weight:bold; margin-top:20px;}
+.liao_z{ float:left; border-bottom:1px solid #ddd; height:30px; line-height:30px; width:923px; background:url(../images/inco5.gif) left no-repeat; padding:0 25px; font-weight:bold; margin-top:20px;}
+.liao_z a{ float: right; color: #f00;}
 .liao_a{ float:left; width:908px; line-height:30px; padding:20px;}
 .liao_a span{ margin-right:5px;}
 .liao_a .s01{ border:1px solid #5a74a4; height:20px; line-height:20px; width:240px; float:left;}

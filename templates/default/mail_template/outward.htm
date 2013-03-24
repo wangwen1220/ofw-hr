@@ -1,435 +1,371 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="content-type" content="text/html; charset=gb2312" />
 <title>个人简历_OFweek人才网</title>
-<link href="{#$QISHI.site_domain#}{#$QISHI.site_template#}css/home.css" rel="stylesheet" type="text/css" />
-<link href="{#$QISHI.site_domain#}{#$QISHI.site_template#}css/personal.css" rel="stylesheet" type="text/css" />
-<script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script>
-<script>
-$(document).ready(function() {
-	//下载简历
-	$("#type2_btn_down").click(function(){
-		location.href="resume.php?uid={#$id#}&act=down";
+<!-- <script src="{#$QISHI.site_template#}js/jquery.js" type='text/javascript' ></script> -->
+<!-- <script type='text/javascript'>
+	$(function() {
+		//下载简历
+		$("#type2_btn_down").click(function(){
+			location.href="resume.php?uid={#$id#}&act=down";
+		});
+		//收藏简历
+		$("#type2_btn_favorites").click(function(){
+			location.href="resume.php?uid={#$id#}&act=favorites";
+		});
+		//发面试通知
+		$("#type3_btn_interview").click(function(){
+			location.href="company/company_recruitment.php?act=send_interview&uid={#$id#}";
+		});
+		//转发简历
+		$("#type2_btn_send").click(function(){
+			location.href="{#$QISHI.site_domain#}/user/company/company_send.php?uid={#$user_info.uid#}";
+		});
+
+	{#if $type == 'admin'#}
+
+
+	$("span.editable").live('click',function(){
+		var html = '<textarea style="display:block;line-height:22px;width:'+($(this).width()-5)+'px;height:'+$(this).height()+'px;" data-id="'+$(this).attr('data-id')+'" data-name="'+$(this).attr('data-name')+'">';
+		var unstr = removeNL($(this).html());
+		html += br2nl(unstr);
+		html += '</textarea>';
+
+		var param = encodeURIComponent(unstr).replace(/(')/g,"\\$1");
+		html += '<input type="button" onclick="editsave(this)" value="保存">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="editunsave(\''+param+ '\', this)" value="取消">';
+		var parent = $(this).parent();
+		$(this).removeAttr('class');
+		$(parent).html(html);
+
 	});
-	//收藏简历
-	$("#type2_btn_favorites").click(function(){
-		location.href="resume.php?uid={#$id#}&act=favorites";
-	});
-	//发面试通知 
-	$("#type3_btn_interview").click(function(){
-		location.href="company/company_recruitment.php?act=send_interview&uid={#$id#}";
-	});
-	//转发简历
-	$("#type2_btn_send").click(function(){
-		location.href="{#$QISHI.site_domain#}/user/company/company_send.php?uid={#$user_info.uid#}";
+
+	{#/if#}
+
 	});
 
-{#if $type == 'admin'#}
+	function nl2br (str, is_xhtml) {
+			var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+	//    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag );
+	}
+	function br2nl(txt) {
+			var re = /(<br ?\/>|<br>|<BR>|<BR ?\/>)/g;
+			var s = txt.replace(re, "\r\n");
+			return s;
+	}
+	function removeNL(str){
+		var re = /\r\n|\n\r|\r|\n/g;
+		return str.replace(re, '');
+	}
 
-
-$("span.editable").live('click',function(){
-	var html = '<textarea style="display:block;line-height:22px;width:'+($(this).width()-5)+'px;height:'+$(this).height()+'px;" data-id="'+$(this).attr('data-id')+'" data-name="'+$(this).attr('data-name')+'">';
-	var unstr = removeNL($(this).html());	
-	html += br2nl(unstr);
-	html += '</textarea>';
-
-	var param = encodeURIComponent(unstr).replace(/(')/g,"\\$1");
-	html += '<input type="button" onclick="editsave(this)" value="保存">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="editunsave(\''+param+ '\', this)" value="取消">';
-	var parent = $(this).parent();
-	$(this).removeAttr('class');
-	$(parent).html(html);
-
-});
-
-{#/if#}
-
-});
-
-function nl2br (str, is_xhtml) {
-    var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
-//    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
-	return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag );
-}
-function br2nl(txt) {   
-    var re = /(<br ?\/>|<br>|<BR>|<BR ?\/>)/g;   
-    var s = txt.replace(re, "\r\n");   
-    return s;                                      
-}  
-function removeNL(str){
-	var re = /\r\n|\n\r|\r|\n/g;
-	return str.replace(re, '');
-}
-
-function editsave(ele){
-	var textarea = $(ele).parent().children('textarea');
-	//ajax保存
-	var value = $(textarea).val();
-	var type = $(textarea).attr('data-name');
-	var id = $(textarea).attr('data-id');
-//	console.log('act=resume&type='+type+'&id='+id+'value='+encodeURIComponent(value));
-	$.ajax({
-		type: "POST",
-		url: "{#$QISHI.site_domain#}/admin/personal.php?act=resume",
-		data: 'type='+type+'&id='+id+'&value='+encodeURIComponent(value),
-		success: function(msg){
-//			console.log(msg);
-			if(msg != 1){
-				alert('修改失败,请重试');
+	function editsave(ele){
+		var textarea = $(ele).parent().children('textarea');
+		//ajax保存
+		var value = $(textarea).val();
+		var type = $(textarea).attr('data-name');
+		var id = $(textarea).attr('data-id');
+	//	console.log('act=resume&type='+type+'&id='+id+'value='+encodeURIComponent(value));
+		$.ajax({
+			type: "POST",
+			url: "{#$QISHI.site_domain#}/admin/personal.php?act=resume",
+			data: 'type='+type+'&id='+id+'&value='+encodeURIComponent(value),
+			success: function(msg){
+	//			console.log(msg);
+				if(msg != 1){
+					alert('修改失败,请重试');
+				}
 			}
-		}
-	});
+		});
 
-	//刷新显示
-	var html = '<span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="'+$(textarea).attr('data-id')+'" data-name="'+$(textarea).attr('data-name')+'">';
-	html += nl2br(value);
-	html += '</span>';
-	$(textarea).parent().html(html);
-
-
-}
-function editunsave(str,ele){
-//	console.log($(ele).parent().children('textarea'));
-	var textarea = $(ele).parent().children('textarea');
-	var html = '<span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="'+$(textarea).attr('data-id')+'" data-name="'+$(textarea).attr('data-name')+'">';
-	html += nl2br(decodeURIComponent(str));
-	html += '</span>';
-	$(textarea).parent().html(html);
-}
-
-</script>
-<style type="text/css">
-
-	#whole{ width:650px; margin:0 auto;}
-.top_ch{ float:left; width:650px;}
-.top_ch .logo{ float:left;}
-.top_ch .bian{ float:left; margin-left:100px; display:inline; line-height:24px; margin-top:60px;}
-.contented{ float:left; width:650px; padding-bottom:20px;}
-.jbzi{ float:left; width:648px; border:1px solid #dbe6f3; border-bottom:none;}
-.tleti{ float:left; background:url({#$QISHI.site_domain#}/templates/default/images/bg_jl.gif) repeat-x; height:27px; width:618px; padding:0px 15px;}
-.tleti h3{ line-height:28px; color:#222;}
-.data{ width:628px; float:left; padding:10px; line-height:22px;}
-.tb01 td{ padding-left:10px;}
-.btn_s{ background:url({#$QISHI.site_domain#}/templates/default/images/btn_bg.gif) no-repeat; width:58px; height:23px; border:none;}
-.btn_h{ background:url({#$QISHI.site_domain#}/templates/default/images/btn_bg1.gif) no-repeat; width:90px; height:23px; border:none;}
-.btn_y{ background:url({#$QISHI.site_domain#}/templates/default/images/btn_bg2.gif) no-repeat; width:78px; height:24px; border:none;}
+		//刷新显示
+		var html = '<span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="'+$(textarea).attr('data-id')+'" data-name="'+$(textarea).attr('data-name')+'">';
+		html += nl2br(value);
+		html += '</span>';
+		$(textarea).parent().html(html);
+	}
+	function editunsave(str,ele){
+	//	console.log($(ele).parent().children('textarea'));
+		var textarea = $(ele).parent().children('textarea');
+		var html = '<span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="'+$(textarea).attr('data-id')+'" data-name="'+$(textarea).attr('data-name')+'">';
+		html += nl2br(decodeURIComponent(str));
+		html += '</span>';
+		$(textarea).parent().html(html);
+	}
+</script> -->
+<style>
+	#wrapper { margin:0 auto; color:#444; font:12px/18px Arial; border:1px solid #999; background:url(../images/email/bg-thead.png) repeat-x; }
+	#topbar { padding:0 10px; height: 30px; line-height:30px; background:#E8F2FE url(../images/email/bg-thead.png) repeat-x; }
+	#topbar a { margin: 0 5px; padding-left:18px; background:url(../images/email/icon-notice.png) no-repeat left center; text-decoration: none; outline: none; }
+	#topbar a.send { background-image:url(../images/email/icon-send.png); }
+	#topbar a.print { background-image:url(../images/email/icon-print.png); }
+	#topbar a.favorite { padding-left: 0; background: none; }
+	#topbar a:hover { text-decoration: underline; }
+	#footer { margin: 10px 0 20px; text-align: center; }
+	#footer a { display: inline-block; margin: 0 10px; width: 40px; height: 20px; text-indent: -9999px; background:url(../images/email/btn-print.png) no-repeat center center; text-decoration: none; outline: none; }
+	#footer a.close { background-image:url(../images/email/btn-close.png); }
+	#footer a { text-decoration: none; }
 </style>
 </head>
 <body>
-<div id="whole">
-	<div class="top_ch">
-<!--
-		<div style="padding-left:10px; padding-right:10px;line-height:22px;"><span style="display:block;">尊敬的人事经理您好！</span>
-        <span style="display:block; text-indent:2em;">感谢您在百忙之中阅读我的简历！期待与您的面谈！</span>
+<div id='wrapper'>
+	<div id='topbar'><a class='notice' href="">面试通知</a> <a class='send' href="">发送简历</a> <a class='print' href="">打印/保存</a> | <a class='favorite' href="">收藏简历</a></div>
 
-        <span style="display:block; text-indent:2em;">祝商琪！</span>
-		</div>
--->
-    	<div class="logo"><a href="/"><img src="{#$QISHI.site_domain#}/templates/default/images/logo.jpg" border="0" /></a></div>
-		
-      <div class="bian"><strong style="font-family:'微软雅黑', '黑体'; font-size:16px;">{#$user_info.fullname#}的个人简历</strong><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;简历编号：{#$reg_time#}{#$user_info.id#}</div>
-  </div>
-    <div class="content mtop">
-   	  <div class="jbzi">
-        	<div class="tleti"><h3>【基本信息】</h3></div>
-            <div class="data">
-            		<table width="100%" border="0" bordercolor="#DDDDDD">
-            				<tr>
-            						<td width="76%"><table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#DDDDDD" class="tb01">
-            								<tr>
-            										<td width="20%" bgcolor="#FFFFFF">姓名：</td>
-            										<td width="24%" bgcolor="#FFFFFF">{#$user_info.fullname#}</td>
-            										<td width="25%" bgcolor="#FFFFFF">性别：</td>
-            										<td width="31%" bgcolor="#FFFFFF"><span style="display:block;width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#if $user_info.sex == 1#}男{#elseif $user_info.sex == 2#}女{#/if#}</span></td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#EEEEEE">出生年份：</td>
-            										<td bgcolor="#EEEEEE">{#$user_info.birthdate#}</td>
-            										<td bgcolor="#EEEEEE">年龄：</td>
-            										<td bgcolor="#EEEEEE"><span style="display:block;width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$user_info.ageyear#}</span></td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#FFFFFF">民族：</td>
-            										<td bgcolor="#FFFFFF">{#$user_info.nation#}</td>
-            										<td bgcolor="#FFFFFF">婚姻状况：</td>
-            										<td bgcolor="#FFFFFF"><span style="display:block;width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#if $user_info.marriage == 1#}未婚{#elseif $user_info.marriage == 2#}已婚{#else#}保密{#/if#}</span></td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#EEEEEE">户籍：</td>
-            										<td bgcolor="#EEEEEE">{#$user_info.cencus#}</td>
-            										<td bgcolor="#EEEEEE">现居地：</td>
-            										<td bgcolor="#EEEEEE">{#$user_info.home#} </td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#FFFFFF">身高：</td>
-            										<td bgcolor="#FFFFFF">{#$user_info.height#}  cm</td>
-            										<td bgcolor="#FFFFFF">工作年限：</td>
-            										<td bgcolor="#FFFFFF"><span style="display:block;width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$user_info.workyear#}</span></td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#EEEEEE">学历：</td>
-            										<td bgcolor="#EEEEEE">{#$user_info.education_cn#}</td>
-            										<td bgcolor="#EEEEEE">毕业学校：</td>
-            										<td bgcolor="#EEEEEE"><span style="display:block;width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$user_edu.school#}</span></td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#FFFFFF">专业：</td>
-            										<td bgcolor="#FFFFFF">{#$user_edu.speciality#}</td>
-            										<td bgcolor="#FFFFFF">英语等级：</td>
-            										<td bgcolor="#FFFFFF"><span style="display:block;width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#if $user_info.english_degree>0 #}CET-{#$user_info.english_degree#}{#elseif $user_info.english_ability == 1#}一般{#elseif $user_info.english_ability == 2#}熟练{#elseif $user_info.english_ability == 3#}精通{#/if#}</span></td>
-            										</tr>
-            								</table></td>
-            						<td width="24%" align="center"><img src="{#$QISHI.site_domain#}{#if $personal_img#}/data/file/{#$personal_img#}{#else#}/templates/default/images/pic_z.gif{#/if#}" style="border:1px solid #ccc;" width="120" height="120" /></td>
-            						</tr>
-            				<tr>
-            						<td colspan="2"><table width="100%" border="0" cellpadding="1" cellspacing="1" bgcolor="#DDDDDD" class="tb01" >
-            								<tr>
-            										<td width="15%" bgcolor="#FFFFFF">目前岗位</td>
-            										<td width="18%" bgcolor="#FFFFFF"><span style="display:block;width:96px; overflow:hidden; text-overflow:ellipsis;white-space:nowrap;" title="{#$user_info.recentjobs#}">{#$user_info.recentjobs#}</span></td>
-            										<td width="19%" bgcolor="#FFFFFF">意向职位</td>
-            										<td width="48%" bgcolor="#FFFFFF">{#$user_intention.intention_category#}</td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#FFFFFF">期望薪酬</td>
-            										<td bgcolor="#FFFFFF">{#if $user_intention.expected_salary == 0#}面议{#else#}{#$user_intention.expected_salary#}{#/if#}</td>
-            										<td bgcolor="#FFFFFF">意向地区</td>
-            										<td bgcolor="#FFFFFF">{#$user_intention.intention_district#}</td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#FFFFFF">可到岗日期</td>
-            										<td bgcolor="#FFFFFF"> {#if $user_intention.time_2work == 1#}随时可以到岗
-            												{#elseif $user_intention.time_2work == 2#}一周以内
-            												{#elseif $user_intention.time_2work == 3#}一个月内
-            												{#elseif $user_intention.time_2work == 4#}三个月内
-            												{#/if#} </td>
-            										<td bgcolor="#FFFFFF">求职状态</td>
-            										<td bgcolor="#FFFFFF"> {#if $user_intention.work_status == 1#}目前在职，考虑更好的工作
-            												{#elseif $user_intention.work_status == 2#}目前离职，在找工作
-            												{#elseif $user_intention.work_status == 3#}目前在职，不考虑换工作
-            												{#elseif $user_intention.work_status == 4#}我是应届生
-            												{#/if#} </td>
-            										</tr>
-            								<tr>
-            										<td bgcolor="#FFFFFF">目前行业</td>
-            										<td bgcolor="#FFFFFF">{#$user_info.trade_cn#}</td>
-            										<td bgcolor="#FFFFFF">意向行业</td>
-            										<td bgcolor="#FFFFFF">{#$user_intention.intention_industry#}</td>
-            										</tr>
-            								</table></td>
-            						</tr>
-            				</table>
-            </div>
-      </div>
-      <div class="jbzi">
-        	<div class="tleti"><h3>【工作经历】</h3></div>
-            <div class="data">
-			  <!--循环-->
-			  {#foreach item=item from=$user_work#}
+	<table width="98%" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto; color:#333; font:12px/18px Arial; border-bottom:#999 dashed 1px;">
+		<tbody>
+			<tr>
+				<td width="30%" style="padding-bottom:10px; border-bottom:#9f9f9f solid 1px;"><img width="185" height="102" style="border:0;" src="http://hr.ofweek.com/templates/default/images/logo.jpg"></td>
+				<td width="70%" align="right" style="padding-bottom:10px; border-bottom:#9f9f9f solid 1px;">
+					<span style='display:inline-block; width:18em; text-align:left;'><strong>简历编号：</strong><span style="color:#3a78d4;"><strong>J6166003</strong></span></span>
+					<br>
+					<span style='display:inline-block; width:18em; text-align:left;'>最后更新时间：<span style="color:#3a78d4;">2012-05-20 21:38</span></span>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" style="padding:6px 0 6px 2px; border-bottom:#999 dashed 1px; font-size:28px; line-height:30px; font-weight:bold;">王文 </td>
+				<td width="70%" align="right" style="padding:6px 0 6px 2px; border-bottom:#999 dashed 1px; line-height:18px;color:#3a78d4;">应聘岗位：网络工程师</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table width="100%" cellspacing="0" cellpadding="0" border="0">
+						<tbody>
+							<tr>
+								<td width="82%" valign="top">
+									<table width="100%" cellspacing="0" cellpadding="0" border="0" style="color:#333; font:12px/18px Arial,'宋体';">
+										<tbody>
+											<tr>
+												<td>
+													<table width="100%" cellspacing="0" cellpadding="5" style="color:#333; font:12px/18px Arial,'宋体';">
+														<tbody>
+															<tr>
+																<td style="font-weight:bold;" colspan="2">5.0年以上工作经验
+																	| 大专
+																	| 英语四级
+																	| 男
+																	| 31岁
+																	| 175CM
+																	| 已婚 </td>
+															</tr>
+															<tr>
+																<td width="33%"> 目前所在地：<span style="color:#3a78d4;">南山区</span></td>
+																<td width="67%"> 户口所在地：<span style="color:#3a78d4;">河南省</span></td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td style="border:#a5c9ff 1px solid; background:#f7fbff;" colspan="2">
+													<table width="100%" cellspacing="0" cellpadding="5" border="0" style="color:#333; font:12px/18px Arial,'宋体';">
+														<tbody>
+															<tr>
+																<td width="33%"><strong>手机号码：</strong><span style="color:#3a78d4;">13715129377</span></td>
+																<td width="33%"><strong>联系电话：</strong><span style="color:#3a78d4;">〖求职意向：Web 前端开发〗</span></td>
+																<td width="33%"><strong>公司电话：</strong><span style="color:#3a78d4;"></span></td>
+															</tr>
+															<tr>
+																<td width="33%"><strong>Email：</strong><span style="color:#3a78d4;"><a style="color:#3A78D4; text-decoration:underline;" href='mailto:wangwen1220@139.com'>wangwen1220@139.com</a></span></td>
+																<td width="67%" colspan="2"><strong>QQ：</strong><span style="color:#3a78d4;">150291556</span></td>
+															</tr>
+															<tr>
+																<td width="100%" colspan="3"><strong>通信地址：</strong><span style="color:#3a78d4;">深圳市南山区桃源村&nbsp; (邮编：523876）</span></td>
+															</tr>
+															<tr>
+																<td width="100%" colspan="3"><strong>个人主页：</strong><a href="http://seosteven.com/resume" style="color:#3A78D4; text-decoration:underline;" target="_blank">http://seosteven.com/resume</a></td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="2">
+													<table width="100%" cellspacing="0" cellpadding="5" border="0" style="color:#333; font:12px/18px Arial,'宋体';">
+														<tbody>
+															<tr>
+																<td width="49%"> 目前岗位：<span style="color:#3a78d4;">网页设计/制作/美工</span></td>
+																<td width="51%"> 毕业院校：<span style="color:#3a78d4;">郑州华信学院</span></td>
+															</tr>
+															<tr>
+																<td width="49%"> 目前行业：<span style="color:#3a78d4;">互联网/电子商务/网游</span></td>
+																<td width="51%"> 专业：<span style="color:#3a78d4;">电子信息科学与技术;</span></td>
+															</tr>
+														</tbody>
+													</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								<td width="1%"></td>
+								<td width="17%" align="center" valign="top"><br>
+									<img width="110" height="140" src="../images/email/photo_JobSeekers_cn.gif" style="padding:1px; border:1px solid #a5c9ff;"></td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
 
-				<table width="100%" border="0">
-                <tbody><tr>
-                	<td width="28%"><span style="width:165px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#$item.start#}至{#if $item.work_status#}今{#else#}{#$item.endtime#}{#/if#}</span></td>
-                    <td width="21%"><span style="width:120px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$item.jobs#}">{#$item.jobs#}</span></td>
-                    <td width="31%"><span style="width:190px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" title="{#$item.companyname#}">{#$item.companyname#}</span></td>
-                    <td width="8%">月薪：</td>
-                    <td width="12%"><span style="width:50px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">{#if $item.salary_private#}保密{#else#}{#$item.salary#}{#/if#}</span></td>
-                </tr>
-                <tr>
-                	<td colspan="5"><span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="{#$item.id#}" data-name="work">{#$item.achievements|nl2br#}</span></td>
-                </tr>
-                <tr>
-                	<td height="10" colspan="5"></td>
-                </tr>
-				</tbody></table>
+	<table width="98%" cellspacing="0" cellpadding="5" border="0" style="margin:0 auto; border:#a5c9ff 1px solid; font-size:12px; color:#333; font-family:Arial;">
+		<tbody>
+			<tr>
+				<td width="100%" height="18" style="background:#eaf4fe url(../images/email/bg-thead.png) repeat-x; border-bottom:#a5c9ff solid 1px; color:#3A78D4;"><strong>求职意向</strong></td>
+			</tr>
+			<tr>
+				<td> 意向行业：<span style="color:#3a78d4;">互联网/电子商务/网游&nbsp; 计算机软件及服务</span></td>
+			</tr>
+			<tr>
+				<td> 意向岗位：<span style="color:#3a78d4;">网页设计/制作/美工</span></td>
+			</tr>
+			<tr>
+				<td> 意向地区：<span style="color:#3a78d4;">南山区&nbsp; 福田区&nbsp; 宝安区</span></td>
+			</tr>
+			<tr>
+				<td> 可到岗时间：<span style="color:#3a78d4;">随时到岗</span></td>
+			</tr>
+			<tr>
+				<td> 期望月薪：<span style="color:#3a78d4;">面议</span>（不要求提供住房） </td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
 
-			{#/foreach#}
-			<!--END-->
-            </div>
-      </div>
-      <div class="jbzi">
-        	<div class="tleti"><h3>【教育经历】</h3></div>
-            <div class="data">
-              <table width="100%" border="0">
-                <tr>
-                	<td>{#$user_edu.start#}至{#$user_edu.endtime#}</td>
-                  <td>{#$user_edu.education_cn#}</td>
-                  <td>{#$user_edu.speciality#} </td>
-                  <td>{#$user_edu.school#}</td>
-                </tr>
-				<tr><td colspan="4"><span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="{#$user_edu.id#}" data-name="edu">{#$user_edu.content|nl2br#}</span></td></tr>
-              </table>
-            </div>
-      </div>
-      <div class="jbzi">
-        	<div class="tleti"><h3>【优势特长】</h3></div>
-            <div class="data">
-              <table width="100%" border="0">
-                <tr>
-                	<td><span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="{#$user_intention.id#}" data-name="spe">{#if $type == 1 or $type == 'admin'#}{#$user_intention.specialty_tmp|nl2br#}{#else#}{#$user_intention.specialty|nl2br#}{#/if#}</span></td>
-                </tr>
-              </table>
-            </div>
-      </div>
-      <div class="jbzi">
-        	<div class="tleti"><h3>【自我评价】</h3></div>
-            <div class="data">
-              <table width="100%" border="0">
-                <tr>
-                	<td><span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="{#$user_intention.id#}" data-name="self">{#if $type == 1 or $type == 'admin'#}{#$user_intention.self_evaluation_tmp|nl2br#}{#else#}{#$user_intention.self_evaluation|nl2br#}{#/if#}</span></td>
-                </tr>
-              </table>
-            </div>
-      </div>
+	<table width="98%" cellspacing="0" cellpadding="5" border="0" style="margin:0 auto; border:#a5c9ff 1px solid; font-size:12px; color:#333; font-family:Arial;">
+		<tbody>
+			<tr>
+				<td width="100%" height="18" style="background:#eaf4fe url(../images/email/bg-thead.png) repeat-x; border-bottom:#a5c9ff solid 1px; color:#3A78D4;"><strong>技能专长</strong></td>
+			</tr>
+			<tr>
+				<td style="line-height:22px;">1、对当前流行的网页前端开发及 Web 标准有深刻的理解，并能运用 Web 标准的理念对网站进行重构与优化 <br>
+					2、精通 XHTML、CSS 与 jQuery 等前端开发技术，能熟练手写代码，代码简洁规范，符合 W3C 标准，兼容主流浏览器 <br>
+					3、有学习与实践 HTML5 和 CSS3 先进前端开发技术经验 <br>
+					4、对 ASP、 PHP 等后台语言有一定了解，能编写简单代码 <br>
+					5、有平面设计基础，能熟练操作 Photoshop 等图片处理软件 <br>
+					<br>
+					【求职意向：Web 前端开发】</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
 
-{#if $user_file#}
-	<div class="jbzi">
-        	<div class="tleti"><h3>【作品及证书】</h3></div>
-            <div class="data">
-              <table width="100%" border="0">
-                <tbody>
-				<tr>
-                	<td>附件名称 </td>
-                    <td>附件类别</td>
-                    <td>文档类别</td>
-                </tr>
-				{#foreach item=item from=$user_file#}
-                <tr>
-                	<td><a href="{#$QISHI.site_domain#}{#$QISHI.site_dir#}data/down.php?id={#$item.id#}">{#$item.name#}</a> </td>
-                    <td>{#if $item.type == 1#}照片
-						{#elseif $item.type == 2#}作品/证书
-						{#elseif $item.type == 3#}附件简历
-						{#elseif $item.type == 4#}其他附件
-						{#/if#}</td>
-                    <td><img src="{#$QISHI.site_domain#}{#$QISHI.site_template#}images/thumb_{#$item.type#}.gif"></td>
-                </tr>
-				{#/foreach#}
-              </tbody></table>
-            </div>
-      </div>
-{#/if#}
-	<div style="border-bottom:1px solid #dbe6f3" class="jbzi">
-        	<div class="tleti"><h3>【联系方式】</h3></div>
-			<div class="data">
-			{#if ($type == 1 || $type=='admin')#}
-              <table width="100%" border="0">
-                <tbody><tr>
-                <td>
-                <table width="100%" bgcolor="#CCCCCC" cellspacing="1" cellpadding="1" border="0">
-                  <tbody><tr>
-                    <td width="15%" bgcolor="#FFFFFF">手机：</td>
-                    <td width="36%" bgcolor="#FFFFFF">{#$user_info.telephone#}</td>
-                    <td width="19%" bgcolor="#FFFFFF">&nbsp;</td>
-                    <td width="30%" bgcolor="#FFFFFF">&nbsp;</td>
-                </tr>
-                  <tr>
-                 <td width="15%" bgcolor="#FFFFFF">邮箱地址：</td>
-                  <td width="36%" bgcolor="#FFFFFF">{#$user_info.email#}</td>
-                  <td width="19%" bgcolor="#FFFFFF">通信地址：</td>
-                  <td width="30%" bgcolor="#FFFFFF">{#$user_info.address#}</td>
-                </tr>
-                </tbody></table>                </td>
-                </tr>
-				{#if !$send#}
-                <tr>
-               	  <td align="center"><!--<input type="button" class="btn_y" value="保存至本地" onclick="javascript:document.execCommand('saveAs',null,'{#$user_info.fullname#}的个人简历')">               	    &nbsp;&nbsp;&nbsp;&nbsp;-->
-           	      <input type="button" class="btn_y" value="外发简历" onclick="location.href='{#$QISHI.site_domain#}/user/personal/personal_send.php'">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" class="btn_y" value="打印简历" onclick="print();"></td>
-                </tr>
-				{#/if#}
-              </tbody></table>
-			  {#elseif $type == 2#}
-              <table width="100%" border="0" style="margin-top:20px;">
-                <tbody>
-				{#if !$send#}
-				<tr>
-               	  <td align="center"><input type="button" id="type2_btn_down" class="btn_y" value="下载联系方式">
-                  &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="type2_btn_favorites" class="btn_y" value="收藏简历">            	    &nbsp;&nbsp;&nbsp;&nbsp;
-           	      <!--<input type="button" class="btn_y" value="保存至本地" onclick="javascript:document.execCommand('saveAs',null,'{#$user_info.fullname#}的个人简历')">&nbsp;&nbsp;&nbsp;&nbsp;--><input type="button" class="btn_y" value="打印简历"  onclick="print();"></td>
-				  </tr>
-				{#/if#}
-              </tbody></table>
-			  {#elseif $type == 3#}
-              <table width="100%" border="0" style="margin-top:20px;">
-                <tbody><tr>
-                <td>
-                <table width="100%" bgcolor="#CCCCCC" cellspacing="1" cellpadding="1" border="0">
-                  <tbody><tr>
-                    <td width="15%" bgcolor="#FFFFFF">手机：</td>
-                    <td width="36%" bgcolor="#FFFFFF">{#$user_info.telephone#}</td>
-                    <td width="19%" bgcolor="#FFFFFF">&nbsp;</td>
-                    <td width="30%" bgcolor="#FFFFFF">&nbsp;</td>
-                </tr>
-                  <tr>
-                 <td width="15%" bgcolor="#FFFFFF">邮箱地址：</td>
-                  <td width="36%" bgcolor="#FFFFFF">{#$user_info.email#}</td>
-                  <td width="19%" bgcolor="#FFFFFF">通信地址：</td>
-                  <td width="30%" bgcolor="#FFFFFF">{#$user_info.address#}</td>
-                </tr>
-                </tbody></table>                </td>
-                </tr>
-				{#if !$send#}
-                <tr>
-               	  <td align="center"><input type="button" id="type3_btn_interview" class="btn_y" value="面试通知">   
-                  &nbsp;&nbsp;&nbsp;&nbsp;
-           	      <!--<input type="button" class="btn_y" value="保存至本地" onclick="javascript:document.execCommand('saveAs',null,'{#$user_info.fullname#}的个人简历')">            	    &nbsp;&nbsp;&nbsp;&nbsp;-->
-           	      <input id="type2_btn_send" type="button" class="btn_y" value="转发简历">&nbsp;&nbsp;&nbsp;&nbsp;
-           	      <input type="button" class="btn_y" value="打印简历" onclick="print();"></td>
-                </tr>
-				{#/if#}
-              </tbody></table>
-			  {#/if#}
-        </div>
+	<table width="98%" cellspacing="0" cellpadding="5" border="0" style="margin:0 auto; border:#a5c9ff 1px solid; font-size:12px; color:#333; font-family:Arial;">
+		<tbody>
+			<tr>
+				<td width="100%" height="18" style="background:#eaf4fe url(../images/email/bg-thead.png) repeat-x; border-bottom:#a5c9ff solid 1px; color:#3A78D4;"><strong>技能专长</strong></td>
+			</tr>
+			<tr>
+				<td style="line-height:22px;">1、对当前流行的网页前端开发及 Web 标准有深刻的理解，并能运用 Web 标准的理念对网站进行重构与优化 <br>
+					2、精通 XHTML、CSS 与 jQuery 等前端开发技术，能熟练手写代码，代码简洁规范，符合 W3C 标准，兼容主流浏览器 <br>
+					3、有学习与实践 HTML5 和 CSS3 先进前端开发技术经验 <br>
+					4、对 ASP、 PHP 等后台语言有一定了解，能编写简单代码 <br>
+					5、有平面设计基础，能熟练操作 Photoshop 等图片处理软件
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
 
-      </div>
-      
-      
-      
-       {#if $type == 'admin'#}
-      <div style="border-bottom:1px solid #dbe6f3" class="jbzi">
-        	<div class="tleti"><h3>【管理员管理】</h3></div>
-			<div class="data">
-			
-			<form id="Form1" name="Form1" action="{#$QISHI.site_domain#}/admin/personal.php?act=audit" method="post">
-			<input type="hidden" name="uid" value="{#$user_info.uid#}" />
-                <table width="100%" cellspacing="5" cellpadding="5" border="0">
-                  <tr>
-               	  <td>简历状态</td>
-               	  <td>
-               	  <input type="radio"{#if $user_info.audit == 1#} checked="checked"{#/if#} name="audit" value="1" />审核通过
-               	  <input type="radio"{#if ($user_info.audit == 2 || $user_info.audit == 4) #} checked="checked"{#/if#} name="audit" value="2" />待审核
-               	  <input type="radio"{#if $user_info.audit == 3#} checked="checked"{#/if#} name="audit" value="3" />审核不通过
-               	  </td>
-                </tr>
-                <tr>
-                	<td>审核不通过原因</td>
-                	<td>
-                	<input checked="checked" type="radio"{#if $user_info.audit_reason == '简历内容中包含广告或者违禁词'#} checked="checked"{#/if#} name="audit_reason" value="简历内容中包含广告或者违禁词" />简历内容中包含广告或者违禁词
-                	<input type="radio"{#if $user_info.audit_reason == '简历不符合规范'#} checked="checked"{#/if#} name="audit_reason" value="简历不符合规范" />简历不符合规范
-                	<input type="radio"{#if $user_info.audit_reason == '简历当中包含明显的虚假信息'#} checked="checked"{#/if#} name="audit_reason" value="简历当中包含明显的虚假信息" />简历当中包含明显的虚假信息<br /><br />
-                	其他：<input type="text" name="audit_reason_other" value="{#if ($user_info.audit_reason != '简历内容中包含广告或者违禁词' && $user_info.audit_reason != '简历不符合规范' && $user_info.audit_reason != '简历当中包含明显的虚假信息')#}{#$user_info.audit_reason#}{#/if#}" size="50" />
-                	</td>
-                </tr>
-                <tr>
-                	<td>是否发邮件</td>
-                	<td>
-                	<input type="radio" name="audit_email" value="1" />发送
-                	<input type="radio" checked="checked" name="audit_email" value="0" />不发送
-                	</td>
-                </tr>
-                <tr>
-                	<td></td>
-                	<td>
-                	<input type="submit" value="提交" />
-                	</td>
-                </tr>
-              </tbody></table>
-              </form>
-              <br />
-              <br />
-        </div>
-      </div>
-      {#/if#}
-      
-    </div>
+	<table width="98%" cellspacing="0" cellpadding="5" border="0" style="margin:0 auto; border:#a5c9ff 1px solid; font-size:12px; color:#333; font-family:Arial;">
+		<tbody>
+			<tr>
+				<td width="100%" height="18" style="background:#eaf4fe url(../images/email/bg-thead.png) repeat-x; border-bottom:#a5c9ff solid 1px; color:#3A78D4;"><strong>工作经验</strong></td>
+			</tr>
+			<tr>
+				<td><table width="100%" cellspacing="0" cellpadding="5" border="0" style="font:12px/18px Arial,'宋体';">
+						<tbody>
+							<tr>
+								<td style="color:#333;"><strong>东莞力康国际有限公司</strong><span style="color:#666;"> （3年1月） </span></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;"><span style="color:#3a78d4;">2009/02至2012/03 | </span><span style="color:#3a78d4;">网站前端开发与重构</span>&nbsp;|
+									月薪：<span style="color:#3a78d4;">保密</span></td>
+							</tr>
+							<tr>
+								<td style="color:#666;"><strong>工作描述</strong></td>
+							</tr>
+							<tr>
+								<td style="line-height:20px;">主要工作职责：公司网站前端开发和优化，主要使用的前端技术有 XHTML、 CSS、 javascript 和 jQuery <br>
+									1、 重构了 367net.com 网站，优化了网站结构和代码，加快了网站打开速度，提升了网站的排名和流量 <br>
+									2、 设计与开发了 lieko.com 与 yingjiawireless.com 等英文网站，兼容主流浏览器，实现了结构、表现和行为的分离</td>
+							</tr>
+						</tbody>
+					</table>
+					<table width="100%" cellspacing="0" cellpadding="5" border="0" style="font:12px/18px Arial,'宋体';">
+						<tbody>
+							<tr>
+								<td style="color:#333;"><strong>郑州玉龙广告公司</strong><span style="color:#666;"> （1年5月） </span></td>
+							</tr>
+							<tr>
+								<td style="font-weight:bold;"><span style="color:#3a78d4;">2007/07至2008/12 | </span><span style="color:#3a78d4;">平面设计师</span>&nbsp;|
+									月薪：<span style="color:#3a78d4;">保密</span></td>
+							</tr>
+							<tr>
+								<td style="color:#666;"><strong>工作描述</strong></td>
+							</tr>
+							<tr>
+								<td style="line-height:20px;">1、 负责平面广告的设计与制作 <br>
+									2、 主要使用的软件有 CorelDraw 和 Photoshop</td>
+							</tr>
+						</tbody>
+					</table></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+
+	<table width="98%" cellspacing="0" cellpadding="5" border="0" style="margin:0 auto; border:#a5c9ff 1px solid; font-size:12px; color:#333; font-family:Arial;">
+		<tbody>
+			<tr>
+				<td width="100%" height="18" style="background:#eaf4fe url(../images/email/bg-thead.png) repeat-x; border-bottom:#a5c9ff solid 1px; color:#3A78D4;"><strong>自我评价</strong></td>
+			</tr>
+			<tr>
+				<td style="line-height:22px;">1.有丰富网站前端开发与重构经验，熟悉网站前端优化，SEO优化和图片优化； <br>
+					2.有英文网站前端开发经验，兼容主流浏览器，结构、表现和行为分离，代码书写规范简洁； <br>
+					3.熟悉常用的后台开发语言，如ASP、PHP、JSP和Rails,对网站内部SEO优化有一定的研究； <br>
+					4.熟悉各种前端开发技术，能熟练手写符合 W3C 标准的代码，有学习与实践 HTML5 和 CSS3 前沿技术经验； <br>
+					5.有平面设计基础，能熟练操作 Photoshop 等平面设计软件。</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+
+	<table width="98%" cellspacing="0" cellpadding="5" border="0" style="margin:0 auto; border:#a5c9ff 1px solid; font-size:12px; color:#333; font-family:Arial;">
+		<tbody>
+			<tr>
+				<td width="100%" height="18" style="background:#eaf4fe url(../images/email/bg-thead.png) repeat-x; border-bottom:#a5c9ff solid 1px; color:#3A78D4;"><strong>教育背景</strong></td>
+			</tr>
+			<tr>
+				<td><table width="100%" cellspacing="0" cellpadding="0" border="0" style="font:12px/18px Arial,'宋体';">
+						<tbody>
+							<tr>
+								<td style="font-weight:bold;"><span style="color:#3a78d4;">2003/09至2007/07</span>&nbsp;| <span style="color:#3a78d4;">郑州华信学院</span>&nbsp;| <span style="color:#3a78d4;">计算机应用与技术</span>&nbsp;| <span style="color:#3a78d4;">大专</span></td>
+							</tr>
+							<tr>
+								<td style="line-height:22px;">主修：网页制作（HTML，CSS，JS 等前端开发技术）、平面设计（Photoshop，CorelDraw 等）与 C++ 语言</td>
+							</tr>
+						</tbody>
+					</table></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+
+	<table width="98%" cellspacing="0" cellpadding="5" border="0" style="margin:0 auto; border:#a5c9ff 1px solid; font-size:12px; color:#333; font-family:Arial;">
+		<tbody>
+			<tr>
+				<td width="100%" height="18" style="background:#eaf4fe url(../images/email/bg-thead.png) repeat-x; border-bottom:#a5c9ff solid 1px; color:#3A78D4;" colspan="2"><strong>语言能力与技巧</strong></td>
+			</tr>
+			<tr>
+				<td width="33%"> 英语水平：<span style="color:#3a78d4;">一般&nbsp; 四级</span></td>
+				<td width="67%"> 计算机水平：<span style="color:#3a78d4;">熟练</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+
+	<div id='footer'><a class='print btn' href="" onclick='print();'>打印</a> <a class='close btn' href="">关闭</a></div>
 </div>
 </body>
 </html>
