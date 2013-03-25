@@ -1,633 +1,837 @@
-
-      <div class="weiz">您当前所在位置：<a href="/user/personal/">个人中心</a> >> 简历修改</div>
-      <div class="zhao_p">
-        <div class="tite_qh">
-          <ul class="chqh_ul" id="new_vouch">
-            <li class="sel0{#if $smarty.get.act=="step1" or $smarty.get.act==""#}1{#else#}2{#/if#}"><a href="personal_resume.php?act=step1" target="_self">基本信息</a></li>
-            <li class="sel0{#if $smarty.get.act=="step2"#}1{#else#}2{#/if#}"><a href="personal_resume.php?act=step2" target="_self">教育工作背景</a></li>
-            <li class="sel0{#if $smarty.get.act=="step3"#}1{#else#}2{#/if#}" ><a href="personal_resume.php?act=step3" target="_self">求职意向特长</a></li>
-          </ul>
-        </div>
-        <div class="jiben_ul">
-		{#if $smarty.get.act=="step1" or $smarty.get.act==""#}
-		  <form id="form_step1" enctype="multipart/form-data" method="post">
-          <div class="bluech" id="newvouch_1">
-            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-			<tbody><tr>
-                <td width="12%"><span class="f_red">*</span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
-                <td width="44%"><input name="name" id="name" class="s01" style="float:left;" type="text" value="{#$user_info.fullname#}" >
-                </td>
-                <td width="44%">&nbsp;</td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
-                <td width="88%" colspan="2"><label>
-                  <input name="sex" id="sex1" value="1" type="radio" {#if $user_info.sex == 1 or $user_info.sex== ''#}checked="checked"{#/if#}>
-                  男</label>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <label>
-                  <input name="sex" id="sex2" value="2" type="radio" {#if $user_info.sex == 2#}checked="checked"{#/if#}>
-                女</label></td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>出生年月：</td>
-                <td width="88%" colspan="2"><label>
-                  <!--<input name="birthday" id="birthday" class="s01" style="float:left;" type="text" value="{#$user_info.birthdate#}">-->
-				  {#html_select_date prefix="birthday" field_order="YMD" start_year="1970" time=$user_info.birthdate month_format="%m月" #}
-                </label></td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>婚姻状况：</td>
-                <td width="88%" colspan="2"><label>
-				<input name="marry"  value="1" type="radio" {#if $user_info.marriage < 2 or $user_info.marriage == ''#}checked="checked"{#/if#}>
-                未婚</label>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <label>
-                <input name="marry"  value="2" type="radio" {#if $user_info.marriage == 2#}checked="checked"{#/if#}>
-                  已婚</label>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <label>
-                <input name="marry"  value="3" type="radio" {#if $user_info.marriage == 3#}checked="checked"{#/if#}>
-                  保密</label>
-				  
-				  </td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>民&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;族：</td>
-                <td width="88%" colspan="2"><label style="float:left;display:block;">
-                  <!--<input name="nation" id="nation" type="text" value="{#$user_info.nation#}" maxlength="10">&nbsp;&nbsp;<strong>族</strong>-->
-					<select name="nation">
-					<option value="汉族" {#if $user_info.nation eq "汉族"#}selected="selected"{#/if#}>汉族</option>
-					<option value="壮族" {#if $user_info.nation eq "壮族"#}selected="selected"{#/if#}>壮族</option>
-					<option value="满族" {#if $user_info.nation eq "满族"#}selected="selected"{#/if#}>满族</option>
-					<option value="回族" {#if $user_info.nation eq "回族"#}selected="selected"{#/if#}>回族</option>
-					<option value="苗族" {#if $user_info.nation eq "苗族"#}selected="selected"{#/if#}>苗族</option>
-					<option value="维吾尔族" {#if $user_info.nation eq "维吾尔族"#}selected="selected"{#/if#}>维吾尔族</option>
-					<option value="土家族" {#if $user_info.nation eq "土家族"#}selected="selected"{#/if#}>土家族</option>
-					<option value="蒙古族" {#if $user_info.nation eq "蒙古族"#}selected="selected"{#/if#}>蒙古族</option>
-					<option value="藏族" {#if $user_info.nation eq "藏族"#}selected="selected"{#/if#}>藏族</option>
-					<option value="其他" {#if $user_info.nation eq "其他"#}selected="selected"{#/if#}>其他</option>
-				</select>
-                </label></td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>身&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高：</td>
-                <td width="88%" colspan="2"><input name="height" id="height" class="s02" type="text" value="{#$user_info.height#}" maxlength="3">
-                &nbsp;&nbsp;厘米</td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>工作年限：</td>
-                <td width="88%" colspan="2"><input name="workyear" id="workyear" class="s02" type="text" value="{#$user_info.workyear#}" maxlength="2">
-                &nbsp;&nbsp;<strong>年</strong>&nbsp;&nbsp;（请填写数字）</td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>户&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;籍：</td>
-                <td width="88%" colspan="2">
-
-                            <select id="cencus_province" style="height:20px;width:120px;" name="cencus_province">
-                            <option value="-1">请选择</option>
-							{#html_options options=$select_district selected=$select_district_val#}
-                            </select>              				
-							<select id="cencus_city" style="height:20px;width:120px;" name="cencus_city" {#if $select_district_val == ''#}disabled="disabled"{#/if#}>
-                            <option value="-1">请选择</option> 
-							{#html_options options=$select_sdistrict selected=$select_sdistrict_val#}
-							</select>
-                </td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>目前行业：</td>
-                <td width="88%"><label>
+<link href="{#$QISHI.site_template#}css/jobs.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="{#$QISHI.site_template#}css/jquery-ui-1.8.10.custom.min.css" />
+<script charset='utf-8' type="text/javascript" src="{#$QISHI.site_template#}js/jquery-ui.min.js"></script>
+<script charset='utf-8' type="text/javascript" src="{#$QISHI.site_template#}js/plugin/jquery.ui.datepicker.min.js"></script>
+<script charset='utf-8' type="text/javascript" src="{#$QISHI.site_template#}js/plugin/jquery.ui.datepicker-zh-CN.js"></script>
+<div class="weiz">您当前所在位置：<a href="/user/personal/">个人中心</a> >> 简历修改</div>
+<div class="zhao_p">
+	<div class="tite_qh">
+		<ul class="chqh_ul" id="new_vouch">
+			<li class="sel0{#if $smarty.get.act=="step1" or $smarty.get.act==""#}1{#else#}2{#/if#}"><a href="personal_resume.php?act=step1" target="_self">基本信息</a></li>
+			<li class="sel0{#if $smarty.get.act=="step2"#}1{#else#}2{#/if#}"><a href="personal_resume.php?act=step2" target="_self">教育工作背景</a></li>
+			<li class="sel0{#if $smarty.get.act=="step3"#}1{#else#}2{#/if#}" ><a href="personal_resume.php?act=step3" target="_self">求职意向特长</a></li>
+		</ul>
+	</div>
+	<div class="jiben_ul" style='overflow:hidden;'> {#if $smarty.get.act=="step1" or $smarty.get.act==""#}
+		<!-- 基本信息 -->
+		<form id="form_step1" enctype="multipart/form-data" method="post">
+		<div class="tish">提示：<span class="f_red">*</span>表示必填项</div>
+		<div class="liao_z" style='width: 92%;'><span>基本资料：</span></div>
+		<div class="liao_a">
+			<input type="hidden" name="id" value="{#$user_info.id#}"/>
+			<table width="100%" cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>姓 名：</td>
+					<td width="42%"><label>
+							<input name="user_name" id="user-name" class="s01" type="text" value="傅雷" maxlength="20">
+						</label></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>性 别：</td>
+					<td width="42%"><label>
+							<input name="sex" id="sex1" value="1" type="radio" {#if $user_info.sex == 1 or $user_info.sex== ''#}checked="checked"{#/if#}>
+							男</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label>
+							<input name="sex" id="sex2" value="2" type="radio" {#if $user_info.sex == 2#}checked="checked"{#/if#}>
+							女</label></td>
+					<td width="45%" valign="top" align="center" rowspan="15"></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>出生年月：</td>
+					<td width="42%"><label>
+							<input name="user_birthday" id="user-birthday" class="s01" type="text" autocomplete="off">
+						</label></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>婚姻状况：</td>
+					<td width="42%">
+						<select name="marry">
+							<option value="未婚">未婚</option>
+							<option value="已婚">已婚</option>
+							<option value="保密">保密</option>
+						</select>
+					</td>
+					<!-- <td width="42%"><label><input name="marry"  value="1" type="radio" {#if $user_info.marriage < 2 or $user_info.marriage == ''#}checked="checked"{#/if#}>
+							未婚</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label>
+							<input name="marry"  value="2" type="radio" {#if $user_info.marriage == 2#}checked="checked"{#/if#}>
+							已婚</label>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<label>
+							<input name="marry"  value="3" type="radio" {#if $user_info.marriage == 3#}checked="checked"{#/if#}>
+							保密</label></td> -->
+				</tr>
+				<!--<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>民 族：</td>
+					<td width="42%"><label>
+						<select name="nation">
+							<option value="汉族" {#if $user_info.nation eq "汉族"#}selected="selected"{#/if#}>汉族</option>
+							<option value="壮族" {#if $user_info.nation eq "壮族"#}selected="selected"{#/if#}>壮族</option>
+							<option value="满族" {#if $user_info.nation eq "满族"#}selected="selected"{#/if#}>满族</option>
+							<option value="回族" {#if $user_info.nation eq "回族"#}selected="selected"{#/if#}>回族</option>
+							<option value="苗族" {#if $user_info.nation eq "苗族"#}selected="selected"{#/if#}>苗族</option>
+							<option value="维吾尔族" {#if $user_info.nation eq "维吾尔族"#}selected="selected"{#/if#}>维吾尔族</option>
+							<option value="土家族" {#if $user_info.nation eq "土家族"#}selected="selected"{#/if#}>土家族</option>
+							<option value="蒙古族" {#if $user_info.nation eq "蒙古族"#}selected="selected"{#/if#}>蒙古族</option>
+							<option value="藏族" {#if $user_info.nation eq "藏族"#}selected="selected"{#/if#}>藏族</option>
+							<option value="其他" {#if $user_info.nation eq "其他"#}selected="selected"{#/if#}>其他</option>
+						</select>
+					</label></td>
+				</tr>-->
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>您的身高：</td>
+					<td width="42%"><input name="height" id="height" class="s02" type="text" value="{#$user_info.height#}" maxlength="3">
+						&nbsp;&nbsp;厘米</td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>最高学历：</td>
+					<td width="42%">
+						<select name="highest_degree" class="s11" size="1" id="highest_degree">
+							<option value="-1" >请选择</option>
+							{#html_options options=$select_edu selected=$select_edu_val#}
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;' valign='top'><span class="f_red">*</span>专 业：<br />
+						(最多可选2个)</td>
+					<td width="42%">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td width="37%" valign="bottom" >
+								<select id="ajax_speciality" style="width:17em; border: 1px solid #5A74A4;">
+										<option value="0">请选择</option>
+										{#foreach from=$specialityCate item=list#}
+										<option value="{#$list.id#}">{#$list.categoryname#}</option>
+										{#/foreach#}
+									</select>
+								</td>
+								<td width="15%" align="left"></td>
+								<td width="48%" valign="top"></td>
+							</tr>
+							<tr>
+								<td valign="top">
+									<select id="content_speciality" multiple="multiple"  size="6" style="width: 17em; border: 1px solid #5A74A4;">
+										<!--AJAX分类数据回传区-->
+										<!--END-->
+									</select>
+								</td>
+								<td class='btn-move' align="left">
+									<input id="button_r_speciality" class='btn-input btn-right' type="button" />
+									<input id="button_l_speciality" class='btn-input btn-left' type="button" />
+								</td>
+								<td><label>
+									<select multiple="true" size="6" style="width: 17em; border: 1px solid #5A74A4;" name="value_speciality[]" id="value_speciality">
+										{#foreach from=$speciality_Right item=list#}
+										<option value="{#$list.id#}">{#$list.categoryname#}</option>
+										{#/foreach#}
+									</select>
+								</label></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>英语水平：</td>
+					<td width="42%" style='white-space: nowrap;'>
+						<select name="english_ability" class="s11" size="1" id="english_ability" style="width:68px;">
+							<!-- <option value="-1">请选择</option> -->
+							<option value="1" {#if $user_info.english_ability == 1#}selected="selected"{#/if#}>一般</option>
+							<option value="2" {#if $user_info.english_ability == 2#}selected="selected"{#/if#}>熟练</option>
+							<option value="3" {#if $user_info.english_ability == 3#}selected="selected"{#/if#}>精通</option>
+						</select>
+						&nbsp;&nbsp;级别：
+						<select name="english_degree" class="s11" size="1" id="english_degree" style="width:68px;">
+							<!-- <option value="-1">请选择</option> -->
+							<option value="3" {#if $user_info.english_degree == 3#}selected="selected"{#/if#}>三级</option>
+							<option value="4" {#if $user_info.english_degree == 4#}selected="selected"{#/if#}>四级</option>
+							<option value="6" {#if $user_info.english_degree == 6#}selected="selected"{#/if#}>六级</option>
+							<option value="8" {#if $user_info.english_degree == 8#}selected="selected"{#/if#}>八级</option>
+						</select>
+						&nbsp;&nbsp;其它外语：
+						<select name="otherlang" size="1" id="otherlang" style="width:78px;">
+							<option value="-1">无</option>
+							<option value="日语" {#if $user_info.otherlang == '日语'#}selected="selected"{#/if#}>日语</option>
+							<option value="韩语" {#if $user_info.otherlang == '韩语'#}selected="selected"{#/if#}>韩语</option>
+							<option value="德语" {#if $user_info.otherlang == '德语'#}selected="selected"{#/if#}>德语</option>
+							<option value="法语" {#if $user_info.otherlang == '法语'#}selected="selected"{#/if#}>法语</option>
+							<option value="西班牙语" {#if $user_info.otherlang == '西班牙语'#}selected="selected"{#/if#}>西班牙语</option>
+							<option value="葡萄牙语" {#if $user_info.otherlang == '葡萄牙语'#}selected="selected"{#/if#}>葡萄牙语</option>
+							<option value="俄语" {#if $user_info.otherlang == '俄语'#}selected="selected"{#/if#}>俄语</option>
+							<option value="阿拉伯语" {#if $user_info.otherlang == '阿拉伯语'#}selected="selected"{#/if#}>阿拉伯语</option>
+							<option value="越南语" {#if $user_info.otherlang == '越南语'#}selected="selected"{#/if#}>越南语</option>
+							<option value="泰国语" {#if $user_info.otherlang == '泰国语'#}selected="selected"{#/if#}>泰国语</option>
+						</select>
+						&nbsp;&nbsp;水平：
+						<select name="otherlang_degree" class="s11" size="1" id="otherlang_degree" style="width:68px;">
+							<!-- <option value="-1">请选择</option> -->
+							<option value="1" {#if $user_info.otherlang_degree == 1#}selected="selected"{#/if#}>一般</option>
+							<option value="2" {#if $user_info.otherlang_degree == 2#}selected="selected"{#/if#}>熟练</option>
+							<option value="3" {#if $user_info.otherlang_degree == 3#}selected="selected"{#/if#}>精通</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>计算机能力：</td>
+					<td width="42%"><select name="computer_degree" class="s11" size="1" id="computer_degree" style="width:80px;">
+							<option value="-1">请选择</option>
+							<option value="1" {#if $user_info.computer_degree == 1#}selected="selected"{#/if#}>一般</option>
+							<option value="2" {#if $user_info.computer_degree == 2#}selected="selected"{#/if#}>熟练</option>
+							<option value="3" {#if $user_info.computer_degree == 3#}selected="selected"{#/if#}>精通</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>工作年限：</td>
+					<td width="42%"><input name="workyear" id="workyear" type="text" style='width: 30px;' value="{#$user_info.workyear#}" maxlength="2"> 年（请填写数字）</td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>目前行业：</td>
+					<td width="42%"><label>
 						<select style="height:20px;width:243px;" id="work_industry" size="1" name="work_industry">
-                            <option value="-1">请选择</option> 
+							<option value="-1">请选择</option>
 							{#html_options options=$select_industry selected=$select_industry_val#}
 						</select>
-				</td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>目前岗位：</td>
-                <td width="88%" colspan="2"><input name="current_jobs" id="current_jobs" class="s01" style="float:left;" maxlength="20" type="text" value="{#$user_info.recentjobs#}"  maxlength="20"></td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>最高学历：</td>
-                <td width="88%" colspan="2">
-				<select name="highest_degree" size="1" id="highest_degree">
-                    <option value="-1" >请选择</option> 
-					{#html_options options=$select_edu selected=$select_edu_val#}
-				</select></td>
-              </tr>
-              
-              <tr>
-                <td width="12%"><span class="f_red">*</span>专业：<br />
-                  (不多于3个)</td>
-                <td width="88%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                      <td width="37%" valign="bottom" ><select id="ajax_speciality" style="WIDTH:17em">
-                         <option value="0">请选择</option>
-                          {#foreach from=$specialityCate item=list#}
-						  <option value="{#$list.id#}">{#$list.categoryname#}</option>
-						  {#/foreach#}
-                        </select></td>
-                      <td width="15%" align="left"></td>
-                      <td width="48%" valign="top"></td>
-                    </tr>
-                    <tr>
-                      <td valign="top"><select id="content_speciality" multiple="multiple"  size="6" style="WIDTH: 17em">
-                        <!--AJAX分类数据回传区-->
-						<!--END-->
-                        </select>                      </td>
-                      <td align="left"><input id="button_r_speciality" type="button" style="width:50px;" value=">>" />
-                        <br />
-                        <br />
-                        <input id="button_l_speciality" type="button" style="width:50px;" value="<<" /></td>
-                      <td><label>
-                        <select multiple="true" size="6" style="WIDTH: 17em" name="value_speciality[]" id="value_speciality">
-                        {#foreach from=$speciality_Right item=list#}
-						  <option value="{#$list.id#}">{#$list.categoryname#}</option>
-						  {#/foreach#}
-                        </select>
-                        </label></td>
-                    </tr>
-                  </table></td>
-              </tr>
-              
-              <tr>
-                <td width="12%"><span class="f_red">*</span>英语能力：</td>
-                <td width="88%" colspan="2">
-                        <select name="english_ability" size="1" id="english_ability" style="width:100px;">
-						  <option value="-1">请选择</option> 
-                          <option value="1" {#if $user_info.english_ability == 1#}selected="selected"{#/if#}>一般</option>
-						  <option value="2" {#if $user_info.english_ability == 2#}selected="selected"{#/if#}>熟练</option>
-						  <option value="3" {#if $user_info.english_ability == 3#}selected="selected"{#/if#}>精通</option>
-                        </select>
-                          &nbsp;&nbsp;英语级别：<select name="english_degree" size="1" id="english_degree">
-                          <option value="-1">请选择</option> 
-						  <option value="3" {#if $user_info.english_degree == 3#}selected="selected"{#/if#}>三级</option>
-						  <option value="4" {#if $user_info.english_degree == 4#}selected="selected"{#/if#}>四级</option>
-						  <option value="6" {#if $user_info.english_degree == 6#}selected="selected"{#/if#}>六级</option>
-						  <option value="8" {#if $user_info.english_degree == 8#}selected="selected"{#/if#}>八级</option>
-                        </select>
-				</td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>其他外语：</td>
-                <td width="88%" colspan="2">
-					<select name="otherlang" size="1" id="otherlang" style="width:100px;">
-                          <option value="-1">请选择</option> 
-						  <option value="日语" {#if $user_info.otherlang == '日语'#}selected="selected"{#/if#}>日语</option>
-						  <option value="韩语" {#if $user_info.otherlang == '韩语'#}selected="selected"{#/if#}>韩语</option>
-						  <option value="德语" {#if $user_info.otherlang == '德语'#}selected="selected"{#/if#}>德语</option>
-						  <option value="法语" {#if $user_info.otherlang == '法语'#}selected="selected"{#/if#}>法语</option>
-						  <option value="西班牙语" {#if $user_info.otherlang == '西班牙语'#}selected="selected"{#/if#}>西班牙语</option>
-						  <option value="葡萄牙语" {#if $user_info.otherlang == '葡萄牙语'#}selected="selected"{#/if#}>葡萄牙语</option>
-						  <option value="俄语" {#if $user_info.otherlang == '俄语'#}selected="selected"{#/if#}>俄语</option>
-						  <option value="阿拉伯语" {#if $user_info.otherlang == '阿拉伯语'#}selected="selected"{#/if#}>阿拉伯语</option>
-						  <option value="越南语" {#if $user_info.otherlang == '越南语'#}selected="selected"{#/if#}>越南语</option>
-						   <option value="泰国语" {#if $user_info.otherlang == '泰国语'#}selected="selected"{#/if#}>泰国语</option>
-                        </select>                          &nbsp;&nbsp;水&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;平：<select name="otherlang_degree" size="1" id="otherlang_degree">
-                          <option value="-1">请选择</option> 
-						  <option value="1" {#if $user_info.otherlang_degree == 1#}selected="selected"{#/if#}>一般</option>
-						  <option value="2" {#if $user_info.otherlang_degree == 2#}selected="selected"{#/if#}>熟练</option>
-						  <option value="3" {#if $user_info.otherlang_degree == 3#}selected="selected"{#/if#}>精通</option>
-                        </select>				
-				</td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>计算机能力：</td>
-                <td width="88%" colspan="2"><select name="computer_degree" size="1" id="computer_degree">
-                    <option value="-1">请选择</option> 
-					<option value="1" {#if $user_info.computer_degree == 1#}selected="selected"{#/if#}>一般</option>
-					<option value="2" {#if $user_info.computer_degree == 2#}selected="selected"{#/if#}>熟练</option>
-					<option value="3" {#if $user_info.computer_degree == 3#}selected="selected"{#/if#}>精通</option>
-					</select>
-				</td>
-              </tr>
-			   <tr>
-                <td width="12%"><span class="f_red">*</span>手机号码：</td>
-                <td width="88%" colspan="2"><input name="telephone" id="telephone" class="s01" type="text" value="{#$user_info.telephone#}"></td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>邮箱地址：</td>
-                <td width="88%" colspan="2"><input name="mail" id="mail" class="s01" type="text" value="{#$user_info.email#}"></td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>现居地：</td>
-                <td width="88%" colspan="2">
-
-                            <select id="home_province" style="height:20px;width:120px;" name="home_province">
-                            <option value="-1">请选择</option>
+					</label></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>目前岗位：</td>
+					<td width="42%">
+						<select id="home_province" style="height:20px;width:120px;" name="home_province">
+							<option value="-1">请选择</option>
 							{#html_options options=$select_district2 selected=$select_district_val2#}
-                            </select>              				
-							<select id="home_city" style="height:20px;width:120px;" name="home_city" {#if $select_district_val2 == ''#}disabled="disabled"{#/if#}>
-                            <option value="-1">请选择</option> 
+						</select>
+						<select id="home_city" style="height:20px;width:120px;" name="home_city" {#if $select_district_val2 == ''#}disabled="disabled"{#/if#}>
+							<option value="-1">请选择</option>
 							{#html_options options=$select_sdistrict2 selected=$select_sdistrict_val2#}
-							</select>
-                </td>
-              </tr>
-              <tr>
-                <td width="12%"><span class="f_red">*</span>通信地址：</td>
-                <td width="88%" colspan="2"><input name="address" id="address" class="s01" type="text" value="{#$user_info.address#}"  maxlength="50"></td>
-              </tr>
-			  <tr>
-                <td width="12%">&nbsp;&nbsp;&nbsp;&nbsp;照&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;片：</td>
-                <td width="88%" colspan="2"><input id="photo" style="height:26px;width:245px;" name="photo" type="file">
-                选择照片（照片大小不大于2M，图片格式：gif/jpg/bmp）</td>
-              </tr>
-			  {#if $user_info.photo#}
-			  <tr>
-                <td colspan="3" style="padding-left:50px;"><img src="{#$QISHI.site_dir#}data/file/{#$user_info.photo_img#}" width="100" height="120"></img></td>
-				<input type="hidden" name="oldphoto" value="{#$user_info.photo_img#}"/>
-              </tr>
-			  {#/if#}
-              <tr>
-              	<td></td>
-              	<td colspan="2"><input value="保存" class="btnm" id="form_step1_submit" type="button"></td>
-              </tr>
-            </tbody></table>
-          </div>
-<script>
-$(function(){
-	
-	$("#form_step1_submit").click(function(){
-		$('#value_speciality option').each(function(){this.selected=true;});
-		$("#form_step1").submit();
-	});
-	
-	$('#cencus_province').change(function(){
-		var parentId = $(this).val();
-		if(parentId == -1){
-			$('#cencus_city').html('<option value="-1">请选择</option>');
-			$('#cencus_city').attr('disabled','disabled');
-			return;
-		}
-		$('#cencus_city').removeAttr('disabled');
-
-		//ajax
-		$.ajax({
-			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
-			success: function(data){
-				var res = eval('('+data+')');
-				var options = '';
-				for(var item in res){
-					var cur = res[item];
-					options += '<option value="'+cur.id+'">'+cur.categoryname+'</option>';				
-				}
-				options = '<option value="-1">请选择</option>'+options;
-				$('#cencus_city').html(options);
-			}
-		});
-
-	});
-	$('#home_province').change(function(){
-		var parentId = $(this).val();
-		if(parentId == -1){
-			$('#home_city').html('<option value="-1">请选择</option>');
-			$('#home_city').attr('disabled','disabled');
-			return;
-		}
-		$('#home_city').removeAttr('disabled');
-
-		//ajax
-		$.ajax({
-			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
-			success: function(data){
-				var res = eval('('+data+')');
-				var options = '';
-				for(var item in res){
-					var cur = res[item];
-					options += '<option value="'+cur.id+'">'+cur.categoryname+'</option>';				
-				}
-				options = '<option value="-1">请选择</option>'+options;
-				$('#home_city').html(options);
-			}
-		});
-
-	});
-	
-	
-	//专业条数限制
-	var type = ['speciality'];
-	$(type).each(function(){
-		var ename = this;
-		if(ename == 'speciality') var num_max = 3;
-		else var num_max = 5;
-		
-		$('#button_r_'+ename).click(function(){
-			var options = $('#content_'+ename+' :selected');
-			var num_c = options.length;
-			var num_v = $('#value_'+ename+' option').length;
-			
-			if((num_c + num_v) > num_max) {
-				alert('请选择不多于'+num_max+'个条目');
-				return;
-			}
-			
-			$('#value_'+ename).append(options);
-		});
-		
-		$('#button_l_'+ename).click(function(){
-			var options = $('#value_'+ename+' :selected');
-			$('#content_'+ename).append(options);
-		});
-	});
-	//专业选择
-	$('#ajax_speciality').change(function(){
-		var parentid = $(this).val();
-		if(parentid==0){
-			$('#content_speciality').html('');
-			return;
-		}
-		
-		//ajax
-		$.ajax({
-			url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_speciality&parentid='+parentid,
-			success:function(data){
-				var res = eval('('+data+')');
-				var options = '';
-				for(var item in res){
-					var cur = res[item];
-					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';
-				}
-				
-				options = '<option value="'+$('#ajax_speciality option:selected').val()+'">'+$('#ajax_speciality option:selected').html()+'</option>'+options;
-				$('#content_speciality').html(options);
-			}
-		});
-	});
-	
-});
-$(document).ready(function(){
-
-	$.validator.methods.checkSelect = function(value, element, param){
-		if(value == param){
-			return false;
-		}
-		return true;
-	}
-
-	$("form").validate({
-		rules:{
-			'name':{
-				'required':true
-			},
-			'birthday':{
-				'required':true,
-				'dateISO':true
-			},
-			'nation':{
-				'required':true,
-				'maxlength':100
-			},
-			'height':{
-				'required':true,
-				'number':true,
-				'range':[0,300]
-			},
-			'workyear':{
-				'required':true,
-				'number':true,
-				'range':[0,99]
-			},
-			'cencus_province':{
-				'checkSelect':-1
-			},
-			'work_industry':{
-				'checkSelect':-1
-			},
-			'current_jobs':{
-				'required':true
-			},
-			'highest_degree':{
-				'checkSelect':-1
-			},
-			//专业
-			'value_speciality[]':{
-				required: true
-			},
-			'english_ability':{
-				'checkSelect':-1
-			},
-			'computer_degree':{
-				'checkSelect':-1
-			},
-			'telephone':{
-				'required':true,
-				'z_mobile':true
-			},
-			'mail':{
-				'required':true,
-				'email':true
-			},
-			'home_province':{
-				'checkSelect':-1
-			},
-			'address':{
-				'required':true,
-				'maxlength':50
-			}
-
-		},
-		messages:{
-			'name':{
-				'required':'请填写姓名'
-			},
-			'birthday':{
-				'required':'请填写出生年月',
-				'dateISO':'请输入正确的格式'
-			},
-			'nation':{
-				'required':'请输入民族',
-				'maxlength':'请输入少于100个字符'
-			},
-			'height':{
-				'required':'请输入身高',
-				'number':'请输入正确的身高',
-				'range':'请输入0-300之间的数字'
-			},
-			'workyear':{
-				'required':'请输入工作年限',
-				'number':'请输入正确的工作年限',
-				'range':'请输入0-99之间的数字'
-			},
-			'cencus_province':{
-				'checkSelect':'请选择户籍'
-			},
-			'work_industry':{
-				'checkSelect':'请选择目前行业'
-			},
-			'current_jobs':{
-				'required':'请填写目前岗位',
-				'maxlength':'请输入少于20个字符'
-			},
-			'highest_degree':{
-				'checkSelect':'请选择学历'
-			},
-			//专业
-			'value_speciality[]':{
-				'required': '请选择专业'
-			},
-			'english_ability':{
-				'checkSelect':'请选择英语能力'
-			},
- 			'computer_degree':{
-				'checkSelect':'请选择计算机水平'
-			},
-			'telephone':{
-				'required':'请输入正确的手机号码',
-				'z_mobile':'请输入正确的手机号码'
-			},
-			'mail':{
-				'required':'请填写Email',
-				'email':'请填写正确的Email地址'
-			},
-			'home_province':{
-				'checkSelect':'请选择现居地'
-			},
-			'address':{
-				'required':'请填写通信地址',
-				'maxlength':'请输入少于50个字符'
-			}
-		}
-	});
-});
-
-</script>
-		  </form>
-		  {#elseif $smarty.get.act=="step2"#}
-		  <form method="post" action="">
-          <div class="bluech" id="newvouch_2">
-            <table border="0" cellpadding="0" cellspacing="3" width="100%">
-              <tbody><tr>
-                <td width="11%"><span class="f_red">*</span>毕业院校：</td>
-                <td width="89%"><input name="graduated_school" id="graduated_school" class="s01" type="text" label="need" value="{#$user_edu.school#}" maxlength="100">
-				<input name="edu_id" type="hidden" value="{#$user_edu.id#}"/>
-				</td>
-              </tr>
-              <tr>
-                <td><span class="f_red">*</span>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</td>
-                <td><input name="study_course" id="study_course" class="s01" type="text" label="need" value="{#$user_edu.speciality#}" maxlength="100"></td>
-              </tr>
-              <tr>
-                <td><span class="f_red">*</span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历：</td>
-                <td><select name="degree" size="1" id="degree" label="need">
-                    <option value="-1">请选择</option> 
-					  {#html_options options=$select_edu selected=$select_edu_val#}       
-                  </select>
-				  </td>
-              </tr>
-			  <tr>
-                <td colspan="2"><span class="f_red">*</span>从
-					{#html_select_date prefix="edustart_" display_days=false field_order="YM" start_year="1970" time=$user_edu.edustart month_format="%m月" #}
-                  到
-					{#html_select_date prefix="eduend_" display_days=false field_order="YM" start_year="1970" time=$user_edu.eduend month_format="%m月" #}
-                  
-				</td>
-              </tr>
-              <tr>
-                <td valign="top"><span class="f_red">*</span>教育背景：</td>
-                <td><span style="color:#999;">示例：主修专业：应用电子，电子信息工程，毕业设计：《电子电路设计》</span><br>
-                  <textarea cols="80" rows="9" name="edu_content" id="edu_content" label="need" onkeyup="this.value = this.value.substring(0, 2000)">{#$user_edu.content#}</textarea>
-                  <br>
-                  <span style="color:#999">请填写主修专业，毕业设计或者参与课题等。不超过2000字</span></td>
-              </tr>
-              <tr>
-                <td colspan="2" height="20" valign="top">&nbsp;</td>
-              </tr>
-            </tbody></table>
-			<!--工作经历-->
-			{#foreach name=work item=item from=$user_work#}
-            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody><tr>
-				<input type="hidden" value="{#$item.id#}" name="work_id[]" />
-                <td colspan="2"><span class="f_red">*</span>从
-                 
-					{#html_select_date prefix="workstart_" display_days=false field_order="YM" start_year="1970" time=$item.work_start ext_flag=true month_format="%m月"#}
-					到
-					{#html_select_date prefix="workend_" display_days=false field_order="YM" start_year="1970" time=$item.work_end ext_flag=true all_extra=$item.all_extra month_format="%m月"#}				
-
-                  <label> 
-                  <input name="work_status[]"  type="checkbox" {#if $item.work_status#}checked="checked"  value="1"{#/if#}>
-                  </label>
-                  目前仍然在职&nbsp;&nbsp;</td>
-              </tr>
-              <tr>
-              	<td><span class="f_red">*</span>月薪</td>
-                <td>
-                  <input name="salary[]" class="s04" label="need" type="text" value="{#$item.salary#}" maxlength="7">
-                  RMB&nbsp;&nbsp;
-                  <input name="salary_private[]"  type="checkbox" {#if $item.salary_private#}checked="checked"{#/if#}>
-                  保密</td>
-              </tr>
-              <tr>
-                <td width="11%"><span class="f_red">*</span>职位名称：</td>
-                <td width="89%"><input name="job_title[]" label="need" class="s01" type="text" value="{#$item.jobs#}" maxlength="100"></td>
-              </tr>
-              <tr>
-                <td width="11%"><span class="f_red" >*</span>公司名称：</td>
-                <td width="89%"><input name="company_name[]" label="need" class="s01" type="text" value="{#$item.companyname#}" maxlength="100"></td>
-              </tr>
-              <tr>
-                <td valign="top" width="11%"><span class="f_red">*</span>工作经历：</td>
-                <td><span style="color:#999;">示例：2011/03~至今 深圳市XX有限公司  经理  主要业绩：组建5人团队，为公司创造300万/年业绩</span><br>
-                  <textarea cols="80" rows="9" name="work_content[]" label="need" onkeyup="this.value = this.value.substring(0, 2000)">{#$item.achievements#}</textarea>
-                  <br>
-                  <span style="color:#999">请填写任职公司，任职时间，岗位，主要的工作职责以及业绩等。不超过2000个字的中文字</span></td>
-              </tr>
-              <tr>
-                <td colspan="2"><a href="#"><strong onclick="delete_table(this);return false;">删除工作经历&gt;&gt;</strong></a></td>
-              </tr>
-            </tbody>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>&nbsp;&nbsp;&nbsp;&nbsp;照 片：</td>
+					<td width="42%"><input id="photo" style="width:245px;" name="photo" type="file"><br>
+						推荐像素：105*140，照片大小不大于2M，图片格式：gif/jpg/bmp</td>
+				</tr>
+				{#if $user_info.photo#}
+				<tr>
+					<td colspan="2" style="padding-left:50px;"><img width="120" height="120" src="{#$QISHI.site_dir#}data/file/{#$user_info.photo_img#}"></img></td>
+				</tr>
+				{#/if#}
+				<!-- <tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>户 籍：</td>
+					<td width="42%"><select id="cencus_province" style="height:20px;width:120px;" name="cencus_province">
+							<option value="-1">请选择</option>
+							{#html_options options=$select_district selected=$select_district_val#}
+						</select>
+						<select id="cencus_city" style="height:20px;width:120px;" name="cencus_city" {#if $select_district_val == ''#}disabled="disabled"{#/if#}>
+							<option value="-1">请选择</option>
+							{#html_options options=$select_sdistrict selected=$select_sdistrict_val#}
+						</select></td>
+				</tr> -->
+				<!-- <tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>目前岗位：</td>
+					<td width="42%"><input name="current_jobs" id="current_jobs" class="s01" type="text" value="{#$user_info.recentjobs#}" maxlength="20"></td>
+				</tr> -->
+				<!--<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>手机号码：</td>
+					<td width="42%"><input name="telephone" id="telephone" class="s01" type="text" value="{#$user_info.telephone#}" maxlength="20"></td>
+				</tr> -->
+				<!--<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>&nbsp;&nbsp;&nbsp;其他外语：</td>
+					<td width="42%">
+						<select name="otherlang" size="1" id="otherlang" style="width:100px;">
+							<option value="-1">请选择</option>
+							<option value="日语" {#if $user_info.otherlang == '日语'#}selected="selected"{#/if#}>日语</option>
+							<option value="韩语" {#if $user_info.otherlang == '韩语'#}selected="selected"{#/if#}>韩语</option>
+							<option value="德语" {#if $user_info.otherlang == '德语'#}selected="selected"{#/if#}>德语</option>
+							<option value="法语" {#if $user_info.otherlang == '法语'#}selected="selected"{#/if#}>法语</option>
+							<option value="西班牙语" {#if $user_info.otherlang == '西班牙语'#}selected="selected"{#/if#}>西班牙语</option>
+							<option value="葡萄牙语" {#if $user_info.otherlang == '葡萄牙语'#}selected="selected"{#/if#}>葡萄牙语</option>
+							<option value="俄语" {#if $user_info.otherlang == '俄语'#}selected="selected"{#/if#}>俄语</option>
+							<option value="阿拉伯语" {#if $user_info.otherlang == '阿拉伯语'#}selected="selected"{#/if#}>阿拉伯语</option>
+							<option value="越南语" {#if $user_info.otherlang == '越南语'#}selected="selected"{#/if#}>越南语</option>
+							<option value="泰国语" {#if $user_info.otherlang == '泰国语'#}selected="selected"{#/if#}>泰国语</option>
+						</select>
+						&nbsp;&nbsp;水 平：
+						<select name="otherlang_degree" class="s11" size="1" id="otherlang_degree">
+							<option value="-1">请选择</option>
+							<option value="1" {#if $user_info.otherlang_degree == 1#}selected="selected"{#/if#}>一般</option>
+							<option value="2" {#if $user_info.otherlang_degree == 2#}selected="selected"{#/if#}>熟练</option>
+							<option value="3" {#if $user_info.otherlang_degree == 3#}selected="selected"{#/if#}>精通</option>
+						</select>
+					</td>
+				</tr>-->
+				<!--<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>现居地：</td>
+					<td width="42%"><select id="home_province" style="height:20px;width:120px;" name="home_province">
+							<option value="-1">请选择</option>
+							{#html_options options=$select_district2 selected=$select_district_val2#}
+						</select>
+						<select id="home_city" style="height:20px;width:120px;" name="home_city" {#if $select_district_val2 == ''#}disabled="disabled"{#/if#}>
+							<option value="-1">请选择</option>
+							{#html_options options=$select_sdistrict2 selected=$select_sdistrict_val2#}
+						</select></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>通讯地址：</td>
+					<td width="42%"><input name="address" id="address" class="s01" type="text" value="{#$user_info.address#}" /></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>&nbsp;&nbsp;&nbsp;&nbsp;照 片：</td>
+					<td width="42%"><input id="photo" style="height:26px;width:245px;" name="photo" type="file">
+						<br>
+						推荐像素：105*140，照片大小不大于2M，图片格式：gif/jpg/bmp</td>
+				</tr>
+				{#if $user_info.photo#}
+				<tr>
+					<td colspan="2" style="padding-left:50px;"><img src="{#$QISHI.site_dir#}data/file/{#$user_info.photo_img#}"></img></td>
+					<input type="hidden" name="oldphoto" value="{#$user_info.photo_img#}"/>
+				</tr>
+				{#/if#}
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>&nbsp;</td>
+					<td width="42%" align="right"><input type="button" id="form_step1_submit" class="btn" value="下一步"></td>
+				</tr> -->
+				</tbody>
 			</table>
-			{#foreachelse#}
-            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-              <tbody><tr>
-				<input type="hidden" value="{#$item.id#}" name="work_id[]" />
-                <td colspan="2"><span class="f_red">*</span>从
-					{#html_select_date prefix="workstart_" display_days=false field_order="YM" start_year="1970" time='-' ext_flag=true month_format="%m月" #}
-					到
-					{#html_select_date prefix="workend_" display_days=false field_order="YM" start_year="1970" time='-' ext_flag=true month_format="%m月" #}				
-                  <label>
-                  <input name="work_status[]"  type="checkbox" value="1">
-                  </label>
-                  目前仍然在职&nbsp;&nbsp;</td>
-              </tr>
-              <tr>
-              	<td><span class="f_red">*</span>月薪</td>
-                <td>
-                  <input name="salary[]" label="need" class="s04" type="text" value="{#$item.salary#}" maxlength="7">
-                  RMB&nbsp;&nbsp;
-                  <input name="salary_private[]"  type="checkbox" {#if $item.salary_private#}checked="checked"{#/if#}>
-                  保密</td>
-              </tr>
-              <tr>
-                <td width="11%"><span class="f_red">*</span>职位名称：</td>
-                <td width="89%"><input name="job_title[]" label="need" class="s01" type="text" value="" maxlength="100"></td>
-              </tr>
-              <tr>
-                <td width="11%"><span class="f_red" >*</span>公司名称：</td>
-                <td width="89%"><input name="company_name[]" label="need" class="s01" type="text" value="" maxlength="100"></td>
-              </tr>
-              <tr>
-                <td valign="top" width="11%"><span class="f_red">*</span>工作经历：</td>
-                <td><span style="color:#999;">示例：2011/03~至今 深圳市XX有限公司  经理  主要业绩：组建5人团队，为公司创造300万/年业绩</span><br>
-                  <textarea cols="80" rows="9" name="work_content[]" label="need" onkeyup="this.value = this.value.substring(0, 2000)"></textarea>
-                  <br>
-                  <span style="color:#999">请填写任职公司，任职时间，岗位，主要的工作职责以及业绩等。不超过2000个字的中文字</span></td>
-              </tr>
-              <tr>
-                <td colspan="2"><a href="#"><strong onclick="delete_table(this);return false;">删除工作经历&gt;&gt;</strong></a></td>
-              </tr>
-            </tbody>
+		</div>
+		<div class="liao_z" style='width: 92%;'><span>联系方式：</span></div>
+		<div class="liao_a">
+			<input type="hidden" name="id" value="{#$user_info.id#}"/>
+			<table width="54%" cellspacing="0" cellpadding="0" border="0">
+				<tbody>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>联系电话：</td>
+					<td width="42%"><input name="phone" id="phone" class="s01" type="text" value="" maxlength="20"></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>公司电话：</td>
+					<td width="42%"><input name="company_phone" id="company_phone" class="s01" type="text" value="" maxlength="20"></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>手机号码：</td>
+					<td width="42%"><input name="telephone" id="telephone" class="s01" type="text" value="{#$user_info.telephone#}" maxlength="20"></td>
+				</tr>
+				<tr>
+					<td colspan='2'><strong>&nbsp;&nbsp;提示：</strong>建议填写手机号码，这样用人单位就能在第一时间和您联系上。</td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>QQ：</td>
+					<td width="42%"><input name="qq" id="telephone" class="qq" type="text" value=""></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>个人主页/微博：</td>
+					<td width="42%"><input name="qq" id="telephone" class="qq" type="text" value="http://"></td>
+				</tr>
+				<!--<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>户口所在地：</td>
+					<td width="42%"><label>
+						<select style="height:20px;width:243px;" id="born_city" size="1" name="born_city">
+							<option value="-1">请选择</option>
+							<option value="2">中国</option>
+						</select>
+					</label></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>目前所在地：</td>
+					<td width="42%"><label>
+						<select style="height:20px;width:243px;" id="now_city" size="1" name="now_city">
+							<option value="-1">请选择</option>
+							<option value="2">中国</option>
+						</select>
+					</label></td>
+				</tr>-->
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>户籍：</td>
+					<td width="42%"><select id="home_province" style="height:20px;width:120px;" name="home_province">
+							<option value="-1">请选择</option>
+							{#html_options options=$select_district2 selected=$select_district_val2#}
+						</select>
+						<select id="home_city" style="height:20px;width:120px;" name="home_city" {#if $select_district_val2 == ''#}disabled="disabled"{#/if#}>
+							<option value="-1">请选择</option>
+							{#html_options options=$select_sdistrict2 selected=$select_sdistrict_val2#}
+						</select></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>现居地：</td>
+					<td width="42%"><select id="now_province" style="height:20px;width:120px;" name="now_province">
+							<option value="-1">请选择</option>
+							{#html_options options=$select_district2 selected=$select_district_val2#}
+						</select>
+						<select id="now_city" style="height:20px;width:120px;" name="now_city" {#if $select_district_val2 == ''#}disabled="disabled"{#/if#}>
+							<option value="-1">请选择</option>
+							{#html_options options=$select_sdistrict2 selected=$select_sdistrict_val2#}
+						</select></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>通讯地址：</td>
+					<td width="42%"><input name="address" id="address" class="s01" type="text" value="{#$user_info.address#}" /></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>邮政编码：</td>
+					<td width="42%"><input name="postal" id="postal" class="s02" style='width: 70px;' type="text" value="{#$user_info.address#}" /></td>
+				</tr>
+				<tr>
+					<td width="15%" style='text-align:right;padding-right:5px;'>&nbsp;</td>
+					<td width="42%"><input type="button" id="form_step1_submit" class="btn" value="保存"></td>
+				</tr>
+				</tbody>
 			</table>
-			{#/foreach#}
-			<!--END-->
+		</div>
+	</form>
+	<script>
+		$(function(){
+			$("#form_step1_submit").click(function(){
+				$('#value_speciality option').each(function(){this.selected=true;});
+				$("#form_step1").submit();
+			});
+			$('#cencus_province').change(function(){
+				var parentId = $(this).val();
+				if(parentId == -1){
+					$('#cencus_city').html('<option value="-1">请选择</option>');
+					$('#cencus_city').attr('disabled','disabled');
+					return;
+				}
+				$('#cencus_city').removeAttr('disabled');
+				//ajax
+				$.ajax({
+					url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
+					success: function(data){
+						var res = eval('('+data+')');
+						var options = '';
+						for(var item in res){
+							var cur = res[item];
+							options += '<option value="'+cur.id+'">'+cur.categoryname+'</option>';
+						}
+						//console.log(options);
+						options = '<option value="-1">请选择</option>'+options;
+						$('#cencus_city').html(options);
+					}
+				});
+			});
+			$('#home_province').change(function(){
+				var parentId = $(this).val();
+				if(parentId == -1){
+					$('#home_city').html('<option value="-1">请选择</option>');
+					$('#home_city').attr('disabled','disabled');
+					return;
+				}
+				$('#home_city').removeAttr('disabled');
+				//ajax
+				$.ajax({
+					url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
+					success: function(data){
+						var res = eval('('+data+')');
+						var options = '';
+						for(var item in res){
+							var cur = res[item];
+							options += '<option value="'+cur.id+'">'+cur.categoryname+'</option>';
+						}
+						//console.log(options);
+						options = '<option value="-1">请选择</option>'+options;
+						$('#home_city').html(options);
+					}
+				});
+			});
+			$('#now_province').change(function(){
+				var parentId = $(this).val();
+				if(parentId == -1){
+					$('#now_city').html('<option value="-1">请选择</option>');
+					$('#now_city').attr('disabled','disabled');
+					return;
+				}
+				$('#now_city').removeAttr('disabled');
+				//ajax
+				$.ajax({
+					url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
+					success: function(data){
+						var res = eval('('+data+')');
+						var options = '';
+						for(var item in res){
+							var cur = res[item];
+							options += '<option value="'+cur.id+'">'+cur.categoryname+'</option>';
+						}
+						//console.log(options);
+						options = '<option value="-1">请选择</option>'+options;
+						$('#now_city').html(options);
+					}
+				});
+			});
+			//专业条数限制
+			var type = ['speciality'];
+			$(type).each(function(){
+				var ename = this;
+				if(ename == 'speciality') var num_max = 3;
+				else var num_max = 5;
+				$('#button_r_'+ename).click(function(){
+					var options = $('#content_'+ename+' :selected');
+					var num_c = options.length;
+					var num_v = $('#value_'+ename+' option').length;
+					if((num_c + num_v) > num_max) {
+						alert('请选择不多于'+num_max+'个条目');
+						return;
+					}
+					$('#value_'+ename).append(options);
+				});
+				$('#button_l_'+ename).click(function(){
+					var options = $('#value_'+ename+' :selected');
+					$('#content_'+ename).append(options);
+				});
+			});
+			//专业选择
+			$('#ajax_speciality').change(function(){
+				var parentid = $(this).val();
+				if(parentid==0){
+					$('#content_speciality').html('');
+					return;
+				}
+				//ajax
+				$.ajax({
+					url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_speciality&parentid='+parentid,
+					success:function(data){
+						var res = eval('('+data+')');
+						var options = '';
+						for(var item in res){
+							var cur = res[item];
+							options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';
+						}
+						options = '<option value="'+$('#ajax_speciality option:selected').val()+'">'+$('#ajax_speciality option:selected').html()+'</option>'+options;
+						$('#content_speciality').html(options);
+					}
+				});
+			});
+			$.validator.methods.checkSelect = function(value, element, param){
+				if(value == param){
+					return false;
+				}
+				return true;
+			}
+			$("form").validate({
+				rules:{
+					'name':{
+						'required':true
+					},
+					'birthday':{
+						'required':true,
+						'dateISO':true
+					},
+					'nation':{
+						'required':true,
+						'maxlength':100
+					},
+					'height':{
+						'required':true,
+						'number':true,
+						'range':[0,300]
+					},
+					'workyear':{
+						'required':true,
+						'number':true,
+						'range':[0,99]
+					},
+					'cencus_province':{
+						'checkSelect':-1
+					},
+					'work_industry':{
+						'checkSelect':-1
+					},
+					'current_jobs':{
+						'required':true
+					},
+					'highest_degree':{
+						'checkSelect':-1
+					},
+					//专业
+					'value_speciality[]':{
+						required: true
+					},
+					'english_ability':{
+						'checkSelect':-1
+					},
+					'computer_degree':{
+						'checkSelect':-1
+					},
+					'home_province':{
+						'checkSelect':-1
+					},
+					'now_province':{
+						'checkSelect':-1
+					},
+					'telephone':{
+						'required':true,
+						'z_mobile':true
+					},
+					'mail':{
+						'required':true,
+						'email':true
+					},
+					'address':{
+						'required':true,
+						'maxlength':50
+					}
+				},
+				messages:{
+					'name':{
+						'required':'请填写姓名'
+					},
+					'birthday':{
+						'required':'请填写出生年月',
+						'dateISO':'请输入正确的格式'
+					},
+					'nation':{
+						'required':'请输入民族',
+						'maxlength':'请输入少于100个字符'
+					},
+					'height':{
+						'required':'请输入身高',
+						'number':'请输入正确的身高',
+						'range':'请输入0-300之间的数字'
+					},
+					'workyear':{
+						'required':'请输入工作年限',
+						'number':'请输入正确的工作年限',
+						'range':'请输入0-99之间的数字'
+					},
+					'cencus_province':{
+						'checkSelect':'请选择户籍'
+					},
+					'work_industry':{
+						'checkSelect':'请选择目前行业'
+					},
+					'current_jobs':{
+						'required':'请填写目前岗位',
+						'maxlength':'请输入少于20个字符'
+					},
+					'highest_degree':{
+						'checkSelect':'请选择学历'
+					},
+					//专业
+					'value_speciality[]':{
+						'required': '请选择专业'
+					},
+					'english_ability':{
+						'checkSelect':'请选择英语能力'
+					},
+					'computer_degree':{
+						'checkSelect':'请选择计算机水平'
+					},
+					'home_province':{
+						'checkSelect':'请选择现居地'
+					},
+					'now_province':{
+						'checkSelect':'请选择户籍地'
+					},
+					'telephone':{
+						'required':'请输入正确的手机号码',
+						'z_mobile':'请输入正确的手机号码'
+					},
+					'mail':{
+						'required':'请填写Email',
+						'email':'请填写正确的Email地址'
+					},
+					'address':{
+						'required':'请填写通信地址',
+						'maxlength':'请输入少于50个字符'
+					}
+				}
+			});
+		});
+		// 展开/收起信息
+		$(function() {
+			var base_info_more_txt = "+ 填写更多基本资料",
+				no_deeed_txt = "- 收起非必填项",
+				contact_info_more_txt = "+ 填写更多联系方式";
+			$('.liao_z a').click(function() {
+				var $ths = $(this);
+				if ($ths.text() === no_deeed_txt) {
+					if ($ths.index() === 0) {
+						$ths.text(base_info_more_txt).parent().next().find('tr.fn-hide').hide();
+					} else {
+						$ths.text(contact_info_more_txt).parent().next().find('tr.fn-hide').hide();
+					}
+				} else {
+					$ths.text(no_deeed_txt).parent().next().find('tr.fn-hide').show();
+				}
+			});
+			$("#user-birthday").datepicker({
+				defaultDate: "1980-01-01",
+				minDate: "-100Y",
+				maxDate: "-16Y",
+				yearRange: "-100:-16",
+				changeMonth: true,
+				changeYear: true,
+				onClose: function() {
+					/*var f = $("#user-birthday").val();
+					if (f.length == 0) {
+						$("#tbxbirthday_ok,#tbxbirthday_default").hide();
+						$("#Tab_panelBasicInfo_tbxbirthday_error").html("出生日期不能为空").show()
+					} else {
+						var e = null;
+						try {
+							e = $.datepicker.parseDate("yy-mm-dd", f)
+						} catch(d) {
+							e = null
+						}
+						var g = new Date();
+						g.setFullYear(g.getFullYear() - 16);
+						if (e == null) {
+							$("#tbxbirthday_ok,#tbxbirthday_default").hide();
+							$("#Tab_panelBasicInfo_tbxbirthday_error").html("出生日期格式错误").show()
+						} else {
+							if (e > g) {
+								$("#tbxbirthday_ok,#tbxbirthday_default").hide();
+								$("#Tab_panelBasicInfo_tbxbirthday_error").html("仅可选择当前年份-16年以前的年份").show()
+							} else {
+								$("#Tab_panelBasicInfo_tbxbirthday_error,#tbxbirthday_default").hide();
+								$("#tbxbirthday_ok").show()
+							}
+						}
+					}*/
+				}
+			});
+		});
+	</script>
 
-            <span><input value="保存" class="btnm" type="submit"></span>
-<script>
+		{#elseif $smarty.get.act=="step2"#}
+		<!-- 教育工作背景 -->
+		<form method="post" action="">
+			<div class="bluech" id="newvouch_2">
+				<table border="0" cellpadding="0" cellspacing="3" width="100%">
+					<tbody>
+						<tr>
+							<td width="11%"><span class="f_red">*</span>毕业院校：</td>
+							<td width="89%"><input name="graduated_school" id="graduated_school" class="s01" type="text" label="need" value="{#$user_edu.school#}" maxlength="100">
+								<input name="edu_id" type="hidden" value="{#$user_edu.id#}"/></td>
+						</tr>
+						<tr>
+							<td><span class="f_red">*</span>专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：</td>
+							<td><input name="study_course" id="study_course" class="s01" type="text" label="need" value="{#$user_edu.speciality#}" maxlength="100"></td>
+						</tr>
+						<tr>
+							<td><span class="f_red">*</span>学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历：</td>
+							<td><select name="degree" size="1" id="degree" label="need">
+									<option value="-1">请选择</option>
+
+					  {#html_options options=$select_edu selected=$select_edu_val#}
+
+								</select></td>
+						</tr>
+						<tr>
+							<td colspan="2"><span class="f_red">*</span>从
+								{#html_select_date prefix="edustart_" display_days=false field_order="YM" start_year="1970" time=$user_edu.edustart month_format="%m月" #}
+								到
+								{#html_select_date prefix="eduend_" display_days=false field_order="YM" start_year="1970" time=$user_edu.eduend month_format="%m月" #} </td>
+						</tr>
+						<tr>
+							<td valign="top"><span class="f_red">*</span>教育背景：</td>
+							<td><span style="color:#999;">示例：主修专业：应用电子，电子信息工程，毕业设计：《电子电路设计》</span><br>
+								<textarea cols="80" rows="9" name="edu_content" id="edu_content" label="need" onkeyup="this.value = this.value.substring(0, 2000)">{#$user_edu.content#}</textarea>
+								<br>
+								<span style="color:#999">请填写主修专业，毕业设计或者参与课题等。不超过2000字</span></td>
+						</tr>
+						<tr>
+							<td colspan="2" height="20" valign="top">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<!--工作经历-->
+				{#foreach name=work item=item from=$user_work#}
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody>
+						<tr>
+							<input type="hidden" value="{#$item.id#}" name="work_id[]" />
+							<td colspan="2"><span class="f_red">*</span>从
+
+								{#html_select_date prefix="workstart_" display_days=false field_order="YM" start_year="1970" time=$item.work_start ext_flag=true month_format="%m月"#}
+								到
+								{#html_select_date prefix="workend_" display_days=false field_order="YM" start_year="1970" time=$item.work_end ext_flag=true all_extra=$item.all_extra month_format="%m月"#}
+								<label>
+									<input name="work_status[]"  type="checkbox" {#if $item.work_status#}checked="checked"  value="1"{#/if#}>
+								</label>
+								目前仍然在职&nbsp;&nbsp;</td>
+						</tr>
+						<tr>
+							<td><span class="f_red">*</span>月薪</td>
+							<td><input name="salary[]" class="s04" label="need" type="text" value="{#$item.salary#}" maxlength="7">
+								RMB&nbsp;&nbsp;
+								<input name="salary_private[]"  type="checkbox" {#if $item.salary_private#}checked="checked"{#/if#}>
+								保密</td>
+						</tr>
+						<tr>
+							<td width="11%"><span class="f_red">*</span>职位名称：</td>
+							<td width="89%"><input name="job_title[]" label="need" class="s01" type="text" value="{#$item.jobs#}" maxlength="100"></td>
+						</tr>
+						<tr>
+							<td width="11%"><span class="f_red" >*</span>公司名称：</td>
+							<td width="89%"><input name="company_name[]" label="need" class="s01" type="text" value="{#$item.companyname#}" maxlength="100"></td>
+						</tr>
+						<tr>
+							<td valign="top" width="11%"><span class="f_red">*</span>工作经历：</td>
+							<td><span style="color:#999;">示例：2011/03~至今 深圳市XX有限公司  经理  主要业绩：组建5人团队，为公司创造300万/年业绩</span><br>
+								<textarea cols="80" rows="9" name="work_content[]" label="need" onkeyup="this.value = this.value.substring(0, 2000)">{#$item.achievements#}</textarea>
+								<br>
+								<span style="color:#999">请填写任职公司，任职时间，岗位，主要的工作职责以及业绩等。不超过2000个字的中文字</span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><a href="#"><strong onclick="delete_table(this);return false;">删除工作经历&gt;&gt;</strong></a></td>
+						</tr>
+					</tbody>
+				</table>
+				{#foreachelse#}
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody>
+						<tr>
+							<input type="hidden" value="{#$item.id#}" name="work_id[]" />
+							<td colspan="2"><span class="f_red">*</span>从
+								{#html_select_date prefix="workstart_" display_days=false field_order="YM" start_year="1970" time='-' ext_flag=true month_format="%m月" #}
+								到
+								{#html_select_date prefix="workend_" display_days=false field_order="YM" start_year="1970" time='-' ext_flag=true month_format="%m月" #}
+								<label>
+									<input name="work_status[]"  type="checkbox" value="1">
+								</label>
+								目前仍然在职&nbsp;&nbsp;</td>
+						</tr>
+						<tr>
+							<td><span class="f_red">*</span>月薪</td>
+							<td><input name="salary[]" label="need" class="s04" type="text" value="{#$item.salary#}" maxlength="7">
+								RMB&nbsp;&nbsp;
+								<input name="salary_private[]"  type="checkbox" {#if $item.salary_private#}checked="checked"{#/if#}>
+								保密</td>
+						</tr>
+						<tr>
+							<td width="11%"><span class="f_red">*</span>职位名称：</td>
+							<td width="89%"><input name="job_title[]" label="need" class="s01" type="text" value="" maxlength="100"></td>
+						</tr>
+						<tr>
+							<td width="11%"><span class="f_red" >*</span>公司名称：</td>
+							<td width="89%"><input name="company_name[]" label="need" class="s01" type="text" value="" maxlength="100"></td>
+						</tr>
+						<tr>
+							<td valign="top" width="11%"><span class="f_red">*</span>工作经历：</td>
+							<td><span style="color:#999;">示例：2011/03~至今 深圳市XX有限公司  经理  主要业绩：组建5人团队，为公司创造300万/年业绩</span><br>
+								<textarea cols="80" rows="9" name="work_content[]" label="need" onkeyup="this.value = this.value.substring(0, 2000)"></textarea>
+								<br>
+								<span style="color:#999">请填写任职公司，任职时间，岗位，主要的工作职责以及业绩等。不超过2000个字的中文字</span></td>
+						</tr>
+						<tr>
+							<td colspan="2"><a href="#"><strong onclick="delete_table(this);return false;">删除工作经历&gt;&gt;</strong></a></td>
+						</tr>
+					</tbody>
+				</table>
+				{#/foreach#}
+				<!--END-->
+
+				<span>
+				<input value="保存" class="btnm" type="submit">
+				</span>
+				<script>
 var t = $($('#newvouch_2 table')[1]).clone();
 $(t).find('[name="work_id[]"]').remove();
 $(t).find('[label=need]').each(function (){
 	if($(this).attr('name') == 'work_content[]'){
-		$(this).html('');		
+		$(this).html('');
 	}
 	else if($(this).attr('type') == 'checkbox' || $(this).attr('type') == 'hidden'){
 		$(this).removeAttr('value');
@@ -641,18 +845,14 @@ $(t).find('[type=checkbox]').each(function (){
 });
 $(t).find('select').each(function (){
 	$(this).removeAttr('disabled');
-
 });
-
 $(function(){
-
 	$('#newvouch_2 table:last').find(':last').html('继续添加工作经历>>');
 	$('#newvouch_2 table:last').find(':last').bind('click',function(){
 		add_table(this);
 		return false;
 	});
-
-/**check box选中状态**/	
+/**check box选中状态**/
 	$('[name="work_status[]"]').live('click',function(){
 		var date1 = $(this).parent().prev();
 		var date2 = $(date1).prev();
@@ -663,17 +863,14 @@ $(function(){
 		}
 		else{
 //			$(this).removeAttr('value');
-
 			$(date1).removeAttr('disabled');
 //			$(date1).attr('label','need');
-			
+
 			$(date2).removeAttr('disabled');
 //			$(date2).attr('label','need');
-
 		}
 	});
-/***END*****/	
-
+/***END*****/
 	//提交表单进行验证
 	$('form').submit(function(){
 		var status = check_form();
@@ -696,7 +893,6 @@ $(function(){
 		}
 	});
 });
-
 function add_table(e){
 	//验证必填项
 //	if(!check_field(e)){
@@ -714,7 +910,6 @@ function add_table(e){
 	});
 	return false;
 }
-
 function delete_table(e){
 	var d = $(e).parentsUntil('table').last().parent().next();
 	if($(d).next().is('table')){
@@ -731,7 +926,6 @@ function delete_table(e){
 	}
 	return false;
 }
-
 function check_field(e){
 	var table = $(e).parentsUntil('table').last().parent();
 	var fields = $(table).find('[label=need]');
@@ -746,7 +940,6 @@ function check_field(e){
 	if(!res) return false;
 	return true;
 }
-
 function check_form(){
 	var res = 0;
 	//验证need项
@@ -756,7 +949,6 @@ function check_form(){
 			this.focus();
 			return false;
 		}
-
 	});
 	//验证日期
 	$('.s02').each(function(){
@@ -775,7 +967,6 @@ function check_form(){
 	if (res > 0){
 		return res;
 	}
-
 	$('[type=checkbox]').each(function(){
 		if(this.checked == true){
 			$(this).attr('value',1);
@@ -791,172 +982,184 @@ function check_form(){
 	});
 	return res;
 }
-
 </script>
-          </div>
-		  </form>
-		  {#elseif $smarty.get.act=="step3"#}
-		  <form method="post" action="">
-          <div class="bluech" id="newvouch_3">
-            <table cellpadding="0" cellspacing="4" width="100%">
-				<input type="hidden" value="{#$intention_info.id#}" name="intention_id"/>
-              <tbody><tr>
-                <td width="13%"><span class="f_red">*</span>意向行业<br>
-                  （不多于5个）</td>
-                <td valign="top" width="87%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr>
-                      <td valign="top" width="30%">
-					  <!--行业分类-->
-					   <select id="content_industry" size="6" multiple="multiple" style="WIDTH: 17em">
+			</div>
+		</form>
+		{#elseif $smarty.get.act=="step3"#}
+		<form method="post" action="">
+			<div class="bluech" id="newvouch_3">
+				<table cellpadding="0" cellspacing="4" width="100%">
+					<input type="hidden" value="{#$intention_info.id#}" name="intention_id"/>
+					<tbody>
+						<tr>
+							<td width="13%"><span class="f_red">*</span>意向行业<br>
+								（不多于5个）</td>
+							<td valign="top" width="87%"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tbody>
+										<tr>
+											<td valign="top" width="30%"><!--行业分类-->
+
+												<select id="content_industry" size="6" multiple="multiple" style="WIDTH: 17em">
+
                           {#foreach item=item from=$category_industry#}
-						  <option value="{#$item.c_id#}">{#$item.c_name#}</option>
+
+													<option value="{#$item.c_id#}">{#$item.c_name#}</option>
+
 						  {#/foreach#}
-                        </select>
-					  <!--END-->
-				  
-					  </td>
-                      <td align="center" width="11%"><input id="button_r_industry" type="button" style="width:50px;" value=">>" />
-                        <br>
-                        <br>
-                        <input id="button_l_industry" type="button" style="width:50px;" value="<<" /></td>
-                      <td width="59%"><label>
-                       <select multiple="true" size="6" style="WIDTH: 17em" name="value_industry[]" id="value_industry" label="need">
-						<!-- 所选行业显示区-->
+
+												</select>
+
+												<!--END--></td>
+											<td align="center" width="11%"><input id="button_r_industry" type="button" style="width:50px;" value=">>" />
+												<br>
+												<br>
+												<input id="button_l_industry" type="button" style="width:50px;" value="<<" /></td>
+											<td width="59%"><label>
+													<select multiple="true" size="6" style="WIDTH: 17em" name="value_industry[]" id="value_industry" label="need">
+														<!-- 所选行业显示区-->
 						{#$intention_info.industry#}
 						<!--END-->
-                        </select>
-                        </label></td>
-                    </tr>
-                  </tbody></table></td>
-              </tr>
-              <tr>
-                <td width="13%"><p><span class="f_red">*</span>意向岗位<br>
-                    <br>
-                    （不多于5个）</p></td>
-                <td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tbody><tr>
-                      <td valign="bottom" width="30%">
-					  <!--岗位分类-->
-					  <select id="ajax_category" style="WIDTH:17em">
-						  <option value="-1">请选择</option>
+													</select>
+												</label></td>
+										</tr>
+									</tbody>
+								</table></td>
+						</tr>
+						<tr>
+							<td width="13%"><p><span class="f_red">*</span>意向岗位<br>
+									<br>
+									（不多于5个）</p></td>
+							<td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tbody>
+										<tr>
+											<td valign="bottom" width="30%"><!--岗位分类-->
+
+												<select id="ajax_category" style="WIDTH:17em">
+													<option value="-1">请选择</option>
+
                           {#foreach item=item from=$parent_category#}
-						  <option value="{#$item.id#}">{#$item.categoryname#}</option>
+
+													<option value="{#$item.id#}">{#$item.categoryname#}</option>
+
 						  {#/foreach#}
-                        </select>
-					  <!--END-->
-						</td>
-                      <td align="left" width="11%"></td>
-                      <td align="left" valign="top" width="59%"><label>
-                        <input type="text" id="categorykey" class="s03" />
-                        </label>
-                        <input id="search_category" type="button" style="background:url({#$QISHI.site_template#}images/btn03.gif);width:22px;"/></td>
-                    </tr>
-                    <tr>
-                      <td valign="top">
-						<select id="content_category" multiple="multiple"  size="6" style="WIDTH: 17em">
-					  <!--AJAX分类数据回传区-->
-						<!--END-->
-					    </select>
-                      </td>
-                      <td align="center" width="11%"><input id="button_r_category" type="button" style="width:50px;" value=">>" />
-                        <br>
-                        <br>
-                        <input id="button_l_category" type="button" style="width:50px;" value="<<" /></td>
-                      <td width="59%"><label>
-                        <select multiple="true" size="6" style="WIDTH: 17em" name="value_category[]" id="value_category" label="need">
-						<!-- 所选职位分类显示区-->
+
+												</select>
+
+												<!--END--></td>
+											<td align="left" width="11%"></td>
+											<td align="left" valign="top" width="59%"><label>
+													<input type="text" id="categorykey" class="s03" />
+												</label>
+												<input id="search_category" type="button" style="background:url({#$QISHI.site_template#}images/btn03.gif);width:22px;"/></td>
+										</tr>
+										<tr>
+											<td valign="top"><select id="content_category" multiple="multiple"  size="6" style="WIDTH: 17em">
+													<!--AJAX分类数据回传区-->
+													<!--END-->
+												</select></td>
+											<td align="center" width="11%"><input id="button_r_category" type="button" style="width:50px;" value=">>" />
+												<br>
+												<br>
+												<input id="button_l_category" type="button" style="width:50px;" value="<<" /></td>
+											<td width="59%"><label>
+													<select multiple="true" size="6" style="WIDTH: 17em" name="value_category[]" id="value_category" label="need">
+														<!-- 所选职位分类显示区-->
 						{#$intention_info.category#}
 						<!--END-->
-                        </select>
-                        </label></td>
-                    </tr>
-                  </tbody></table></td>
-              </tr>
-              <tr>
-                <td width="13%"><p><span class="f_red">*</span>意向地区<br>
-                    <br>
-                    （不多于5个）</p></td>
-                <td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%">
-				<tbody><tr>
-                      <td valign="bottom" width="30%">
-				<!--地区分类-->
-				<select id="ajax_district" style="WIDTH:17em">
-							<option value="-1">请选择</option>
-                          {#foreach item=item from=$parent_district#}
-						  <option value="{#$item.id#}">{#$item.categoryname#}</option>
-						  {#/foreach#}
-                        </select>
-				<!--END-->		
+													</select>
+												</label></td>
+										</tr>
+									</tbody>
+								</table></td>
+						</tr>
+						<tr>
+							<td width="13%"><p><span class="f_red">*</span>意向地区<br>
+									<br>
+									（不多于5个）</p></td>
+							<td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="100%">
+									<tbody>
+										<tr>
+											<td valign="bottom" width="30%"><!--地区分类-->
 
-						</td>
-                      <td align="left" width="11%"></td>
-                    </tr>
-                    <tr>
-                      <td valign="top" width="30%">
-						<select id="content_district" size="6" multiple="multiple" style="WIDTH: 17em">
-                          <!--AJAX地区内容回传区-->
-						  <!--END-->
-                        </select>						
-						</td>
-                      <td align="center" width="11%"><input id="button_r_district" type="button" style="width:50px;" value=">>" />
-                        <br>
-                        <br>
-                        <input type="button" id="button_l_district" style="width:50px;" value="<<" /></td>
-                      <td width="59%"><label>
-                        <select multiple="true" size="6" style="WIDTH: 17em" name="value_district[]" id="value_district" label="need">
-						<!-- 所选地区显示区-->
+												<select id="ajax_district" style="WIDTH:17em">
+													<option value="-1">请选择</option>
+
+                          {#foreach item=item from=$parent_district#}
+
+													<option value="{#$item.id#}">{#$item.categoryname#}</option>
+
+						  {#/foreach#}
+
+												</select>
+
+												<!--END--></td>
+											<td align="left" width="11%"></td>
+										</tr>
+										<tr>
+											<td valign="top" width="30%"><select id="content_district" size="6" multiple="multiple" style="WIDTH: 17em">
+													<!--AJAX地区内容回传区-->
+													<!--END-->
+												</select></td>
+											<td align="center" width="11%"><input id="button_r_district" type="button" style="width:50px;" value=">>" />
+												<br>
+												<br>
+												<input type="button" id="button_l_district" style="width:50px;" value="<<" /></td>
+											<td width="59%"><label>
+													<select multiple="true" size="6" style="WIDTH: 17em" name="value_district[]" id="value_district" label="need">
+														<!-- 所选地区显示区-->
 						{#$intention_info.district#}
 						<!--END-->
-                        </select>
-                        </label></td>
-                    </tr>
-                  </tbody></table></td>
-              </tr>
-			   <tr>
-                <td width="13%"><span class="f_red">*</span>求职状态：</td>
-                <td><select name="work_status" id="work_status" style="WIDTH:17em" label="need">
-					<option value="-1">请选择</option>
-                    <option value="1" {#if $intention_info.work_status == 1#}selected="selected"{#/if#}>目前在职，考虑更好的工作</option>
-                    <option value="2"{#if $intention_info.work_status == 2#}selected="selected"{#/if#}>目前离职，在找工作</option>
-                    <option value="3"{#if $intention_info.work_status == 3#}selected="selected"{#/if#}>目前在职，不考虑换工作</option>
-					 <option value="4"{#if $intention_info.work_status == 4#}selected="selected"{#/if#}>我是应届生</option>
-                  </select></td>
-              </tr>
-              <tr>
-                <td width="13%"><span class="f_red">*</span>到岗日期：</td>
-                <td valign="top"><select name="time_2work" id="time_2work" style="WIDTH:17em" label="need">
-					<option value="-1">请选择</option>
-                    <option value="1" {#if $intention_info.time_2work == 1#}selected="selected"{#/if#}>随时可以到岗</option>
-					<option value="2" {#if $intention_info.time_2work == 2#}selected="selected"{#/if#}>一周以内</option>
-                    <option value="3" {#if $intention_info.time_2work == 3#}selected="selected"{#/if#}>一个月内</option>
-                    <option value="4" {#if $intention_info.time_2work == 4#}selected="selected"{#/if#}>三个月内</option>
-                  </select></td>
-              </tr>
-              <tr>
-                <td width="13%"><span class="f_red">*</span>期望月薪：</td>
-                <td valign="top"><input name="expected_salary" id="expected_salary" class="s01" type="text" label="need" maxlength="7" value="{#$intention_info.expected_salary#}">
-                  &nbsp;&nbsp;&nbsp;RMB以上&nbsp;&nbsp;（<strong>提示：</strong>提供给招聘单位参考，填写0表示面议）</td>
-              </tr>
-              <tr>
-                <td valign="top" width="13%"><span class="f_red">*</span>自我评价：</td>
-                <td><span style="color:#999;">示例：5年工作经验，3年管理经验。擅长团队组建，性格开朗，能承受压力。爱好：旅游</span><br>
-                  <textarea cols="80" rows="9" name="self_evaluation" id="self_evaluation" label="need" maxlength="4000">{#$intention_info.self_evaluation_tmp#}</textarea></td>
-              </tr>
-              <tr>
-                <td valign="top" width="13%"><span class="f_red">*</span>优势特长：</td>
-                <td><span style="color:#999;">示例：精通西格玛管理，擅长JIT，3年sap关键用户经验</span><br>
-                  <textarea cols="80" rows="9" name="specialty" id="specialty" label="need"  maxlength="4000">{#$intention_info.specialty_tmp#}</textarea></td>
-              </tr>
-              <tr>
-                <td valign="top" width="13%"></td>
-                <td><input value="保存" class="btnm" type="submit"></td>
-              </tr>
-            </tbody></table>
-<script>
+													</select>
+												</label></td>
+										</tr>
+									</tbody>
+								</table></td>
+						</tr>
+						<tr>
+							<td width="13%"><span class="f_red">*</span>求职状态：</td>
+							<td><select name="work_status" id="work_status" style="WIDTH:17em" label="need">
+									<option value="-1">请选择</option>
+									<option value="1" {#if $intention_info.work_status == 1#}selected="selected"{#/if#}>目前在职，考虑更好的工作</option>
+									<option value="2"{#if $intention_info.work_status == 2#}selected="selected"{#/if#}>目前离职，在找工作</option>
+									<option value="3"{#if $intention_info.work_status == 3#}selected="selected"{#/if#}>目前在职，不考虑换工作</option>
+									<option value="4"{#if $intention_info.work_status == 4#}selected="selected"{#/if#}>我是应届生</option>
+								</select></td>
+						</tr>
+						<tr>
+							<td width="13%"><span class="f_red">*</span>到岗日期：</td>
+							<td valign="top"><select name="time_2work" id="time_2work" style="WIDTH:17em" label="need">
+									<option value="-1">请选择</option>
+									<option value="1" {#if $intention_info.time_2work == 1#}selected="selected"{#/if#}>随时可以到岗</option>
+									<option value="2" {#if $intention_info.time_2work == 2#}selected="selected"{#/if#}>一周以内</option>
+									<option value="3" {#if $intention_info.time_2work == 3#}selected="selected"{#/if#}>一个月内</option>
+									<option value="4" {#if $intention_info.time_2work == 4#}selected="selected"{#/if#}>三个月内</option>
+								</select></td>
+						</tr>
+						<tr>
+							<td width="13%"><span class="f_red">*</span>期望月薪：</td>
+							<td valign="top"><input name="expected_salary" id="expected_salary" class="s01" type="text" label="need" maxlength="7" value="{#$intention_info.expected_salary#}">
+								&nbsp;&nbsp;&nbsp;RMB以上&nbsp;&nbsp;（<strong>提示：</strong>提供给招聘单位参考，填写0表示面议）</td>
+						</tr>
+						<tr>
+							<td valign="top" width="13%"><span class="f_red">*</span>自我评价：</td>
+							<td><span style="color:#999;">示例：5年工作经验，3年管理经验。擅长团队组建，性格开朗，能承受压力。爱好：旅游</span><br>
+								<textarea cols="80" rows="9" name="self_evaluation" id="self_evaluation" label="need" maxlength="4000">{#$intention_info.self_evaluation_tmp#}</textarea></td>
+						</tr>
+						<tr>
+							<td valign="top" width="13%"><span class="f_red">*</span>优势特长：</td>
+							<td><span style="color:#999;">示例：精通西格玛管理，擅长JIT，3年sap关键用户经验</span><br>
+								<textarea cols="80" rows="9" name="specialty" id="specialty" label="need"  maxlength="4000">{#$intention_info.specialty_tmp#}</textarea></td>
+						</tr>
+						<tr>
+							<td valign="top" width="13%"></td>
+							<td><input value="保存" class="btnm" type="submit"></td>
+						</tr>
+					</tbody>
+				</table>
+				<script>
 $(document).ready(function(){
-	
-	//分类
 
+	//分类
 	$('#ajax_category').change(function(){
 		var parentId = $(this).val();
 		if(parentId == -1){
@@ -971,11 +1174,10 @@ $(document).ready(function(){
 				var options = '';
 				for(var item in res){
 					var cur = res[item];
-					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';				
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';
 				}
 //				console.log(options);
 				options = '<option value="'+$('#ajax_category option:selected').val()+'">'+$('#ajax_category option:selected').html()+'</option>'+options;
-
 				$('#content_category').html(options);
 			}
 		});
@@ -995,16 +1197,14 @@ $(document).ready(function(){
 				var options = '';
 				for(var item in res){
 					var cur = res[item];
-					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';				
+					options += '<option value="'+cur.id+'">>'+cur.categoryname+'</option>';
 				}
 //				console.log(options);
 				options = '<option value="'+$('#ajax_district option:selected').val()+'">'+$('#ajax_district option:selected').html()+'</option>'+options;
-
 				$('#content_district').html(options);
 			}
 		});
 	});
-
 	$('#search_category').click(function(){
 		var keyword = $('#categorykey').val();
 		if(keyword == ''){
@@ -1017,15 +1217,15 @@ $(document).ready(function(){
 				var options = '';
 				for(var item in res){
 					var cur = res[item];
-					options += '<option value="'+cur.id+'">'+(cur.parentid>0? '>': '')+cur.categoryname+'</option>';				
+					options += '<option value="'+cur.id+'">'+(cur.parentid>0? '>': '')+cur.categoryname+'</option>';
 				}
 				$('#content_category').html(options);
 			}
 		});
 	});
-	
+
 	var type = ['industry','category','district'];
-	
+
 	$(type).each(function(){
 		var ename = this;
 		var num = 5;
@@ -1033,12 +1233,12 @@ $(document).ready(function(){
 			var options = $('#content_'+ename+' :selected');
 			var num_c = options.length;
 			var num_v = $('#value_'+ename+' option').length;
-			
+
 			if((num_c+num_v) > num){
 				alert('请选择不多于'+num+'个条目');
 				return;
 			}
-			
+
 			$('#value_'+ename).append(options);
 		});
 		$('#button_l_'+ename).click(function(){
@@ -1046,8 +1246,6 @@ $(document).ready(function(){
 			$('#content_'+ename).append(options);
 		});
 	});
-
-
 	$.validator.methods.checkSelect = function(value, element, param){
 		if(value == param){
 			return false;
@@ -1091,10 +1289,9 @@ $(document).ready(function(){
 			'specialty':{
 				'maxlength':'请填写少于4000字符'
 			}
-		
+
 		}
 	});
-	
 
 	$('form').submit(function(){
 //		console.log($('form [label=need]'));
@@ -1122,7 +1319,7 @@ $(document).ready(function(){
 						this.focus();
 						return false;
 					}
-					break;				
+					break;
 				default:
 					return false;
 			}
@@ -1131,9 +1328,7 @@ $(document).ready(function(){
 	});
 });
 </script>
-          </div>
-		  </form>
-		 {#/if#}
-        </div>
-	  </div>
-    
+			</div>
+		</form>
+		{#/if#} </div>
+</div>

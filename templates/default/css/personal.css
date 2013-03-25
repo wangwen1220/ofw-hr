@@ -1,5 +1,5 @@
 .lefter{ float:left; width:200px;}
-.righter{ width:775px; float:left; margin-left:15px; }
+.righter{ width:775px; float:left; margin-left:15px; display: inline; }
 .job{ float:left; width:200px;}
 .job .fuwu{ float:left; width:158px; height:29px; border-left:1px solid #cacaca; line-height:29px; background:url(../images/l_bg.gif) repeat-x; border-right:1px solid #cacaca; padding:0px 20px; line-height:29px;}
 .job .fuwu img{ float:left; margin-right:10px; margin-top:7px;}
@@ -162,7 +162,7 @@ input, textarea, select {font-size: 12px;vertical-align: middle;}
 	font-size:13px;
 	font-family:"Î¢ÈíÑÅºÚ";
 	}
-	
+
 .mini_con a{
 	color:#1363bd;
 	text-decoration:none;
@@ -170,7 +170,7 @@ input, textarea, select {font-size: 12px;vertical-align: middle;}
 .mini_con a:visited{
 	color:#F03;
 	text-decoration:underline;
-	}	
+	}
 .mini_con a:hover{
 	color:#cb0a00;
 	text-decoration:underline;

@@ -1,15 +1,15 @@
 10
 
 dir
-25754
+25772
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr
 http://huoshow.3322.org:8999/svn/netway
 
 
 
-2013-03-22T09:18:02.950636Z
-25752
-zhoutian
+2013-09-27T19:43:20.954484Z
+25760
+zhangchengjun
 has-props
 has-prop-mods
 
@@ -182,6 +182,10 @@ dir
 
 temp
 dir
+
+
+
+delete
 
 company
 dir
@@ -228,6 +232,10 @@ dir
 
 data
 dir
+
+
+
+delete
 
 .htaccess
 file
@@ -335,15 +343,15 @@ dir
 
 display.php
 file
+25777
 
 
 
-
-2013-03-19T02:07:09.375000Z
-70f99fd04b9526494115ce2437f51297
-2013-03-04T07:46:42.822148Z
-25542
-zhoutian
+2013-03-25T07:25:00.437500Z
+682a5baa4915205e68dd1935e494d5e5
+2013-09-27T21:00:02.354873Z
+25777
+wangwen
 
 
 

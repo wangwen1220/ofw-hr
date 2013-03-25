@@ -25,7 +25,6 @@
 
 	{#if $type == 'admin'#}
 
-
 	$("span.editable").live('click',function(){
 		var html = '<textarea style="display:block;line-height:22px;width:'+($(this).width()-5)+'px;height:'+$(this).height()+'px;" data-id="'+$(this).attr('data-id')+'" data-name="'+$(this).attr('data-name')+'">';
 		var unstr = removeNL($(this).html());
@@ -37,22 +36,20 @@
 		var parent = $(this).parent();
 		$(this).removeAttr('class');
 		$(parent).html(html);
-
 	});
 
 	{#/if#}
-
 	});
 
 	function nl2br (str, is_xhtml) {
-			var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
-	//    return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
+		var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br />' : '<br>';
+		// return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
 		return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag );
 	}
 	function br2nl(txt) {
-			var re = /(<br ?\/>|<br>|<BR>|<BR ?\/>)/g;
-			var s = txt.replace(re, "\r\n");
-			return s;
+		var re = /(<br ?\/>|<br>|<BR>|<BR ?\/>)/g;
+		var s = txt.replace(re, "\r\n");
+		return s;
 	}
 	function removeNL(str){
 		var re = /\r\n|\n\r|\r|\n/g;
@@ -65,13 +62,13 @@
 		var value = $(textarea).val();
 		var type = $(textarea).attr('data-name');
 		var id = $(textarea).attr('data-id');
-	//	console.log('act=resume&type='+type+'&id='+id+'value='+encodeURIComponent(value));
+		// console.log('act=resume&type='+type+'&id='+id+'value='+encodeURIComponent(value));
 		$.ajax({
 			type: "POST",
 			url: "{#$QISHI.site_domain#}/admin/personal.php?act=resume",
 			data: 'type='+type+'&id='+id+'&value='+encodeURIComponent(value),
 			success: function(msg){
-	//			console.log(msg);
+				// console.log(msg);
 				if(msg != 1){
 					alert('修改失败,请重试');
 				}
@@ -85,7 +82,7 @@
 		$(textarea).parent().html(html);
 	}
 	function editunsave(str,ele){
-	//	console.log($(ele).parent().children('textarea'));
+		// console.log($(ele).parent().children('textarea'));
 		var textarea = $(ele).parent().children('textarea');
 		var html = '<span style="display:block;width:620px;word-break:break-all;" class="editable" data-id="'+$(textarea).attr('data-id')+'" data-name="'+$(textarea).attr('data-name')+'">';
 		html += nl2br(decodeURIComponent(str));
@@ -93,6 +90,7 @@
 		$(textarea).parent().html(html);
 	}
 </script> -->
+
 <style>
 	#wrapper { margin:0 auto; color:#444; font:12px/18px Arial; border:1px solid #999; background:url(../images/email/bg-thead.png) repeat-x; }
 	#topbar { padding:0 10px; height: 30px; line-height:30px; background:#E8F2FE url(../images/email/bg-thead.png) repeat-x; }
@@ -101,12 +99,12 @@
 	#topbar a.print { background-image:url(../images/email/icon-print.png); }
 	#topbar a.favorite { padding-left: 0; background: none; }
 	#topbar a:hover { text-decoration: underline; }
-	#footer { margin: 10px 0 20px; text-align: center; }
-	#footer a { display: inline-block; margin: 0 10px; width: 40px; height: 20px; text-indent: -9999px; background:url(../images/email/btn-print.png) no-repeat center center; text-decoration: none; outline: none; }
-	#footer a.close { background-image:url(../images/email/btn-close.png); }
-	#footer a { text-decoration: none; }
+	#footer { padding-bottom: 20px; text-align: center; *zoom: 1; }
+	#footer a { display: inline-block; margin: 0 10px; width: 40px; height: 20px; background:url(../images/email/btn-print.png) no-repeat center center; text-decoration: none; outline: none; }
+	#footerw a.close { background-image:url(../images/email/btn-close.png); }
 </style>
 </head>
+
 <body>
 <div id='wrapper'>
 	<div id='topbar'><a class='notice' href="">面试通知</a> <a class='send' href="">发送简历</a> <a class='print' href="">打印/保存</a> | <a class='favorite' href="">收藏简历</a></div>
@@ -365,7 +363,7 @@
 	</table>
 	<br>
 
-	<div id='footer'><a class='print btn' href="" onclick='print();'>打印</a> <a class='close btn' href="">关闭</a></div>
+	<div id='footer'><a class='print btn' href="" onclick='print();' title='打印'></a> <a class='close btn' href="" title='关闭'></a></div>
 </div>
 </body>
 </html>

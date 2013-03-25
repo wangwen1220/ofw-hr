@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/netway/!svn/ver/25713/ofweek_hr/templates/default/css
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/css
 END
 css.css
 K 25
@@ -15,6 +15,18 @@ svn:wc:ra_dav:version-url
 V 67
 /svn/netway/!svn/ver/25713/ofweek_hr/templates/default/css/home.css
 END
+jquery-ui-1.8.10.custom.min.css
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/css/jquery-ui-1.8.10.custom.min.css
+END
+jsdialog.css
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/netway/!svn/ver/25756/ofweek_hr/templates/default/css/jsdialog.css
+END
 74cms.css
 K 25
 svn:wc:ra_dav:version-url
@@ -25,13 +37,25 @@ jobs.css
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/netway/!svn/ver/23758/ofweek_hr/templates/default/css/jobs.css
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/css/jobs.css
 END
 pager.css
 K 25
 svn:wc:ra_dav:version-url
 V 68
 /svn/netway/!svn/ver/24310/ofweek_hr/templates/default/css/pager.css
+END
+user.css
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/netway/!svn/ver/25756/ofweek_hr/templates/default/css/user.css
+END
+global.css
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/netway/!svn/ver/25756/ofweek_hr/templates/default/css/global.css
 END
 powerFloat.css
 K 25
@@ -43,7 +67,7 @@ personal.css
 K 25
 svn:wc:ra_dav:version-url
 V 71
-/svn/netway/!svn/ver/24720/ofweek_hr/templates/default/css/personal.css
+/svn/netway/!svn/ver/25774/ofweek_hr/templates/default/css/personal.css
 END
 company.css
 K 25

@@ -1,6 +1,9 @@
 K 10
 svn:ignore
-V 5
+V 20
+*.md
+.git
 data
+temp
 
 END

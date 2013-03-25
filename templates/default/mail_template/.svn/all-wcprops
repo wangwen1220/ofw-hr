@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svn/netway/!svn/ver/25675/ofweek_hr/templates/default/mail_template
+/svn/netway/!svn/ver/25759/ofweek_hr/templates/default/mail_template
 END
 resume_complete.htm
 K 25
@@ -97,5 +97,5 @@ outward.htm
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/netway/!svn/ver/25478/ofweek_hr/templates/default/mail_template/outward.htm
+/svn/netway/!svn/ver/25759/ofweek_hr/templates/default/mail_template/outward.htm
 END

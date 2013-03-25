@@ -1,15 +1,15 @@
 10
 
 dir
-25754
+25772
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/templates/default/images/email
 http://huoshow.3322.org:8999/svn/netway
 
 
 
-2013-03-07T01:51:50.710157Z
-25590
-fulei
+2013-09-27T17:03:17.436270Z
+25758
+wangwen
 
 
 
@@ -25,6 +25,516 @@ fulei
 
 
 dd5f29d9-076b-d946-b61a-7118524f1a20
+
+btn-update-resume.png
+file
+
+
+
+
+2013-03-19T02:06:48.890625Z
+1217ce40aef9c3b224a9f1fe635baa71
+2013-03-05T08:26:22.878820Z
+25554
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4070
+
+tongzhi.gif
+file
+
+
+
+
+2013-03-19T02:06:48.890625Z
+c8762c1b4bf91883c1c770cad459d27a
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+601
+
+photo_JobSeekers_cn.gif
+file
+
+
+
+
+2013-03-25T00:47:20.437500Z
+e09969d9bdce181fc073cb3c829a64d4
+2013-09-27T17:03:17.436270Z
+25758
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2417
+
+xiugai.gif
+file
+
+
+
+
+2013-03-19T02:06:48.906250Z
+5b2b5374a72f8cec7235a497b9199f0d
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3387
+
+icon-notice.png
+file
+
+
+
+
+2013-03-25T00:47:20.437500Z
+11f4551ca251d1ea63427071009558d2
+2013-09-27T17:03:17.436270Z
+25758
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1553
+
+bg.gif
+file
+
+
+
+
+2013-03-19T02:06:48.937500Z
+4bd84c37254dcce1c717b6768a69def2
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+114
+
+zhpw.gif
+file
+
+
+
+
+2013-03-19T02:06:48.937500Z
+cf63a7db4a7373885ead7d359c14ad20
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2590
+
+sousuo.gif
+file
+
+
+
+
+2013-03-19T02:06:48.937500Z
+72b89e6ebdfb71efc6a1a62b47994406
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+591
+
+wanshan.gif
+file
+
+
+
+
+2013-03-19T02:06:48.953125Z
+1d13c418bca7dade063fc4401dbc4360
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2613
+
+hao_y.gif
+file
+
+
+
+
+2013-03-19T02:06:48.937500Z
+22961b00977ffcebce5571d8a2cac804
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+644
+
+icon-print.png
+file
+
+
+
+
+2013-03-25T00:47:20.437500Z
+af74eb8818879b71d2fe11f8ed1fb4b6
+2013-09-27T17:03:17.436270Z
+25758
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1518
+
+retrieve-password.png
+file
+
+
+
+
+2013-03-19T02:06:48.968750Z
+d32c69f4ed5d53605ba207845432bd72
+2013-03-05T08:26:22.878820Z
+25554
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3425
+
+btn-apply-for-jobs.png
+file
+
+
+
+
+2013-03-19T02:06:48.953125Z
+3445e394119adef156c4a1264a52f64f
+2013-03-05T08:26:22.878820Z
+25554
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3460
+
+download.gif
+file
+
+
+
+
+2013-03-19T02:06:48.968750Z
+aa47f78f5777a6d56e1bca7883a41a8c
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1071
+
+fangdian.gif
+file
+
+
+
+
+2013-03-19T02:06:48.968750Z
+3c83b014440584b80bf8995395e4ad01
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+302
 
 btn-search-job-green.png
 file
@@ -94,40 +604,6 @@ has-props
 
 4129
 
-shen_q.gif
-file
-
-
-
-
-2013-03-19T02:06:48.875000Z
-d9d8454bb073dca12657d082ef6db654
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2501
-
 btn-search-job.png
 file
 
@@ -162,17 +638,17 @@ has-props
 
 3984
 
-btn-edit-info.png
+shen_q.gif
 file
 
 
 
 
 2013-03-19T02:06:48.875000Z
-59c25a2a01cda0168d31fe79b8867511
-2013-03-05T08:26:22.878820Z
-25554
-wangwen
+d9d8454bb073dca12657d082ef6db654
+2012-11-08T02:03:06.882821Z
+24034
+zhoutian
 has-props
 
 
@@ -194,7 +670,7 @@ has-props
 
 
 
-3668
+2501
 
 btn-post-info.png
 file
@@ -230,14 +706,14 @@ has-props
 
 3513
 
-btn-update-resume.png
+btn-edit-info.png
 file
 
 
 
 
-2013-03-19T02:06:48.890625Z
-1217ce40aef9c3b224a9f1fe635baa71
+2013-03-19T02:06:48.875000Z
+59c25a2a01cda0168d31fe79b8867511
 2013-03-05T08:26:22.878820Z
 25554
 wangwen
@@ -262,7 +738,7 @@ has-props
 
 
 
-4070
+3668
 
 btn-perfect-info.png
 file
@@ -297,40 +773,6 @@ has-props
 
 
 4102
-
-tongzhi.gif
-file
-
-
-
-
-2013-03-19T02:06:48.890625Z
-c8762c1b4bf91883c1c770cad459d27a
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-601
 
 btn-edit-resume.png
 file
@@ -434,40 +876,6 @@ has-props
 
 54137
 
-xiugai.gif
-file
-
-
-
-
-2013-03-19T02:06:48.906250Z
-5b2b5374a72f8cec7235a497b9199f0d
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3387
-
 btn-perfect-resume.png
 file
 
@@ -502,152 +910,16 @@ has-props
 
 3482
 
-zhpw.gif
+bg-thead.png
 file
 
 
 
 
-2013-03-19T02:06:48.937500Z
-cf63a7db4a7373885ead7d359c14ad20
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-2590
-
-bg.gif
-file
-
-
-
-
-2013-03-19T02:06:48.937500Z
-4bd84c37254dcce1c717b6768a69def2
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-114
-
-sousuo.gif
-file
-
-
-
-
-2013-03-19T02:06:48.937500Z
-72b89e6ebdfb71efc6a1a62b47994406
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-591
-
-hao_y.gif
-file
-
-
-
-
-2013-03-19T02:06:48.937500Z
-22961b00977ffcebce5571d8a2cac804
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-644
-
-btn-perfect-resume-yellow.png
-file
-
-
-
-
-2013-03-19T02:06:48.937500Z
-69f8f143bb0a58ff47080184d5ccd405
-2013-03-05T08:26:22.878820Z
-25554
+2013-03-25T00:47:20.437500Z
+702931d41d43c4c0a3eb6e273cf938e5
+2013-09-27T17:03:17.436270Z
+25758
 wangwen
 has-props
 
@@ -670,18 +942,18 @@ has-props
 
 
 
-3803
+1014
 
-icon-arrow.png
+btn-print.png
 file
 
 
 
 
-2013-03-19T02:06:48.953125Z
-c07e9b3b3cc14f1a68a49fb059977d24
-2013-03-05T08:26:22.878820Z
-25554
+2013-03-25T00:47:20.437500Z
+88e13c9b102040d6048fce2a16a70d77
+2013-09-27T17:03:17.436270Z
+25758
 wangwen
 has-props
 
@@ -704,7 +976,41 @@ has-props
 
 
 
-1310
+1975
+
+icon-send.png
+file
+
+
+
+
+2013-03-25T00:47:20.437500Z
+bfdb1ec9538ea3c8f443ec6e1236b726
+2013-09-27T17:03:17.436270Z
+25758
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1430
 
 top_right.gif
 file
@@ -740,17 +1046,17 @@ has-props
 
 768
 
-wanshan.gif
+icon-arrow.png
 file
 
 
 
 
 2013-03-19T02:06:48.953125Z
-1d13c418bca7dade063fc4401dbc4360
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
+c07e9b3b3cc14f1a68a49fb059977d24
+2013-03-05T08:26:22.878820Z
+25554
+wangwen
 has-props
 
 
@@ -772,7 +1078,41 @@ has-props
 
 
 
-2613
+1310
+
+btn-perfect-resume-yellow.png
+file
+
+
+
+
+2013-03-19T02:06:48.937500Z
+69f8f143bb0a58ff47080184d5ccd405
+2013-03-05T08:26:22.878820Z
+25554
+wangwen
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3803
 
 bottom_right.gif
 file
@@ -842,16 +1182,16 @@ has-props
 
 2852
 
-btn-apply-for-jobs.png
+btn-close.png
 file
 
 
 
 
-2013-03-19T02:06:48.953125Z
-3445e394119adef156c4a1264a52f64f
-2013-03-05T08:26:22.878820Z
-25554
+2013-03-25T00:47:20.437500Z
+d701639168333be1bf6694b42eb0eb46
+2013-09-27T17:03:17.436270Z
+25758
 wangwen
 has-props
 
@@ -874,107 +1214,5 @@ has-props
 
 
 
-3460
-
-retrieve-password.png
-file
-
-
-
-
-2013-03-19T02:06:48.968750Z
-d32c69f4ed5d53605ba207845432bd72
-2013-03-05T08:26:22.878820Z
-25554
-wangwen
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3425
-
-fangdian.gif
-file
-
-
-
-
-2013-03-19T02:06:48.968750Z
-3c83b014440584b80bf8995395e4ad01
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-302
-
-download.gif
-file
-
-
-
-
-2013-03-19T02:06:48.968750Z
-aa47f78f5777a6d56e1bca7883a41a8c
-2012-11-08T02:03:06.882821Z
-24034
-zhoutian
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1071
+1978
 

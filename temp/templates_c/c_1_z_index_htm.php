@@ -1,4 +1,4 @@
-<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2013-03-22 17:31 中国标准时间 */ ?>
+<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2013-03-25 08:57 中国标准时间 */ ?>
 
 <?php $_templatelite_tpl_vars = $this->_vars;
 echo $this->_fetch_compile_include("sys/admin_header.htm", array());

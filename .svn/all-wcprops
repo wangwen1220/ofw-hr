@@ -1,7 +1,11 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 21
+/svn/netway/!svn/act/
 K 25
 svn:wc:ra_dav:version-url
 V 36
-/svn/netway/!svn/ver/25752/ofweek_hr
+/svn/netway/!svn/ver/25760/ofweek_hr
 END
 merge_trade.php
 K 25
@@ -37,7 +41,7 @@ display.php
 K 25
 svn:wc:ra_dav:version-url
 V 48
-/svn/netway/!svn/ver/25542/ofweek_hr/display.php
+/svn/netway/!svn/ver/25777/ofweek_hr/display.php
 END
 404.php
 K 25

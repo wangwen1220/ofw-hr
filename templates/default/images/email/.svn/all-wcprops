@@ -1,7 +1,97 @@
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/netway/!svn/ver/25590/ofweek_hr/templates/default/images/email
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email
+END
+btn-update-resume.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-update-resume.png
+END
+tongzhi.gif
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/tongzhi.gif
+END
+photo_JobSeekers_cn.gif
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email/photo_JobSeekers_cn.gif
+END
+xiugai.gif
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/xiugai.gif
+END
+icon-notice.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email/icon-notice.png
+END
+zhpw.gif
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/zhpw.gif
+END
+bg.gif
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/bg.gif
+END
+sousuo.gif
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/sousuo.gif
+END
+wanshan.gif
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/wanshan.gif
+END
+hao_y.gif
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/hao_y.gif
+END
+icon-print.png
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email/icon-print.png
+END
+retrieve-password.png
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/retrieve-password.png
+END
+btn-apply-for-jobs.png
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-apply-for-jobs.png
+END
+download.gif
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/download.gif
+END
+fangdian.gif
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/fangdian.gif
 END
 btn-search-job-green.png
 K 25
@@ -15,23 +105,17 @@ svn:wc:ra_dav:version-url
 V 91
 /svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-post-info-green.png
 END
-btn-search-job.png
-K 25
-svn:wc:ra_dav:version-url
-V 86
-/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-search-job.png
-END
 shen_q.gif
 K 25
 svn:wc:ra_dav:version-url
 V 78
 /svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/shen_q.gif
 END
-btn-post-info.png
+btn-search-job.png
 K 25
 svn:wc:ra_dav:version-url
-V 85
-/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-post-info.png
+V 86
+/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-search-job.png
 END
 btn-edit-info.png
 K 25
@@ -39,23 +123,17 @@ svn:wc:ra_dav:version-url
 V 85
 /svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-edit-info.png
 END
-btn-update-resume.png
+btn-post-info.png
 K 25
 svn:wc:ra_dav:version-url
-V 89
-/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-update-resume.png
+V 85
+/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-post-info.png
 END
 btn-perfect-info.png
 K 25
 svn:wc:ra_dav:version-url
 V 88
 /svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-perfect-info.png
-END
-tongzhi.gif
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/tongzhi.gif
 END
 btn-edit-resume.png
 K 25
@@ -81,41 +159,23 @@ svn:wc:ra_dav:version-url
 V 90
 /svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-perfect-resume.png
 END
-xiugai.gif
+bg-thead.png
 K 25
 svn:wc:ra_dav:version-url
-V 78
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/xiugai.gif
+V 80
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email/bg-thead.png
 END
-bg.gif
+btn-print.png
 K 25
 svn:wc:ra_dav:version-url
-V 74
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/bg.gif
+V 81
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email/btn-print.png
 END
-zhpw.gif
+icon-send.png
 K 25
 svn:wc:ra_dav:version-url
-V 76
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/zhpw.gif
-END
-sousuo.gif
-K 25
-svn:wc:ra_dav:version-url
-V 78
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/sousuo.gif
-END
-hao_y.gif
-K 25
-svn:wc:ra_dav:version-url
-V 77
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/hao_y.gif
-END
-btn-perfect-resume-yellow.png
-K 25
-svn:wc:ra_dav:version-url
-V 97
-/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-perfect-resume-yellow.png
+V 81
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email/icon-send.png
 END
 icon-arrow.png
 K 25
@@ -129,11 +189,11 @@ svn:wc:ra_dav:version-url
 V 81
 /svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/top_right.gif
 END
-wanshan.gif
+btn-perfect-resume-yellow.png
 K 25
 svn:wc:ra_dav:version-url
-V 79
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/wanshan.gif
+V 97
+/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-perfect-resume-yellow.png
 END
 bottom_right.gif
 K 25
@@ -147,27 +207,9 @@ svn:wc:ra_dav:version-url
 V 76
 /svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/qhmm.gif
 END
-btn-apply-for-jobs.png
+btn-close.png
 K 25
 svn:wc:ra_dav:version-url
-V 90
-/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/btn-apply-for-jobs.png
-END
-retrieve-password.png
-K 25
-svn:wc:ra_dav:version-url
-V 89
-/svn/netway/!svn/ver/25554/ofweek_hr/templates/default/images/email/retrieve-password.png
-END
-fangdian.gif
-K 25
-svn:wc:ra_dav:version-url
-V 80
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/fangdian.gif
-END
-download.gif
-K 25
-svn:wc:ra_dav:version-url
-V 80
-/svn/netway/!svn/ver/24034/ofweek_hr/templates/default/images/email/download.gif
+V 81
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/images/email/btn-close.png
 END

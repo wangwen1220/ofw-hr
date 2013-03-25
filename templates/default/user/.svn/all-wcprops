@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 59
-/svn/netway/!svn/ver/25745/ofweek_hr/templates/default/user
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/user
 END
 header.htm
 K 25
@@ -21,17 +21,17 @@ svn:wc:ra_dav:version-url
 V 70
 /svn/netway/!svn/ver/23544/ofweek_hr/templates/default/user/footer.htm
 END
-activate.htm
-K 25
-svn:wc:ra_dav:version-url
-V 72
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/user/activate.htm
-END
 reg_form.htm
 K 25
 svn:wc:ra_dav:version-url
 V 72
 /svn/netway/!svn/ver/24244/ofweek_hr/templates/default/user/reg_form.htm
+END
+activate.htm
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/user/activate.htm
 END
 get_password.htm
 K 25
@@ -75,21 +75,21 @@ svn:wc:ra_dav:version-url
 V 80
 /svn/netway/!svn/ver/25281/ofweek_hr/templates/default/user/get_password_set.htm
 END
-get_password_tip.htm
-K 25
-svn:wc:ra_dav:version-url
-V 80
-/svn/netway/!svn/ver/25281/ofweek_hr/templates/default/user/get_password_tip.htm
-END
 reg.htm
 K 25
 svn:wc:ra_dav:version-url
 V 67
 /svn/netway/!svn/ver/24254/ofweek_hr/templates/default/user/reg.htm
 END
+get_password_tip.htm
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/netway/!svn/ver/25281/ofweek_hr/templates/default/user/get_password_tip.htm
+END
 user_information.htm
 K 25
 svn:wc:ra_dav:version-url
 V 80
-/svn/netway/!svn/ver/25597/ofweek_hr/templates/default/user/user_information.htm
+/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/user/user_information.htm
 END

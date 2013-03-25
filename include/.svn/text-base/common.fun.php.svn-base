@@ -1531,6 +1531,7 @@ function assing_resume($uid,$type, $send=false){
 	//意向数据
 	$sql = "SELECT * FROM ".table('resume_intention')." WHERE uid=".$uid;
 	$res = $db->getone($sql);
+	$res['industry'] = trim($res['industry'], ',');
 	//意向岗位需处理category
 	if (empty($res)){
 		return -4;//意向数据无

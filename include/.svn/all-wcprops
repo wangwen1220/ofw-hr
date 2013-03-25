@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 44
-/svn/netway/!svn/ver/25751/ofweek_hr/include
+/svn/netway/!svn/ver/25760/ofweek_hr/include
 END
 gdbmp.php
 K 25
@@ -73,7 +73,7 @@ mysql.class.php
 K 25
 svn:wc:ra_dav:version-url
 V 60
-/svn/netway/!svn/ver/25656/ofweek_hr/include/mysql.class.php
+/svn/netway/!svn/ver/25760/ofweek_hr/include/mysql.class.php
 END
 fun_company.php
 K 25
@@ -85,7 +85,7 @@ common.fun.php
 K 25
 svn:wc:ra_dav:version-url
 V 59
-/svn/netway/!svn/ver/25746/ofweek_hr/include/common.fun.php
+/svn/netway/!svn/ver/25755/ofweek_hr/include/common.fun.php
 END
 page.class.php
 K 25

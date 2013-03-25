@@ -140,6 +140,7 @@ class mysql {
     		$info = "Errno£º".$this->errno()." Error£º".$this->error();
     	}
     	//exit('mysql error!');
+		header("Location: 404.php");die;
     	exit($info);
     }
 

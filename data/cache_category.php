@@ -82,43 +82,43 @@ $data = array (
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
-    176 => 
+    182 => 
     array (
-      'id' => '176',
+      'id' => '182',
       'parentid' => '0',
-      'categoryname' => '节能/环保',
+      'categoryname' => '电气/机械/设备/重工/机电',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
-    177 => 
+    183 => 
     array (
-      'id' => '177',
+      'id' => '183',
       'parentid' => '0',
-      'categoryname' => '电力/智能电网',
+      'categoryname' => '互联网/电子商务',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
-    178 => 
+    184 => 
     array (
-      'id' => '178',
+      'id' => '184',
       'parentid' => '0',
-      'categoryname' => '电子/电源/微电子',
+      'categoryname' => '计算机软硬件及服务',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
-    180 => 
+    185 => 
     array (
-      'id' => '180',
+      'id' => '185',
       'parentid' => '0',
-      'categoryname' => '电力/智能电网',
+      'categoryname' => '水工业',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
-    181 => 
+    186 => 
     array (
-      'id' => '181',
+      'id' => '186',
       'parentid' => '0',
-      'categoryname' => '通信/光通讯',
+      'categoryname' => '交通/运输/物流',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -126,7 +126,7 @@ $data = array (
     array (
       'id' => '187',
       'parentid' => '0',
-      'categoryname' => '电气/机械/设备/重工/机电',
+      'categoryname' => '汽车',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -134,7 +134,7 @@ $data = array (
     array (
       'id' => '188',
       'parentid' => '0',
-      'categoryname' => '互联网/电子商务',
+      'categoryname' => '安防',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -142,7 +142,7 @@ $data = array (
     array (
       'id' => '189',
       'parentid' => '0',
-      'categoryname' => '计算机软硬件及服务',
+      'categoryname' => '家电/家居',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -150,7 +150,7 @@ $data = array (
     array (
       'id' => '190',
       'parentid' => '0',
-      'categoryname' => '水工业',
+      'categoryname' => '金属/模具',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -158,7 +158,7 @@ $data = array (
     array (
       'id' => '191',
       'parentid' => '0',
-      'categoryname' => '交通/运输/物流',
+      'categoryname' => '航空/航天',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -166,7 +166,7 @@ $data = array (
     array (
       'id' => '192',
       'parentid' => '0',
-      'categoryname' => '汽车',
+      'categoryname' => '建筑/楼宇',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -174,7 +174,7 @@ $data = array (
     array (
       'id' => '193',
       'parentid' => '0',
-      'categoryname' => '安防',
+      'categoryname' => '纺织/服装/皮革',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -182,7 +182,7 @@ $data = array (
     array (
       'id' => '194',
       'parentid' => '0',
-      'categoryname' => '家电/家居',
+      'categoryname' => '造纸/印刷/包装',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -190,7 +190,7 @@ $data = array (
     array (
       'id' => '195',
       'parentid' => '0',
-      'categoryname' => '金属/模具',
+      'categoryname' => '采矿/地质',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -198,7 +198,7 @@ $data = array (
     array (
       'id' => '196',
       'parentid' => '0',
-      'categoryname' => '航空/航天',
+      'categoryname' => '石油/化工/天然气',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -206,7 +206,7 @@ $data = array (
     array (
       'id' => '197',
       'parentid' => '0',
-      'categoryname' => '建筑/楼宇',
+      'categoryname' => '冶金/钢铁',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -214,7 +214,7 @@ $data = array (
     array (
       'id' => '198',
       'parentid' => '0',
-      'categoryname' => '纺织/服装/皮革',
+      'categoryname' => '医疗/医药/生物工程',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -222,7 +222,7 @@ $data = array (
     array (
       'id' => '199',
       'parentid' => '0',
-      'categoryname' => '造纸/印刷/包装',
+      'categoryname' => '食品/饮料/烟酒',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -230,7 +230,7 @@ $data = array (
     array (
       'id' => '200',
       'parentid' => '0',
-      'categoryname' => '采矿/地质',
+      'categoryname' => '材料',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -238,7 +238,7 @@ $data = array (
     array (
       'id' => '201',
       'parentid' => '0',
-      'categoryname' => '石油/化工/天然气',
+      'categoryname' => '橡胶/塑料',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -246,7 +246,7 @@ $data = array (
     array (
       'id' => '202',
       'parentid' => '0',
-      'categoryname' => '冶金/钢铁',
+      'categoryname' => '检测/检验/认证',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -254,7 +254,7 @@ $data = array (
     array (
       'id' => '203',
       'parentid' => '0',
-      'categoryname' => '医疗/医药/生物工程',
+      'categoryname' => '科学研究/技术服务',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -262,7 +262,7 @@ $data = array (
     array (
       'id' => '204',
       'parentid' => '0',
-      'categoryname' => '食品/饮料/烟酒',
+      'categoryname' => '工业设计/艺术设计',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -270,7 +270,7 @@ $data = array (
     array (
       'id' => '205',
       'parentid' => '0',
-      'categoryname' => '材料',
+      'categoryname' => '贸易/进出口',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -278,7 +278,7 @@ $data = array (
     array (
       'id' => '206',
       'parentid' => '0',
-      'categoryname' => '橡胶/塑料',
+      'categoryname' => '公共设施',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -286,7 +286,7 @@ $data = array (
     array (
       'id' => '207',
       'parentid' => '0',
-      'categoryname' => '检测/检验/认证',
+      'categoryname' => '财税服务',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -294,7 +294,7 @@ $data = array (
     array (
       'id' => '208',
       'parentid' => '0',
-      'categoryname' => '科学研究/技术服务',
+      'categoryname' => '法律/中介/招聘',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -302,7 +302,7 @@ $data = array (
     array (
       'id' => '209',
       'parentid' => '0',
-      'categoryname' => '工业设计/艺术设计',
+      'categoryname' => '教育/培训/学术',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -310,7 +310,7 @@ $data = array (
     array (
       'id' => '210',
       'parentid' => '0',
-      'categoryname' => '贸易/进出口',
+      'categoryname' => '传媒/文化/出版',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -318,7 +318,7 @@ $data = array (
     array (
       'id' => '211',
       'parentid' => '0',
-      'categoryname' => '公共设施',
+      'categoryname' => '社会组织/政府/非盈利机构',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -326,7 +326,7 @@ $data = array (
     array (
       'id' => '212',
       'parentid' => '0',
-      'categoryname' => '财税服务',
+      'categoryname' => '国际组织',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
@@ -334,53 +334,13 @@ $data = array (
     array (
       'id' => '213',
       'parentid' => '0',
-      'categoryname' => '法律/中介/招聘',
+      'categoryname' => '广告/会展/咨询/公关',
       'stat_jobs' => '',
       'stat_resume ' => NULL,
     ),
     214 => 
     array (
       'id' => '214',
-      'parentid' => '0',
-      'categoryname' => '教育/培训/学术',
-      'stat_jobs' => '',
-      'stat_resume ' => NULL,
-    ),
-    215 => 
-    array (
-      'id' => '215',
-      'parentid' => '0',
-      'categoryname' => '传媒/文化/出版',
-      'stat_jobs' => '',
-      'stat_resume ' => NULL,
-    ),
-    216 => 
-    array (
-      'id' => '216',
-      'parentid' => '0',
-      'categoryname' => '社会组织/政府/非盈利机构',
-      'stat_jobs' => '',
-      'stat_resume ' => NULL,
-    ),
-    217 => 
-    array (
-      'id' => '217',
-      'parentid' => '0',
-      'categoryname' => '国际组织',
-      'stat_jobs' => '',
-      'stat_resume ' => NULL,
-    ),
-    218 => 
-    array (
-      'id' => '218',
-      'parentid' => '0',
-      'categoryname' => '广告/会展/咨询/公关',
-      'stat_jobs' => '',
-      'stat_resume ' => NULL,
-    ),
-    219 => 
-    array (
-      'id' => '219',
       'parentid' => '0',
       'categoryname' => '其它',
       'stat_jobs' => '',
