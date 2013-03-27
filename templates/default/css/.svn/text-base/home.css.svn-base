@@ -87,26 +87,31 @@ label.error{color:#FF0000;margin-left:6px;}
 input, textarea, select {font-size: 12px;vertical-align: middle;}
 
 
-.mydiv {background:#f4f4f4;z-index:99; width:520px; padding:10px; left:50%;/*FF IE7*/top:50%;/*FF IE7*/
+.mydiv {background:#f4f4f4;z-index:99; width:520px; padding:10px; left:50%;/*FF IE7*/
+/* top:50%;FF IE7 */
+top: 40px;
 margin-left:-290px!important;/*FF IE7 该值为本身宽的一半 */
-margin-top:-180px!important;/*FF IE7 该值为本身高的一半*/
-margin-top:0px;
-position:fixed!important;/*FF IE7*/
-position:absolute;/*IE6*/_top:       expression(eval(document.compatMode &&
-            document.compatMode=='CSS1Compat') ?
-            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
-            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+/* margin-top:-180px!important;FF IE7 该值为本身高的一半 */
+/* position:fixed!important;FF IE7 */
+position:absolute;/* 2013-3-27 */
+/* position:absolute;IE6_top:       expression(eval(document.compatMode && */
+            /* document.compatMode=='CSS1Compat') ? */
+            /* documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :IE6 */
+            /* document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);IE5 IE5.5 */
 
 }
-.mydiv1 {background:#f4f4f4;z-index:99; width:630px; padding:10px; left:50%;/*FF IE7*/top:50%;/*FF IE7*/
+.mydiv1 {background:#f4f4f4;z-index:99; width:630px; padding:10px; left:50%;/*FF IE7*/
+/* top:50%;FF IE7 */
+top: 40px;
 margin-left:-290px!important;/*FF IE7 该值为本身宽的一半 */
-margin-top:-210px!important;/*FF IE7 该值为本身高的一半*/
-margin-top:0px;
-position:fixed!important;/*FF IE7*/
-position:absolute;/*IE6*/_top:       expression(eval(document.compatMode &&
-            document.compatMode=='CSS1Compat') ?
-            documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :/*IE6*/
-            document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);/*IE5 IE5.5*/
+/* margin-top:-210px!important;FF IE7 该值为本身高的一半 */
+/* position:fixed!important;FF IE7 */
+position:absolute;/* 2013-3-27 */
+position:absolute;/*IE6*/
+/* _top: expression(eval(document.compatMode && */
+            /* document.compatMode=='CSS1Compat') ? */
+            /* documentElement.scrollTop + (document.documentElement.clientHeight-this.offsetHeight)/2 :IE6 */
+            /* document.body.scrollTop + (document.body.clientHeight - this.clientHeight)/2);IE5 IE5.5 */
 
 }
 

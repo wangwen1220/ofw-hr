@@ -99,8 +99,8 @@ body {
 	line-height: 33px;
 	border: 1px solid #A6B6C5;
 	font-size: 14px;
-	background: #F4F9FD;
 	border-radius: 3px;
+	background: #F4F9FD url(../images/user/bg-input.png) repeat-x;
 }
 #regbox form .item-select label {
 	height: 30px;

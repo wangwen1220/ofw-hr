@@ -1,15 +1,15 @@
 10
 
 dir
-25772
+25830
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr
 http://huoshow.3322.org:8999/svn/netway
 
 
 
-2013-09-27T19:43:20.954484Z
-25760
-zhangchengjun
+2014-01-01T14:26:11.591867Z
+25802
+wangrui
 has-props
 has-prop-mods
 
@@ -23,12 +23,12 @@ has-prop-mods
 
 
 
-
+incomplete
 dd5f29d9-076b-d946-b61a-7118524f1a20
 
 301.php
 file
-
+25802
 
 
 
@@ -68,7 +68,7 @@ dir
 
 404.php
 file
-
+25802
 
 
 
@@ -102,7 +102,7 @@ zhangchengjun
 
 favicon.ico
 file
-
+25802
 
 
 
@@ -145,7 +145,7 @@ dir
 
 merge_trade.php
 file
-
+25802
 
 
 
@@ -180,13 +180,6 @@ zhoutian
 doc
 dir
 
-temp
-dir
-
-
-
-delete
-
 company
 dir
 
@@ -195,7 +188,7 @@ dir
 
 notice.php
 file
-
+25802
 
 
 
@@ -230,16 +223,9 @@ zhangchengjun
 login
 dir
 
-data
-dir
-
-
-
-delete
-
 .htaccess
 file
-
+25802
 
 
 
@@ -271,25 +257,25 @@ zhangchengjun
 
 455330
 
-jobfair
+news
 dir
 
-news
+jobfair
 dir
 
 ofweek
 dir
 
-notice
-dir
-
 phpmailer
 dir
 
-plus
+notice
 dir
 
 include
+dir
+
+plus
 dir
 
 hanyang
@@ -297,7 +283,7 @@ dir
 
 robots.txt
 file
-
+25802
 
 
 
@@ -332,10 +318,10 @@ zhangchengjun
 wap
 dir
 
-admin
+help
 dir
 
-help
+admin
 dir
 
 hrtools
@@ -343,11 +329,11 @@ dir
 
 display.php
 file
-25777
+25802
 
 
 
-2013-03-25T07:25:00.437500Z
+2013-03-26T01:39:20.953125Z
 682a5baa4915205e68dd1935e494d5e5
 2013-09-27T21:00:02.354873Z
 25777
@@ -383,7 +369,7 @@ dir
 
 index.php
 file
-
+25802
 
 
 

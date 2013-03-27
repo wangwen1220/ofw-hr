@@ -246,13 +246,13 @@
 			if ($ths.hasClass('no-more')) {
 				var id = $ths.attr('data-id'),
 					text = $ths.text();
-				if ($area_selected.find('[data-id =' + id + ']').length) {
-					$area_selected.find('[data-id =' + id + ']').remove();
+				if ($area_selected.find('[data-id =cbx-' + id + ']').length) {
+					$area_selected.find('[data-id =cbx-' + id + ']').remove();
 					$area_err.hide();
 				} else if ($area_selected.find('.area-selected-item').length >= 3) {
 					$area_err.show().text('最多只能选择3项');
 				} else {
-					$area_selected.append("<div class='area-selected-item' data-id='" + id + "' data-val='" + id + "'><span class='text'>" + text + "</span><a class='closer' title='点击取消' href='javascript:;'>X</a></div>");
+					$area_selected.append("<div class='area-selected-item' data-id='cbx-" + id + "' data-val='" + id + "'><span class='text'>" + text + "</span><a class='closer' title='点击取消' href='javascript:;'>X</a></div>");
 					$area_err.hide();
 				}
 			} else {

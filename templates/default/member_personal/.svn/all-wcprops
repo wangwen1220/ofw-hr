@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/member_personal
+/svn/netway/!svn/ver/25810/ofweek_hr/templates/default/member_personal
 END
 personal_user_email.htm
 K 25
@@ -69,6 +69,12 @@ svn:wc:ra_dav:version-url
 V 90
 /svn/netway/!svn/ver/23927/ofweek_hr/templates/default/member_personal/personal_search.htm
 END
+feedback-msg.htm
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/netway/!svn/ver/25810/ofweek_hr/templates/default/member_personal/feedback-msg.htm
+END
 personal_resume_photo_cutting.htm
 K 25
 svn:wc:ra_dav:version-url
@@ -91,7 +97,7 @@ feedback-new.htm
 K 25
 svn:wc:ra_dav:version-url
 V 87
-/svn/netway/!svn/ver/25776/ofweek_hr/templates/default/member_personal/feedback-new.htm
+/svn/netway/!svn/ver/25778/ofweek_hr/templates/default/member_personal/feedback-new.htm
 END
 personal_private.htm
 K 25
@@ -117,11 +123,11 @@ svn:wc:ra_dav:version-url
 V 96
 /svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_resume_make1.htm
 END
-personal_file.htm
+personal_resume_tpl.htm
 K 25
 svn:wc:ra_dav:version-url
-V 88
-/svn/netway/!svn/ver/24631/ofweek_hr/templates/default/member_personal/personal_file.htm
+V 94
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_resume_tpl.htm
 END
 personal_resume_make2.htm
 K 25
@@ -129,11 +135,11 @@ svn:wc:ra_dav:version-url
 V 96
 /svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_resume_make2.htm
 END
-personal_resume_tpl.htm
+personal_file.htm
 K 25
 svn:wc:ra_dav:version-url
-V 94
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_resume_tpl.htm
+V 88
+/svn/netway/!svn/ver/24631/ofweek_hr/templates/default/member_personal/personal_file.htm
 END
 personal_resume_make3.htm
 K 25
@@ -141,23 +147,11 @@ svn:wc:ra_dav:version-url
 V 96
 /svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_resume_make3.htm
 END
-personal_user_status.htm
+personal_resume_make4.htm
 K 25
 svn:wc:ra_dav:version-url
-V 95
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_user_status.htm
-END
-personal_notice_show.htm
-K 25
-svn:wc:ra_dav:version-url
-V 95
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_notice_show.htm
-END
-personal_notice.htm
-K 25
-svn:wc:ra_dav:version-url
-V 90
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_notice.htm
+V 96
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_resume_make4.htm
 END
 body_index.htm
 K 25
@@ -165,11 +159,23 @@ svn:wc:ra_dav:version-url
 V 85
 /svn/netway/!svn/ver/24755/ofweek_hr/templates/default/member_personal/body_index.htm
 END
-personal_resume_make4.htm
+personal_notice.htm
 K 25
 svn:wc:ra_dav:version-url
-V 96
-/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_resume_make4.htm
+V 90
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_notice.htm
+END
+personal_notice_show.htm
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_notice_show.htm
+END
+personal_user_status.htm
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/netway/!svn/ver/24244/ofweek_hr/templates/default/member_personal/personal_user_status.htm
 END
 personal_resume_make5.htm
 K 25

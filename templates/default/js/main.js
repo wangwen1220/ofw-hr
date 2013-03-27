@@ -187,8 +187,7 @@ window.myjq = window.myjq || jQuery.noConflict(true);
 			if (wd) {
 				$.get('/plus/ajax_zt.php?action=navisug&key=' + encodeURIComponent(wd), function(d) {
 					/* TODO */
-					if (d !== '' && d == 'null' && d === '<div id="gw-search-resault" class="gw-search-resault fn-clear"></div>') {
-					//if (d !== '') {
+					if (d !== '') {
 						$jobs_list.html(d);
 						$tips.hide();
 					} else {

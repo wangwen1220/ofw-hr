@@ -135,9 +135,9 @@ $(document).ready(function()
 <div id="content">
 		<div class="zpxx_up">
 			<dl>
-				<dt><img border="0" src="{#$company.logo#}" width="157" height="109"></dt>
+				<dt><img border="0" src="{#$company.logo#}" width="157" height="109" alt="{#$company.companyname#}"></dt>
 				<dd>
-					<span class="zpxx_gs_tl{#if $company.certificate_status==1#} tupian{#/if#}">{#$company.companyname#}</span>
+				<span class="zpxx_gs_tl{#if $company.certificate_status==1#} tupian{#/if#}"><h1>{#$company.companyname#}</h1></span>
 					公司性质：{#$company.nature_cn#}<br>
 					所属行业：{#$company.trade_cn#}<br>
 					公司地址：{#$company.address#}{#if $company.website#}<br>公司网址：{#$company.website#}{#/if#}
@@ -147,8 +147,8 @@ $(document).ready(function()
 		</div>
 		<div class="zpxx_down">
 			<div class="zpxx_lm">
-				<span><a href="#tab1" class="selected">公司简介</a></span>
-				<span><a href="#tab2">招聘职位</a></span>
+				<span><a href="#tab1" class="selected"><h3>公司简介</h3></a></span>
+						<span><a href="#tab2"><h3>招聘职位</h3></a></span>
 			</div>
 			<div id="tab1" class="blk_03">
 				<div class="zpxx_con">

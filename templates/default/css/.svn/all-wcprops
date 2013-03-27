@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/css
+/svn/netway/!svn/ver/25830/ofweek_hr/templates/default/css
 END
 css.css
 K 25
@@ -13,7 +13,7 @@ home.css
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/netway/!svn/ver/25713/ofweek_hr/templates/default/css/home.css
+/svn/netway/!svn/ver/25830/ofweek_hr/templates/default/css/home.css
 END
 jquery-ui-1.8.10.custom.min.css
 K 25
@@ -49,7 +49,7 @@ user.css
 K 25
 svn:wc:ra_dav:version-url
 V 67
-/svn/netway/!svn/ver/25756/ofweek_hr/templates/default/css/user.css
+/svn/netway/!svn/ver/25794/ofweek_hr/templates/default/css/user.css
 END
 global.css
 K 25

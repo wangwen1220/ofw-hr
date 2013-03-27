@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />{#qishi_pageinfo set="列表名:page,调用:list,分类ID:GET[trade],school:GET[school]"#}
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />{#qishi_pageinfo set="列表名:page,调用:list,分类ID:GET[trade],school:GET[school],district:"#}
 <title>{#$page.title#}</title>
 <meta name="description" content="{#$page.description#}">
 <meta name="keywords" content="{#$page.keywords#}">
@@ -34,7 +34,7 @@
 				<dt><a href='javascript:void(0);'>按类别选择：</a></dt>
 				<dd>
 				{#if $related_category_info#}
-					<h3><a href='#'>{#$related_category_info.categoryname#}</a></h3>
+					<h2><a href='#'>{#$related_category_info.categoryname#}</a></h2>
 				{#/if#}
 					<ul>
 						{#foreach item=item from=$related_category#}
