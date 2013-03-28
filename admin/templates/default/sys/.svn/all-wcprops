@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 64
-/svn/netway/!svn/ver/25001/ofweek_hr/admin/templates/default/sys
+/svn/netway/!svn/ver/25856/ofweek_hr/admin/templates/default/sys
 END
 admin_left_company.htm
 K 25
@@ -39,11 +39,11 @@ svn:wc:ra_dav:version-url
 V 81
 /svn/netway/!svn/ver/24659/ofweek_hr/admin/templates/default/sys/admin_header.htm
 END
-admin_left_personal.htm
+admin_csrf.htm
 K 25
 svn:wc:ra_dav:version-url
-V 88
-/svn/netway/!svn/ver/24096/ofweek_hr/admin/templates/default/sys/admin_left_personal.htm
+V 79
+/svn/netway/!svn/ver/24226/ofweek_hr/admin/templates/default/sys/admin_csrf.htm
 END
 admin_left_article.htm
 K 25
@@ -51,17 +51,17 @@ svn:wc:ra_dav:version-url
 V 87
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/sys/admin_left_article.htm
 END
-admin_csrf.htm
-K 25
-svn:wc:ra_dav:version-url
-V 79
-/svn/netway/!svn/ver/24226/ofweek_hr/admin/templates/default/sys/admin_csrf.htm
-END
-admin_left_feedback.htm
+admin_left_personal.htm
 K 25
 svn:wc:ra_dav:version-url
 V 88
-/svn/netway/!svn/ver/25001/ofweek_hr/admin/templates/default/sys/admin_left_feedback.htm
+/svn/netway/!svn/ver/24096/ofweek_hr/admin/templates/default/sys/admin_left_personal.htm
+END
+admin_footer.htm
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/sys/admin_footer.htm
 END
 admin_left_ad.htm
 K 25
@@ -69,11 +69,11 @@ svn:wc:ra_dav:version-url
 V 82
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/sys/admin_left_ad.htm
 END
-admin_footer.htm
+admin_left_feedback.htm
 K 25
 svn:wc:ra_dav:version-url
-V 81
-/svn/netway/!svn/ver/23544/ofweek_hr/admin/templates/default/sys/admin_footer.htm
+V 88
+/svn/netway/!svn/ver/25856/ofweek_hr/admin/templates/default/sys/admin_left_feedback.htm
 END
 admin_top.htm
 K 25

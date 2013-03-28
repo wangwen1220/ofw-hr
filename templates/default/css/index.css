@@ -38,6 +38,8 @@
 .fenl .gang ul li{ float:left; line-height:24px; width:227px; color:#888;}
 .fenl .gang ul li a{ color:#444;}
 .fenl .gang ul li a:hover {color:#cb0a00; text-decoration:underline;}
+.fenl .gang ul li h2 a{ color:#444; line-height:24px;}
+.fenl .gang ul li h2 a:hover {color:#cb0a00; text-decoration:underline;line-height:24px;}
 
 .fenl .fyen{ float:left; background:#efefef; height:30px; width:928px; line-height:30px; text-align:right; padding:0px 30px; border:1px solid #e2e2e2; border-top:none; }
 .fyen a{color:#333;background:#FFFFFF;border:#ccc 1px solid; padding:3px 8px;text-decoration:none; margin:0px 2px; font-family:"宋体";}
@@ -47,6 +49,7 @@
 .zhaop{ float:left; width:488px;}
 .zhaop .titel{background:url(../images/co_bg.gif) repeat-x; border-right:1px solid #e2e2e2; border-left:1px solid #e2e2e2; width:456px; height:28px; line-height:28px; float:left; padding:0px 15px;}
 .zhaop .titel h3{ float:left; line-height:28px; color:#ac0000; font-size:14px;}
+.zhaop .titel h2{ float:left; line-height:28px; color:#ac0000; font-size:14px;}
 .zhaop .titel span{ float:right; font-family:"宋体";}
 .zhaop .list_man{ width:466px; border:1px solid #e2e2e2; border-top:none; padding:5px 10px; float:left; line-height:30px;}
 

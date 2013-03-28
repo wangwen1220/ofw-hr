@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 42
-/svn/netway/!svn/ver/25736/ofweek_hr/admin
+/svn/netway/!svn/ver/25885/ofweek_hr/admin
 END
 admin_notice.php
 K 25
@@ -49,7 +49,7 @@ admin_feedback.php
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/netway/!svn/ver/24732/ofweek_hr/admin/admin_feedback.php
+/svn/netway/!svn/ver/25885/ofweek_hr/admin/admin_feedback.php
 END
 admin_promotion.php
 K 25
@@ -87,11 +87,11 @@ svn:wc:ra_dav:version-url
 V 57
 /svn/netway/!svn/ver/24985/ofweek_hr/admin/admin_left.php
 END
-admin_set.php
+admin_safety.php
 K 25
 svn:wc:ra_dav:version-url
-V 56
-/svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_set.php
+V 59
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_safety.php
 END
 admin_qqconnect.php
 K 25
@@ -99,11 +99,11 @@ svn:wc:ra_dav:version-url
 V 62
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_qqconnect.php
 END
-admin_safety.php
+admin_set.php
 K 25
 svn:wc:ra_dav:version-url
-V 59
-/svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_safety.php
+V 56
+/svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_set.php
 END
 admin_link.php
 K 25
@@ -111,29 +111,29 @@ svn:wc:ra_dav:version-url
 V 57
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_link.php
 END
-company.php
-K 25
-svn:wc:ra_dav:version-url
-V 54
-/svn/netway/!svn/ver/25733/ofweek_hr/admin/company.php
-END
 admin_templates.php
 K 25
 svn:wc:ra_dav:version-url
 V 62
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_templates.php
 END
-job.php
+company.php
 K 25
 svn:wc:ra_dav:version-url
-V 50
-/svn/netway/!svn/ver/25603/ofweek_hr/admin/job.php
+V 54
+/svn/netway/!svn/ver/25733/ofweek_hr/admin/company.php
 END
 admin_sms.php
 K 25
 svn:wc:ra_dav:version-url
 V 56
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_sms.php
+END
+job.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/netway/!svn/ver/25603/ofweek_hr/admin/job.php
 END
 admin_index.php
 K 25
@@ -171,17 +171,17 @@ svn:wc:ra_dav:version-url
 V 60
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_hotword.php
 END
-admin_set_com.php
-K 25
-svn:wc:ra_dav:version-url
-V 60
-/svn/netway/!svn/ver/24490/ofweek_hr/admin/admin_set_com.php
-END
 admin_simple.php
 K 25
 svn:wc:ra_dav:version-url
 V 59
 /svn/netway/!svn/ver/23544/ofweek_hr/admin/admin_simple.php
+END
+admin_set_com.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/netway/!svn/ver/24490/ofweek_hr/admin/admin_set_com.php
 END
 admin_locoyspider.php
 K 25

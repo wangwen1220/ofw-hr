@@ -29,9 +29,14 @@ if (!is_numeric(trim($_GET['id']))) {
 	exit;
 }
 
+$act = $_GET['action']?$_GET['action']:'';
+
+
 $option = ' WHERE 1 ';
 $option .= "AND uid=".intval($_GET['id']);
 //查询下拉单的筛选条件 tab2页的数据
+
+if($act == 'list'){
 $select_area = array();
 $sql = "SELECT district,sdistrict,district_cn FROM ".table('jobs')." $option GROUP BY district_cn ORDER BY COUNT(*) DESC";
 #echo $sql;
@@ -58,6 +63,7 @@ foreach ($res as $v){
 	$select_edu[$v['c_id']] = $v['c_name'];
 }
 $smarty->assign('options_edu',array_reverse($select_edu,1));
+}
 //END
 
 

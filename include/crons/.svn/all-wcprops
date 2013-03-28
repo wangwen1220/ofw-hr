@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 50
-/svn/netway/!svn/ver/25751/ofweek_hr/include/crons
+/svn/netway/!svn/ver/25883/ofweek_hr/include/crons
 END
 mail_resume_complete.php
 K 25
@@ -61,7 +61,7 @@ job_refresh.php
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/netway/!svn/ver/25566/ofweek_hr/include/crons/job_refresh.php
+/svn/netway/!svn/ver/25883/ofweek_hr/include/crons/job_refresh.php
 END
 stat_category.php
 K 25

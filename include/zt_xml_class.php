@@ -150,7 +150,7 @@ class BaiboXMLGenerator {
 		$tmp['data']['education'] = mb_convert_encoding($data['education_cn'], 'utf8','gbk');
 		$tmp['data']['experience'] = mb_convert_encoding($data['experience_cn'], 'utf8','gbk');
 		$tmp['data']['startdate'] = date($this->dateFormat,$data['refreshtime']);
-		$tmp['data']['enddate'] = $data['deadline']?date($this->dateFormat,$data['deadline']):'长期有效';
+		$tmp['data']['enddate'] = $data['deadline']?date($this->dateFormat,$data['deadline']):date($this->dateFormat,$lastModified+3600*24*365);
 		$tmp['data']['salary'] = mb_convert_encoding(z_wage_cn($data['wage_min'], $data['wage_max']), 'utf8','gbk');
 
 		$tmp['data']['source'] = 'OFweek人才网';//OFweek人才网, 待定
@@ -180,7 +180,7 @@ class BaiboXMLGenerator {
 		$tmp['data']['employertype'] = mb_convert_encoding($company['nature_cn'], 'utf8','gbk');//公司类型, 需查询
 		$tmp['data']['email'] = $company['email']; //公司邮箱,需查询
 		$tmp['data']['workplace'] = mb_convert_encoding($company['address'], 'utf8','gbk');//待查询 若为空，则读取该公司的地区
-		$tmp['data']['number'] = $data['amount']; //招聘人数
+		$tmp['data']['number'] = $data['amount']?$data['amount']:'不限'; //招聘人数
 		//过滤描述文件
 		$company['contents'] = $this->baibo_escape($company['contents']);
 		$tmp['data']['introduction'] = mb_convert_encoding($company['contents'], 'utf8','gbk'); //公司简介, 需查询

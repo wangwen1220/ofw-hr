@@ -17,35 +17,8 @@
 <script type="text/javascript">
 $(document).ready(function()
 {
-	  $(".zpxx_lm").idTabs();
-	  $(".zpxx_lm a").click(function(){
-		$(this).attr('class','selected');
-	  });
-
-	  $(".toptabs  a").click(function(){
-		$(this).blur();
-		});	
 		var id="{#$show.id#}";
-		var company_id="{#$show.company_id#}";
-		var tsTimeStamp= new Date().getTime();
-		$.get("{#$QISHI.site_dir#}plus/ajax_click.php", { "id": id,"time":tsTimeStamp,"act":"jobs_click"},
-			function (data,textStatus)
-			 {			
-				$(".click").html(data);
-			 }
-		);
-		$.get("{#$QISHI.site_dir#}plus/ajax_contact.php", { "id": id,"time":tsTimeStamp,"act":"jobs_contact"},
-			function (data,textStatus)
-			 {			
-				$("#jobs_contact").html(data);
-			 }
-		);
-		$.get("{#$QISHI.site_dir#}plus/ajax_contact.php", { "id": company_id,"time":tsTimeStamp,"act":"company_contact"},
-			function (data,textStatus)
-			 {			
-				$("#company_contact").html(data);
-			 }
-		);
+
 		//申请职位
 //		$(".app_jobs").click(function(){
 //		dialog("申请职位","url:get?{#$QISHI.site_dir#}user/user_apply_jobs.php?id="+id+"&act=app","500px","auto","");
@@ -115,53 +88,6 @@ $(document).ready(function()
 			return false;
 		}		
 	}
-
-	//默认加载
-	function page_init(pagenumber){
-		//向服务器发送请求，查询满足条件的记录
-		var areaid = $('#list_areaid').val();
-		var eduid = $('#list_educationid').val();
-
-		$.getJSON('{#$QISHI.site_dir#}jobs/jobs-show.php',{'id':{#$smarty.get.id#},'page':pagenumber,'areaid':areaid,'eduid':eduid},function(data){
-			//data 为返回json 对象 并包括(pagecount、totalcount)的key-value值;
-//			var data = {'pagecount':15,'totalcount':150};
-			var table = new String;
-			$.each(data.list,function(i,val){
-				if(i % 2 == 1){
-					table += '<tr class="zwlist">';
-				}
-				else{
-					table += '<tr>';
-				}
-				table += '<td valign="middle" height="30" align="left" style="padding-left:15px;"><a title="'+val.jobs_name+'" target="_blank" href="{#$QISHI.site_dir#}jobs/jobs-show-'+val.id+'.html">'+val.jobs_name+'</a></td>';
-				table += '<td valign="middle" align="center">'+val.district_cn+'</td>';
-				table += '<td valign="middle" align="center">'+val.education_cn+'</td>';
-				table += '<td valign="middle" align="center">'+val.experience_cn+'</td>';
-				table += '<td valign="middle" align="center">'+val.wage_cn+'</td>';
-				table += '<td valign="middle" align="center">'+val.refreshtime+'</td>';
-				table += '</tr>';
-
-			});
-			if(table == ''){
-				table = '<span>无数据</span>';
-			}
-			$('#tab2 .zpxx_con table tr:first-child').nextAll().remove();
-			$('#tab2 .zpxx_con table tbody').append(table);
-
-			$('#list_educationid').unbind().bind('change',function(){page_init(1);this.blur();});
-			$('#list_areaid').unbind().bind('change',function(){page_init(1);this.blur();});
-			
-			$("#pager").pager({ pagenumber: pagenumber, pagecount:data.pagecount,totalcount:data.totalcount, buttonClickCallback: PageClick});
-		});
-	}
-
-	//回调函数
-	PageClick = function(pageclickednumber) {
-		page_init(pageclickednumber);
-	}
-
-	$('#tab2 .zpxx_con table tbody').append('<span>加载中...</span>');
-	page_init(1);
 
 
 	//验证码部分
@@ -235,95 +161,14 @@ $(document).ready(function()
 		</div>
 		<div class="zpxx_down">
 			<div class="zpxx_lm">
-				<span><a href="#tab1" >公司简介</a></span>
-				<span><a href="#tab2">招聘职位</a></span>
-				<span><a href="#tab3" class="selected">{#$show.jobs_name#}</a></span>
-			</div>
-			<div id="tab1" class="blk_03">
-				<div class="zpxx_con">
-				{#if $show.audit == 4 && $show.uid == $smarty.session.uid #}
-				{#$show.company.contents_tmp|nl2br#}
-				{#else#}
-				{#$show.company.contents|nl2br#}
-				{#/if#}
-				</div>
-				<!--未登录用户提示区域-->
-				{#if !$smarty.session.uid#}
-				<div class="zpxx_logout" style="display:none;">
-				
-				
-				<form id="Form3" name="Form3" action="http://www.ofweek.com/user/login.do?method=loginUser" method="post">
-				<input type="hidden" id="p_exist2" name="talentNetworkLogin" value="">
-				<table width="560" align="center" cellspacing="0" cellpadding="0" border="0">
-		<tbody><tr>
-				<td valign="middle" height="40" align="center" colspan="5">只有注册个人会员才能查看企业的联系方式，请登录或注册</td>
-		</tr>
-		<tr>
-				<td width="50" height="35">用户名：</td>
-				<td width="120"><input type="text" id="p_username2" name="username" value="" style="width:120px; height:20px; line-height:20px;"></td>
-				<td width="50">密码：</td>
-				<td width="120"><input type="password" name="password" value="" style="width:120px; height:20px; line-height:20px;"></td>
-				<td><input type="button" id="submit_form3" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{#$QISHI.site_dir#}hrlogin/">企业用户登录</a></td>
-		</tr>
-		<tr>
-				<td valign="middle" height="35" align="center" colspan="5"><a target="_blank" href="http://www.ofweek.com/user/registerUser.do?talentNetworkLogin=talentNetworkLogin" style="color:#cb0a00; text-decoration:underline;">如果您还没有注册，请点击这里进行注册</a></td>
-		</tr>
-</tbody></table>
-				<input type="hidden" name="siteweb" value="hr" />
-				<input type="hidden" name="returnurl" value="{#$QISHI.cur_url#}" />
-				</form>
-
-
-				</div>
-				<!-- END-->
-				{#else#}
-				<!--已登录显示-->
-				<div class="zpxx_login" style="display:none;">
-					<ul>
-						<li>联 系 人：{#$show.company.contact#}</li>
-						<li>联系电话：{#$show.company.telephone#}</li>
-						<li>邮箱地址：请通过系统投递邮件</li>
-						<li>公司网址：{#$show.company.website#}</li>
-					</ul>
-				</div>
-				{#/if#}
-				<!-- END-->
-
+				<span><a href="{#$show.company_url#}" >公司简介</a></span>
+				<span><a href="{#$QISHI.site_domain#}/company/joblist-{#$show.uid#}.html" >招聘职位</a></span>
+				<span><a href="{#$QISHI.site_domain#}/jobs/jobs-show-{#$show.id#}.html" class="selected">{#$show.jobs_name#}</a></span>
 			</div>
 
-<!--列表页-->
-			<div id="tab2" class="blk_03">
-				<div style="border-bottom:none; padding-top:10px;" class="zpxx_con">
-					<table width="100%" cellspacing="0" cellpadding="0" border="0" >
-		<tr style="background:#f2f2f2;">
-				<td width="26%" valign="middle" height="30" align="left" style="padding-left:15px;">职位名称</td>
-				<td width="17%" valign="middle" align="center">
-						<select name="list_areaid" id="list_areaid">
-						<option value="-1">工作地点</option>
-						{#html_options options=$options_area selected=$smarty.get.list_areaid#}
-				   </select>
-				</td>
-				<td width="15%" valign="middle" align="center">
-						<select name="list_educationid" id="list_educationid">
-						<option value="-1">学历</option>
-						{#html_options options=$options_edu selected=$smarty.get.list_educationid#}
-				   </select>
-</td>
-				<td width="15%" valign="middle" align="center">
-						经验
-				</td>
-				<td width="13%" valign="middle" align="center">
-					月薪
-				</td>
-				<td width="14%" valign="middle" align="center">更新日期</td>
-		</tr>
-		</table>
-				</div>
-	<div id="pager" class="code"></div>	
-	<div style="clear:both;"></div>		
-			</div>
-<!--END-->
 
+
+<!--职位详情标签页-->
 			<div id="tab3" class="blk_03">
 				<div class="zpxx_detail">
 					<div class="detail_tl">
@@ -473,6 +318,7 @@ $(document).ready(function()
 
 				
 			</div>
+<!--END-->
 		</div>
 	</div>
 

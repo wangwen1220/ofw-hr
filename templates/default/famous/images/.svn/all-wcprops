@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images
+/svn/netway/!svn/ver/25872/ofweek_hr/templates/default/famous/images
 END
 dian.gif
 K 25
@@ -9,59 +9,65 @@ svn:wc:ra_dav:version-url
 V 77
 /svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/dian.gif
 END
-news_top.gif
+bigpic03.jpg
 K 25
 svn:wc:ra_dav:version-url
 V 81
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/news_top.gif
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/bigpic03.jpg
 END
-1.gif
+bigpic04.jpg
 K 25
 svn:wc:ra_dav:version-url
-V 74
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/1.gif
+V 81
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/bigpic04.jpg
 END
-news_bottom.gif
-K 25
-svn:wc:ra_dav:version-url
-V 84
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/news_bottom.gif
-END
-2.gif
-K 25
-svn:wc:ra_dav:version-url
-V 74
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/2.gif
-END
-focus_top.gif
+485X60_hl.jpg
 K 25
 svn:wc:ra_dav:version-url
 V 82
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/focus_top.gif
+/svn/netway/!svn/ver/25863/ofweek_hr/templates/default/famous/images/485X60_hl.jpg
 END
-3.gif
+bigpic05.jpg
 K 25
 svn:wc:ra_dav:version-url
-V 74
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/3.gif
+V 81
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/bigpic05.jpg
 END
-4.gif
+104X47_byd.jpg
 K 25
 svn:wc:ra_dav:version-url
-V 74
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/4.gif
+V 83
+/svn/netway/!svn/ver/25872/ofweek_hr/templates/default/famous/images/104X47_byd.jpg
 END
-focus_bottom.gif
+smallpic01.jpg
 K 25
 svn:wc:ra_dav:version-url
-V 85
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/focus_bottom.gif
+V 83
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/smallpic01.jpg
 END
-hover.gif
+smallpic02.jpg
 K 25
 svn:wc:ra_dav:version-url
-V 78
-/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/hover.gif
+V 83
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/smallpic02.jpg
+END
+smallpic03.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/netway/!svn/ver/25852/ofweek_hr/templates/default/famous/images/smallpic03.jpg
+END
+smallpic04.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/netway/!svn/ver/25852/ofweek_hr/templates/default/famous/images/smallpic04.jpg
+END
+smallpic05.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/smallpic05.jpg
 END
 news_icon.gif
 K 25
@@ -69,11 +75,101 @@ svn:wc:ra_dav:version-url
 V 82
 /svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/news_icon.gif
 END
+978X60_tbea.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/netway/!svn/ver/25863/ofweek_hr/templates/default/famous/images/978X60_tbea.jpg
+END
+news_top.gif
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/news_top.gif
+END
+news_bottom.gif
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/news_bottom.gif
+END
+focus_top.gif
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/focus_top.gif
+END
+485X60_thyg.gif
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/netway/!svn/ver/25863/ofweek_hr/templates/default/famous/images/485X60_thyg.gif
+END
+hover.gif
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/hover.gif
+END
+485X60_zm.gif
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/netway/!svn/ver/25863/ofweek_hr/templates/default/famous/images/485X60_zm.gif
+END
+1.gif
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/1.gif
+END
+2.gif
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/2.gif
+END
+520X280_BYD.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/netway/!svn/ver/25872/ofweek_hr/templates/default/famous/images/520X280_BYD.jpg
+END
+3.gif
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/3.gif
+END
+focus_bottom.gif
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/focus_bottom.gif
+END
+4.gif
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/4.gif
+END
+485X60_abs.gif
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/netway/!svn/ver/25863/ofweek_hr/templates/default/famous/images/485X60_abs.gif
+END
 pic1.jpg
 K 25
 svn:wc:ra_dav:version-url
 V 77
 /svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/pic1.jpg
+END
+485X60_hg.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/netway/!svn/ver/25863/ofweek_hr/templates/default/famous/images/485X60_hg.jpg
 END
 pic2.jpg
 K 25
@@ -86,4 +182,16 @@ K 25
 svn:wc:ra_dav:version-url
 V 77
 /svn/netway/!svn/ver/25733/ofweek_hr/templates/default/famous/images/pic3.jpg
+END
+bigpic01.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/bigpic01.jpg
+END
+bigpic02.jpg
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/netway/!svn/ver/25850/ofweek_hr/templates/default/famous/images/bigpic02.jpg
 END

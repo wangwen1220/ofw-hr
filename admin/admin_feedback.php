@@ -24,14 +24,16 @@ if($act == 'suggest_list')
 	!empty($_GET['replyinfo'])? $wheresqlarr['replyinfo']=intval($_GET['replyinfo']):'';
 		if (is_array($wheresqlarr))
 		{
-		$where_set=' WHERE';
+                        $where_set=' WHERE';
 			foreach ($wheresqlarr as $key => $value)
 			{
 			$wheresql .=$where_set. $comma.'`'.$key.'`'.'=\''.$value.'\'';
 			$comma = ' AND ';
 			$where_set='';
 			}
-		}
+		}else{
+                        $wheresql = " where infotype in (1,2,3,4)";
+                }
 	$key=trim($_POST['key']);
 	!empty($key)?($wheresql=" WHERE username like '%{$key}%'"):'';
 	$total_sql="SELECT COUNT(*) AS num FROM ".table('feedback').$wheresql;
@@ -147,5 +149,52 @@ elseif($act == 'del_report')
 	{
 	adminmsg("删除失败！",0);
 	}
+}
+elseif($act == 'bad_info')
+{
+	check_permissions($_SESSION['admin_purview'],"suggest_show");
+	require_once(QISHI_ROOT_PATH.'include/page.class.php');
+        $wheresql = " where infotype=5";
+	$total_sql="SELECT COUNT(*) AS num FROM ".table('feedback').$wheresql;
+	$total_val=$db->get_total($total_sql);
+	$page = new page(array('total'=>$total_val, 'perpage'=>$perpage));
+	$currenpage=$page->nowindex;
+	$offset=($currenpage-1)*$perpage;
+	$list = get_feedback_list($offset,$perpage,$wheresql);
+	$smarty->assign('pageheader',"不良信息举报");
+	$smarty->assign('infotype',$_GET['infotype']);//照片人才
+	$smarty->assign('usertype',$_GET['usertype']);//照片审核状态
+	$smarty->assign('replyinfo',$_GET['replyinfo']);//是否已回复
+	$smarty->assign('key',$key);
+	$smarty->assign('perpage',$perpage);
+	$smarty->assign('list',$list);//列表
+	if ($total_val>$perpage)
+	{
+            $smarty->assign('page',$page->show(3));//分页符
+	}
+	$smarty->display('feedback/admin_feedback_bad_info.htm');
+}
+else if($act =='reply_msgback')
+{
+        get_token();
+	check_permissions($_SESSION['admin_purview'],"suggest_reply");
+	$id =!empty($_GET['id'])?intval($_GET['id']):adminmsg("你没有选择项目！",1);
+	$smarty->assign('pageheader',"不良信息举报");
+	$smarty->assign('feedback',get_feedback_one($id));
+	$smarty->assign('url',$_SERVER["HTTP_REFERER"]);
+	$smarty->display('feedback/admin_feedback_msg_reply.htm');
+}
+else if($act =='reply_msg_save')
+{
+        check_token();
+	check_permissions($_SESSION['admin_purview'],"suggest_reply");
+	$setsqlarr['feedbacktime']=$timestamp;
+	$setsqlarr['reply']=trim($_POST['reply'])?trim($_POST['reply']):adminmsg('您没有填写回复内容！',1);
+	$setsqlarr['replyinfo']=2;
+	$wheresql=" id='".intval($_POST['feedbackid'])."' ";
+	if (!updatetable(table('feedback'), $setsqlarr,$wheresql)) adminmsg("保存失败！",0);
+	$link[0]['text'] = "返回列表";
+	$link[0]['href'] = $_POST['url'];
+	adminmsg("操作成功！",2,$link);
 }
 ?>

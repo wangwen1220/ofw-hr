@@ -12,6 +12,8 @@ $t = time();
 /*ÃûÆó¶¯Ì¬*/
 #pic
 $article_pic = z_article_pic(5);
+$article_pic['title'] = cut_str($article_pic['title'], 15);
+$article_pic['seo_description'] = cut_str($article_pic['seo_description'], 42);
 $smarty->assign('article_pic', $article_pic);
 
 #list
@@ -20,6 +22,9 @@ if (!empty($article_pic)) {
 	$idarr[] = $article_pic['id'];
 }
 $article_list = z_article_list(5, 6, $idarr);
+foreach ($article_list as $key=>$value) {
+	$article_list[$key]['title'] = cut_str($value['title'], 22);
+}
 $smarty->assign('article_list', $article_list);
 
 

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/netway/!svn/ver/25814/ofweek_hr/templates/tpl_company/default
+/svn/netway/!svn/ver/25881/ofweek_hr/templates/tpl_company/default
 END
 thumbnail.jpg
 K 25
@@ -13,7 +13,7 @@ jobs.htm
 K 25
 svn:wc:ra_dav:version-url
 V 75
-/svn/netway/!svn/ver/25587/ofweek_hr/templates/tpl_company/default/jobs.htm
+/svn/netway/!svn/ver/25832/ofweek_hr/templates/tpl_company/default/jobs.htm
 END
 info.txt
 K 25
@@ -25,5 +25,5 @@ company_profile.htm
 K 25
 svn:wc:ra_dav:version-url
 V 86
-/svn/netway/!svn/ver/25814/ofweek_hr/templates/tpl_company/default/company_profile.htm
+/svn/netway/!svn/ver/25881/ofweek_hr/templates/tpl_company/default/company_profile.htm
 END

@@ -259,6 +259,12 @@ a:hover.tips{color:#cb0a00; text-decoration:underline;}
 	color:#cb0a00;
 	font-weight:bold;
 	}
+.zpxx_gs_tl h1{
+	display:block;
+	font-size:16px;
+	color:#cb0a00;
+	font-weight:bold;
+	}
 .zpxx_down{
 	margin-bottom:15px;
 	border:1px solid #ccc;
@@ -281,7 +287,29 @@ a:hover.tips{color:#cb0a00; text-decoration:underline;}
     text-align: center;
 	padding:0 10px;
 }
+.zpxx_lm span h3 {
+    background: url(../images/hc1_h.png) repeat-x scroll 0 0 transparent;
+    display: block;
+	font-weight:normal;
+    float: left;
+    height: 28px;
+	line-height:28px;
+    text-align: center;
+}
 .zpxx_lm span a.selected {
+    background: url(../images/heq_curr.png) repeat-x scroll 0 0 transparent;
+    cursor: pointer;
+	color:#cb0a00;
+	font-weight:bold;
+    float: left;
+	line-height:28px;
+    height: 28px;
+    text-align: center;
+    padding:0 10px;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.zpxx_lm span h3 a.selected {
     background: url(../images/heq_curr.png) repeat-x scroll 0 0 transparent;
     cursor: pointer;
 	color:#cb0a00;

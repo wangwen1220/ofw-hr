@@ -172,7 +172,7 @@ function inserttable($tablename, $insertsqlarr, $returnid=0, $replace = false, $
 		$comma = ', ';
 	}
 	$method = $replace?'REPLACE':'INSERT';
-#	echo $method." INTO $tablename ($insertkeysql) VALUES ($insertvaluesql)";die;
+	//echo $method." INTO $tablename ($insertkeysql) VALUES ($insertvaluesql)";die;
 	$state = $db->query($method." INTO $tablename ($insertkeysql) VALUES ($insertvaluesql)", $silent?'SILENT':'');
 	if($returnid && !$replace) {
 		return $db->insert_id();
@@ -316,9 +316,9 @@ function cut_str($string, $length, $start=0,$dot='')
 		}
 		$string = str_replace(array('&amp;', '&quot;', '&lt;', '&gt;'), array('&', '"', '<', '>'), $string);
 		$strcut = '';	 
-			for($i = 0; $i < $length; $i++) {
-				$strcut .= ord($string[$i]) > 127 ? $string[$i].$string[++$i] : $string[$i];
-			}
+                for($i = 0; $i < $length; $i++) {
+                        $strcut .= ord($string[$i]) > 127 ? $string[$i].$string[++$i] : $string[$i];
+                }
 		$strcut = str_replace(array('&', '"', '<', '>'), array('&amp;', '&quot;', '&lt;', '&gt;'), $strcut);
 		return $strcut.$dot;
 }
@@ -1311,6 +1311,14 @@ function get_subcategory($tablename,$parentid){
 	$sql = "select * from ".table($tablename)." where parentid=$parentid  order BY category_order desc, id asc";
 	return $db->getall($sql);	
 }
+/**获取所有子分类
+ * ZT 2013年3月28日 14:59:50
+ */
+function get_subcategory_district($tablename='category_district'){
+	global $db;
+	$sql = "select * from ".table($tablename)." where parentid!=0  order BY category_order desc, id asc";
+	return $db->getall($sql);	
+}
 
 
 function z_get_category_jobs() {
@@ -1363,7 +1371,7 @@ function get_now_address($province,$city){
 		$res_dis = get_parent_cagegory('category_district');
 	}
 	if(empty($res_sdis)){
-		$res_sdis = get_subcategory('category_district',$province);
+		$res_sdis = get_subcategory_district();
 	}
 //户籍处理
 	//地区省
@@ -2184,7 +2192,46 @@ function file_upload($input_name, $uid, $ext, $type=0,$size="2000"){
 		$post['type'] = $_POST['type'];
 	}
 	$post['upload_time'] = time();
+	//处理上传的图片p(photo),更改photo(0,1),photo_img路径
+	if (!empty($_FILES[$input_name]['name'])){
+		require_once(QISHI_ROOT_PATH.'include/upload.php');
+		$photo_dir= QISHI_ROOT_PATH."data/file/".date("Y/m/d/");
+		make_dir($photo_dir);
+		$filename =_asUpFiles($photo_dir, $input_name,$size,$ext,true);
+		$post['path'] = date("Y/m/d/").$filename;
+		$post['size'] = $_FILES[$input_name]['size'];
+		$post['ext'] = strtolower(str_replace(".","",strrchr($post['path'], ".")));
+	}
+	inserttable(table('resume_file'), $post);
+	return $post['path'];
+}
 
+/*
+ * 上传文件处理
+ * HTML标签name, ext文件后缀,type是否附件页上传,0是其它数则指定类型
+ */
+function move_upload($input_name, $uid, $ext, $type=0,$size="2000"){
+	global $db;
+        $uid =  empty($uid) ?  '-1' : $uid;
+	$post['uid'] = $uid;
+	$sql = "SELECT id FROM ".table('resume')." WHERE uid=".$uid;
+	$res = $db->getone($sql);
+        $resume_id = $res['id'];
+	$post['resume_id'] = $resume_id;
+	if ($type){
+		$post['type'] = $type;
+		if ($type == 1){
+			$post['name'] = '个人照片';
+		}
+		else{
+			$post['name'] = '其它附件';
+		}
+	}
+	else{
+		$post['name'] = $_POST['name'];
+		$post['type'] = $_POST['type'];
+	}
+	$post['upload_time'] = time();
 	//处理上传的图片p(photo),更改photo(0,1),photo_img路径
 	if (!empty($_FILES[$input_name]['name'])){
 		require_once(QISHI_ROOT_PATH.'include/upload.php');

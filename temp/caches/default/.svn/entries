@@ -1,10 +1,10 @@
 10
 
 dir
-25772
+25887
 http://huoshow.3322.org:8999/svn/netway/ofweek_hr/temp/caches/default
 http://huoshow.3322.org:8999/svn/netway
-delete
+
 
 
 2012-12-20T04:42:20.176477Z
@@ -25,10 +25,4 @@ zhoutian
 
 
 dd5f29d9-076b-d946-b61a-7118524f1a20
-
-
-
-
-
-keep-local
 

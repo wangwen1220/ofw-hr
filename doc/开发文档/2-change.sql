@@ -1155,3 +1155,6 @@ ALTER TABLE  `hr_company_profile` ADD  `company_type_addtime` INT NOT NULL COMME
 
 UPDATE hr_members_setmeal SET `endtime`=`endtime`+315360000 WHERE (endtime<1600000000 AND endtime>0);
 UPDATE hr_jobs SET `setmeal_deadline`=`setmeal_deadline`+315360000 WHERE (setmeal_deadline<1600000000 AND setmeal_deadline>0);
+
+ALTER TABLE  `hr_jobs` ADD  `edittime` INT NOT NULL COMMENT  '修改时间' AFTER  `addtime`;
+UPDATE  `hr_jobs` SET  `edittime` =  `addtime` ;

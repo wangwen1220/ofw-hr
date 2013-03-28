@@ -74,7 +74,7 @@ if ($act=='apply_jobs') {
 		WHERE ja.audit=1 AND ja.del!=1 AND ja.company_uid=$uid$addsql");
 	
 	//列表
-	$sql = "SELECT ja.*,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo
+	$sql = "SELECT ja.*,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo,r.home_province,r.home_city
 		FROM hr_personal_jobs_apply ja
 		LEFT JOIN hr_resume r ON ja.personal_uid=r.uid
 		WHERE ja.audit=1 AND ja.del!=1 AND ja.company_uid=$uid$addsql
@@ -395,7 +395,7 @@ elseif ($act=='interview_list') {
 		WHERE ci.del!=1 AND ci.company_uid=$uid$addsql");
 	
 	//列表
-	$sql = "SELECT ci.*,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo
+	$sql = "SELECT ci.*,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo,r.home_province,r.home_city
 		FROM hr_company_interview ci
 		LEFT JOIN hr_resume r ON ci.resume_uid=r.uid
 		WHERE ci.del!=1 AND ci.company_uid=$uid$addsql
@@ -501,7 +501,7 @@ elseif ($act=='down_resume_list') {
 		WHERE dr.company_uid=$uid$addsql");
 	
 	//列表
-	$sql = "SELECT dr.*,ri.category AS intention_jobs,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo
+	$sql = "SELECT dr.*,ri.category AS intention_jobs,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo,r.home_province,r.home_city
 		FROM hr_company_down_resume dr
 		LEFT JOIN hr_resume r ON dr.resume_uid=r.uid
 		LEFT JOIN hr_resume_intention ri ON ri.uid=r.uid
@@ -555,7 +555,7 @@ elseif ($act=='favorites_list')
 		WHERE cf.company_uid=$uid$addsql");
 	
 	//列表
-	$sql = "SELECT cf.*,r.uid,ri.category AS intention_jobs,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo
+	$sql = "SELECT cf.*,r.uid,ri.category AS intention_jobs,r.fullname,r.sex,r.birthdate,r.education,r.education_cn,r.experience,r.experience_cn,r.district_cn,r.recentjobs,r.photo,r.home_province,r.home_city
 		FROM hr_company_favorites cf
 		LEFT JOIN hr_resume r ON cf.resume_id=r.id
 		LEFT JOIN hr_resume_intention ri ON ri.uid=r.uid

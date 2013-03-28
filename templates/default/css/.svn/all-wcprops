@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 58
-/svn/netway/!svn/ver/25830/ofweek_hr/templates/default/css
+/svn/netway/!svn/ver/25881/ofweek_hr/templates/default/css
 END
 css.css
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/netway/!svn/ver/25386/ofweek_hr/templates/default/css/css.css
+/svn/netway/!svn/ver/25881/ofweek_hr/templates/default/css/css.css
 END
 home.css
 K 25
@@ -79,5 +79,5 @@ index.css
 K 25
 svn:wc:ra_dav:version-url
 V 68
-/svn/netway/!svn/ver/24817/ofweek_hr/templates/default/css/index.css
+/svn/netway/!svn/ver/25881/ofweek_hr/templates/default/css/index.css
 END

@@ -1,0 +1,41 @@
+{#include file="sys/admin_header.htm"#}
+<div class="admin_main_nr_dbox">
+    <div class="pagetit">
+        <div class="ptit"> {#$pageheader#}</div>
+        <div class="clear"></div>
+    </div>
+    <form id="form1" name="form1" method="post" action="?act=del_feedback">
+        {#$inputtoken#}
+        <table width="100%" border="0" cellpadding="0" cellspacing="0"  id="list" class="link_lan">
+            <tr>
+                <td width="40%"  class="admin_list_tit"  >内容</td>
+                <td width="120" align="center" class="admin_list_tit">时间</td>
+                <!--<td align="center" class="admin_list_tit">是否已经回复</td>-->
+            </tr>
+            {#foreach from=$list item=li#}
+            <tr>
+                <td  class="admin_list vtip" title="{#$li.feedback|nl2br#}" >{#$li.feedback#}{#if $li.file#}&nbsp;&nbsp;<a href="/data/file/{#$li.file#}" target="_blank">查看图片</a>{#/if#}</td>
+                <td align="center" class="admin_list">{#$li.addtime|date_format:"%Y-%m-%d"#}</td>
+                <!-- <td align="center" class="admin_list">
+                   {#if $li.replyinfo=="1"#}<a href="?act=reply_msgback&id={#$li.id#}">回复</a>{#else#}<span>已经回复</span>{#/if#}
+                </td>-->
+            </tr>
+            {#/foreach#}
+        </table>
+        {#if !$list#}
+        <div class="admin_list_no_info">没有任何信息！</div>
+        {#/if#}
+        <table width="100%" border="0" cellspacing="10" cellpadding="0" class="admin_list_btm">
+            <tr>
+                <td>
+                    <input name="del" type="submit" class="admin_submit" id="ButDel" value="删除所选"/>
+                </td>
+                <td width="305" align="right"></td>
+            </tr>
+        </table>
+    </form>
+    <div class="page link_bk">{#$page#}</div>
+</div>
+{#include file="sys/admin_footer.htm"#}
+</body>
+</html>

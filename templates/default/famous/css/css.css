@@ -9,7 +9,7 @@ p,ul,li,h1,h2,h3,h4,h5{
 
 .main01{
 	width:990px;
-	margin:10px auto;
+	margin:0 auto 10px;
 	overflow:hidden;
 	*zoom:1;
 	}
@@ -41,6 +41,8 @@ p,ul,li,h1,h2,h3,h4,h5{
 	margin-bottom:12px\9;
 	*margin-bottom:10px;
 	text-align:center;
+	border:1px solid #ccc;
+	background:#f2f2f2;
 	}
 .main03 ul li img{
 	width:157px;
@@ -50,7 +52,6 @@ p,ul,li,h1,h2,h3,h4,h5{
 	margin:0;
 	padding:0;
 	width:157px;
-	border:1px solid #ccc;
 	}
 .main03 ul li ul li{
 	font-size:12px;
@@ -117,6 +118,8 @@ p,ul,li,h1,h2,h3,h4,h5{
     display: block;
     margin-bottom: 10px;
     text-align: right;
+	width:122px;
+	height:47px;
 }
 #boxImg #btn span.current {
     background: url("../images/hover.gif") no-repeat scroll center center transparent;
@@ -144,6 +147,7 @@ p,ul,li,h1,h2,h3,h4,h5{
     font-size: 14px;
     font-weight: bold;
     text-indent: 32px;
+	line-height:33px;
 }
 .title_t a {
     color: #FFFFFF;

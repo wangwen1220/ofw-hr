@@ -31,6 +31,7 @@ if ($_GET['id'] == ''){
 		exit();
 }
 
+
 if ($_GET['type'] == 'com'){
 	$companyid = intval($_GET['id']);
 }
@@ -53,40 +54,12 @@ $option .= "AND uid={$companyid} ";
 //验证码random
 $smarty->assign('random',time());
 
-//查询下拉单的筛选条件 tab2页的数据
-$select_area = array();
-$sql = "SELECT district,sdistrict,district_cn FROM ".table('jobs')." $option GROUP BY district_cn ORDER BY COUNT(*) DESC";
-#echo $sql;
-$res = $db->getall($sql);
-#e($res);
-if (!empty($res)){
-	foreach ($res as $v){
-		if ($v['district_cn']){
-			if ($v['sdistrict'] == 0){
-				$select_area[$v['district']] = $v['district_cn'];
-			}
-			else{
-				$select_area[$v['sdistrict']] = substr($v['district_cn'],strpos($v['district_cn'], '/')+1);
-			}
-		}
-	}
-#	e($select_area);
-	$smarty->assign('options_area', $select_area);
-}
-//
-$select_edu = array();
-$res = get_category_zt('QS_education');
-foreach ($res as $v){
-	$select_edu[$v['c_id']] = $v['c_name'];
-}
-$smarty->assign('options_edu',array_reverse($select_edu,1));
-//END
 
 //tab1页数据
 #e($_SESSION);
 //END
 
-
+//此处是公司的职位列表页
 if ($_GET['page']){
 	if ($_GET['page'] == 0){
 		exit;
@@ -135,6 +108,7 @@ if ($_GET['page']){
 	echo json_encode($ret);
 	exit;
 }
+//END
 
 
 

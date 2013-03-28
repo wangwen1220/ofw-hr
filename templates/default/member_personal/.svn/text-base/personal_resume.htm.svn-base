@@ -199,11 +199,11 @@
 				<tr>
 					<td width="15%" style='text-align:right;padding-right:5px;'><span class="f_red">*</span>目前岗位：</td>
 					<td width="42%">
-						<select id="home_province" style="height:20px;width:120px;" name="home_province">
+						<select id="now_jobtype" style="height:20px;width:120px;" name="now_jobtype">
 							<option value="-1">请选择</option>
 							{#html_options options=$select_district2 selected=$select_district_val2#}
 						</select>
-						<select id="home_city" style="height:20px;width:120px;" name="home_city" {#if $select_district_val2 == ''#}disabled="disabled"{#/if#}>
+						<select id="now_job" style="height:20px;width:120px;" name="now_job" {#if $select_district_val2 == ''#}disabled="disabled"{#/if#}>
 							<option value="-1">请选择</option>
 							{#html_options options=$select_sdistrict2 selected=$select_sdistrict_val2#}
 						</select>
@@ -387,14 +387,14 @@
 				$('#value_speciality option').each(function(){this.selected=true;});
 				$("#form_step1").submit();
 			});
-			$('#cencus_province').change(function(){
+			$('#now_jobtype').change(function(){
 				var parentId = $(this).val();
 				if(parentId == -1){
-					$('#cencus_city').html('<option value="-1">请选择</option>');
-					$('#cencus_city').attr('disabled','disabled');
+					$('#now_job').html('<option value="-1">请选择</option>');
+					$('#now_job').attr('disabled','disabled');
 					return;
 				}
-				$('#cencus_city').removeAttr('disabled');
+				$('#now_job').removeAttr('disabled');
 				//ajax
 				$.ajax({
 					url:'{#$QISHI.site_dir#}plus/ajax_zt.php?action=subclass&type=category_district&parentid='+parentId,
@@ -407,7 +407,7 @@
 						}
 						//console.log(options);
 						options = '<option value="-1">请选择</option>'+options;
-						$('#cencus_city').html(options);
+						$('#now_job').html(options);
 					}
 				});
 			});
@@ -531,7 +531,7 @@
 						'number':true,
 						'range':[0,99]
 					},
-					'cencus_province':{
+					'now_jobtype':{
 						'checkSelect':-1
 					},
 					'work_industry':{
@@ -594,7 +594,7 @@
 						'number':'请输入正确的工作年限',
 						'range':'请输入0-99之间的数字'
 					},
-					'cencus_province':{
+					'now_jobtype':{
 						'checkSelect':'请选择户籍'
 					},
 					'work_industry':{

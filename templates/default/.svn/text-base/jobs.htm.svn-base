@@ -93,16 +93,7 @@
 				<p class="clear"></p>
 			</div>-->
 
-    <div>
-        <table width="100%">
-	        <tr>
-	        <td><div id="ad-11"><script type="text/javascript">loadAD(760);</script></div></td>
-	        <td><div id="ad-12"><script type="text/javascript">loadAD(761);</script></div></td>
-	        <td><div id="ad-13"><script type="text/javascript">loadAD(762);</script></div></td>
-	        <td><div id="ad-14"><script type="text/javascript">loadAD(763);</script></div></td>
-	        </tr>
-        </table>
-        </div>
+
 
 			<!--分页-->
 			<div class="code">
@@ -238,8 +229,8 @@
 			<table width="359" cellspacing="0" cellpadding="0" border="0" style="margin-bottom:15px;">
 		<tbody><tr>
 				<td valign="middle" height="40" align="left" style="padding-left:15px;">&nbsp;</td>
-				<td width="33%"><a href="javascript:void(0);" id="applyjobs_multi"><img border="0" src="{#$QISHI.site_template#}images/jianli.gif"></a></td>
-				<td width="45%"><a target="_blank" href="{#$QISHI.site_dir#}jobs/jobsearch.php"><img border="0" src="{#$QISHI.site_template#}images/genggai.gif"></a></td>
+				<td width="33%"><a href="javascript:void(0);" id="applyjobs_multi"><img border="0" src="{#$QISHI.site_template#}images/jianli.gif" alt="投递简历"></a></td>
+				<td width="45%"><a target="_blank" href="{#$QISHI.site_dir#}jobs/jobsearch.php"><img border="0" src="{#$QISHI.site_template#}images/genggai.gif" alt="更改搜索条件"></a></td>
 		</tr>
 </tbody></table>
 

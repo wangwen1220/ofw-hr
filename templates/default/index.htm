@@ -118,7 +118,7 @@
                 <div class="gang" id="category_{#$key#}" style="display:none;">
 				  {#foreach from=$category_page item=category_parent#}
                	  <ul>
-					  <li class="jing"><a href="{#$QISHI.site_dir#}jobs/?jobcategory={#$category_parent.id#}" title="{#$category_parent.categoryname#}"><h2>{#$category_parent.categoryname#}</h2></a></li>
+					  <li class="jing"><h2><a href="{#$QISHI.site_dir#}jobs/?jobcategory={#$category_parent.id#}" title="{#$category_parent.categoryname#}">{#$category_parent.categoryname#}</a></h2></li>
 					{#foreach from=$category_parent.sub item=category_sub#}
                    	<li><a href="{#$QISHI.site_dir#}jobs/?jobcategory={#$category_sub.id#}" title="{#$category_sub.categoryname#}">{#$category_sub.categoryname#}</a> <!--{#$category_sub.stat_jobs#}--></li>
                     {#/foreach#}

@@ -202,7 +202,7 @@ elseif ($act=='jobs_save') {
 				WHERE uid='$uid' AND id IN('$ids')");
 			foreach ($list as $value) {
 				if ($value['audit']==1 && $value['display']==1 && (($value['deadline'] == 0 || $value['deadline'] > $t) && $value['setmeal_deadline'] > $t)) {
-					if ($value['refreshtime'] < $dayNow) {
+					if ($value['refreshtime'] < $dayNow+60) {
 						$id_ok[] = $value['id'];
 					} else {
 						$id_day[] = $value['id'];
@@ -696,6 +696,7 @@ elseif ($act=='addjobs_save'){
 	$setsqlarr['setmeal_id']=$setmeal['setmeal_id'];
 	$setsqlarr['setmeal_name']=$setmeal['setmeal_name'];
 	$setsqlarr['addtime']=$timestamp;
+	$setsqlarr['edittime']=$timestamp;
 	switch ($setsqlarr['effect']) {
 		case 0:$setsqlarr['deadline'] = 0;break;#长期有效
 		case 1:$setsqlarr['deadline'] = $timestamp+1*30*24*60*60;break;#1个月
@@ -1012,6 +1013,7 @@ elseif ($act=='editjobs_save') {
 	}
 	
 	$setsqlarr['display']=1;//1发布中，4草稿
+	$setsqlarr['edittime'] = time();
 	
 	
 	/////////////////////////表jobs_contact//////////////////////

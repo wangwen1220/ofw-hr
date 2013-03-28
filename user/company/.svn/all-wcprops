@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 49
-/svn/netway/!svn/ver/25715/ofweek_hr/user/company
+/svn/netway/!svn/ver/25865/ofweek_hr/user/company
 END
 company_message.php
 K 25
@@ -49,7 +49,7 @@ company_jobs.php
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/netway/!svn/ver/25622/ofweek_hr/user/company/company_jobs.php
+/svn/netway/!svn/ver/25848/ofweek_hr/user/company/company_jobs.php
 END
 company_user.php
 K 25
@@ -79,5 +79,5 @@ company_recruitment.php
 K 25
 svn:wc:ra_dav:version-url
 V 73
-/svn/netway/!svn/ver/25654/ofweek_hr/user/company/company_recruitment.php
+/svn/netway/!svn/ver/25865/ofweek_hr/user/company/company_recruitment.php
 END

@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 70
-/svn/netway/!svn/ver/25810/ofweek_hr/templates/default/member_personal
+/svn/netway/!svn/ver/25861/ofweek_hr/templates/default/member_personal
 END
 personal_user_email.htm
 K 25
@@ -43,7 +43,7 @@ personal_resume.htm
 K 25
 svn:wc:ra_dav:version-url
 V 90
-/svn/netway/!svn/ver/25758/ofweek_hr/templates/default/member_personal/personal_resume.htm
+/svn/netway/!svn/ver/25861/ofweek_hr/templates/default/member_personal/personal_resume.htm
 END
 personal_resume_training_edit.htm
 K 25

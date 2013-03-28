@@ -17,15 +17,9 @@
 <script type="text/javascript">
 $(document).ready(function()
 {
-	  $(".zpxx_lm").idTabs();
-	  $(".zpxx_lm a").click(function(){
-		$(this).attr('class','selected');
-	  });
-
-
-
 
 	//默认加载
+{#if $smarty.get.action == 'list'#}
 	function page_init(pagenumber){
 		//向服务器发送请求，查询满足条件的记录
 		var areaid = $('#list_areaid').val();
@@ -69,13 +63,14 @@ $(document).ready(function()
 		page_init(pageclickednumber);
 	}
 
+{#/if#}
+
 {#if $company.expired#}
 	$('#tab2 .zpxx_con table tbody').html('<span>公司已过期</span>');
 {#else#}
 	$('#tab2 .zpxx_con table tbody').append('<span>加载中...</span>');
 	page_init(1);
 {#/if#}
-
 	//验证码部分
 	function imgcaptcha(inputID,imgdiv)
 	{
@@ -147,9 +142,10 @@ $(document).ready(function()
 		</div>
 		<div class="zpxx_down">
 			<div class="zpxx_lm">
-				<span><a href="#tab1" class="selected"><h3>公司简介</h3></a></span>
-						<span><a href="#tab2"><h3>招聘职位</h3></a></span>
+				<span><h3><a href="company-show-{#$company.uid#}.html" {#if $smarty.get.action == ''#}class="selected"{#/if#}>公司简介</a></h3></span>
+						<span><h3><a href="joblist-{#$company.uid#}.html" {#if $smarty.get.action == 'list'#}class="selected"{#/if#}>招聘职位</a></h3></span>
 			</div>
+			{#if $smarty.get.action == ''#}
 			<div id="tab1" class="blk_03">
 				<div class="zpxx_con">
 				{#if $company.audit == 4  && $company.uid == $smarty.session.uid #}
@@ -206,6 +202,7 @@ $(document).ready(function()
 			</div>
 
 <!--列表页-->
+{#else if $smarty.get.action == 'list'#}
 			<div id="tab2" class="blk_03">
 				<div style="border-bottom:none; padding-top:10px;" class="zpxx_con">
 					<table width="100%" cellspacing="0" cellpadding="0" border="0" >
@@ -237,6 +234,7 @@ $(document).ready(function()
 	<div style="clear:both;"></div>
 			</div>
 <!--END-->
+{#/if#}
 
 		</div>
 	</div>

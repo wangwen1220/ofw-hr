@@ -331,7 +331,11 @@ if ($wage_type){
 */
 
 //处理列表页相关分类
-if ($link_category){//指定分类
+if($keyword != ''){//没指定分类,则根据关键词搜索相关
+	$res_category = get_category_related_to_key($keyword);
+}
+
+if ($link_category || empty($res_category)){//指定分类
 	//该分类下的总职位数
 	$sql = "SELECT * FROM ".table('category_jobs')." WHERE id=$link_category";
 	$qry = $db->query($sql);
@@ -353,9 +357,6 @@ if ($link_category){//指定分类
 		$smarty->assign('parent_info', "{'id':$res[id],'name':'$res[categoryname]'}");
 	}
 	
-}
-else{//没指定分类,则根据关键词搜索相关
-	$res_category = get_category_related_to_key($keyword);
 }
 
 $smarty->assign('related_category',$res_category);

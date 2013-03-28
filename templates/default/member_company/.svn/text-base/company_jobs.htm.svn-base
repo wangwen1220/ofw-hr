@@ -67,7 +67,7 @@
               	<td width="7%" align="center"><label>
               	  <input type="checkbox" name="jobslist[]" value="{#$list.id#}" />
               	</label></td>
-                <td width="13%" align="center"><a href="/jobs/jobs-show-{#$list.id#}.html" title="{#$list.jobs_name#}" style="width:155px;display:block;float:left;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" target="_blank" class="tips">{#$list.jobs_name#}</a></td>
+                <td width="13%" align="center"><a href="company_jobs.php?act=editjobs&id={#$list.id#}" title="{#$list.jobs_name#}" style="width:155px;display:block;float:left;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;" target="_blank" class="tips">{#$list.jobs_name#}</a></td>
                 <td width="11%" align="center"><span class="{#$list.show_status_style#}">{#$list.show_status#}</span></td>
                 <td width="16%" align="center">{#$list.district_cn#}</td>
                 <td width="17%" align="center">{#$list.addtime#}</td>

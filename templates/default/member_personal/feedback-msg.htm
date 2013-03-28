@@ -1,4 +1,6 @@
 <link href="{#$QISHI.site_template#}css/company.css" rel="stylesheet" type="text/css" />
+<script src="{#$QISHI.site_template#}js/jquery.idTabs.min.js" type='text/javascript' language="javascript"></script>
+<script src="{#$QISHI.site_template#}js/jquery.validate.min.js" type='text/javascript' language="javascript"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	//验证表单
@@ -28,7 +30,7 @@ $(document).ready(function(){
 		},
 		email:{
 			required: "邮箱地址不能为空"
-		}
+		},
 		feedback:{
 			required: "具体描述不能为空",
 			maxlength: jQuery.format("邮件主题不能大于{0}个字符")

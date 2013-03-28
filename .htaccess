@@ -52,6 +52,8 @@ RewriteRule ^shanxi$ /jobs/?list_areaid=27 [L]
 
 #公司详情页
 RewriteRule ^company/company-show-(.*?)\.html$ /company/company-show.php?id=$1 [L]
+#公司职位列表页
+RewriteRule ^company/joblist-(.*?)\.html$ /company/company-show.php?id=$1&action=list [L]
 #职位详情页
 RewriteRule ^jobs/jobs-show-(.*?)\.html$ /jobs/jobs-show.php?id=$1 [L]
 #资讯列表页

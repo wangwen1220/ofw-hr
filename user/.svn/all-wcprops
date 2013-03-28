@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 41
-/svn/netway/!svn/ver/25715/ofweek_hr/user
+/svn/netway/!svn/ver/25880/ofweek_hr/user
 END
 user_favorites_job.php
 K 25
@@ -26,6 +26,12 @@ K 25
 svn:wc:ra_dav:version-url
 V 54
 /svn/netway/!svn/ver/23544/ofweek_hr/user/user_reg.php
+END
+bad_msg.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/netway/!svn/ver/25880/ofweek_hr/user/bad_msg.php
 END
 reg.php
 K 25
